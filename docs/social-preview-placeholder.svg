@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Atlas mózgu w psychiatrii — podgląd projektu</title>
+  <desc id="desc">Ciemna plansza podglądu z uproszczonym bocznym konturem mózgu.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#15223a"/>
+      <stop offset="1" stop-color="#05070d"/>
+    </radialGradient>
+    <linearGradient id="brain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4864"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(620 82) scale(.55)" opacity=".9">
+    <path d="M101 326C73 280 88 219 129 186C130 132 181 91 240 101C284 62 357 62 403 91C453 52 526 70 563 111C619 87 689 111 719 157C769 167 805 216 793 266C823 309 803 364 759 394C739 431 686 451 630 444C594 480 537 490 489 471C443 503 378 510 330 482C273 500 214 480 188 443C135 434 92 386 101 326Z" fill="url(#brain)" stroke="#aeb9d0" stroke-opacity=".6" stroke-width="3"/>
+    <path d="M103 326C82 281 97 223 137 194C139 145 184 111 239 115C274 90 316 101 343 127C325 169 316 213 319 258C310 302 281 347 235 375C181 394 126 370 103 326Z" fill="#858bff" fill-opacity=".52" stroke="#b9bcff" stroke-width="2"/>
+    <path d="M371 367C389 354 414 359 422 378C426 397 409 413 388 408C370 405 360 382 371 367Z" fill="#ff8179" stroke="#ffc0bc" stroke-width="3"/>
+    <path d="M633 401C670 375 722 374 757 399C791 423 793 468 765 494C736 521 684 521 646 499C621 484 611 441 633 401Z" fill="#8fb3d9" fill-opacity=".55" stroke="#bfd3e7" stroke-width="2"/>
+  </g>
+  <text x="72" y="108" fill="#8f9aae" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">PROJEKT EDUKACYJNY</text>
+  <text x="72" y="166" fill="#f4f7fb" font-family="Inter,Arial,sans-serif" font-size="47" font-weight="750">Atlas mózgu w psychiatrii</text>
+  <text x="74" y="205" fill="#a5afc0" font-family="Inter,Arial,sans-serif" font-size="22">Interaktywny atlas neuroanatomii funkcjonalnej</text>
+  <text x="74" y="556" fill="#737f93" font-family="Inter,Arial,sans-serif" font-size="16">ETAP 1 · STRUKTURY I INTERAKTYWNA ANATOMIA</text>
+</svg>

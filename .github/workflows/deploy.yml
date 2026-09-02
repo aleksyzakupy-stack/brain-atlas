@@ -1,0 +1,63 @@
+name: Wdrożenie GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Skonfiguruj Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Skonfiguruj GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Ustal ścieżkę bazową repozytorium
+        shell: bash
+        run: echo "VITE_BASE_PATH=/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_ENV"
+
+      - name: Zainstaluj zależności
+        run: npm ci
+
+      - name: Sprawdź jakość kodu
+        run: npm run lint
+
+      - name: Uruchom testy
+        run: npm test
+
+      - name: Zbuduj aplikację
+        run: npm run build
+
+      - name: Przekaż artefakt Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Opublikuj GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
