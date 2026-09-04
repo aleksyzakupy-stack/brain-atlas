@@ -13,7 +13,7 @@ describe('bezpośrednie trasy struktur', () => {
     render(<App />)
 
     await waitFor(() => {
-      expect(screen.getByRole('button', { name: 'Hipokamp, struktura głęboka' })).toHaveAttribute('aria-pressed', 'true')
+      expect(screen.getAllByRole('button', { name: 'Hipokamp' }).find(element => element.tagName.toLowerCase() === 'path')).toHaveAttribute('aria-pressed', 'true')
     })
     expect(screen.getAllByRole('heading', { name: 'Hipokamp' }).length).toBeGreaterThan(0)
   })

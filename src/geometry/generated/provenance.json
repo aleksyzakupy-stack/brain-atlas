@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/ggsegverse/ggseg.formats",
+  "revision": "ae4fc09d9b6b527b04cd9d78412945c36f09ca1d",
+  "sourceUrl": "https://raw.githubusercontent.com/ggsegverse/ggseg.formats/ae4fc09d9b6b527b04cd9d78412945c36f09ca1d/R/sysdata.rda",
+  "sourceSha256": "1cf6517c49141709134cd62ccaa5b3329dbfe6e6921344c76e6ee437582c68bb",
+  "outputSha256": "023f4eaf37b86d346d1f1605a057c74a2f8aa11e78cd71dd30a72fd0f79f6cce",
+  "atlases": [
+    "Desikan-Killiany / fsaverage5 aparc",
+    "FreeSurfer aseg / fsaverage5"
+  ],
+  "changes": "Selected left cortical views and coronal_1 and sagittal deep projections; affine fit to 800x600; inverted display Y; rounded coordinates to 0.1; no functional relabeling.",
+  "licenseNotices": [
+    "ggseg.formats-MIT.txt",
+    "FreeSurfer-LICENSE.txt"
+  ],
+  "exporter": "scripts/export-atlas.py; rdata==1.1.0"
+}

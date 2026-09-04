@@ -1,4 +1,5 @@
 import type { BrainStructure } from '../types/atlas'
+import { educationFor } from './structureEducation'
 
 type StructureInput = Pick<
   BrainStructure,
@@ -32,8 +33,8 @@ const structure = (input: StructureInput): BrainStructure => ({
   brodmannAreas: [],
   preferredViews: ['lateral'],
   availableViews: ['lateral'],
-  references: [],
   ...input,
+  ...educationFor(input.id),
 })
 
 export const brainStructures: BrainStructure[] = [
@@ -123,7 +124,7 @@ export const brainStructures: BrainStructure[] = [
     displayAtBaseLevel: true,
     shortRole: 'Łączy monitorowanie konfliktu i wysiłku z regulacją uwagi, emocji oraz reakcji autonomicznych.',
     functions: ['wykrywanie konfliktu', 'monitorowanie błędów', 'alokacja wysiłku', 'modulacja bólu'],
-    localization: 'Przyśrodkowo, nad przednią częścią ciała modzelowatego; w widoku bocznym pokazana jako struktura głęboka.',
+    localization: 'Przyśrodkowa powierzchnia półkuli, wokół przedniej części ciała modzelowatego. Obejmuje podobszary o różnych funkcjach.',
     inputs: ['PFC', 'wzgórze', 'wyspa', 'ciało migdałowate'],
     outputs: ['kora ruchowa', 'prążkowie', 'podwzgórze', 'PAG'],
     relatedStructureIds: ['prefrontal-cortex', 'insula', 'amygdala', 'pag'],
@@ -177,7 +178,7 @@ export const brainStructures: BrainStructure[] = [
     displayAtBaseLevel: true,
     shortRole: 'Uczestniczy w integracji perspektywy własnej, wyobrażeń przestrzennych i pamięci epizodycznej.',
     functions: ['wyobraźnia wzrokowo-przestrzenna', 'przetwarzanie autoreferencyjne', 'wydobywanie wspomnień', 'świadomość otoczenia'],
-    localization: 'Przyśrodkowa część płata ciemieniowego, przed klinekiem; w atlasie zaznaczona półprzezroczysto.',
+    localization: 'Przyśrodkowa część płata ciemieniowego, przed klinkiem, za bruzdą brzeżną.',
     inputs: ['PCC', 'wzgórze', 'kora ciemieniowa'],
     outputs: ['PCC', 'mPFC', 'hipokamp'],
     relatedStructureIds: ['pcc', 'hippocampus', 'prefrontal-cortex'],
@@ -211,7 +212,7 @@ export const brainStructures: BrainStructure[] = [
     childrenIds: [],
     depth: 2,
     displayAtBaseLevel: true,
-    shortRole: 'Tworzy uporządkowane reprezentacje dotyku, propriocepcji, bólu i temperatury.',
+    shortRole: 'Tworzy uporządkowane reprezentacje dotyku i propriocepcji; współdziała z innymi obszarami czuciowymi.',
     functions: ['lokalizacja bodźca', 'rozróżnianie dotyku', 'propriocepcja', 'integracja informacji o ciele'],
     localization: 'Zakręt zaśrodkowy płata ciemieniowego, bezpośrednio za bruzdą środkową.',
     inputs: ['jądra wzgórza', 'pień mózgu'],
@@ -222,7 +223,7 @@ export const brainStructures: BrainStructure[] = [
   structure({
     id: 'visual-cortex',
     slug: 'kora-wzrokowa',
-    names: { pl: 'Kora wzrokowa', en: 'Visual cortex', la: 'Cortex visualis', abbreviation: 'V1' },
+    names: { pl: 'Kora wzrokowa', en: 'Visual cortex', la: 'Cortex visualis' },
     aliases: ['primary visual cortex', 'kora prążkowana'],
     categoryId: 'integration',
     parentId: 'cerebral-cortex',
@@ -231,7 +232,7 @@ export const brainStructures: BrainStructure[] = [
     displayAtBaseLevel: true,
     shortRole: 'Analizuje podstawowe cechy obrazu i przekazuje je do wyspecjalizowanych strumieni wzrokowych.',
     functions: ['orientacja krawędzi', 'kontrast', 'organizacja retinotopowa', 'wczesna analiza ruchu i barwy'],
-    localization: 'Tylny biegun płata potylicznego, wokół bruzdy ostrogowej.',
+    localization: 'Płat potyliczny: V1 wokół bruzdy ostrogowej oraz obszary pozaprążkowe. Nakładka obejmuje orientacyjnie szerszy obszar wzrokowy.',
     inputs: ['ciało kolankowate boczne wzgórza'],
     outputs: ['pozaprążkowe obszary wzrokowe', 'kora ciemieniowa', 'kora skroniowa'],
     relatedStructureIds: ['thalamus', 'precuneus'],
@@ -240,7 +241,7 @@ export const brainStructures: BrainStructure[] = [
   structure({
     id: 'auditory-cortex',
     slug: 'kora-sluchowa',
-    names: { pl: 'Kora słuchowa', en: 'Auditory cortex', la: 'Cortex auditorius', abbreviation: 'A1' },
+    names: { pl: 'Kora słuchowa', en: 'Auditory cortex', la: 'Cortex auditorius' },
     aliases: ['primary auditory cortex', 'kora audytoryczna'],
     categoryId: 'integration',
     parentId: 'cerebral-cortex',
@@ -303,7 +304,7 @@ export const brainStructures: BrainStructure[] = [
     displayAtBaseLevel: true,
     shortRole: 'Przekazuje hipokampowi zintegrowaną informację o miejscach, scenach i kontekście zdarzeń.',
     functions: ['rozpoznawanie scen', 'pamięć kontekstowa', 'nawigacja', 'integracja informacji korowych'],
-    localization: 'Przyśrodkowa, dolna powierzchnia płata skroniowego, otaczająca hipokamp.',
+    localization: 'Przyśrodkowa, dolna powierzchnia płata skroniowego, poniżej hipokampa. Kontur DK przedstawia tylko część zakrętu; kora śródwęchowa jest odrębną parcelą.',
     inputs: ['kora skroniowa', 'kora ciemieniowa', 'PCC'],
     outputs: ['kora śródwęchowa', 'hipokamp', 'PFC'],
     relatedStructureIds: ['hippocampus', 'pcc', 'visual-cortex'],

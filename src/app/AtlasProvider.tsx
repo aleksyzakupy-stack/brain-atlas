@@ -2,21 +2,22 @@ import { useEffect, useReducer, type PropsWithChildren } from 'react'
 import { AtlasContext } from './atlasContext'
 import { atlasReducer } from './atlasReducer'
 import { createInitialAtlasState, STORAGE_KEYS } from './atlasState'
+import { writeStorage } from '../utils/storage'
 
 export function AtlasProvider({ children }: PropsWithChildren) {
   const [state, dispatch] = useReducer(atlasReducer, undefined, createInitialAtlasState)
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEYS.terminology, state.terminologyLanguage)
+    writeStorage(STORAGE_KEYS.terminology, state.terminologyLanguage)
   }, [state.terminologyLanguage])
 
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEYS.brainView, state.currentBrainView)
+    writeStorage(STORAGE_KEYS.brainView, state.currentBrainView)
   }, [state.currentBrainView])
 
   useEffect(() => {
     if (state.onboardingStatus === 'dismissed') {
-      window.localStorage.setItem(STORAGE_KEYS.onboardingDismissed, 'true')
+      writeStorage(STORAGE_KEYS.onboardingDismissed, 'true')
     }
   }, [state.onboardingStatus])
 

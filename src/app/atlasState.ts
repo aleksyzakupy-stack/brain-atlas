@@ -7,6 +7,7 @@ import type {
   TerminologyLanguage,
   ViewportState,
 } from '../types/atlas'
+import { readStorage } from '../utils/storage'
 
 export const STORAGE_KEYS = {
   terminology: 'brainAtlas.terminology',
@@ -31,13 +32,14 @@ export type AtlasState = {
 
 const readStoredTerminology = (): TerminologyLanguage => {
   if (typeof window === 'undefined') return 'pl'
-  const stored = window.localStorage.getItem(STORAGE_KEYS.terminology)
+  const stored = readStorage(STORAGE_KEYS.terminology)
   return stored === 'en' || stored === 'la' ? stored : 'pl'
 }
 
 const readStoredView = (): BrainViewId => {
   if (typeof window === 'undefined') return 'lateral'
-  return window.localStorage.getItem(STORAGE_KEYS.brainView) === 'lateral' ? 'lateral' : 'lateral'
+  const view = readStorage(STORAGE_KEYS.brainView)
+  return view === 'medial' || view === 'deep' ? view : 'lateral'
 }
 
 export const createInitialAtlasState = (): AtlasState => ({
@@ -45,14 +47,14 @@ export const createInitialAtlasState = (): AtlasState => ({
   terminologyLanguage: readStoredTerminology(),
   currentBrainView: readStoredView(),
   primarySelection: null,
-  activeLayerIds: ['deep-anatomy'],
+  activeLayerIds: [],
   anatomyDepth: 0,
   anatomyFocusId: null,
   viewport: { zoom: 1, pan: { x: 0, y: 0 } },
   panelState: 'collapsed',
   onboardingStatus:
     typeof window !== 'undefined' &&
-    window.localStorage.getItem(STORAGE_KEYS.onboardingDismissed) === 'true'
+    readStorage(STORAGE_KEYS.onboardingDismissed) === 'true'
       ? 'dismissed'
       : 'visible',
   searchOpen: false,

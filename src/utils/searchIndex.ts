@@ -1,4 +1,6 @@
 import { brainStructures } from '../data/structures'
+import { learningPaths } from '../data/learningPaths'
+import { connections } from '../data/connections'
 import type { BrainStructure } from '../types/atlas'
 import { normalizeSearch } from './normalizeSearch'
 
@@ -16,6 +18,8 @@ const searchableValues = (structure: BrainStructure): string[] => [
   structure.names.abbreviation || '',
   ...structure.aliases,
   ...structure.brodmannAreas,
+  structure.shortRole,
+  ...structure.functions,
 ]
 
 export const searchStructures = (rawQuery: string): StructureSearchResult[] => {
@@ -43,4 +47,23 @@ export const searchStructures = (rawQuery: string): StructureSearchResult[] => {
     })
     .filter((result): result is StructureSearchResult => result !== null)
     .sort((a, b) => b.score - a.score || a.structure.names.pl.localeCompare(b.structure.names.pl, 'pl'))
+}
+
+export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' }
+export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
+  const query = normalizeSearch(rawQuery)
+  if (!query) return []
+  const results: AtlasSearchResult[] = searchStructures(rawQuery).map(({ structure }) => ({ id: structure.id, title: structure.names.pl, subtitle: structure.names.en, to: `/struktury/${structure.slug}`, type: 'structure' }))
+  for (const path of learningPaths) for (const step of path.steps) {
+    if (normalizeSearch([path.title, step.title, step.lead, ...step.paragraphs].join(' ')).includes(query)) results.push({ id: `${path.slug}-${step.id}`, title: step.title, subtitle: path.title, to: `/nauka/${path.slug}/${step.id}`, type: 'lesson' })
+  }
+  for (const connection of connections) {
+    if (normalizeSearch(`${connection.title} ${connection.description}`).includes(query)) {
+      const path = learningPaths.find(path => path.steps.some(step => step.connectionIds.includes(connection.id)))
+      const step = path?.steps.find(step => step.connectionIds.includes(connection.id))
+      const structure = brainStructures.find(structure => structure.id === connection.sourceId)!
+      results.push({ id: connection.id, title: connection.title, subtitle: connection.kind === 'anatomical' ? 'Połączenie anatomiczne' : 'Związek funkcjonalny', to: path && step ? `/nauka/${path.slug}/${step.id}` : `/struktury/${structure.slug}?sekcja=powiazania`, type: 'connection' })
+    }
+  }
+  return results
 }

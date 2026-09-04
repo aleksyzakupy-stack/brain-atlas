@@ -6,11 +6,12 @@ import { STORAGE_KEYS } from '../app/atlasState'
 describe('interakcja z atlasem SVG', () => {
   beforeEach(() => {
     window.localStorage.setItem(STORAGE_KEYS.onboardingDismissed, 'true')
-    window.location.hash = '#/'
+    window.location.hash = '#/atlas'
   })
 
   it('otwiera kartę informacyjną po wybraniu struktury SVG', async () => {
     const { container } = render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Struktury głębokie' }))
     const amygdala = container.querySelector<SVGPathElement>('[data-structure-id="amygdala"]')
     expect(amygdala).not.toBeNull()
     fireEvent.click(amygdala!)

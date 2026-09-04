@@ -26,3 +26,8 @@ Object.defineProperty(Element.prototype, 'setPointerCapture', {
   writable: true,
   value: vi.fn(),
 })
+
+class ResizeObserverMock { observe() {} unobserve() {} disconnect() {} }
+vi.stubGlobal('ResizeObserver', ResizeObserverMock)
+
+window.scrollTo = vi.fn()

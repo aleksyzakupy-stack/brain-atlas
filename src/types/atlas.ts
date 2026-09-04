@@ -1,7 +1,7 @@
 export type TerminologyLanguage = 'pl' | 'en' | 'la'
 
-export type BrainViewId = 'lateral' | 'medial' | 'sagittal' | 'coronal'
-export type AtlasMode = 'structures' | 'circuits' | 'networks'
+export type BrainViewId = 'lateral' | 'medial' | 'deep' | 'sagittal' | 'coronal'
+export type AtlasMode = 'learning' | 'structures' | 'circuits' | 'networks'
 export type PanelState = 'collapsed' | 'medium' | 'expanded'
 
 export type OverlayLayerId =
@@ -36,6 +36,7 @@ export type Reference = {
   pmid?: string
   url?: string
   status: 'placeholder' | 'verified'
+  kind?: 'study' | 'review' | 'textbook' | 'atlas' | 'framework'
 }
 
 export type BrainStructure = {
@@ -61,6 +62,7 @@ export type BrainStructure = {
   preferredViews: BrainViewId[]
   availableViews: BrainViewId[]
   psychiatrySummary?: string
+  interpretationNote?: string
   references: Reference[]
 }
 
@@ -112,4 +114,48 @@ export type PrimarySelection =
 export type ViewportState = {
   zoom: number
   pan: { x: number; y: number }
+}
+
+export type AtlasView = 'lateral' | 'medial' | 'deep'
+
+export type Connection = {
+  id: string
+  title: string
+  sourceId: string
+  targetId: string
+  kind: 'anatomical' | 'functional'
+  directed: boolean
+  description: string
+  referenceIds: string[]
+}
+
+export type LearningStep = {
+  id: string
+  title: string
+  stage: string
+  lead: string
+  paragraphs: string[]
+  detail: { title: string; text: string }
+  takeaway: string
+  view: AtlasView
+  structureIds: string[]
+  connectionIds: string[]
+  referenceIds: string[]
+  scene: 'anatomy' | 'connections'
+}
+
+export type LearningPath = {
+  slug: string
+  title: string
+  subtitle: string
+  description: string
+  categoryId: FunctionalCategoryId
+  minutes: number
+  steps: LearningStep[]
+}
+
+export type LearningProgress = {
+  version: 1
+  lastStep: { pathSlug: string; stepId: string } | null
+  completed: Record<string, string[]>
 }
