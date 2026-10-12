@@ -1,5 +1,11 @@
 # Pochodzenie ilustracji i biblioteki
 
+## Model 3D FreeSurfer fsaverage5
+
+Interaktywny model 3D używa oryginalnych powierzchni pial obu półkul, parcellacji DK oraz struktur odtworzonych z segmentacji ASEG, pobranych z oficjalnego serwera FreeSurfer. Jest zmodyfikowaną pochodną danych FreeSurfer na warunkach [FreeSurfer Software License Agreement](./FreeSurfer-LICENSE.txt).
+
+[Pochodzenie, przekształcenia, odtwarzanie eksportu i ograniczenia modelu 3D](./BRAIN_3D_PROVENANCE.md). Sumy SHA-256 pięciu plików źródłowych i eksportu: [manifest modelu](../models/brain-provenance.json). Powierzchnie i struktury głębokie zachowują wspólny układ surface-RAS. Granice funkcjonalne są przybliżone i oddzielone od nazw oryginalnych parceli. Struktury, których źródło nie wyodrębnia, nie otrzymują sztucznych brył 3D.
+
 ## ggseg.formats / DK / aseg
 
 Repozytorium: https://github.com/ggsegverse/ggseg.formats

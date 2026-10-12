@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { lazy, Suspense, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { TransformComponent, TransformWrapper, useControls } from 'react-zoom-pan-pinch'
 import { categoryById } from '../../data/categories'
@@ -9,11 +9,23 @@ import { useReducedMotion } from '../../hooks/useReducedMotion'
 import type { AtlasView, LearningStep, TerminologyLanguage } from '../../types/atlas'
 import { getStructureName } from '../../utils/terminology'
 import { MinusIcon, PlusIcon, ResetIcon } from '../common/Icons'
+import '../../styles/brain3d.css'
+
+const Brain3DScene = lazy(() => import('./Brain3DScene'))
 
 const viewLabels: Record<AtlasView, string> = { lateral: 'Boczny', medial: 'Przyśrodkowy', deep: 'Struktury głębokie' }
 type Props = {
   view: AtlasView; onView: (view: AtlasView) => void; selectedId?: string;
   step?: LearningStep; language: TerminologyLanguage; onSelect: (id: string) => void;
+  onSelect3d?: (id: string) => void;
+}
+
+export function AtlasScene(props: Props) {
+  const [mode, setMode] = useState<'3d' | '2d'>(props.step?.scene === 'connections' ? '2d' : '3d')
+  return <div className="atlas-scene">
+    <div className="scene-mode-switch" role="group" aria-label="Rodzaj modelu"><button aria-pressed={mode === '3d'} onClick={() => setMode('3d')}>Model 3D</button><button aria-pressed={mode === '2d'} onClick={() => setMode('2d')}>Schemat 2D</button></div>
+    {mode === '3d' ? <Suspense fallback={<div className="model-message model-loading-placeholder">Ładowanie widoku 3D…</div>}><Brain3DScene selectedId={props.selectedId} highlightedIds={props.step?.structureIds} language={props.language} onSelect={props.onSelect3d ?? props.onSelect} onFallback={() => setMode('2d')} /></Suspense> : <AtlasScene2D {...props} />}
+  </div>
 }
 
 function ZoomControls({ reduced }: { reduced: boolean }) {
@@ -53,26 +65,24 @@ function ConnectionScene({ step, language, onSelect }: Pick<Props, 'language' | 
     </svg>
     {ids.map(id => <button key={id} className="network-node" data-structure-id={id}
       style={{ left: `${points[id].x / 8}%`, top: `${points[id].y / 6}%`, '--category': categoryById[structureById[id].categoryId].color } as CSSProperties}
-      onClick={() => onSelect(id)}><span className="category-dot" />{getStructureName(structureById[id], language)}<span className="node-hint">Otwórz strukturę ↗</span></button>)}
+      onClick={() => onSelect(id)}><span className="category-dot" />{getStructureName(structureById[id], language)}</button>)}
   </div>
 }
 
 function SeparateSchematic({ id, language, onSelect }: { id: string } & Pick<Props, 'language' | 'onSelect'>) {
   const groups = id === 'nucleus-accumbens' ? ['caudate', 'putamen', id] : id === 'hypothalamus' ? ['thalamus', id] : ['substantia-nigra', 'vta', 'pag', 'locus-coeruleus', 'raphe-nuclei']
   return <div className="separate-schematic">
-    <span className="eyebrow">Schemat dydaktyczny</span>
     <h2>{id === 'nucleus-accumbens' ? 'Prążkowie i jego część brzuszna' : id === 'hypothalamus' ? 'Międzymózgowie' : 'Wybrane układy pnia mózgu'}</h2>
-    <p>Układ elementów jest umowny. Schemat nie przedstawia ich kształtu, wielkości ani dokładnych granic.</p>
     <div className="schematic-nodes">{groups.map(item => <button key={item} aria-pressed={item === id} onClick={() => onSelect(item)}
       style={{ '--category': categoryById[structureById[item].categoryId].color } as CSSProperties}>
       <span className="category-dot" />{getStructureName(structureById[item], language)}
       <small>{item === 'locus-coeruleus' ? 'Most' : item === 'raphe-nuclei' ? 'Różne poziomy pnia mózgu' : ['vta', 'pag', 'substantia-nigra'].includes(item) ? 'Śródmózgowie' : structureById[item].localization}</small>
     </button>)}</div>
-    <small>Ta struktura nie ma osobnego konturu w wykorzystanej projekcji aseg. Lokalizację opisano w karcie i źródłach.</small>
+    <small>Położenie umowne</small>
   </div>
 }
 
-export function AtlasScene({ view, onView, selectedId, step, language, onSelect }: Props) {
+function AtlasScene2D({ view, onView, selectedId, step, language, onSelect }: Props) {
   const reduced = useReducedMotion()
   const [labels, setLabels] = useState(false)
   const [hovered, setHovered] = useState<string | null>(null)
@@ -91,13 +101,12 @@ export function AtlasScene({ view, onView, selectedId, step, language, onSelect 
   const pick = (id: string) => { if (!gesture.current?.moved) onSelect(id) }
 
   return <section className="scene-panel" aria-label="Interaktywny schemat mózgu">
-    <div className="scene-topline"><span>{isNetwork ? 'Jak współpracują struktury' : 'Odkrywaj anatomię'}</span><span className="scene-number">{isNetwork ? 'Schemat relacji' : 'Atlas 2D'}</span></div>
     <div className="scene-toolbar">
       <div className="view-switch" role="group" aria-label="Widok mózgu">{(Object.keys(viewLabels) as AtlasView[]).map(id =>
         <button key={id} aria-pressed={view === id && !isNetwork} onClick={() => { onView(id); setShowAnatomy(true) }}>{viewLabels[id]}</button>)}</div>
       {step?.scene === 'connections' && <button className="text-button" aria-pressed={!!isNetwork} onClick={() => setShowAnatomy(!showAnatomy)}>{isNetwork ? 'Pokaż anatomię' : 'Pokaż powiązania'}</button>}
     </div>
-    {!isNetwork && view === 'deep' && !isSeparate && <div className="projection-line"><label>Projekcja <select aria-label="Projekcja struktur głębokich" value={projection === 'deepSide' ? 'side' : 'front'} onChange={event => setDeepSide(event.target.value === 'side')} disabled={selectedId === 'cerebellum'}><option value="front">Czołowa</option><option value="side">Strzałkowa</option></select></label><span>Model atlasowy, nie obraz MR</span></div>}
+    {!isNetwork && view === 'deep' && !isSeparate && <div className="projection-line"><label>Projekcja <select aria-label="Projekcja struktur głębokich" value={projection === 'deepSide' ? 'side' : 'front'} onChange={event => setDeepSide(event.target.value === 'side')} disabled={selectedId === 'cerebellum'}><option value="front">Czołowa</option><option value="side">Strzałkowa</option></select></label></div>}
     <TransformWrapper key={`${projection}-${isNetwork}-${isSeparate ? selectedId : ''}`} minScale={1} maxScale={3.5} smooth={!reduced}
       wheel={{ activationKeys: ['Control'] }} doubleClick={{ disabled: true }} panning={{ velocityDisabled: true }}
       keyboard={{ disabled: false, animationTime: reduced ? 0 : 150 }} velocityAnimation={{ disabled: true }}
@@ -130,13 +139,11 @@ export function AtlasScene({ view, onView, selectedId, step, language, onSelect 
       </div>
     </TransformWrapper>
     <div className="scene-footnote">
-      <p>{isNetwork ? 'Położenie węzłów jest umowne. Wybierz strukturę, aby otworzyć jej kartę.' : isSeparate ? 'Uzupełniający schemat lokalizacji • opis i źródła w karcie' : view === 'deep' ? (projection === 'deepSide' ? 'Projekcja strzałkowa; przód po prawej. Zestawienie struktur obu półkul, nie pojedynczy przekrój.' : 'L / P — lewa / prawa strona według etykiet atlasu aseg. Zestawienie struktur w projekcji.') : 'Lewa półkula • projekcja atlasowa DK; wyspa i kora słuchowa są odsłonięte w modelu.'}</p>
       {!isSeparate && <div className="diagram-key">{isNetwork ? <><span><i className="line-sample" />Połączenie anatomiczne</span><span><i className="line-sample dashed" />Związek funkcjonalny</span></> : <><span><i className="area-sample" />Kontur anatomiczny</span><span><i className="area-sample dashed" />Przybliżony obszar funkcjonalny</span></>}
         {!isNetwork && <button className="text-button" aria-pressed={labels} onClick={() => setLabels(!labels)}>{labels ? 'Ukryj podpisy' : 'Pokaż podpisy'}</button>}
       </div>}
       {!isNetwork && <div className="structure-chips" aria-label="Podpisy struktur">{regions.filter(region => labels || highlighted.includes(region.id) || (!highlighted.length && ['motor-cortex', 'visual-cortex', 'hippocampus', 'precuneus'].includes(region.id))).map(region => <button key={region.id} onClick={() => onSelect(region.id)} style={{ '--category': categoryById[structureById[region.id].categoryId].color } as CSSProperties}><span className="category-dot" />{getStructureName(structureById[region.id], language)}</button>)}</div>}
       {!isNetwork && highlighted.some(id => !visibleIds.has(id) && !separateSchematicIds.includes(id)) && <div className="off-view">Poza tą projekcją: {highlighted.filter(id => !visibleIds.has(id)).map(id => <button className="text-button" key={id} onClick={() => onSelect(id)}>{getStructureName(structureById[id], language)} ↗</button>)}</div>}
-      {!isNetwork && !isSeparate && <small className="gesture-hint">Przeciągnij, aby przesunąć · + / −, gest szczypania lub Ctrl + przewijanie, aby powiększyć</small>}
     </div>
   </section>
 }

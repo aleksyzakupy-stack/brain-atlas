@@ -11,6 +11,7 @@ describe('interakcja z atlasem SVG', () => {
 
   it('otwiera kartę informacyjną po wybraniu struktury SVG', async () => {
     const { container } = render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Schemat 2D' }))
     fireEvent.click(screen.getByRole('button', { name: 'Struktury głębokie' }))
     const amygdala = container.querySelector<SVGPathElement>('[data-structure-id="amygdala"]')
     expect(amygdala).not.toBeNull()
@@ -23,6 +24,7 @@ describe('interakcja z atlasem SVG', () => {
 
   it('obsługuje wybór klawiszem Enter', async () => {
     const { container } = render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Schemat 2D' }))
     const cortex = container.querySelector<SVGPathElement>('[data-structure-id="visual-cortex"]')
     expect(cortex).not.toBeNull()
     fireEvent.keyDown(cortex!, { key: 'Enter' })

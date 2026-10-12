@@ -11,13 +11,14 @@ describe('przełącznik terminologii PL / EN / LAT', () => {
 
   it('zmienia podstawową nazwę wybranej struktury bez zmiany języka interfejsu', async () => {
     const { container } = render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Schemat 2D' }))
     const prefrontalRegion = container.querySelector<SVGPathElement>('[data-structure-id="prefrontal-cortex"]')
     expect(prefrontalRegion).not.toBeNull()
     fireEvent.click(prefrontalRegion!)
 
     fireEvent.click(screen.getByRole('button', { name: 'EN' }))
     await waitFor(() => expect(screen.getAllByRole('heading', { name: 'Prefrontal cortex' }).length).toBeGreaterThan(0))
-    expect(screen.getByText('Główna rola')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: 'Lokalizacja' })).toBeInTheDocument()
 
     fireEvent.click(screen.getByRole('button', { name: 'LAT' }))
     await waitFor(() => expect(screen.getAllByRole('heading', { name: 'Cortex praefrontalis' }).length).toBeGreaterThan(0))

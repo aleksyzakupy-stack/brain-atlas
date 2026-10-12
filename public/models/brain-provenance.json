@@ -1,0 +1,167 @@
+{
+  "asset": "brain-atlas.json",
+  "outputSha256": "d0d123d1d47224337ecb3a42fd36e57e9337da471022b829c9821b98ca157b9d",
+  "sourceProject": "FreeSurfer / The General Hospital Corporation",
+  "sourceTemplate": "fsaverage5, official tutorial distribution",
+  "sources": [
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage5/surf/lh.pial",
+      "sha256": "d3e772b74f39ed7a979d78dab5b98d1fe5916f1354b52d05c23b85a8080b72bd"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage5/surf/rh.pial",
+      "sha256": "64440462e8d1cec650d100c0fb16cb4704937e19e0bc42f58997a6a09e5e536b"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage5/label/lh.aparc.annot",
+      "sha256": "74d1c2fd5e6b7ca193f06fee45a86f5638f347e38cea5ba27fce9fd69c0056be"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage5/label/rh.aparc.annot",
+      "sha256": "ca86b3b0bd5b74e367519dd94157154ae7c61ad128680fcc7b52e1a799e34e9f"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage5/mri/aseg.mgz",
+      "sha256": "f69a16aad073471cef634db1002f6cae1ef7cd9548ab1b028ca7963861f136f3"
+    }
+  ],
+  "license": "../licenses/FreeSurfer-LICENSE.txt",
+  "notice": "../licenses/BRAIN_3D_PROVENANCE.md",
+  "modified": true,
+  "coordinateSystem": "surface-RAS",
+  "voxelToSurfaceRAS": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      128.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      -128.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      128.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "processing": [
+    "Original pial vertices and triangles retained; no synthetic cortical geometry.",
+    "DK faces assigned by majority vertex annotation; three-way ties use the first vertex.",
+    "Whole-hemisphere area-weighted normals computed before splitting parcels.",
+    "ASEG binary masks Gaussian-smoothed (sigma 0.65 voxel) and tessellated at 0.5 with marching cubes step_size 2.",
+    "ASEG voxel coordinates transformed with MGH vox2ras_tkr into pial surface-RAS, without per-part centering.",
+    "Positions rounded to 0.001 mm and normals to 0.0001; faces use zero-based indices."
+  ],
+  "functionalMappings": {
+    "rostralmiddlefrontal": [
+      "dlpfc",
+      "prefrontal-cortex"
+    ],
+    "caudalmiddlefrontal": [
+      "dlpfc",
+      "prefrontal-cortex"
+    ],
+    "frontalpole": [
+      "vmpfc",
+      "prefrontal-cortex"
+    ],
+    "medialorbitofrontal": [
+      "ofc",
+      "vmpfc",
+      "prefrontal-cortex"
+    ],
+    "lateralorbitofrontal": [
+      "ofc",
+      "prefrontal-cortex"
+    ],
+    "parsorbitalis": [
+      "prefrontal-cortex"
+    ],
+    "parstriangularis": [
+      "prefrontal-cortex"
+    ],
+    "precentral": [
+      "motor-cortex"
+    ],
+    "postcentral": [
+      "somatosensory-cortex"
+    ],
+    "pericalcarine": [
+      "visual-cortex"
+    ],
+    "cuneus": [
+      "visual-cortex"
+    ],
+    "lingual": [
+      "visual-cortex"
+    ],
+    "lateraloccipital": [
+      "visual-cortex"
+    ],
+    "transversetemporal": [
+      "auditory-cortex"
+    ]
+  },
+  "anatomicalMappings": {
+    "caudalanteriorcingulate": [
+      "acc"
+    ],
+    "rostralanteriorcingulate": [
+      "acc"
+    ],
+    "posteriorcingulate": [
+      "pcc"
+    ],
+    "insula": [
+      "insula"
+    ],
+    "precuneus": [
+      "precuneus"
+    ],
+    "parahippocampal": [
+      "parahippocampal-gyrus"
+    ]
+  },
+  "unavailableStructureIds": [
+    "hypothalamus",
+    "vta",
+    "substantia-nigra",
+    "locus-coeruleus",
+    "raphe-nuclei",
+    "pag"
+  ],
+  "cortex": [
+    {
+      "hemisphere": "left",
+      "vertices": 10242,
+      "triangles": 20480,
+      "parcels": 36
+    },
+    {
+      "hemisphere": "right",
+      "vertices": 10242,
+      "triangles": 20480,
+      "parcels": 36
+    }
+  ],
+  "meshCount": 89,
+  "triangleCount": 81626,
+  "exporter": "scripts/export-brain-3d.py",
+  "dependencies": {
+    "numpy": "2.5.4",
+    "nibabel": "5.4.2",
+    "scipy": "1.18.1",
+    "scikit-image": "0.26.0"
+  }
+}

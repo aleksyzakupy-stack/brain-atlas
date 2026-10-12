@@ -1,0 +1,57 @@
+.atlas-scene { min-width: 0; }
+.scene-mode-switch { display: flex; gap: 4px; padding: 15px 22px 0; }
+.scene-mode-switch button { padding: 8px 14px; border-radius: 8px; color: var(--muted); border: 1px solid transparent; }
+.scene-mode-switch button[aria-pressed="true"] { background: #b7a5f514; border-color: #b7a5f538; color: var(--ink); }
+.brain-3d .scene-topline { padding-top: 18px; }
+.model-tools { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 20px 22px 12px; }
+.model-tools button { min-height: 36px; font-size: 12px; padding: 7px 10px; border-radius: 7px; }
+.model-tools button:disabled { opacity: .4; cursor: default; }
+.interior-toggle { border: 1px solid var(--line); color: var(--secondary); }
+.interior-toggle[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.model-hemispheres { display: flex; border: 1px solid var(--line); border-radius: 8px; }
+.model-hemispheres button[aria-pressed="true"] { color: var(--ink); background: #ffffff0d; }
+.model-hemispheres button { color: var(--muted); }
+.model-stage { position: relative; background: radial-gradient(ellipse at 50% 48%, #292634 0, #1a1a23 48%, transparent 76%); }
+.brain-3d-host { width: 100%; height: clamp(340px, 51vh, 570px); }
+.brain-3d-canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; outline-offset: -3px; }
+.brain-3d-canvas:active { cursor: grabbing; }
+.model-badge { position: absolute; left: 22px; top: 8px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); pointer-events: none; }
+.model-presets { position: absolute; right: 20px; top: 0; display: flex; gap: 2px; }
+.model-presets button { font-size: 11px; padding: 8px 10px; color: var(--secondary); border-radius: 6px; background: #181b22cc; }
+.model-presets button:hover { background: #35323f; }
+.model-stage .zoom-controls { bottom: 82px; }
+.model-caption { position: absolute; bottom: 10px; left: 22px; right: 22px; pointer-events: none; display: flex; align-items: flex-start; gap: 9px; font-size: 14px; line-height: 1.4; background: #181b22e8; border: 1px solid #ffffff0b; padding: 12px 14px; border-radius: 10px; }
+.model-caption .category-dot { margin-top: 5px; flex-shrink: 0; }
+.model-caption small { display: block; color: var(--muted); margin-top: 3px; font-size: 11px; }
+.model-message { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 35px; color: var(--secondary); }
+.model-message p { max-width: 400px; font-size: 13px; line-height: 1.7; }
+.model-message strong { color: var(--ink); font-size: 17px; }
+.model-loading-placeholder { position: relative; min-height: 420px; }
+.model-loading { width: 36px; height: 36px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: model-load 1.2s linear infinite; }
+@keyframes model-load { to { transform: rotate(360deg); } }
+.model-bottom { padding: 4px 22px 20px; }
+.hemisphere-spacing { display: flex; align-items: center; gap: 12px; font-size: 11px; color: var(--secondary); margin: 8px 0 16px; }
+.hemisphere-spacing input { flex: 1; width: 0; min-width: 45px; accent-color: var(--accent); }
+.hemisphere-spacing span { min-width: 63px; color: var(--muted); font-size: 10px; }
+.model-selection { display: flex; align-items: center; gap: 12px; font-size: 11px; color: var(--muted); }
+.model-selection select { flex: 1; min-width: 0; width: 100px; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); font-size: 12px; }
+.model-source { font-size: 10px; color: var(--muted); line-height: 1.65; margin: 15px 0 6px; }
+.model-source a { color: var(--secondary); white-space: nowrap; }
+.model-notice { font-size: 12px; line-height: 1.65; color: var(--secondary); padding-left: 10px; border-left: 2px solid var(--accent); }
+.model-bottom .gesture-hint { font-size: 10px; }
+@media (max-width: 640px) {
+  .scene-mode-switch { padding: 12px 16px 0; }
+  .model-tools { padding: 16px 16px 12px; }
+  .brain-3d-host { height: 380px; height: clamp(340px, 50svh, 450px); }
+  .model-caption { left: 12px; right: 12px; }
+  .model-badge { left: 16px; font-size: 9px; }
+  .model-presets { right: 12px; }
+  .model-presets button { padding: 7px; }
+  .model-bottom { padding: 4px 16px 20px; }
+  .model-selection { flex-direction: column; align-items: stretch; gap: 6px; }
+  .model-selection select { width: 100%; font-size: 16px; }
+  .model-tools button { min-height: 40px; }
+  .model-stage .zoom-controls button { min-width: 40px; min-height: 40px; }
+  .model-message { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .model-loading { animation: none; } }

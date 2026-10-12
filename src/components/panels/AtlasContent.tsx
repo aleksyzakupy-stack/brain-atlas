@@ -21,7 +21,6 @@ export function Sources({ references }: { references: Reference[] }) {
 export function LessonContent({ path, step, language, onSelect }: { path: LearningPath; step: LearningStep; language: TerminologyLanguage; onSelect: (id: string) => void }) {
   const currentConnections = connections.filter(connection => step.connectionIds.includes(connection.id))
   return <article className="reading-content" style={{ '--category': categoryById[path.categoryId].color } as CSSProperties}>
-    <span className="eyebrow">{step.stage} · {path.steps.indexOf(step) + 1} z 6</span>
     <h1 tabIndex={-1}>{step.title}</h1>
     <p className="reading-lead">{step.lead}</p>
     {step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
@@ -48,26 +47,20 @@ export function StructureContent({ structure, language, onSelect, returnTo }: { 
   }
   return <article className="reading-content structure-content" style={{ '--category': category.color } as CSSProperties}>
     {returnTo && <Link className="return-link" to={returnTo}>← Wróć do lekcji</Link>}
-    <span className="eyebrow"><span className="category-dot" />{category.label}</span>
     <h1>{getStructureName(structure, language)}</h1>
-    <p className="anatomical-name">{language === 'en' ? structure.names.la : structure.names.en}{structure.names.abbreviation ? ` · ${structure.names.abbreviation}` : ''}</p>
     <div className="card-tabs" role="tablist" aria-label="Informacje o strukturze">{cardTabs.map((name, index) => <button key={name} role="tab" id={`structure-tab-${index}`} aria-selected={tab === index} aria-controls="structure-tab-content" tabIndex={tab === index ? 0 : -1} onClick={() => setTab(index)} onKeyDown={event => switchTab(event, index)}>{name}</button>)}</div>
     <div role="tabpanel" id="structure-tab-content" aria-labelledby={`structure-tab-${tab}`} tabIndex={0}>
       {tab === 0 && <>
-        <h2>Główna rola</h2><p className="reading-lead">{structure.shortRole}</p>
-        <h2>Gdzie się znajduje</h2><p>{structure.localization}</p>
-        <h2>W czym uczestniczy</h2><ul className="function-list">{structure.functions.map(item => <li key={item}>{item}</li>)}</ul>
-        {(functionalReferenceIds[structure.id] || separateSchematicIds.includes(structure.id)) && <p className="interpretation">{separateSchematicIds.includes(structure.id) ? 'Ilustracja jest odrębnym schematem dydaktycznym. Ta struktura nie ma osobnego konturu w wykorzystanej geometrii aseg.' : 'Przerywany obrys to orientacyjna nakładka dydaktyczna. Granice funkcjonalne nie są tożsame z parcelami anatomicznymi DK.'}</p>}
-        {structure.id === 'striatum' && <p className="interpretation">Zaznaczono część grzbietową: jądro ogoniaste i skorupę. Część brzuszną omawia osobna karta jądra półleżącego.</p>}
-        <details className="source-details"><summary>Podstawa opisu i ilustracji</summary><Sources references={references} /></details>
+        <p className="reading-lead">{structure.shortRole}</p>
+        <h2>Lokalizacja</h2><p>{structure.localization}</p>
+        <h2>Funkcje</h2><ul className="function-list">{structure.functions.map(item => <li key={item}>{item}</li>)}</ul>
       </>}
       {tab === 1 && <>
-        <h2>W kontekście układu</h2><p>Powiązanie funkcjonalne nie jest dowodem bezpośredniego połączenia anatomicznego.</p>
         {relatedConnections.map(connection => <section className="connection-card" key={connection.id}><span className="eyebrow">{connection.kind === 'anatomical' ? 'Anatomia' : 'Funkcja'}{connection.directed ? ' · kierunek udokumentowany' : ''}</span><h3>{connection.title}</h3><p>{connection.description}</p><Sources references={resolveReferences(connection.referenceIds)} /></section>)}
         <h2>Struktury do porównania</h2><div className="related-links">{structure.relatedStructureIds.filter(id => structureById[id]).map(id => <button key={id} onClick={() => onSelect(id)}>{getStructureName(structureById[id], language)} <span>↗</span></button>)}</div>
       </>}
-      {tab === 2 && <><h2>Od anatomii do rozumienia objawów</h2><p>{structure.psychiatrySummary}</p><p className="interpretation">{structure.interpretationNote}</p><Sources references={structure.references} />{paths.length > 0 && <><h2>Prześledź cały mechanizm</h2><div className="related-links">{paths.map(path => <Link key={path.slug} to={lessonUrl(path.slug, path.steps[0].id)}>{path.title} <span>→</span></Link>)}</div></>}</>}
-      {tab === 3 && <><h2>Bibliografia i pochodzenie</h2><Sources references={references} /><p className="interpretation">Kontury: ggseg.formats, DK / aseg (FreeSurfer). Nakładki funkcjonalne: autorskie, o przybliżonych granicach. Opis i bibliografia nie oznaczają zewnętrznej recenzji klinicznej.</p><a href={`${import.meta.env.BASE_URL}licenses/THIRD_PARTY_NOTICES.md`} target="_blank" rel="noreferrer">Pochodzenie danych i licencje ↗</a></>}
+      {tab === 2 && <><p>{structure.psychiatrySummary}</p><p className="interpretation">{structure.interpretationNote}</p><Sources references={structure.references} />{paths.length > 0 && <><h2>Trasy nauki</h2><div className="related-links">{paths.map(path => <Link key={path.slug} to={lessonUrl(path.slug, path.steps[0].id)}>{path.title} <span>→</span></Link>)}</div></>}</>}
+      {tab === 3 && <><Sources references={references} /><p className="interpretation">Model 3D: FreeSurfer fsaverage5, powierzchnie pial, DK i aseg. Kontury 2D: ggseg.formats. Przypisania funkcjonalne: dydaktyczne, o przybliżonych granicach. Powiązanie funkcjonalne nie oznacza bezpośredniego połączenia anatomicznego.</p>{separateSchematicIds.includes(structure.id) && <p>W 2D tę strukturę przedstawia schemat o umownym położeniu elementów.</p>}{structure.id === 'striatum' && <p>Model 3D prążkowia obejmuje jądro ogoniaste, skorupę i jądro półleżące. W schemacie 2D zaznaczono część grzbietową: jądro ogoniaste i skorupę.</p>}<a href={`${import.meta.env.BASE_URL}licenses/THIRD_PARTY_NOTICES.md`} target="_blank" rel="noreferrer">Pochodzenie danych i licencje ↗</a></>}
     </div>
   </article>
 }

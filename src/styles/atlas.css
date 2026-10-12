@@ -57,7 +57,7 @@ kbd { font: 12px var(--font-sans); border: 1px solid var(--line); border-radius:
 .atlas-workspace { display: grid; grid-template-columns: 240px minmax(0, 1fr) 380px; height: calc(100dvh - 144px); min-height: 620px; }
 .atlas-workspace.is-learning { height: calc(100dvh - 234px); min-height: 590px; }
 .workspace-sidebar { padding: 28px 18px; border-right: 1px solid var(--line); overflow-y: auto; scrollbar-width: thin; }
-.workspace-sidebar h2, .directory-drawer h2 { font-size: 22px; margin-top: 10px; }
+.workspace-sidebar h2, .directory-drawer h2 { font-size: 22px; margin: 0 0 22px; }
 .sidebar-subtitle { color: var(--muted); font-size: 14px; margin: 9px 0 26px; }
 .back-to-paths { display: block; font-size: 14px; margin: 0 0 24px; color: var(--secondary); }
 .step-list { display: flex; flex-direction: column; gap: 5px; }
@@ -84,7 +84,7 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 .scene-panel { min-width: 0; }
 .scene-topline { display: flex; align-items: center; justify-content: space-between; padding: 24px 24px 16px; gap: 15px; color: var(--secondary); font-size: 14px; }
 .scene-number { color: var(--muted); font-size: 13px; }
-.scene-toolbar { padding: 0 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.scene-toolbar { padding: 16px 20px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .view-switch { background: #20232c; padding: 3px; display: flex; border-radius: 8px; max-width: 100%; }
 .view-switch button { padding: 7px 13px; min-height: 38px; border-radius: 6px; font-size: 13px; color: var(--secondary); }
 .view-switch button[aria-pressed="true"] { background: #393344; color: #f3edff; box-shadow: 0 1px 3px #0003; }
@@ -302,7 +302,7 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
   .atlas-workspace, .atlas-workspace.is-learning { min-height: 0; }
   .workspace-scene .brain-transform { justify-content: center; }
   .workspace-scene .brain-transform-content { max-width: min(100%, max(340px, calc((100dvh - 445px) * 1.333))); }
-  .home-intro > div:first-child { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, 310px); gap: 0 50px; width: 100%; }
+  .home-intro > div:first-child { display: block; }
   .home-intro > div:first-child > .eyebrow { grid-column: 1; }
   .home-intro > div:first-child > h1 { grid-column: 1; font-size: 46px; }
   .home-intro > div:first-child > p { grid-column: 2; grid-row: 1 / 3; align-self: center; margin: 0; }

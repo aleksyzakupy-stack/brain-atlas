@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
 import { App } from '../app/App'
 import { STORAGE_KEYS } from '../app/atlasState'
@@ -11,6 +11,7 @@ describe('bezpośrednie trasy struktur', () => {
   it('wybiera strukturę po otwarciu jej adresu hash', async () => {
     window.location.hash = '#/struktury/hipokamp'
     render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: 'Schemat 2D' }))
 
     await waitFor(() => {
       expect(screen.getAllByRole('button', { name: 'Hipokamp' }).find(element => element.tagName.toLowerCase() === 'path')).toHaveAttribute('aria-pressed', 'true')

@@ -10,8 +10,8 @@ export const learningPaths: LearningPath[] = [
     steps: [
       step('orientacja', 'Orientacja', 'Gdzie zaczyna się pamięć?',
         'Najpierw znajdź hipokamp. Potem spójrz na jego otoczenie.',
-        ['Hipokamp leży w przyśrodkowej części płata skroniowego. Na powierzchni bocznej półkuli jest ukryty; dlatego oglądasz teraz oddzielną projekcję struktur głębokich.', 'Wybierz hipokamp na schemacie. Zwróć uwagę na ciało migdałowate w jego sąsiedztwie. Bliskość anatomiczna nie oznacza jednak identycznej funkcji.'],
-        { title: 'Jak czytać tę ilustrację?', text: 'Projekcja z atlasu aseg upraszcza przestrzenną anatomię. Nie jest pojedynczym obrazem MR ani obrazem konkretnej osoby. Kolor wiąże strukturę z tematem lekcji.' },
+        ['Hipokamp leży w przyśrodkowej części płata skroniowego. Na powierzchni bocznej półkuli jest ukryty; model 3D odsłania wnętrze, a schemat 2D pokazuje osobną projekcję struktur głębokich.', 'Wybierz hipokamp w modelu. Zwróć uwagę na ciało migdałowate w jego sąsiedztwie. Bliskość anatomiczna nie oznacza jednak identycznej funkcji.'],
+        { title: 'Jak czytać tę ilustrację?', text: 'Geometria atlasowa upraszcza anatomię. Model i projekcje nie są pojedynczym obrazem MR ani obrazem konkretnej osoby. Kolor wiąże strukturę z tematem lekcji.' },
         'Lokalizacja pomaga zrozumieć relacje; nie wyjaśnia jeszcze działania układu.', 'deep', ['hippocampus', 'amygdala'], ['anatomy', 'aseg']),
       step('struktury', 'Struktury', 'Hipokamp i jego korowe otoczenie',
         'Ślad epizodyczny łączy informację o tym, co, gdzie i kiedy się wydarzyło.',
