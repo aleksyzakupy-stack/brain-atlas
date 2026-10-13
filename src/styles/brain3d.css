@@ -118,8 +118,7 @@
 .brain-3d.is-fullscreen .model-options-panel { right: auto; left: 0; max-height: calc(100dvh - 80px); overflow-y: auto; }
 .brain-3d.is-fullscreen > .model-notice { position: absolute; bottom: 0; background: var(--bg); }
 @media (pointer: coarse) {
-  .brain-3d:not(.is-fullscreen) .brain-3d-canvas { pointer-events: none; }
-  .brain-3d:not(.is-fullscreen) .model-stage { touch-action: pan-x pan-y pinch-zoom; }
+  .brain-3d .model-stage { touch-action: none; }
   .anatomy-svg { touch-action: pan-x pan-y pinch-zoom; }
 }
 

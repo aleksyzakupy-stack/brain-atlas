@@ -407,3 +407,32 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 
 .learning-home { padding-top: 16px; }
 @media (max-width: 640px) { .learning-home { padding: 0 8px; } .home-grid { gap: 16px; } }
+
+/* Keep the mobile model in place; reading and directories scroll separately. */
+@media (max-width: 640px), (pointer: coarse) and (max-width: 1199px) {
+  html, body, #root { height: 100%; overflow: hidden; overscroll-behavior: none; }
+  .app-shell { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+  .app-shell > .app-header, .mobile-view-switch, .lesson-navigation, .lesson-return-bar { flex-shrink: 0; }
+  .learning-home { flex: 1; min-height: 0; display: flex; flex-direction: column; padding-block: 0; }
+  .home-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(230px, 1fr); grid-template-rows: minmax(0, 1fr); align-items: stretch; gap: 12px; }
+  .home-brain { min-height: 0; height: 100%; display: flex; flex-direction: column; padding-top: 0; }
+  .home-brain-caption { padding: 4px; flex-shrink: 0; }
+  .path-selection { min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+  .app-shell > .home-footer { display: none; }
+  .app-shell .atlas-workspace, .app-shell .atlas-workspace.is-learning { flex: 1; min-height: 0; height: auto; overflow: hidden; }
+  .workspace-scene { height: 100%; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+  .workspace-reading { height: 100%; min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+  .home-brain > .atlas-scene, .workspace-scene > .atlas-scene, .workspace-scene > .pathway-scene { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .atlas-scene:has(> .scene-panel), .workspace-scene > .pathway-scene:not(:has(.brain-3d)) { overflow-y: auto; overscroll-behavior: contain; }
+  .atlas-scene > .scene-panel, .pathway-graph { flex-shrink: 0; }
+  .atlas-scene > .brain-3d, .pathway-scene > .brain-3d { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .brain-3d .model-stage { flex: 1; min-height: 0; }
+  .brain-3d:not(.is-fullscreen) .brain-3d-host { height: 100% !important; }
+  .brain-3d .model-stage .zoom-controls { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); margin: 0; }
+  .brain-3d .model-stage:has(.model-caption) .zoom-controls { bottom: 82px; }
+  .pathway-heading, .pathway-controls, .pathway-key, .pathway-insight, .pathway-limit, .scenario-related, .lesson-pathway-select { flex-shrink: 0; }
+  .model-options-panel { max-height: calc(100dvh - 120px); overflow-y: auto; overscroll-behavior: contain; }
+}
+@media (max-width: 640px) {
+  .home-grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(100px, 24%); gap: 8px; }
+}
