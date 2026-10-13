@@ -6,7 +6,7 @@ import tseslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 
 export default [
-  { ignores: ['dist', 'coverage', 'output'] },
+  { ignores: ['dist', 'coverage', 'output', 'public/decoders/draco'] },
   js.configs.recommended,
   { files: ['scripts/build-neuroanatomy.mjs', 'docs/neuroanatomy/inventory.mjs'], languageOptions: { globals: globals.node } },
   {

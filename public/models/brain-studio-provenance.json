@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "created": "2026-10-14",
+  "authoring": "Blender 5.2.2 LTS",
+  "transport": "glTF 2.0 / GLB / KHR_draco_mesh_compression",
+  "source": "Existing checksum-pinned FreeSurfer fsaverage / fsaverage6, Destrieux, PALS-B12 and ASEG model exports",
+  "sourceProvenance": [
+    "brain-detailed-provenance.json",
+    "brain-high-resolution-provenance.json"
+  ],
+  "coordinates": {
+    "input": "surface-RAS millimetres",
+    "gltf": "x / 1000, z / 1000, -y / 1000; right-handed Y-up metres",
+    "runtime": "Restored to surface-RAS millimetres before atlas selection, vessel projection and pathway placement"
+  },
+  "processing": [
+    "Source triangle surfaces preserved; connectivity checked after canonicalizing identical source coordinates. No decimation, displacement, smoothing or invented anatomical subdivisions.",
+    "Compact per-parcel vertex buffers, original surface normals, atlas IDs and structure associations.",
+    "Blender-authored warm matte tissue, source sulcal vertex shading, studio lights and camera.",
+    "Draco quantization: positions 16 bits, normals 12 bits, colours 10 bits.",
+    "Runtime merges the continuous neutral cortex for rendering; parcel meshes retain selection and scientific labels."
+  ],
+  "geometryValidation": {
+    "toleranceMm": 0.02,
+    "models": [
+      {
+        "quality": "standard",
+        "triangleConnectivityPreservedAfterCoincidentVertexWeld": true,
+        "coincidentSourceVertices": 0,
+        "meshCount": 274,
+        "triangles": 701380,
+        "maxRoundTripErrorMm": 0.0021309044677764177,
+        "bytes": 2558712,
+        "sha256": "8e9965b1676aff0ce28d659efd630e2d61b10481f5eb5ec4b326dad30dab680b",
+        "sourceSha256": "8e55f740512d81f86b189d6703db6d809d732381831f4979ea5fd5bb067a1666"
+      },
+      {
+        "quality": "high",
+        "triangleConnectivityPreservedAfterCoincidentVertexWeld": true,
+        "coincidentSourceVertices": 4,
+        "meshCount": 274,
+        "triangles": 1684420,
+        "maxRoundTripErrorMm": 0.0021309044677764177,
+        "bytes": 5026756,
+        "sha256": "d8a8158ab49544cf2f6e11da4aacc93f4afc8352c2d879112e6cf672b13a1756",
+        "sourceSha256": "1cab1356159df4f2564e9c1257bb7c40146907adb2f8040bff10c8fb3f9d2a4b"
+      }
+    ]
+  },
+  "limitations": [
+    "Template anatomy, not a patient scan.",
+    "Brainstem and cerebellum detail is limited by the original ASEG segmentation; no fabricated fine nuclei or cerebellar folia.",
+    "Brodmann boundary coverage and unavailable structures are unchanged; consult source provenance.",
+    "Vessels remain an optional procedural illustration, not angiography.",
+    "Blender Cycles render and interactive WebGL lighting are separate renderers, so appearance is not pixel-identical."
+  ],
+  "scripts": [
+    "scripts/prepare-blender-atlas.py",
+    "scripts/author-brain-studio.py",
+    "scripts/verify-blender-atlas.py",
+    "scripts/export-vessel-centerlines.mjs",
+    "scripts/attach-blender-vessels.py"
+  ],
+  "license": "../licenses/FreeSurfer-LICENSE.txt",
+  "decoder": {
+    "source": "three@0.186.1/examples/jsm/libs/draco/gltf",
+    "license": "../decoders/draco/LICENSE",
+    "files": {
+      "draco_decoder.js": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
+      "draco_decoder.wasm": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+      "draco_wasm_wrapper.js": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
+    }
+  },
+  "vascularLayer": {
+    "kind": "Authored teaching reconstruction, not angiographic segmentation",
+    "centerlines": 638,
+    "highQualityTriangles": 178272,
+    "maximumDrawBatches": 14,
+    "positioning": "Surface branches projected onto source cortex; basal routes placed by anatomical landmarks. Symmetric complete Circle of Willis is one schematic variant.",
+    "fineVessels": "Enhanced-diameter pial detail with distance-dependent opacity; not a histological capillary reconstruction.",
+    "references": [
+      "https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p06_index.html",
+      "https://openstax.org/books/anatomy-and-physiology-2e/pages/13-3-circulation-and-the-central-nervous-system"
+    ],
+    "blenderScenes": [
+      "Neuroatlas_Anatomical_Studio",
+      "Neuroatlas_Color_Atlas"
+    ]
+  }
+}

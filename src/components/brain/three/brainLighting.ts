@@ -10,7 +10,7 @@ export function createBrainLighting(renderer: WebGLRenderer, scene: Scene, camer
   const composer = new EffectComposer(renderer, target)
   const renderPass = new RenderPass(scene, camera)
   const ao = new GTAOPass(scene, camera, 1, 1)
-  ao.blendIntensity = 0.65
+  ao.blendIntensity = 0.45
   ao.updateGtaoMaterial({ radius: 5, thickness: 1.5, distanceExponent: 1.5, distanceFallOff: 0.6, scale: 1, samples: 12, screenSpaceRadius: false })
   ao.updatePdMaterial({ radius: 3, samples: 8, rings: 2 })
   const output = new OutputPass()
@@ -24,8 +24,8 @@ export function createBrainLighting(renderer: WebGLRenderer, scene: Scene, camer
       // AO needs less resolution than the multisampled colour render.
       ao.setSize(Math.round(width), Math.round(height))
     },
-    render(opaque: boolean) {
-      ao.enabled = opaque
+    render(opaque: boolean, moving = false) {
+      ao.enabled = opaque && !moving
       composer.render()
     },
     dispose() {

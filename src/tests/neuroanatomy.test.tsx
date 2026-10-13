@@ -86,10 +86,11 @@ describe('integracja kompendium', () => {
     expect(container.querySelector('canvas')).toBeNull()
     expect(screen.getByText(prepared.entries.find(entry=>entry.id==='path-corticospinal')!.decussation!)).toBeInTheDocument()
   })
-  it('zachowuje stronę wybranego regionu w pełnym artykule', async () => {
+  it('pokazuje wspólny artykuł regionu bez podziału na półkule', async () => {
     window.location.hash='#/atlas?obszar=Right-Hippocampus'
     const {container} = render(<App />)
-    expect(await screen.findByText('Prawa półkula')).toBeInTheDocument()
+    expect(await screen.findByRole('heading',{name:'Hipokamp',level:1})).toBeInTheDocument()
+    expect(screen.queryByText('Prawa półkula')).not.toBeInTheDocument()
     await waitFor(()=>expect(container.querySelector('[data-article-id="deep-hippocampus"]')).not.toBeNull())
     await screen.findByRole('heading',{name:'Lateralizacja'})
   })

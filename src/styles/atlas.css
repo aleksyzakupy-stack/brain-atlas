@@ -89,6 +89,8 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 .view-switch button { padding: 7px 13px; min-height: 38px; border-radius: 6px; font-size: 13px; color: var(--secondary); }
 .view-switch button[aria-pressed="true"] { background: #393344; color: #f3edff; box-shadow: 0 1px 3px #0003; }
 .scene-toolbar > .text-button { margin-left: 3px; }
+.scene-toolbar .hover-highlight-toggle { margin-left: auto; padding: 7px 10px; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); font-size: 12px; }
+.scene-toolbar .hover-highlight-toggle[aria-pressed="true"] { color: var(--ink); border-color: #b7a5f565; background: #b7a5f510; }
 .projection-line { padding: 12px 24px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
 .projection-line select { font-size: 13px; padding: 4px 7px; min-height: 34px; margin-left: 6px; }
 .scene-surface { position: relative; min-width: 0; isolation: isolate; }
@@ -98,9 +100,10 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 .anatomical-layer path { fill: #363b48; stroke: #767a89; stroke-width: 1.05; stroke-linejoin: round; }
 .anatomical-layer path[data-parcel="lh_unknown"], .anatomical-layer path[data-parcel="cortex"], .anatomical-layer path[data-parcel="cortex_"] { fill: #242a35; stroke: #5c6371; }
 .teaching-region { fill: var(--category); fill-opacity: .22; stroke: var(--category); stroke-opacity: .55; stroke-width: 1.5; cursor: pointer; transition: fill-opacity .15s; }
-.teaching-region:hover, .teaching-region:focus-visible { fill-opacity: .65; stroke-opacity: 1; stroke-width: 3; outline: none; }
+.teaching-region.is-hovered, .teaching-region:focus-visible { fill-opacity: .8; stroke: #fff2da; stroke-opacity: 1; stroke-width: 3; outline: none; }
 .teaching-region.is-selected { fill-opacity: .75; stroke: #fff2da; stroke-opacity: 1; stroke-width: 2.5; }
-.teaching-region.is-context-muted, .teaching-region.is-context-muted:hover, .teaching-region.is-context-muted:focus-visible { fill: #c8a698; fill-opacity: .1; stroke: #c8a698; stroke-opacity: .18; stroke-width: 1; }
+.teaching-region.is-context-muted { fill: #c8a698; fill-opacity: .1; stroke: #c8a698; stroke-opacity: .18; stroke-width: 1; }
+.teaching-region.is-hovered, .teaching-region.is-context-muted.is-hovered, .teaching-region:focus-visible { fill: var(--category); fill-opacity: .8; stroke: #fff2da; stroke-opacity: 1; stroke-width: 3; }
 .approximate-region { stroke-dasharray: 6 5; fill-opacity: .16; }
 .orientation { pointer-events: none; position: absolute; inset: 20px 22px 18px; z-index: 1; font-size: 13px; color: var(--muted); }
 .orientation span:first-child { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
@@ -377,10 +380,9 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 .anatomical-directory details { border-bottom: 1px solid var(--line); }
 .anatomical-directory summary { font-size: 13px; padding: 14px 0; }
 .anatomical-directory summary small { float: right; color: var(--muted); font-size: 11px; }
-.region-pair { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 0; }
-.region-pair > span { font-size: 13px; line-height: 1.5; color: var(--secondary); }
-.region-pair > div { display: flex; flex-shrink: 0; }
-.region-pair button { padding: 6px 8px; min-width: 32px; font-size: 12px; color: var(--muted); border-radius: 5px; }
+.region-pair { padding: 2px 0; }
+.region-pair button { display: block; width: 100%; padding: 8px; text-align: left; font-size: 13px; color: var(--secondary); border-radius: 5px; }
+.region-pair button:hover { color: var(--ink); background: #ffffff0b; }
 .region-pair button[aria-current] { color: var(--accent); background: var(--accent-soft); }
 .directory-empty { color: var(--muted); font-size: 13px; }
 
@@ -491,7 +493,7 @@ html, body, #root { height: 100%; overflow: hidden; overscroll-behavior: none; }
 .app-shell.is-fullscreen { position: fixed; inset: 0; z-index: 40; width: 100%; height: 100dvh; background: var(--bg); }
 .app-shell.is-fullscreen > .app-header { display: none; }.workspace-fullscreen-exit { position: absolute; z-index: 16; top: 8px; left: 8px; background: #181b22b8; }
 @media (max-width:1199px) { .app-shell .atlas-workspace.atlas-with-panel { grid-template-columns: minmax(0,1fr) minmax(248px,38%); }.atlas-panel-header { padding: 8px 12px 4px; }.atlas-panel-reading { padding: 14px 12px 24px; }.atlas-panel-directory { padding-inline: 12px; } }
-@media (max-width:640px) and (orientation:portrait) { .app-shell .atlas-workspace.atlas-with-panel { grid-template-columns: minmax(0,1fr) 58%; }.atlas-panel-header { padding: 8px; gap: 2px; }.atlas-panel-header h2 { font-size: 12px; }.atlas-panel-tabs { padding-inline: 6px; gap: 0; }.atlas-panel-tabs button { padding: 5px 6px; font-size: 11px; }.atlas-panel-directory, .atlas-panel-reading { padding-inline: 10px; }.atlas-side-panel .region-pair { flex-direction: column; align-items: flex-start; gap: 2px; }.atlas-side-panel .region-pair > div { align-self: flex-end; } }
+@media (max-width:640px) and (orientation:portrait) { .app-shell .atlas-workspace.atlas-with-panel { grid-template-columns: minmax(0,1fr) 58%; }.atlas-panel-header { padding: 8px; gap: 2px; }.atlas-panel-header h2 { font-size: 12px; }.atlas-panel-tabs { padding-inline: 6px; gap: 0; }.atlas-panel-tabs button { padding: 5px 6px; font-size: 11px; }.atlas-panel-directory, .atlas-panel-reading { padding-inline: 10px; } }
 .atlas-player-slot > .pathway-player { display: flex; }
 .structure-actions { display: flex; justify-content: flex-end; margin: -6px 0 4px; }.structure-actions .icon-button { color: var(--accent); background: #ffffff06; }
 .connection-examples h1, .connection-content h1 { font-size: 23px; font-weight: 500; line-height: 1.3; }

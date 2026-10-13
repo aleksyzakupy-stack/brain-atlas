@@ -1,5 +1,5 @@
 import type { AtlasRegion } from '../../data/anatomicalAtlas'
-import { hemisphereName, regionName } from '../../data/anatomicalAtlas'
+import { regionName } from '../../data/anatomicalAtlas'
 import type { TerminologyLanguage } from '../../types/atlas'
 
 const groups = [
@@ -20,7 +20,7 @@ export function AnatomicalDirectory({ regions, selectedId, searching, language, 
       const pairs = new Map<string, AtlasRegion[]>()
       matches.forEach(region => pairs.set(region.names.pl, [...(pairs.get(region.names.pl) ?? []), region]))
       return matches.length ? <details key={kind} open={searching || matches.some(region=>region.id===selectedId) || (defaultOpen && !selectedId && kind === groups.find(([value])=>regions.some(region=>region.kind===value))?.[0])}><summary>{label}<small>{pairs.size}</small></summary>
-        {[...pairs.entries()].map(([key,pair]) => <div key={key} className="region-pair"><span>{regionName(pair[0],language)}</span><div>{pair.map(region => <button key={region.id} aria-label={`${regionName(region,language)} ${hemisphereName(region.hemisphere)}`.trim()} title={region.hemisphere === 'left' ? 'Lewa półkula' : region.hemisphere === 'right' ? 'Prawa półkula' : 'Wybierz strukturę'} aria-current={selectedId===region.id ? 'page' : undefined} onClick={()=>onSelect(region.id)}>{hemisphereName(region.hemisphere) || '↗'}</button>)}</div></div>)}
+        {[...pairs.entries()].map(([key,pair]) => <div key={key} className="region-pair"><button aria-current={pair.some(region => region.id === selectedId) ? 'page' : undefined} onClick={() => onSelect(pair[0].id)}>{regionName(pair[0],language)}</button></div>)}
       </details> : null
     })}
   </nav>

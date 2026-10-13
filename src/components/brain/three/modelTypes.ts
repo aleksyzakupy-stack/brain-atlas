@@ -18,13 +18,14 @@ export type BrainMeshData = {
 export type BrainModelData = {
   version: number
   coordinateSystem: string
+  quality?: 'standard' | 'high'
   meshes: BrainMeshData[]
   surfaces?: Record<string, { positions: number[]; normals: number[]; relief: number[] }>
 }
 
 export type Hemisphere = 'both' | 'left' | 'right'
-export type BrainLayers = { interior: boolean; hemisphere: Hemisphere; separation: number; atlas?: 'anatomy' | 'brodmann'; texture?: boolean; vessels?: boolean; colors?: boolean; labels?: boolean; isolate?: boolean; language?: 'pl' | 'en' | 'la' }
-export type CameraPreset = 'lateral' | 'front' | 'top'
+export type BrainLayers = { interior: boolean; hemisphere: Hemisphere; separation: number; atlas?: 'anatomy' | 'brodmann'; texture?: boolean; vessels?: boolean; vesselType?: 'both' | 'arteries' | 'veins'; microvessels?: boolean; colors?: boolean; labels?: boolean; isolate?: boolean; language?: 'pl' | 'en' | 'la' }
+export type CameraPreset = 'lateral' | 'right' | 'front' | 'back' | 'top' | 'bottom'
 export type HoveredParcel = { label: string; structureId?: string; hemisphere: string; regionId?: string }
 
 export const isCortex = (mesh: BrainMeshData) => mesh.kind === 'cortex' || mesh.kind === 'cortical'

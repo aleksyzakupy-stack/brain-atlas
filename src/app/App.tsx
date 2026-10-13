@@ -88,7 +88,10 @@ function Workspace() {
     const target = structureById[id]
     if (target) navigate('/struktury/'+target.slug+(circuit ? `?powrot=${encodeURIComponent('/szlaki/'+circuit.id)}` : ''))
   }
-  const readingContent = article ? <NeuroArticle key={article.id} id={article.id} language={language} fullPage /> : catalog ? <NeuroCatalog language={language} /> : guide ? <NeuroGuide /> : baDescription && baNumber ? <BrodmannPage number={baNumber} /> : structure ? <StructureContent key={structure.id} structure={structure} language={language} onSelect={select} returnTo={returnTo} /> : region ? <RegionContent region={region} language={language} onSelect={select} /> : circuit ? <PathwayContent circuit={circuit} language={language} onSelect={select} /> : !valid ? <div className="reading-content"><p>Nie znaleziono strony.</p><Link to="/">Wróć do atlasu</Link></div> : undefined
+  function clearSelection() {
+    if (selectedId) navigate(`/atlas?warstwa=${atlasMode}`)
+  }
+  const readingContent = article ? <NeuroArticle key={article.id} id={article.id} language={language} fullPage /> : catalog ? <NeuroCatalog language={language} /> : guide ? <NeuroGuide /> : baDescription && baNumber ? <BrodmannPage number={baNumber} /> : structure ? <StructureContent key={structure.id} structure={structure} language={language} onSelect={select} returnTo={returnTo} /> : region ? <RegionContent region={region} language={language} /> : circuit ? <PathwayContent circuit={circuit} language={language} onSelect={select} /> : !valid ? <div className="reading-content"><p>Nie znaleziono strony.</p><Link to="/">Wróć do atlasu</Link></div> : undefined
 
   const content = connectionFocus ? <ConnectionContent focus={connectionFocus} language={language} /> : connectionsCatalog ? <ConnectionExamples language={language} /> : readingContent && <>{connectionCandidates.length>0 && !circuit && <div className="structure-actions"><Link className="icon-button" aria-label="Połączenia struktury" title="Połączenia struktury" to={structureConnectionUrl(connectionCandidates[0],region?.id)}><ConnectionsIcon /></Link></div>}{readingContent}</>
 
@@ -102,7 +105,7 @@ function Workspace() {
     </header>
     {fullscreen && <button className="workspace-fullscreen-exit icon-button" aria-label="Zamknij pełny ekran atlasu" title="Zamknij pełny ekran" onClick={toggleFullscreen}><FullscreenIcon expanded /></button>}
     <main id="main" tabIndex={-1} className="atlas-workspace atlas-with-panel">
-      <div className="workspace-scene">{circuit ? <PathwayScene key={circuit.id} initialClinical={query.get('stan')==='schizofrenia'} circuit={circuit} language={language} onSelect={select} panelTarget={panelTarget} onRegisterPlayerCloser={registerPlayerCloser} /> : <AtlasScene view={view} onView={next=>setViewOverride({route:location.pathname,view:next})} selectedId={selectedId} highlightedIds={highlightedIds} connectionFocus={connectionFocus} language={language} atlasMode={atlasMode} onSelect={select} onSelect3d={select} />}</div>
+      <div className="workspace-scene">{circuit ? <PathwayScene key={circuit.id} initialClinical={query.get('stan')==='schizofrenia'} circuit={circuit} language={language} onSelect={select} panelTarget={panelTarget} onRegisterPlayerCloser={registerPlayerCloser} /> : <AtlasScene view={view} onView={next=>setViewOverride({route:location.pathname,view:next})} selectedId={selectedId} highlightedIds={highlightedIds} connectionFocus={connectionFocus} language={language} atlasMode={atlasMode} onSelect={select} onSelect3d={select} onClear={clearSelection} />}</div>
       <AtlasSidePanel language={language} atlasMode={atlasMode} selectedId={selectedId} route={route} content={content} onSelect={select} onBrowse={()=>playerCloser.current?.()} onAtlasMode={mode=>navigate('/atlas?warstwa='+mode)} player={<div className="atlas-player-slot" ref={setPanelTarget} />} />
     </main>
   </div>{searchOpen && <AtlasSearch onClose={closeSearch} returnTo={circuit ? '/szlaki/'+circuit.id : undefined} />}</>

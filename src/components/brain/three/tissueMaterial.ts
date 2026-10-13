@@ -12,9 +12,10 @@ export function loadTissueTexture(onLoad: () => void, onError: () => void, aniso
 
 export function createTissueMaterial(texture: Texture) {
   const material = new MeshPhysicalMaterial({
-    color: '#e2bfb1', roughness: 0.49, metalness: 0, side: DoubleSide,
-    vertexColors: true, clearcoat: 0.24, clearcoatRoughness: 0.35,
-    ior: 1.38, specularIntensity: 0.65, envMapIntensity: 0.32,
+    color: '#b7a092', roughness: 0.62, metalness: 0, side: DoubleSide,
+    vertexColors: true, clearcoat: 0.06, clearcoatRoughness: 0.48,
+    ior: 1.38, specularIntensity: 0.28, envMapIntensity: 0.22,
+    sheen: 0.12, sheenColor: '#dbb7a4', sheenRoughness: 0.85,
   })
   const detail = { value: 1 }
   material.userData.tissueDetail = detail
@@ -44,9 +45,10 @@ vec3 tissueSample(vec3 p) {
 }`)
       .replace('#include <map_fragment>', `#include <map_fragment>
 vec3 tissue = tissueSample(vTissuePosition / 32.0);
-diffuseColor.rgb *= mix(vec3(1.0), clamp(tissue * vec3(1.48, 1.85, 2.05), 0.62, 1.15), tissueDetail * 0.58);`)
+float tissueLuminance = dot(tissue, vec3(0.299, 0.587, 0.114));
+diffuseColor.rgb *= mix(1.0, clamp(tissueLuminance * 1.8, 0.82, 1.08), tissueDetail * 0.22);`)
       .replace('#include <roughnessmap_fragment>', `#include <roughnessmap_fragment>
-roughnessFactor = clamp(roughnessFactor + (tissue.g - 0.5) * tissueDetail * 0.24, 0.32, 0.9);`)
+roughnessFactor = clamp(roughnessFactor + (tissue.g - 0.5) * tissueDetail * 0.10, 0.48, 0.85);`)
       .replace('#include <normal_fragment_maps>', `#include <normal_fragment_maps>
 // Screen-space surface gradient: tiny relief, independent of UV seams.
 float tissueHeight = dot(tissue, vec3(0.299, 0.587, 0.114));
@@ -56,14 +58,14 @@ vec3 tissueR1 = cross(tissueDy, normal);
 vec3 tissueR2 = cross(normal, tissueDx);
 float tissueDet = dot(tissueDx, tissueR1);
 vec3 tissueGradient = sign(tissueDet) * (dFdx(tissueHeight) * tissueR1 + dFdy(tissueHeight) * tissueR2);
-normal = normalize(abs(tissueDet) * normal - tissueDetail * 0.045 * tissueGradient);`)
+normal = normalize(abs(tissueDet) * normal - tissueDetail * 0.014 * tissueGradient);`)
   }
-  material.customProgramCacheKey = () => 'cortical-tissue-v1'
+  material.customProgramCacheKey = () => 'blender-studio-tissue-v2'
   return material
 }
 
 export function setTissueDetail(material: MeshPhysicalMaterial, enabled: boolean) {
   material.userData.tissueDetail.value = enabled ? 1 : 0
-  material.roughness = enabled ? 0.49 : 0.78
-  material.clearcoat = enabled ? 0.24 : 0
+  material.roughness = enabled ? 0.62 : 0.78
+  material.clearcoat = enabled ? 0.06 : 0
 }

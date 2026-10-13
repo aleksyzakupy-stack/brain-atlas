@@ -2,7 +2,7 @@ import { brainStructures } from '../data/structures'
 import { connections } from '../data/connections'
 import type { BrainStructure } from '../types/atlas'
 import { normalizeSearch } from './normalizeSearch'
-import { atlasRegions, matchesRegion, regionLabel, regionUrl } from '../data/anatomicalAtlas'
+import { atlasRegions, matchesRegion, regionName, regionUrl } from '../data/anatomicalAtlas'
 import { brainCircuits } from '../data/circuits'
 import { brodmannDescriptions } from '../data/brodmann'
 import { searchNeuroEntries, neuroEntryUrl } from '../data/neuroanatomy'
@@ -62,8 +62,13 @@ export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
     if (exactBA ? description.number === Number(exactBA[1]) : normalizeSearch([description.title,description.location,...description.functions].join(' ')).includes(query)) results.push({ id: `ba-${description.number}`, title: `BA ${description.number} · ${description.title}`, subtitle: 'Funkcje i klinika', to: `/pola/${description.number}`, type: 'brodmann' })
   }
   for (const circuit of brainCircuits) if (normalizeSearch([circuit.names.pl,circuit.names.en,circuit.transmitter,circuit.summary,...circuit.nodes.map(node=>node.label)].join(' ')).includes(query)) results.unshift({id:circuit.id,title:circuit.names.pl,subtitle:circuit.names.en,to:`/szlaki/${circuit.id}`,type:'circuit'})
+  const seenRegions = new Set<string>()
   for (const region of atlasRegions) {
-    if (matchesRegion(region,rawQuery)) results.unshift({ id: region.id, title: regionLabel(region,'pl'), subtitle: region.source, to: regionUrl(region), type: 'atlas-region' })
+    const key = `${region.atlas}:${region.sourceRegion}`
+    if (matchesRegion(region,rawQuery) && !seenRegions.has(key)) {
+      seenRegions.add(key)
+      results.unshift({ id: region.id, title: regionName(region,'pl'), subtitle: region.source, to: regionUrl(region), type: 'atlas-region' })
+    }
   }
   for (const connection of connections) {
     if (normalizeSearch(`${connection.title} ${connection.description}`).includes(query)) {

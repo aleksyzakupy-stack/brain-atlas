@@ -6,14 +6,16 @@ import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js'
 import { MeshBVH } from 'three-mesh-bvh'
 import { isCortex, isLeft, isRight } from './modelTypes'
 import type { BrainLayers, BrainModelData } from './modelTypes'
+import { majorVascularRoutes } from './cerebralVascularRoutes'
 
 type Point = [number, number, number]
 type Route = { points: Point[]; radius: number; vein?: boolean }
+export type VesselCenterline = { name: string; hemisphere: string; type: 'arteries' | 'veins'; scope: string; points: number[][]; radius: number; endRadius: number }
 
 // Art-directed surface routes in surface-RAS, NOT a vessel segmentation or an
 // angiographic atlas. A separate legend makes this limitation visible to users.
 const routes: Route[] = [
-  { points: [[35, 28, -18], [54, 15, -5], [63, -9, 8], [60, -38, 21], [43, -69, 29]], radius: 0.76 },
+  { points: [[35, 2, -12], [51, -1, -1], [62, -19, 11], [57, -45, 27], [42, -67, 40]], radius: 0.95 },
   { points: [[53, 15, -5], [58, 26, 16], [45, 35, 39], [29, 29, 57]], radius: 0.53 },
   { points: [[61, -6, 7], [58, -2, 29], [43, -8, 53], [24, -18, 67]], radius: 0.56 },
   { points: [[62, -27, 16], [55, -34, 41], [37, -43, 60], [22, -54, 62]], radius: 0.46 },
@@ -50,9 +52,8 @@ function smoothSurface(points: Vector3[], center: Vector3) {
   })
 }
 
-function tube(points: Vector3[], radius: number, endRadius: number) {
+function tube(points: Vector3[], radius: number, endRadius: number, sides = 8) {
   const vertices: number[] = [], indices: number[] = []
-  const sides = 8
   const tangent = new Vector3(), radial = new Vector3(), binormal = new Vector3()
   let previousRadial = new Vector3(0, 0, 1)
   points.forEach((point, i) => {
@@ -79,19 +80,51 @@ function tube(points: Vector3[], radius: number, endRadius: number) {
   return geometry
 }
 
-export function createCorticalVessels(model: BrainModelData) {
+export function createCorticalVessels(model: BrainModelData, onCenterline?: (line: VesselCenterline) => void) {
+  const detailed = model.quality === 'high' || Object.values(model.surfaces ?? {}).some(surface => surface.positions.length > 300000)
+  const branchSegments = detailed ? 32 : 20
+  const twigSegments = detailed ? 18 : 12
+  const microSegments = detailed ? 10 : 6
   const root = new Group()
-  root.name = 'Illustrative cortical vessels'
+  root.name = 'Cerebral arteries and veins · teaching reconstruction'
   const materials = [
-    new MeshPhysicalMaterial({ color: '#973b3e', roughness: 0.4, clearcoat: 0.32, clearcoatRoughness: 0.3, metalness: 0, ior: 1.38, envMapIntensity: 0.5 }),
-    new MeshPhysicalMaterial({ color: '#54536e', roughness: 0.45, clearcoat: 0.25, clearcoatRoughness: 0.34, metalness: 0, ior: 1.38, envMapIntensity: 0.5 }),
+    new MeshPhysicalMaterial({ color: '#8e3035', roughness: 0.42, clearcoat: 0.22, clearcoatRoughness: 0.34, metalness: 0, ior: 1.38, envMapIntensity: 0.4 }),
+    new MeshPhysicalMaterial({ color: '#394f7c', roughness: 0.48, clearcoat: 0.18, clearcoatRoughness: 0.38, metalness: 0, ior: 1.38, envMapIntensity: 0.4 }),
   ]
+  const microMaterials = materials.map(material => { const copy = material.clone(); copy.transparent = true; copy.depthWrite = false; return copy })
+  let currentLayers: BrainLayers = { interior: false, hemisphere: 'both', separation: 0 }
+  let microOpacity = .6
+  const centerline = (name: string, hemisphere: string, type: number, scope: string, points: Vector3[], radius: number, endRadius: number) => {
+    onCenterline?.({ name, hemisphere, type: type ? 'veins' : 'arteries', scope, points: points.map(p => p.toArray()), radius, endRadius })
+    return tube(points, radius, endRadius, scope === 'micro' ? 5 : 8)
+  }
+  const addBucket = (geometries: BufferGeometry[], hemisphere: string, type: number, scope: string) => {
+    if (!geometries.length) return
+    const merged = mergeGeometries(geometries)
+    geometries.forEach(g => g.dispose())
+    if (!merged) return
+    const mesh = new Mesh(merged, scope === 'micro' ? microMaterials[type] : materials[type])
+    mesh.userData = { hemisphere, vesselType: type ? 'veins' : 'arteries', scope }
+    mesh.name = `${hemisphere} ${mesh.userData.vesselType} · ${scope}`
+    mesh.castShadow = scope !== 'micro'
+    mesh.receiveShadow = true
+    root.add(mesh)
+  }
   for (const sign of [-1, 1]) {
     const parcels = model.meshes.filter(m => isCortex(m) && m.atlas === 'anatomy' && (sign < 0 ? isLeft(m.hemisphere) : isRight(m.hemisphere)))
     if (!parcels.length) continue
     const geometry = new BufferGeometry()
-    geometry.setAttribute('position', new Float32BufferAttribute(parcels[0].positions, 3))
-    geometry.setIndex(parcels.flatMap(m => m.indices))
+    // Blender exports compact parcel buffers; legacy JSON shares one hemisphere.
+    const shared = parcels.every(parcel => parcel.positions === parcels[0].positions)
+    const positions = shared ? parcels[0].positions : parcels.flatMap(parcel => parcel.positions)
+    let offset = 0
+    const indices = parcels.flatMap(parcel => {
+      const result = shared ? parcel.indices : parcel.indices.map(index => index + offset)
+      offset += parcel.positions.length / 3
+      return result
+    })
+    geometry.setAttribute('position', new Float32BufferAttribute(positions, 3))
+    geometry.setIndex(indices)
     const bvh = new MeshBVH(geometry, { targetLeafSize: 12 })
     const center = new Vector3(sign * 30, -20, 15)
     const ray = new Ray()
@@ -103,13 +136,30 @@ export function createCorticalVessels(model: BrainModelData) {
       return hit ? hit.point.addScaledVector(outward, radius * 0.95 + 0.18) : p
     }
     const buckets: BufferGeometry[][] = [[], []]
+    const microBuckets: BufferGeometry[][] = [[], []]
+    const hemisphere = sign < 0 ? 'left' : 'right'
+    const surfaceRoots = new Map<number, Vector3>()
+    let middleCerebralTrunk: Vector3[] = []
     routes.forEach((route, routeIndex) => {
       const mirrored = route.points.map(([x, y, z]) => new Vector3(sign * x, y, z))
       const curve = new CatmullRomCurve3(mirrored)
-      const samples = Math.max(50, Math.ceil(curve.getLength() * 2))
+      const samples = Math.max(32, Math.ceil(curve.getLength() * (detailed ? 1.4 : 1)))
       const surfacePoints = smoothSurface(curve.getPoints(samples).map((p, i) => project(p, route.radius * (1 - i / samples * 0.75))), center)
       const bucket = buckets[route.vein ? 1 : 0]
-      bucket.push(tube(surfacePoints, route.radius, route.radius * 0.22))
+      const type = route.vein ? 1 : 0
+      surfaceRoots.set(routeIndex, surfacePoints[0])
+      bucket.push(centerline(`Surface ${routeIndex + 1}`, hemisphere, type, 'surface', surfacePoints, route.radius, route.radius * 0.22))
+      if (routeIndex === 0) middleCerebralTrunk = surfacePoints
+      else if (routeIndex < 5) {
+        // Secondary MCA trunks share the principal tree instead of beginning
+        // as disconnected decorative strokes on the convexity.
+        const destination = surfacePoints[0]
+        const origin = middleCerebralTrunk.reduce((nearest, point) => point.distanceToSquared(destination) < nearest.distanceToSquared(destination) ? point : nearest)
+        const bridge = new CatmullRomCurve3([origin, origin.clone().lerp(destination, .5), destination])
+        const join = smoothSurface(bridge.getPoints(16).map(p => project(p, route.radius)), center)
+        join[0].copy(origin); join[join.length - 1].copy(destination)
+        bucket.push(centerline(`MCA surface junction ${routeIndex}`, hemisphere, type, 'surface', join, route.radius, route.radius))
+      }
       // Branches start on their parent tube and thin towards their extremities.
       for (let branch = 0; branch < 5; branch++) {
         const t = 0.22 + branch * 0.145
@@ -123,45 +173,93 @@ export function createCorticalVessels(model: BrainModelData) {
         const end = start.clone().addScaledVector(tangent, reach * 0.65).addScaledVector(lateral, reach)
         const branchCurve = new CatmullRomCurve3([start, bend, end])
         const radius = route.radius * (1 - t * 0.65) * 0.53
-        const points = smoothSurface(branchCurve.getPoints(48).map((p, i) => project(p, radius * (1 - i / 48 * 0.82))), center)
+        const points = smoothSurface(branchCurve.getPoints(branchSegments).map((p, i) => project(p, radius * (1 - i / branchSegments * 0.82))), center)
         points[0].copy(surfacePoints[index])
-        bucket.push(tube(points, radius, 0.045))
+        bucket.push(centerline(`Surface ${routeIndex + 1} · branch ${branch + 1}`, hemisphere, type, 'surface', points, radius, 0.045))
+        // Small pial vessels follow the same measured surface. Diameters are
+        // deliberately enhanced for legibility; this is not capillary imaging.
+        for (let twigIndex = 0; twigIndex < 4; twigIndex++) {
+          const tMicro = .38 + twigIndex * .15
+          const startIndex = Math.round(tMicro * branchSegments)
+          const microStart = branchCurve.getPoint(tMicro)
+          const microLateral = lateral.clone().multiplyScalar(twigIndex % 2 ? 1 : -1)
+          const microEnd = microStart.clone().addScaledVector(tangent, 2.5 + twigIndex).addScaledVector(microLateral, 4 + (routeIndex % 3))
+          const microCurve = new CatmullRomCurve3([microStart, microStart.clone().lerp(microEnd, .45).addScaledVector(tangent, 1.2), microEnd])
+          const microPoints = smoothSurface(microCurve.getPoints(microSegments).map(p => project(p, .08)), center)
+          microPoints[0].copy(points[startIndex])
+          microBuckets[type].push(centerline(`Fine ${routeIndex + 1}.${branch + 1}.${twigIndex + 1}`, hemisphere, type, 'micro', microPoints, .12, .025))
+        }
         if (!route.vein) {
           const twigStart = branchCurve.getPoint(0.55)
           const twigEnd = twigStart.clone().addScaledVector(tangent, reach * 0.45).addScaledVector(lateral, -reach * 0.28)
           const twig = new CatmullRomCurve3([twigStart, twigStart.clone().lerp(twigEnd, 0.5).addScaledVector(out, 1), twigEnd])
-          const twigPoints = smoothSurface(twig.getPoints(24).map(p => project(p, radius * 0.38)), center)
-          twigPoints[0].copy(points[26])
-          bucket.push(tube(twigPoints, radius * 0.45, 0.035))
+          const twigPoints = smoothSurface(twig.getPoints(twigSegments).map(p => project(p, radius * 0.38)), center)
+          twigPoints[0].copy(points[Math.round(.55 * branchSegments)])
+          bucket.push(centerline(`Surface ${routeIndex + 1} · twig ${branch + 1}`, hemisphere, type, 'surface', twigPoints, radius * 0.45, 0.035))
         }
       }
     })
-    buckets.forEach((geometries, type) => {
-      const merged = mergeGeometries(geometries)
-      geometries.forEach(g => g.dispose())
-      if (!merged) return
-      const mesh = new Mesh(merged, materials[type])
-      mesh.userData.hemisphere = sign < 0 ? 'left' : 'right'
-      mesh.name = `${mesh.userData.hemisphere} ${type ? 'veins' : 'arteries'} (illustration)`
-      mesh.castShadow = true
-      mesh.receiveShadow = true
-      root.add(mesh)
+    buckets.forEach((items, type) => addBucket(items, hemisphere, type, 'surface'))
+    microBuckets.forEach((items, type) => addBucket(items, hemisphere, type, 'micro'))
+    // Connect the principal distal surface trunks to the basal circulation.
+    const feeders: [number, Point, Point][] = [
+      [0, [35, 2, -12], [40, 2, -9]],
+      [5, [3, 11, -14], [4, 35, 2]],
+      [6, [33, -52, -20], [35, -62, -17]],
+    ]
+    const links = feeders.map(([route, start, bend]) => {
+      const points = new CatmullRomCurve3([new Vector3(sign * start[0], start[1], start[2]), new Vector3(sign * bend[0], bend[1], bend[2]), surfaceRoots.get(route)!]).getPoints(24)
+      return centerline(`Cortical feeder ${route}`, hemisphere, 0, 'major', points, routes[route].radius * 1.1, routes[route].radius)
     })
+    const major = majorVascularRoutes().filter(route => route.hemisphere === hemisphere)
+    const venousLinks: [number, Point][] = [[7, [0, 17, 73]], [8, [0, -71, 57]], [9, [0, 48, 42]]]
+    const drains = venousLinks.map(([route, endpoint]) => {
+      const start = surfaceRoots.get(route)!, end = new Vector3(...endpoint)
+      const middle = start.clone().lerp(end, .5).add(new Vector3(0, 0, 2))
+      const points = new CatmullRomCurve3([start, middle, end]).getPoints(24)
+      return centerline(`Żyła mostkowa ${route}`, hemisphere, 1, 'major', points, routes[route].radius, routes[route].radius * 1.15)
+    })
+    const majorBuckets = [links, drains]
+    major.forEach(route => {
+      const points = new CatmullRomCurve3(route.points.map(p => new Vector3(...p))).getPoints(Math.max(16, route.points.length * 10))
+      majorBuckets[route.vein ? 1 : 0].push(centerline(route.name, hemisphere, route.vein ? 1 : 0, 'major', points, route.radius, route.endRadius))
+    })
+    majorBuckets.forEach((items, type) => addBucket(items, hemisphere, type, 'major'))
     geometry.dispose()
+  }
+  const midlineBuckets: BufferGeometry[][] = [[], []]
+  majorVascularRoutes().filter(route => route.hemisphere === 'midline').forEach(route => {
+    const points = new CatmullRomCurve3(route.points.map(p => new Vector3(...p))).getPoints(route.points.length * 14)
+    midlineBuckets[route.vein ? 1 : 0].push(centerline(route.name, 'midline', route.vein ? 1 : 0, 'major', points, route.radius, route.endRadius))
+  })
+  midlineBuckets.forEach((items, type) => addBucket(items, 'midline', type, 'major'))
+  const updateVisibility = () => {
+    const layers = currentLayers
+    root.visible = !!layers.vessels && !layers.isolate
+    root.children.forEach(child => {
+      const { hemisphere: side, vesselType, scope } = child.userData
+      child.visible = (layers.hemisphere === 'both' || side === layers.hemisphere || side === 'midline') &&
+        (!layers.vesselType || layers.vesselType === 'both' || vesselType === layers.vesselType) &&
+        (scope !== 'major' || layers.separation === 0) &&
+        (scope !== 'micro' || layers.microvessels !== false && microOpacity > .05)
+      child.position.x = side === 'midline' ? 0 : (side === 'left' ? -1 : 1) * layers.separation
+    })
   }
   return {
     root,
     update(layers: BrainLayers) {
-      root.visible = !!layers.vessels && !layers.interior && !layers.isolate
-      root.children.forEach(child => {
-        const side = child.userData.hemisphere
-        child.visible = layers.hemisphere === 'both' || side === layers.hemisphere
-        child.position.x = (side === 'left' ? -1 : 1) * layers.separation
-      })
+      currentLayers = layers
+      updateVisibility()
+    },
+    detail(distance: number) {
+      microOpacity = Math.max(0, Math.min(.85, (480 - distance) / 220))
+      microMaterials.forEach(material => { material.opacity = microOpacity })
+      updateVisibility()
     },
     dispose() {
       root.children.forEach(child => (child as Mesh<BufferGeometry, MeshBasicMaterial>).geometry.dispose())
       materials.forEach(material => material.dispose())
+      microMaterials.forEach(material => material.dispose())
       root.removeFromParent()
     },
   }

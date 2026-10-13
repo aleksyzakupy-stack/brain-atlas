@@ -8,9 +8,6 @@
 .model-tools button:disabled { opacity: .4; cursor: default; }
 .interior-toggle { border: 1px solid var(--line); color: var(--secondary); }
 .interior-toggle[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
-.model-hemispheres { display: flex; border: 1px solid var(--line); border-radius: 8px; }
-.model-hemispheres button[aria-pressed="true"] { color: var(--ink); background: #ffffff0d; }
-.model-hemispheres button { color: var(--muted); }
 .model-stage { position: relative; background: radial-gradient(ellipse at 50% 48%, #292634 0, #1a1a23 48%, transparent 76%); }
 .brain-3d-host { position: relative; width: 100%; height: clamp(340px, 51vh, 570px); }
 .model-layer-tools { display: flex; gap: 6px; padding: 0 22px 12px; flex-wrap: wrap; }
@@ -49,9 +46,6 @@
 .model-bottom { padding: 4px 22px 20px; }
 .model-quality { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--secondary); margin: 8px 0 12px; }
 .model-quality select { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; }
-.hemisphere-spacing { display: flex; align-items: center; gap: 12px; font-size: 11px; color: var(--secondary); margin: 8px 0 16px; }
-.hemisphere-spacing input { flex: 1; width: 0; min-width: 45px; accent-color: var(--accent); }
-.hemisphere-spacing span { min-width: 63px; color: var(--muted); font-size: 10px; }
 .model-selection { display: flex; align-items: center; gap: 12px; font-size: 11px; color: var(--muted); }
 .model-selection select { flex: 1; min-width: 0; width: 100px; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); font-size: 12px; }
 .model-source { font-size: 10px; color: var(--muted); line-height: 1.65; margin: 15px 0 6px; }
@@ -93,7 +87,6 @@
 .model-options-panel .model-tools, .model-options-panel .model-layer-tools { padding: 0; margin-bottom: 12px; gap: 6px; }
 .model-options-panel .model-presets { position: static; margin-block: 10px; }
 .model-options-panel .model-presets button { min-height: 36px; }
-.model-options-panel .hemisphere-spacing { margin-bottom: 0; }
 .brain-3d .brain-3d-host { height: clamp(390px, calc(100dvh - 165px), 820px); }
 .home-brain .brain-3d-host { height: clamp(390px, 57vh, 660px); }
 .is-learning .brain-3d .brain-3d-host { height: max(350px, calc(100dvh - 185px)); }
@@ -120,6 +113,9 @@
 @media (pointer: coarse) {
   .brain-3d .model-stage { touch-action: none; }
   .anatomy-svg { touch-action: pan-x pan-y pinch-zoom; }
+}
+@media (hover: none), (pointer: coarse) {
+  .hover-highlight-toggle { display: none !important; }
 }
 
 /* Compact controls stay in the model corner. */
@@ -155,3 +151,40 @@
   .landscape-prompt svg { width: 56px; height: 56px; transform: rotate(90deg); }
   .atlas-scene, .pathway-visual { position: relative; }
 }
+
+/* Blender studio: a grounded, quiet field with room around the whole brain. */
+.brain-3d .model-stage {
+  background: radial-gradient(ellipse at 48% 43%, #454449 0%, #303137 38%, #24262c 68%, #1e2026 100%);
+  isolation: isolate;
+}
+.brain-3d .model-stage::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, #11151a22, transparent 48%, #b3a79a0b);
+}
+.brain-3d.pathway-model .model-stage { background: radial-gradient(ellipse at 48% 45%, #323740, #20232b 72%); }
+.hemisphere-controls { padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.hemisphere-controls > div { display: flex; gap: 3px; padding: 3px; background: #ffffff06; border-radius: 7px; }
+.hemisphere-controls button { flex: 1; min-height: 34px; padding: 6px 10px; font-size: 12px; color: var(--muted); border-radius: 5px; }
+.hemisphere-controls button[aria-pressed="true"] { background: #ffffff12; color: var(--ink); }
+.hemisphere-controls label { display: flex; gap: 12px; align-items: center; font-size: 11px; color: var(--secondary); margin-top: 12px; }
+.hemisphere-controls input { flex: 1; min-width: 0; accent-color: var(--accent); }
+.hemisphere-controls small { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.model-options-panel { max-height: calc(100dvh - 135px); overflow-y: auto; }
+.orientation-compass { position: absolute; right: 10px; bottom: 12px; width: 80px; height: 80px; border: 1px solid #e2cec20c; border-radius: 50%; background: #1a1d2345; }
+.orientation-compass svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.orientation-compass line { stroke: #d1bdb1; stroke-width: 1; }
+.orientation-compass button { position: absolute; width: 23px; height: 23px; min-height: 23px; transform: translate(-50%,-50%); padding: 0; border-radius: 50%; background: #282a30; color: #e3d2c6; font-size: 10px; font-weight: 600; line-height: 23px; }
+.orientation-compass button:hover, .orientation-compass button:focus-visible { opacity: 1 !important; background: #574e49; outline: 1px solid #d1bdb1; }
+.brain-3d .model-caption { right: 104px; }
+.model-visual-modes { position: absolute; z-index: 4; left: 14px; top: 12px; display: flex; gap: 3px; padding: 3px; border: 1px solid #ffffff0e; border-radius: 8px; background: #24262bdd; backdrop-filter: blur(12px); }
+.model-visual-modes button { padding: 7px 13px; font-size: 11px; color: var(--muted); border-radius: 5px; }
+.model-visual-modes button[aria-pressed="true"] { color: #f3e7dd; background: #ffffff12; }
+.model-visual-modes button:disabled { opacity: .5; }
+.vascular-options { border-top: 1px solid var(--line); padding-top: 10px; margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+.vascular-options > div { display: flex; flex-basis: 100%; gap: 3px; }
+.vascular-options button { border: 1px solid var(--line); border-radius: 5px; color: var(--muted); padding: 7px 10px; font-size: 11px; }
+.vascular-options button[aria-pressed="true"] { color: #efc4ba; border-color: #91645f; background: #976c5915; }
+.vessel-artery { background: #af5155; }
+.vessel-vein { background: #738cc1; }
+.model-vessel-legend { bottom: 49px; left: 18px; max-width: calc(100% - 126px); }
+@media (max-width: 560px) { .model-visual-modes { top: 10px; left: 8px; } .model-visual-modes button { padding: 7px 9px; } }

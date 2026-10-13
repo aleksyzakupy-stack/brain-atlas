@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { atlasRegions, regionUrl, regionName, regionLabel } from '../../data/anatomicalAtlas'
+import { atlasRegions, regionUrl, regionName } from '../../data/anatomicalAtlas'
 import type { AtlasRegion } from '../../data/anatomicalAtlas'
 import { neuroByBrodmann, neuroByRegion } from '../../data/neuroanatomy'
 import type { TerminologyLanguage } from '../../types/atlas'
@@ -12,9 +12,9 @@ export function BrodmannArticle({ number, compact = false }: { number: number; c
 }
 export function BrodmannPage({ number }: { number: number }) {
   const regions = atlasRegions.filter(item => item.number === number && item.atlas === 'brodmann')
-  return <article className="reading-content"><h1>Pole Brodmanna {number}</h1><BrodmannArticle number={number} /><div className="related-links">{regions.map(region => <Link key={region.id} to={regionUrl(region)}>{regionLabel(region,'pl')} ↗</Link>)}</div></article>
+  return <article className="reading-content"><h1>Pole Brodmanna {number}</h1><BrodmannArticle number={number} /><div className="related-links">{regions[0] && <Link to={regionUrl(regions[0])}>Otwórz w atlasie ↗</Link>}</div></article>
 }
-export function RegionContent({ region, language, onSelect }: { region: AtlasRegion; language: TerminologyLanguage; onSelect: (id: string) => void }) {
+export function RegionContent({ region, language }: { region: AtlasRegion; language: TerminologyLanguage }) {
   const entry = neuroByRegion[region.id]
-  return <article className="reading-content">{entry && <NeuroArticle id={entry.id} title={regionName(region,language)} side={region.hemisphere} language={language} />}<div className="related-links">{atlasRegions.filter(item => item.sourceRegion === region.sourceRegion && item.id !== region.id).map(item => <button key={item.id} onClick={() => onSelect(item.id)}>{regionLabel(item,language)} ↗</button>)}</div></article>
+  return <article className="reading-content">{entry && <NeuroArticle id={entry.id} title={regionName(region,language)} language={language} />}</article>
 }

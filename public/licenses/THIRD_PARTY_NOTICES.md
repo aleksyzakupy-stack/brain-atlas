@@ -59,3 +59,10 @@ Three.js 0.186.1 (MIT): https://github.com/mrdoob/three.js — pełna licencja w
 three-mesh-bvh 0.9.16 (MIT): https://github.com/gkjohnson/three-mesh-bvh — pełna licencja w `three-mesh-bvh-MIT.txt`.
 Mikrotekstura `textures/cortex-tissue-albedo.png` powstała przez wbudowany ImageGen; nie jest fotografią preparatu ani danymi medycznymi. Prompt i pochodzenie: `textures/cortex-tissue-provenance.json`.
 Naczynia są autorską ilustracją proceduralną dopasowaną do powierzchni fsaverage, a nie segmentacją angiografii. Nie opisują indywidualnej anatomii, pełnego drzewa naczyniowego, koła Willisa ani granic unaczynienia. Czerwień i niebieskofioletowy są umownym oznaczeniem tętnic i żył.
+
+
+## Blender studio / Draco
+
+Modele `brain-studio-standard.glb` i `brain-studio-high.glb` są pochodnymi istniejących danych FreeSurfer; zachowują ich licencję. Import, materiały i eksport przygotowano w Blender 5.2.2 LTS. [Manifest konwersji i kontroli geometrii](../models/brain-studio-provenance.json).
+
+Draco (Google) jest dystrybuowany na licencji Apache 2.0. Pliki w `decoders/draco/` skopiowano bez zmian z `three@0.186.1/examples/jsm/libs/draco/gltf/`. [Pełna licencja](../decoders/draco/LICENSE), [projekt źródłowy](https://github.com/google/draco). Dekodowanie odbywa się lokalnie w przeglądarce.
