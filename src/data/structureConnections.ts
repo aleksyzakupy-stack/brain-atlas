@@ -32,3 +32,10 @@ export function connectedStructureIds(id: string) {return [...new Set(linksForSt
 export const structureConnectionUrl = (id: string, regionId?: string, hemisphere?: string) => '/polaczenia/'+id+(regionId ? '?obszar='+encodeURIComponent(regionId) : hemisphere==='left' || hemisphere==='right' ? '?strona='+hemisphere : '')
 export type StructureConnectionFocus = { rootId: string; selectionId?: string; hemisphere?: string; atlas?: 'anatomy' | 'brodmann'; links: StructureLink[] }
 export const connectionExamples = connectionExampleIds.map(id=>structureById[id])
+
+const focusCache = new Map<string,StructureConnectionFocus>()
+export function connectionFocusForStructure(rootId: string, selectionId: string | undefined, hemisphere: string | undefined, atlas: 'anatomy' | 'brodmann') {
+  const key=[rootId,selectionId,hemisphere,atlas].join(':')
+  if(!focusCache.has(key))focusCache.set(key,{rootId,selectionId,hemisphere,atlas,links:linksForStructure(rootId)})
+  return focusCache.get(key)!
+}

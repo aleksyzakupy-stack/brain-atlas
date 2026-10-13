@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { HashRouter, Link, useLocation, useMatch, useNavigate } from 'react-router-dom'
 import { AtlasScene } from '../components/brain/AtlasScene'
 import { SearchIcon, FullscreenIcon, ConnectionsIcon } from '../components/common/Icons'
@@ -22,7 +22,7 @@ import { PathwayScene } from '../components/brain/PathwayScene'
 import { PathwayContent } from '../components/panels/PathwayContent'
 import { BrodmannPage, RegionContent } from '../components/panels/BrodmannContent'
 import { ConnectionContent, ConnectionExamples } from '../components/panels/ConnectionContent'
-import { connectionExamplesForSelection, isConnectionExample, linksForStructure, connectedStructureIds, structureConnectionUrl } from '../data/structureConnections'
+import { connectionExamplesForSelection, isConnectionExample, connectionFocusForStructure, connectedStructureIds, structureConnectionUrl } from '../data/structureConnections'
 import { NeuroArticle } from '../components/neuroanatomy/NeuroArticle'
 import { NeuroCatalog } from '../components/neuroanatomy/NeuroCatalog'
 import { NeuroGuide } from '../components/neuroanatomy/NeuroGuide'
@@ -64,7 +64,7 @@ function Workspace() {
   const highlightedIds = connectionRoot ? connectedStructureIds(connectionRoot) : article ? article.projectRegionIds.length ? article.projectRegionIds : article.projectStructureIds : undefined
   const requestedConnectionSide=query.get('strona')
   const connectionSide=connectionRegion?.hemisphere ?? (requestedConnectionSide==='left' || requestedConnectionSide==='right' ? requestedConnectionSide : undefined)
-  const connectionFocus = useMemo(()=>connectionRoot ? {rootId:connectionRoot,selectionId:connectionRegion?.id,hemisphere:connectionSide,atlas:atlasMode,links:linksForStructure(connectionRoot)} : undefined,[connectionRoot,connectionRegion,atlasMode,connectionSide])
+  const connectionFocus = connectionRoot ? connectionFocusForStructure(connectionRoot,connectionRegion?.id,connectionSide,atlasMode) : undefined
   const connectionCandidates=connectionExamplesForSelection(selectedId ?? article?.projectRegionIds[0] ?? article?.projectStructureIds[0])
   const view = viewOverride?.route===location.pathname ? viewOverride.view : structure ? preferredView(structure.id) : 'lateral'
   const route = location.pathname+location.search
