@@ -8,6 +8,7 @@ import { resolveReferences } from '../../data/references'
 import { AtlasDialog } from '../layout/AtlasDialog'
 import { PathwayContent } from '../panels/PathwayContent'
 import { Sources } from '../panels/Sources'
+import { Model3DIcon, Model2DIcon } from '../common/Icons'
 import '../../styles/pathways.css'
 import '../../styles/brain3d.css'
 
@@ -54,7 +55,7 @@ export function PathwayScene({ circuit, language, onSelect, initialClinical = fa
   return <><section className="pathway-scene" aria-label="Widok szlaku" data-scenario={scenario?.id ?? 'physiology'}>
     <div className="pathway-heading"><h1>{language === 'en' ? circuit.names.en : circuit.names.pl}</h1><button className="text-button" onClick={() => setDialog('article')}>Opis szlaku ↗</button></div>
     <div className="pathway-controls">
-      <div className="scene-mode-switch" role="group" aria-label="Widok szlaku"><button aria-pressed={mode === 'anatomy'} onClick={() => setMode('anatomy')}>Szlak 3D</button><button aria-pressed={mode === 'scheme'} onClick={() => setMode('scheme')}>Schemat</button></div>
+      <div className="scene-mode-switch" role="group" aria-label="Widok szlaku"><button aria-label="Szlak 3D" title="Szlak 3D" aria-pressed={mode === 'anatomy'} onClick={() => setMode('anatomy')}><Model3DIcon /></button><button aria-label="Schemat" title="Schemat 2D" aria-pressed={mode === 'scheme'} onClick={() => setMode('scheme')}><Model2DIcon /></button></div>
       {availableScenario && <div className="scenario-switch" role="group" aria-label="Stan szlaku"><button aria-pressed={!clinical} onClick={() => setClinical(false)}>Fizjologia</button><button aria-pressed={clinical} onClick={() => setClinical(true)}>Schizofrenia</button></div>}
       <button className="playback-toggle" aria-pressed={playing} onClick={() => setPlayOverride(!playing)}>{playing ? 'Pauza' : 'Odtwórz'}</button>
       <details className="playback-options"><summary>Tempo</summary><label>Tempo animacji<select aria-label="Tempo animacji" value={speed} onChange={event => setSpeed(Number(event.target.value))}><option value={0.5}>0,5×</option><option value={1}>1×</option><option value={2}>2×</option></select></label></details>

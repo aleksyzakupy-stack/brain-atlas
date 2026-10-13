@@ -388,7 +388,7 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
   .atlas-workspace, .atlas-workspace.is-learning, .is-focused .atlas-workspace, .is-focused .atlas-workspace.is-learning { height: auto; min-height: calc(100svh - 48px); }
   .workspace-scene, .workspace-reading { overflow: visible; }
   .lesson-navigation { height: auto; min-height: 72px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
-  .brain-transform, .brain-transform-content { touch-action: pan-y pinch-zoom; }
+  .brain-transform, .brain-transform-content { touch-action: pan-x pan-y pinch-zoom; }
 }
 
 .sources-disclosure { margin: 8px 0; }
@@ -404,3 +404,6 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 @keyframes sources-reveal { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 @media (pointer: coarse) { .sources-disclosure > summary { width: 44px; min-height: 44px; } }
 @media (prefers-reduced-motion: reduce) { .sources-disclosure[open] > .sources-drawer { animation: none; } }
+
+.learning-home { padding-top: 16px; }
+@media (max-width: 640px) { .learning-home { padding: 0 8px; } .home-grid { gap: 16px; } }

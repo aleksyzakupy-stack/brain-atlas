@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { HashRouter, Link, useLocation, useMatch, useNavigate } from 'react-router-dom'
 import { AtlasScene } from '../components/brain/AtlasScene'
-import { SearchIcon, ChevronRightIcon } from '../components/common/Icons'
+import { SearchIcon } from '../components/common/Icons'
 import { AboutAtlas, AtlasDialog, AtlasSearch } from '../components/layout/AtlasDialog'
 import { AnatomicalDirectory } from '../components/layout/AnatomicalDirectory'
 import { TerminologySwitch } from '../components/layout/TerminologySwitch'
@@ -60,9 +60,6 @@ function Workspace() {
   const view = viewOverride?.route === location.pathname ? viewOverride.view : step?.view ?? (structure ? preferredView(structure.id) : 'lateral')
   const selectedId = region?.id ?? structure?.id
   const index = path && step ? path.steps.indexOf(step) : 0
-  const last = progress.lastStep
-  const lastPath = last ? learningPathBySlug[last.pathSlug] : undefined
-  const lastStep = lastPath?.steps.find(step => step.id === last?.stepId)
   const completedPath = learningPathBySlug[new URLSearchParams(location.search).get('ukonczono') ?? '']
   const showCompletion = completedPath && progress.completed[completedPath.slug]?.length === 6
   const anyModal = searchOpen || aboutOpen || drawerOpen
@@ -132,9 +129,6 @@ function Workspace() {
     {focusMode && <button className="exit-focus" onClick={() => setFocusMode(false)}>↙ Wyjdź ze skupienia</button>}
 
     {!valid ? <main className="not-found" id="main" tabIndex={-1}><span>404</span><h1>Ta ścieżka nie istnieje w atlasie.</h1><Link className="primary-button" to="/atlas">Wróć do atlasu</Link></main> : home ? <main id="main" tabIndex={-1} className="learning-home">
-      <div className="home-intro"><div><span className="home-brand">Neuroatlas</span><h1>Mózg w psychiatrii</h1></div>
-        {last && lastPath && lastStep && <Link className="resume-card" to={lessonUrl(last.pathSlug, last.stepId)}><span className="resume-symbol">↗</span><span><strong>{progress.completed[last.pathSlug]?.length === 6 ? 'Wróć do ukończonej trasy' : 'Kontynuuj naukę'}</strong><small>{lastPath.title} · {lastStep.title}</small></span><ChevronRightIcon /></Link>}
-      </div>
       {showCompletion && <div className="completion-notice" role="status">✓ Trasa „{completedPath.title}” ukończona.</div>}
       <div className="home-grid"><div className="home-brain"><AtlasScene view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} language={language} atlasMode={atlasMode} onSelect={select} onSelect3d={id => select(id, true)} /><div className="home-brain-caption"><Link to="/atlas">Otwórz pełny atlas ↗</Link></div></div>
         <section className="path-selection"><div className="section-heading"><h2>Trasy nauki</h2></div>{learningPaths.map(item => {

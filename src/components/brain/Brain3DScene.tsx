@@ -5,7 +5,7 @@ import type { AtlasMode } from '../../data/anatomicalAtlas'
 import { categoryById } from '../../data/categories'
 import type { TerminologyLanguage } from '../../types/atlas'
 import { getStructureName } from '../../utils/terminology'
-import { MinusIcon, PlusIcon, ResetIcon } from '../common/Icons'
+import { MinusIcon, PlusIcon, ResetIcon, FullscreenIcon, ViewSettingsIcon } from '../common/Icons'
 import { createBrainViewer } from './three/brainViewer'
 import type { BrainViewer, PathwayPlayback } from './three/brainViewer'
 import { isCortex } from './three/modelTypes'
@@ -45,7 +45,6 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   const [colors, setColors] = useState(false)
   const [labels, setLabels] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
-  const [touchInteractive, setTouchInteractive] = useState(false)
   const nativeFullscreen = useRef(false)
   const fullscreenButton = useRef<HTMLButtonElement>(null)
   const [isolate, setIsolate] = useState(false)
@@ -135,9 +134,9 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   useEffect(() => { viewer.current?.pathway(pathway) }, [pathway, model])
   useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: !!pathway || labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
 
-  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}${fullscreen ? ' is-fullscreen' : ''}${touchInteractive ? ' is-touch-interactive' : ''}`} aria-label="Interaktywny model mózgu 3D">
+  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}${fullscreen ? ' is-fullscreen' : ''}`} aria-label="Interaktywny model mózgu 3D">
     <details className="model-options" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
-      <summary>Widok</summary>
+      <summary aria-label="Widok" title="Widok"><ViewSettingsIcon /></summary>
       <div className="model-options-panel">
         <div className="model-tools">
           <button className="interior-toggle" disabled={!ready} aria-pressed={interior} onClick={() => setInteriorOverride({ key: selectionKey, value: !interior })}>Wnętrze</button>
@@ -155,8 +154,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
     </details>
     <div className="model-stage">
       <div className="model-display-controls">
-        {!fullscreen && <button className="model-touch-toggle" aria-pressed={touchInteractive} onClick={() => setTouchInteractive(!touchInteractive)}>{touchInteractive ? 'Przewijaj stronę' : 'Obracaj model'}</button>}
-        <button ref={fullscreenButton} className="model-fullscreen-toggle" aria-pressed={fullscreen} onClick={toggleFullscreen}>{fullscreen ? 'Zamknij pełny ekran' : 'Pełny ekran'}</button>
+        <button ref={fullscreenButton} className="model-fullscreen-toggle" aria-label={fullscreen ? 'Zamknij pełny ekran' : 'Pełny ekran'} title={fullscreen ? 'Zamknij pełny ekran' : 'Pełny ekran'} aria-pressed={fullscreen} onClick={toggleFullscreen}><FullscreenIcon expanded={fullscreen} /></button>
       </div>
       {quality !== loadedQuality && <span className="model-badge" aria-live="polite">Ładowanie {quality === 'high' ? 'HQ' : 'Standard'}…</span>}
       <div className="brain-3d-host" ref={host} aria-hidden={error ? true : undefined} />
