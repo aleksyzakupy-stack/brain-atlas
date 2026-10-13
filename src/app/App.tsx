@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { HashRouter, Link, useLocation, useMatch, useNavigate } from 'react-router-dom'
 import { AtlasScene } from '../components/brain/AtlasScene'
-import { SearchIcon } from '../components/common/Icons'
-import { AboutAtlas, AtlasDialog, AtlasSearch } from '../components/layout/AtlasDialog'
+import { SearchIcon, BrainMark, BookIcon } from '../components/common/Icons'
+import { AtlasDialog, AtlasSearch } from '../components/layout/AtlasDialog'
 import { AnatomicalDirectory } from '../components/layout/AnatomicalDirectory'
 import { TerminologySwitch } from '../components/layout/TerminologySwitch'
 import { LessonContent, StructureContent } from '../components/panels/AtlasContent'
@@ -54,7 +54,7 @@ function Workspace() {
   const { state } = useAtlas()
   const { progress, complete } = useLearningProgress(step ? path?.slug : undefined, step?.id)
   const [viewOverride, setViewOverride] = useState<{ route: string; view: AtlasView } | null>(null)
-  const [searchOpen, setSearchOpen] = useState(false), [aboutOpen, setAboutOpen] = useState(false), [drawerOpen, setDrawerOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false), [drawerOpen, setDrawerOpen] = useState(false)
   const [mobilePane, setMobilePane] = useState<'diagram' | 'description'>('diagram')
   const [category, setCategory] = useState('all')
   const [focusMode, setFocusMode] = useState(false)
@@ -62,7 +62,7 @@ function Workspace() {
   const readingKey = `${location.pathname}${location.search}`
   const hasReading = !!(step || structure || region || baDescription)
   const showReading = hasReading && closedReading !== readingKey
-  const closeSearch = useCallback(() => setSearchOpen(false), [setSearchOpen]), closeAbout = useCallback(() => setAboutOpen(false), [setAboutOpen]), closeDrawer = useCallback(() => setDrawerOpen(false), [setDrawerOpen])
+  const closeSearch = useCallback(() => setSearchOpen(false), [setSearchOpen]), closeDrawer = useCallback(() => setDrawerOpen(false), [setDrawerOpen])
   const home = location.pathname === '/'
   const valid = !!article || catalog || guide || home || location.pathname === '/atlas' || !!structure || !!step || !!circuit || !!baDescription
   const returnTo = circuit ? `/szlaki/${circuit.id}` : step && path ? lessonUrl(path.slug, step.id) : validReturnPath(new URLSearchParams(location.search).get('powrot'))
@@ -71,7 +71,7 @@ function Workspace() {
   const index = path && step ? path.steps.indexOf(step) : 0
   const completedPath = learningPathBySlug[new URLSearchParams(location.search).get('ukonczono') ?? '']
   const showCompletion = completedPath && progress.completed[completedPath.slug]?.length === 6
-  const anyModal = searchOpen || aboutOpen || drawerOpen
+  const anyModal = searchOpen || drawerOpen
   const language = state.terminologyLanguage
 
   useEffect(() => {
@@ -84,7 +84,7 @@ function Workspace() {
   }, [])
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [location.pathname])
-  useEffect(() => { document.title = `${article ? neuroEntryName(article,language) : catalog ? 'Kompendium neuroanatomii' : guide ? 'Przewodnik' : circuit?.names.pl ?? baDescription?.title ?? step?.title ?? region?.names.pl ?? structure?.names.pl ?? 'Mózg w psychiatrii'} · Neuroatlas` }, [article, catalog, guide, language, circuit?.names.pl, baDescription?.title, step?.title, structure?.names.pl, region?.names.pl])
+  useEffect(() => { document.title = `${article ? neuroEntryName(article,language) : catalog ? 'Kompendium neuroanatomii' : guide ? 'Przewodnik' : circuit?.names.pl ?? baDescription?.title ?? step?.title ?? region?.names.pl ?? structure?.names.pl ?? 'Atlas'} · Neuroatlas` }, [article, catalog, guide, language, circuit?.names.pl, baDescription?.title, step?.title, structure?.names.pl, region?.names.pl])
 
   function select(id: string, keepModel = false) {
     const parcel = atlasRegionById[id]
@@ -132,8 +132,8 @@ function Workspace() {
     <header className="app-header">
       {!home && !referencePage && <button className="directory-trigger" onClick={() => setDrawerOpen(true)} aria-label={step ? 'Kroki trasy' : circuit ? 'Lista szlaków' : 'Lista struktur'}>☰</button>}
       <nav className="mode-nav" aria-label="Główna nawigacja"><Link to="/" aria-current={home || !!step ? 'page' : undefined}>Nauka</Link><Link to="/atlas" aria-current={!home && !step && !circuit ? 'page' : undefined}>Atlas</Link><Link to="/szlaki/mesolimbic" aria-current={circuit ? 'page' : undefined}>Szlaki</Link></nav>
-      <div className="header-tools"><button className="search-trigger" onClick={() => setSearchOpen(true)} aria-label="Szukaj w atlasie" title="Szukaj (⌘K / Ctrl+K)"><SearchIcon /></button>
-        <details className="app-menu" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}><summary aria-label="Menu atlasu">⋯</summary><div className="app-menu-panel"><span>Terminologia</span><TerminologySwitch /><button onClick={event => { event.currentTarget.closest('details')!.open = false; setFocusMode(true) }}>Skupienie</button><button onClick={event => { event.currentTarget.closest('details')!.open = false; setAboutOpen(true) }}>O atlasie i źródłach</button><Link to="/kompendium" onClick={event => { event.currentTarget.closest('details')!.open = false }}>Kompendium</Link><Link to="/przewodnik" onClick={event => { event.currentTarget.closest('details')!.open = false }}>Przewodnik</Link></div></details>
+      <div className="header-tools">{hasReading && <div className="mobile-view-switch" role="group" aria-label="Widok treści"><button aria-label="Mózg" title="Mózg" aria-pressed={mobilePane === 'diagram'} onClick={() => setMobilePane('diagram')}><BrainMark /></button><button aria-label="Opis" title="Opis" aria-pressed={mobilePane === 'description'} onClick={() => {setClosedReading(null);setMobilePane('description')}}><BookIcon /></button></div>}<button className="search-trigger" onClick={() => setSearchOpen(true)} aria-label="Szukaj w atlasie" title="Szukaj (⌘K / Ctrl+K)"><SearchIcon /></button>
+        <details className="app-menu" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}><summary aria-label="Menu atlasu">⋯</summary><div className="app-menu-panel"><span>Terminologia</span><TerminologySwitch /><button onClick={event => { event.currentTarget.closest('details')!.open = false; setFocusMode(true) }}>Skupienie</button><Link to="/kompendium" onClick={event => { event.currentTarget.closest('details')!.open = false }}>Kompendium</Link><Link to="/przewodnik" onClick={event => { event.currentTarget.closest('details')!.open = false }}>Przewodnik</Link></div></details>
       </div>
     </header>
     {focusMode && <button className="exit-focus" onClick={() => setFocusMode(false)}>↙ Wyjdź ze skupienia</button>}
@@ -146,20 +146,16 @@ function Workspace() {
           return <Link className="path-card" key={item.slug} to={lessonUrl(item.slug, item.steps[0].id)} style={{ '--category': categoryById[item.categoryId].color } as CSSProperties}><div className="path-card-top"><span>{item.minutes} min</span>{done > 0 && <span className="path-done">{done}/6 ✓</span>}</div><h3>{item.title}</h3><span className="path-card-arrow" aria-hidden="true">↗</span></Link>
         })}</section></div>
     </main> : <>
-      {hasReading && <div className="mobile-view-switch" role="group" aria-label="Widok treści"><button aria-pressed={mobilePane === 'diagram'} onClick={() => setMobilePane('diagram')}>Mózg</button><button aria-pressed={mobilePane === 'description'} onClick={() => { setClosedReading(null); setMobilePane('description') }}>Opis</button></div>}
-
       <main id="main" tabIndex={-1} className={`atlas-workspace mobile-${hasReading ? mobilePane : 'diagram'} ${step ? 'is-learning' : ''} ${showReading ? '' : 'without-reading'}`}>
         <aside className="workspace-sidebar">{sidebar}</aside>
-        <div className="workspace-scene">{!showReading && hasReading && <button className="reopen-reading text-button" onClick={() => { setClosedReading(null); setMobilePane('description') }}>Pokaż opis ↗</button>}{!hasReading && !circuit && <div className="atlas-empty-heading"><h1>{atlasMode === 'brodmann' ? 'Pola Brodmanna' : 'Anatomia mózgu'}</h1></div>}{circuit ? <PathwayScene key={circuit.id} initialClinical={query.get('stan') === 'schizofrenia'} circuit={circuit} language={language} onSelect={select} /> : step?.circuitIds?.length ? <LessonPathwayScene key={`${path?.slug}-${step.id}`} ids={step.circuitIds} language={language} onSelect={select} /> : baNumber && baDescription ? <AtlasScene view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} language={language} selectedId={atlasRegions.find(item => item.number === baNumber && item.hemisphere === 'left')?.id} atlasMode="brodmann" onSelect={select} /> : <AtlasScene key={step ? `${path?.slug}-${step.id}` : 'atlas'} view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} selectedId={selectedId} step={step} language={language} atlasMode={step?.brodmannNumbers?.length ? 'brodmann' : atlasMode} onSelect={select} onSelect3d={id => select(id, true)} />}</div>
+        <div className="workspace-scene">{!showReading && hasReading && <button className="reopen-reading text-button" onClick={() => { setClosedReading(null); setMobilePane('description') }}>Pokaż opis ↗</button>}{!hasReading && !circuit && <div className="atlas-empty-heading compact-empty-heading"><h1>{atlasMode === 'brodmann' ? 'Pola Brodmanna' : 'Anatomia mózgu'}</h1></div>}{circuit ? <PathwayScene key={circuit.id} initialClinical={query.get('stan') === 'schizofrenia'} circuit={circuit} language={language} onSelect={select} /> : step?.circuitIds?.length ? <LessonPathwayScene key={`${path?.slug}-${step.id}`} ids={step.circuitIds} language={language} onSelect={select} /> : baNumber && baDescription ? <AtlasScene view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} language={language} selectedId={atlasRegions.find(item => item.number === baNumber && item.hemisphere === 'left')?.id} atlasMode="brodmann" onSelect={select} /> : <AtlasScene key={step ? `${path?.slug}-${step.id}` : 'atlas'} view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} selectedId={selectedId} step={step} language={language} atlasMode={step?.brodmannNumbers?.length ? 'brodmann' : atlasMode} onSelect={select} onSelect3d={id => select(id, true)} />}</div>
         <aside className="workspace-reading" key={location.pathname} aria-label="Opis" hidden={!showReading}><button className="close-reading" aria-label="Zamknij opis" onClick={() => { setClosedReading(readingKey); setMobilePane('diagram') }}>×</button>{baDescription && baNumber ? <BrodmannPage number={baNumber} /> : step && path ? <LessonContent path={path} step={step} language={language} onSelect={select} /> : structure ? <StructureContent key={structure.id} structure={structure} language={language} onSelect={select} returnTo={returnTo} /> : region ? <RegionContent region={region} language={language} onSelect={id => select(id,true)} /> : null}</aside>
       </main>
       {path && step && <footer className="lesson-navigation"><Link className="secondary-button" to={index === 0 ? '/' : lessonUrl(path.slug, path.steps[index - 1].id)}>← Wstecz</Link><span><strong>{index + 1} / 6</strong><small>{step.stage}</small></span><button className="primary-button" onClick={() => { complete(path.slug, step.id); navigate(index === 5 ? `/?ukonczono=${path.slug}` : lessonUrl(path.slug, path.steps[index + 1].id)) }}>{index === 5 ? 'Zakończ trasę' : 'Dalej'} →</button></footer>}
       {returnTo && !step && !circuit && <div className="lesson-return-bar"><Link to={returnTo}>← {returnTo.startsWith('/szlaki/') ? `Wróć do szlaku · ${circuitById[returnTo.split('/')[2]]?.names.pl}` : `Wróć do lekcji · ${learningPathBySlug[returnTo.split('/')[2]]?.title}`}</Link></div>}
     </>}
-    {home && <footer className="home-footer"><button className="text-button" onClick={() => setAboutOpen(true)}>O atlasie i źródłach ↗</button></footer>}
   </div>
     {searchOpen && <AtlasSearch onClose={closeSearch} returnTo={returnTo} />}
-    {aboutOpen && <AboutAtlas onClose={closeAbout} />}
     {drawerOpen && <AtlasDialog title={step ? 'Kroki trasy' : 'Struktury mózgu'} onClose={closeDrawer} className="directory-drawer">{sidebar}</AtlasDialog>}
   </>
 }

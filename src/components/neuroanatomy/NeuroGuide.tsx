@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { ReactNode } from 'react'
 import { loadNeuroGuide, loadNeuroReference } from '../../data/neuroanatomy'
+import { Sources } from '../panels/Sources'
 import type { NeuroSource } from '../../types/neuroanatomy'
 import '../../styles/neuroanatomy.css'
 function inline(text: string): ReactNode[] {
@@ -14,7 +15,7 @@ function inline(text: string): ReactNode[] {
   })
 }
 function blocks(text: string) {
-  return text.trim().split(/\n\n+/).map((block,i) => {
+  return text.trim().split(/\n\n+/).filter(block => !block.trim().startsWith('Źródła:')).map((block,i) => {
     const lines = block.split('\n')
     if (lines[0].startsWith('|')) {
       const rows = lines.filter(line => !/^\|[\s|:-]+\|$/.test(line)).map(line => line.split('|').slice(1,-1).map(cell => cell.trim()))
@@ -31,9 +32,8 @@ export function NeuroGuide() {
   useEffect(() => { let active = true; Promise.all([loadNeuroGuide(),loadNeuroReference()]).then(([markdown,reference]) => { if (active) { setData({markdown,sources:reference.sources}); setFailed(false) } }).catch(() => { if (active) setFailed(true) }); return () => { active = false } },[attempt])
   if (!data) return <p role={failed ? 'alert' : 'status'}>{failed ? <>Nie udało się wczytać przewodnika. <button onClick={() => setAttempt(value => value + 1)}>Spróbuj ponownie</button></> : 'Wczytywanie przewodnika…'}</p>
   const parts = data.markdown.split(/^## /m)
-  const title = parts[0].split('\n')[0].replace(/^# /,'')
-  const introduction = parts[0].slice(parts[0].indexOf('\n'))
-  const sections = parts.slice(1).map(part => ({title:part.split('\n')[0], text:part.slice(part.indexOf('\n'))}))
+  const headings: Record<string,string> = { 'Co właściwie przedstawia model': 'Struktury i granice', 'Pięć różnych znaczeń słowa „szlak”': 'Rodzaje szlaków', 'Dlaczego unaczynienie zmienia obraz kliniczny': 'Unaczynienie', 'Wzorce objawów: od mechanizmu do możliwej lokalizacji': 'Lokalizacja objawów' }
+  const sections = parts.slice(1).map(part => ({title:headings[part.split('\n')[0]] ?? part.split('\n')[0], text:part.slice(part.indexOf('\n'))}))
   const ids = [...data.markdown.matchAll(/#source-([\w-]+)/g)].map(match => match[1])
-  return <article className="neuro-guide"><Link to="/kompendium">← Kompendium</Link><h1>{title}</h1>{blocks(introduction)}<nav className="neuro-sections" aria-label="Sekcje przewodnika">{sections.map((section,i) => <button key={i} onClick={() => { const target = document.getElementById('guide-section-' + i) as HTMLDetailsElement; target.open = true; target.scrollIntoView({block:'start'}) }}>{section.title}</button>)}</nav>{sections.map((section,i) => <details className="neuro-section" key={i} id={'guide-section-' + i} open={i===0}><summary>{section.title}</summary>{blocks(section.text)}</details>)}<details className="neuro-section"><summary>Źródła przewodnika</summary>{data.sources.filter(source => ids.includes(source.id)).map(source => <section key={source.id} id={'guide-source-' + source.id}><h3>{source.title}</h3><p>{[source.authors,source.year,source.edition].filter(Boolean).join(' · ')}</p>{source.url && <a href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>}<p>{source.status ?? source.verificationStatus}</p><p>{source.scope}</p><p>{source.limitations}</p></section>)}</details></article>
+  return <article className="neuro-guide"><Link to="/kompendium">← Kompendium</Link><h1>Anatomia i lokalizacja kliniczna</h1>{sections.map((section,i) => <details className="neuro-section" key={i} id={'guide-section-' + i} open={i===0}><summary>{section.title}</summary>{blocks(section.text)}</details>)}<Sources references={[]}>{data.sources.filter(source => ids.includes(source.id)).map(source => <section key={source.id} id={'guide-source-' + source.id}><h3>{source.title}</h3><p>{[source.authors,source.year,source.edition].filter(Boolean).join(' · ')}</p>{source.url && <a href={source.url} target="_blank" rel="noreferrer">{source.title} ↗</a>}</section>)}</Sources></article>
 }

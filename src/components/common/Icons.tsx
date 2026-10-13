@@ -70,6 +70,13 @@ export const Model3DIcon = (props: IconProps) => <svg {...defaults} {...props}><
 export const Model2DIcon = (props: IconProps) => <svg {...defaults} {...props}><rect x="4" y="4" width="16" height="16" rx="2" /><path d="m7 15 3-4 3 2 4-6" /></svg>
 export const FullscreenIcon = ({ expanded, ...props }: IconProps & { expanded?: boolean }) => <svg {...defaults} {...props}><path d={expanded ? 'M9 3v6H3m18 0h-6V3M3 15h6v6m6 0v-6h6' : 'M9 3H3v6m12-6h6v6M3 15v6h6m6 0h6v-6'} /></svg>
 export const ViewSettingsIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M4 7h16M4 17h16M9 4v6m6 4v6" /></svg>
+export const PlayIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="m8 5 11 7-11 7Z" /></svg>
+export const PauseIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M8 5v14M16 5v14" /></svg>
+export const PreviousIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M5 5v14m14-14L8 12l11 7Z" /></svg>
+export const NextIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M19 5v14M5 5l11 7-11 7Z" /></svg>
+export const StepsIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M10 6h10M10 12h10M10 18h10" /><text x="3" y="8" fill="currentColor" stroke="none" fontSize="7">1</text><text x="3" y="14" fill="currentColor" stroke="none" fontSize="7">2</text><text x="3" y="20" fill="currentColor" stroke="none" fontSize="7">3</text></svg>
+export const BookIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M12 6c-3-3-7-3-9-2v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-2-1-6-1-9 2Zm0 0v14" /></svg>
+export const RotatePhoneIcon = (props: IconProps) => <svg {...defaults} {...props}><rect x="6" y="2" width="12" height="20" rx="2" /><path d="M2 7V3h4m16 14v4h-4M2 3l4 4m16 14-4-4" /></svg>
 
 export const BrainMark = (props: IconProps) => (
   <svg {...defaults} viewBox="0 0 32 32" {...props}>

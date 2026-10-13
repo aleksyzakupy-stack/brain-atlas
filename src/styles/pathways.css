@@ -1,100 +1,31 @@
-.lesson-pathway-select { display: flex; flex-direction: column; gap: 8px; margin: 20px 22px 0; color: var(--muted); font-size: 13px; }
-.lesson-pathway-select select { width: 100%; padding: 9px; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); color: var(--ink); }
-.pathway-signal { padding: 20px 24px 0; font-size: 14px; color: var(--secondary); }
-.pathway-animation-tools { display: flex; gap: 20px; align-items: center; padding: 12px 24px; color: var(--secondary); font-size: 12px; }
-.pathway-animation-tools button { border: 1px solid var(--line); border-radius: 7px; min-width: 85px; }
-.pathway-animation-tools label { display: flex; gap: 8px; align-items: center; }
-.pathway-animation-tools select { font-size: 12px; }
-.pathway-particle { filter: drop-shadow(0 0 6px #88d8bb80); }
-.pathway-model .brain-3d-host { height: clamp(440px, 59vh, 650px); }
+.lesson-pathway-select { display: flex; gap: 8px; align-items: center; margin: 8px 12px; color: var(--muted); font-size: 12px; }
+.lesson-pathway-select select { min-width: 0; flex: 1; }
+.pathway-scene { height: 100%; min-height: 0; display: flex; flex-direction: column; }
+.pathway-heading { padding: 8px 12px; display: flex; gap: 12px; align-items: center; flex-shrink: 0; }
+.pathway-heading h1 { font-size: 19px; font-weight: 500; margin: 0; flex: 1; }
+.pathway-controls { display: flex; gap: 2px; align-items: center; }
+.icon-button { display: grid; place-items: center; width: 34px; height: 34px; min-height: 34px; padding: 7px; border-radius: 6px; color: var(--muted); }
+.icon-button svg { width: 18px; height: 18px; }.icon-button:hover, .icon-button[aria-pressed="true"] { background: #ffffff0a; color: var(--ink); }.icon-button:disabled { opacity: .3; }
+.scenario-switch { display: flex; gap: 2px; margin-right: 8px; }.scenario-switch button { padding: 6px 8px; min-height: 32px; font-size: 11px; color: var(--muted); border-radius: 5px; }.scenario-switch button[aria-pressed="true"] { background: #ffffff0a; color: var(--ink); }.scenario-switch button:last-child[aria-pressed="true"] { color: #edb17f; }
+.pathway-body { flex: 1; min-height: 0; display: flex; overflow: hidden; }
+.pathway-visual { flex: 1; min-width: 0; position: relative; display: flex; flex-direction: column; }
+.pathway-visual > .brain-3d { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.pathway-visual > .scene-mode-switch { position: absolute; right: 46px; top: 8px; z-index: 12; padding: 0; gap: 2px; }
+.pathway-visual > .scene-mode-switch button { display: grid; place-items: center; width: 34px; height: 34px; min-height: 34px; padding: 7px; color: var(--muted); border: 0; background: #181b2280; }
+.pathway-visual .model-stage { flex: 1; min-height: 0; }.pathway-visual .brain-3d-host { height: 100% !important; }
 .pathway-3d-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-.pathway-3d-label { position: absolute; transform: translate(-50%,-50%); width: 156px; padding: 6px 9px; min-height: 34px; border: 1px solid #88d8bb65; border-radius: 7px; background: #16272bef; color: #e4f5ef; font-size: 12px; line-height: 1.35; text-align: center; pointer-events: auto; box-shadow: 0 4px 16px #0005; }
-.pathway-3d-label[hidden], .pathway-3d-labels[hidden] { display: none; }
-.pathway-3d-label[data-precision="external"] { border-style: dashed; border-color: #e3a7ce80; }
-.pathway-graph { position: relative; width: 100%; max-width: 720px; margin: 12px auto; }
-.pathway-graph svg { display: block; width: 100%; height: auto; }
-.pathway-node { position: absolute; left: 50%; transform: translate(-50%, -50%); width: 38%; min-height: 52px; }
-.pathway-node > button, .pathway-node > span { display: flex; align-items: center; justify-content: center; gap: 7px; text-align: center; width: 100%; min-height: 52px; padding: 10px 12px; border-radius: 10px; background: #242d37; border: 1px solid #5b7774; color: #e3f2ed; font-size: clamp(11px, 1.1vw, 16px); line-height: 1.3; }
-.pathway-node > button:hover { border-color: #b9ead7; background: #303e49; }
-.pathway-node button span { color: #88d8bb; }
-.pathway-key { display: flex; flex-wrap: wrap; gap: 16px; padding: 12px 24px; color: var(--secondary); font-size: 12px; }
-.pathway-key span { display: flex; align-items: center; gap: 6px; }
-.pathway-key i { width: 16px; height: 2px; }
-.pathway-limit { padding: 0 24px 24px; color: var(--muted); font-size: 12px; }
-.circuit-article + .circuit-article, .brodmann-article + .brodmann-article { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 32px; }
-.circuit-directory-group { font-size: 12px; letter-spacing: .04em; color: var(--muted); margin: 22px 8px 6px; }
-.structure-directory .text-only-ba { opacity: .8; }
-.pathway-course-links { padding-top: 20px; }
-@media (max-width: 640px) {
-  .pathway-model .brain-3d-host { height: 390px; }
-  .pathway-3d-label { width: 120px; font-size: 11px; padding: 5px 6px; }
-  .pathway-node > button, .pathway-node > span { font-size: 12px; min-height: 42px; padding: 6px; }
-  .pathway-graph text { font-size: 24px; }
-  .pathway-animation-tools select, .lesson-pathway-select select { font-size: 16px; }
-}
-
-.pathway-heading { padding: 22px 24px 8px; display: flex; gap: 16px; align-items: center; justify-content: space-between; }
-.pathway-heading h1 { font-size: 26px; font-weight: 500; }
-.pathway-heading > button { flex-shrink: 0; font-size: 13px; }
-.pathway-controls { display: flex; align-items: center; gap: 12px; padding: 4px 110px 8px 22px; flex-wrap: wrap; min-height: 52px; }
-.pathway-controls .scene-mode-switch { padding: 0; }
-.pathway-controls .scene-mode-switch button { font-size: 13px; }
-.scenario-switch { display: flex; gap: 2px; background: #ffffff05; border-radius: 7px; padding: 3px; }
-.scenario-switch button { font-size: 13px; min-height: 36px; padding: 6px 12px; color: var(--muted); border-radius: 5px; }
-.scenario-switch button[aria-pressed="true"] { background: #ffffff0c; color: var(--ink); }
-.scenario-switch button:last-child[aria-pressed="true"] { background: #edb17f1a; color: #edb17f; }
-.playback-toggle { padding: 6px 10px; min-height: 38px; color: var(--secondary); font-size: 13px; }
-.playback-options { position: relative; font-size: 12px; color: var(--muted); }
-.playback-options > summary { font-size: 12px; font-weight: 400; padding: 8px; }
-.playback-options > label { position: absolute; z-index: 12; top: 40px; right: 0; width: 170px; background: var(--panel); padding: 12px; border: 1px solid var(--line); border-radius: 8px; }
-.playback-options select { width: 100%; margin-top: 8px; }
-.pathway-scene .brain-3d .brain-3d-host { height: clamp(390px, calc(100dvh - 325px), 760px); }
-.pathway-3d-label { width: 172px; }
-.pathway-3d-label small { display: block; font-size: 11px; line-height: 1.4; margin-top: 5px; color: #edb17f; }
-.pathway-3d-label[data-change]:not([data-change=""]) { border-color: #edb17f; }
-.pathway-edge-label { position: absolute; transform: translate(-50%, -50%); background: #172522f2; border: 1px solid #88d8bb50; border-radius: 20px; min-height: 32px; min-width: 40px; padding: 4px 9px; font-size: 11px; line-height: 1.3; pointer-events: auto; box-shadow: 0 2px 12px #0006; }
-.pathway-edge-label[hidden] { display: none; }
-.pathway-key { padding-top: 6px; padding-bottom: 8px; }
-.pathway-insight { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 4px 24px 12px; padding: 12px 16px; border-left: 2px solid #88d8bb70; background: #88d8bb05; }
-.pathway-insight.is-clinical { border-color: #edb17f; background: #edb17f08; }
-.insight-kicker { display: block; font-size: 11px; color: var(--muted); margin-bottom: 5px; }
-.is-clinical .insight-kicker { color: #edb17f; }
-.pathway-insight p { font-size: 14px; line-height: 1.6; color: var(--secondary); max-width: 78ch; }
-.pathway-insight button { flex-shrink: 0; font-size: 13px; }
-.scenario-related { display: inline-block; margin: 0 24px 12px; font-size: 13px; }
-.pathway-limit { font-size: 11px; padding-bottom: 14px; }
-.pathway-dialog { max-width: 700px; }
-.pathway-dialog .reading-content { padding: 0; }
-.pathway-dialog .reading-content h3 { margin-top: 20px; }
-.pathway-dialog .connection-transmitter { color: #88d8bb; }
-.pathway-node > button, .pathway-node > span { flex-wrap: wrap; }
-.pathway-node small { display: block; flex-basis: 100%; font-size: 11px; color: #edb17f; }
-.pathway-node[data-change] > button { border-color: #edb17f; }
-.pathway-graph text[role="button"] { cursor: pointer; }
-@media (max-width: 640px) {
-  .pathway-heading { padding: 18px 16px 8px; align-items: start; }
-  .pathway-heading h1 { font-size: 21px; }
-  .pathway-heading > button { font-size: 12px; padding-top: 0; }
-  .pathway-controls { padding-left: 12px; padding-right: 82px; gap: 6px; }
-  .pathway-controls .scene-mode-switch button { padding-inline: 8px; }
-  .scenario-switch button { font-size: 12px; padding-inline: 8px; }
-  .pathway-3d-label { width: 130px; }
-  .pathway-3d-label small { font-size: 10px; }
-  .pathway-scene .brain-3d .brain-3d-host { height: clamp(370px, 56svh, 540px); }
-  .pathway-insight { margin-inline: 16px; flex-direction: column; align-items: start; gap: 3px; padding: 10px 12px; }
-  .pathway-insight p { font-size: 13px; }
-  .pathway-limit { padding-inline: 16px; }
-}
-@media (max-width: 640px) {
-  .pathway-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-rows: 42px 42px; gap: 2px 6px; padding: 0 12px 6px; min-height: 90px; }
-  .pathway-controls .scene-mode-switch { grid-column: 1; grid-row: 1; }
-  .pathway-controls .playback-toggle { grid-column: 2; grid-row: 1; }
-  .pathway-controls .playback-options { grid-column: 3; grid-row: 1; }
-  .pathway-controls .scenario-switch { grid-column: 1 / 3; grid-row: 2; justify-self: start; }
-  .pathway-scene .brain-3d .brain-3d-host { height: clamp(360px, 52svh, 440px); }
-}
-.pathway-node button > span { position: absolute; top: 3px; right: 6px; font-size: 10px; }
-.node-connections { display: flex; flex-direction: column; margin-bottom: 18px; }
-.node-connections button { text-align: left; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
-.node-connections small { display: block; margin-top: 4px; color: #88d8bb; font-size: 12px; }
-.pathway-3d-label .pathway-node-route { color: #a8cebf; font-size: 10px; margin-top: 3px; }
+.pathway-3d-label { position: absolute; transform: translate(-50%,-50%); width: 160px; padding: 7px 9px; border: 1px solid #88d8bb65; border-radius: 6px; background: #16272bef; color: #e4f5ef; font-size: 12px; line-height: 1.35; text-align: center; pointer-events: none; }
+.pathway-3d-label[hidden] { display: none; }
+.pathway-particle { filter: drop-shadow(0 0 6px #88d8bb80); }
+.pathway-graph { flex: 1; min-height: 0; width: 100%; position: relative; padding: 40px 12px 12px; overflow: hidden; }.pathway-graph svg { width: 100%; height: 100%; display: block; }.pathway-graph g[role="button"] { cursor: pointer; }
+.pathway-player { width: clamp(260px,34%,400px); flex-shrink: 0; display: flex; flex-direction: column; min-height: 0; background: var(--panel); border-left: 1px solid var(--line); }
+.pathway-player-controls { display: flex; align-items: center; gap: 2px; padding: 5px 8px; border-bottom: 1px solid var(--line); flex-shrink: 0; }.pathway-player-controls span { color: var(--muted); font-size: 11px; margin-left: auto; }
+.pathway-step-text { overflow-y: auto; overscroll-behavior: contain; padding: 14px 16px 28px; }.pathway-step-text h2 { font-size: 20px; line-height: 1.3; font-weight: 500; margin: 0 0 14px; }.pathway-step-text p { line-height: 1.65; color: var(--secondary); }
+.step-connections { font-size: 13px; padding-bottom: 12px; }.step-connections small { display: block; font-size: 11px; color: #88d8bb; margin-top: 5px; }.step-connections p { margin-bottom: 10px; }.step-end { font-size: 11px; color: var(--muted); }
+.pathway-dialog { max-width: 700px; }.pathway-dialog .reading-content { padding: 0; }.pathway-dialog .reading-content h3 { margin: 16px 0; }
+.circuit-directory-group { font-size: 12px; color: var(--muted); margin: 22px 8px 6px; }
+.circuit-article + .circuit-article, .brodmann-article + .brodmann-article { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 24px; }
+@media (max-width:1199px) and (orientation:landscape) { .pathway-heading h1 { font-size: 16px; }.pathway-player { width: 38%; min-width: 240px; }.pathway-step-text { padding: 12px; }.pathway-step-text h2 { font-size: 18px; }.pathway-step-text .neuro-section p { font-size: 14px; }.pathway-step-text .neuro-section > summary { padding: 10px 0; font-size: 13px; } }
+@media (max-width:640px) and (orientation:portrait) { .pathway-heading { flex-wrap: wrap; gap: 4px; }.pathway-heading h1 { width: 100%; flex-basis: 100%; font-size: 17px; }.pathway-controls { margin-left: auto; }.pathway-player { display: none; } }
+.step-transmitter { display: block; font-size: 11px; color: #88d8bb; margin: -6px 0 16px; }
+.step-connections { display: flex; flex-direction: column; gap: 4px; }.step-connections button { text-align: left; padding: 8px 0; font-size: 13px; color: var(--secondary); }

@@ -1,6 +1,6 @@
 import {
   ACESFilmicToneMapping, AmbientLight, Box3, BufferGeometry, Color, DirectionalLight, PCFShadowMap, PMREMGenerator, SRGBColorSpace,
-  Float32BufferAttribute, Group, HemisphereLight, Mesh, MeshPhysicalMaterial,
+  TOUCH, Float32BufferAttribute, Group, HemisphereLight, Mesh, MeshPhysicalMaterial,
   PerspectiveCamera, Raycaster, Scene, Spherical, Vector2, Vector3, WebGLRenderer,
 } from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
@@ -36,7 +36,7 @@ export type BrainViewer = {
   dispose: () => void
 }
 
-export type PathwayPlayback = { circuit: BrainCircuit; playing: boolean; speed: number; scenario?: PathwayScenario; onEdgePick?: (index: number) => void; onNodePick?: (id: string) => void }
+export type PathwayPlayback = { circuit: BrainCircuit; playing: boolean; speed: number; scenario?: PathwayScenario; onEdgePick?: (index: number) => void; onNodePick?: (id: string) => void; activeNodeId?: string }
 
 export function createBrainViewer(host: HTMLElement, data: BrainModelData, options: Options): BrainViewer {
   const renderer = new WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
@@ -76,6 +76,9 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   controls.enableDamping = !reducedMotion.matches
   controls.dampingFactor = 0.09
   controls.enablePan = true
+  controls.enableRotate = true
+  controls.touches.ONE = TOUCH.ROTATE
+  controls.touches.TWO = TOUCH.DOLLY_PAN
   controls.rotateSpeed = 0.7
   controls.zoomSpeed = 0.8
   controls.minDistance = 110
@@ -360,19 +363,27 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     return raycaster.intersectObjects(pickable.map(part => part.mesh), false)[0]?.object as Mesh | undefined
   }
   const pointers = new Set<number>()
+  let holdTimer: ReturnType<typeof setTimeout> | undefined
+  let held = false
   let gesture: { x: number; y: number; moved: boolean } | null = null
-  const pointerDown = (event: PointerEvent) => {
-    transition = null
-    pointers.add(event.pointerId)
-    if (pointers.size === 1) gesture = { x: event.clientX, y: event.clientY, moved: false }
-    else if (gesture) gesture.moved = true
+  const clearHold = () => { clearTimeout(holdTimer); holdTimer = undefined }
+  const pathwayHit = (event: PointerEvent) => {
+    const rect = canvas.getBoundingClientRect()
+    const marker = pathOverlay?.hit(camera,width,height,event.clientX-rect.left,event.clientY-rect.top)
+    if (marker) return marker
+    const item: BrainMeshData | undefined = hitAt(event)?.userData.parcel
+    if (!item) return undefined
+    return pathOverlay?.nodes().find(node => {
+      const region = spatialAnchors[node.key].region
+      return region === item.id || region?.replace(/^Left-/, 'Right-').replace(/^lh_/, 'rh_') === item.id
+    })
   }
-  const pointerMove = (event: PointerEvent) => {
-    if (pointers.size) {
-      if (gesture && Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y) > 6) gesture.moved = true
+  const showHover = (event: PointerEvent) => {
+    if (pathOverlay) {
+      pathOverlay.setHover(pathwayHit(event)?.id ?? null)
+      requestRender()
       return
     }
-    if (event.pointerType === 'touch') return
     const candidate = hitAt(event)
     const hit = candidate && (!hasFocus() || isActive(candidate.userData.parcel)) ? candidate : undefined
     if ((hit ?? null) === hoverMesh) return
@@ -382,16 +393,43 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     options.onHover(item ? { label: item.label, structureId: item.structureIds[0], regionId: item.id, hemisphere: item.hemisphere } : null)
     applyAppearance()
   }
+  const pointerDown = (event: PointerEvent) => {
+    transition = null
+    pointers.add(event.pointerId)
+    held = false
+    if (pointers.size === 1) {
+      gesture = { x: event.clientX, y: event.clientY, moved: false }
+      if (event.pointerType === 'touch') holdTimer = setTimeout(() => { if (gesture && !gesture.moved) { held = true; showHover(event) } },420)
+    } else { clearHold(); if (gesture) gesture.moved = true }
+  }
+  const pointerMove = (event: PointerEvent) => {
+    if (pointers.size) {
+      if (gesture && Math.hypot(event.clientX - gesture.x, event.clientY - gesture.y) > 6) {
+        gesture.moved = true
+        clearHold()
+        pathOverlay?.setHover(null)
+      }
+      return
+    }
+    if (event.pointerType !== 'touch') showHover(event)
+  }
   const pointerUp = (event: PointerEvent) => {
+    clearHold()
     pointers.delete(event.pointerId)
-    const pick = gesture && !gesture.moved && !pointers.size && event.button === 0
+    const pick = gesture && !gesture.moved && !held && !pointers.size && event.button === 0
     if (!pointers.size) gesture = null
+    if (event.pointerType === 'touch') { pathOverlay?.setHover(null); options.onHover(null); requestRender() }
     if (!pick) return
+    const node = pathwayHit(event)
+    if (node) { playback?.onNodePick?.(node.nodeId); return }
     const item: BrainMeshData | undefined = hitAt(event)?.userData.parcel
+    if (pathOverlay) return
     if (item && item.selectable !== false) options.onPick(atlasRegionById[item.id] ? item.id : item.structureIds[0])
   }
-  const pointerCancel = (event: PointerEvent) => { pointers.delete(event.pointerId); gesture = null }
-  const pointerLeave = () => { hoverMesh = null; options.onHover(null); applyAppearance() }
+  const pointerCancel = (event: PointerEvent) => { clearHold(); pointers.delete(event.pointerId); gesture = null; pathOverlay?.setHover(null); requestRender() }
+  const pointerLeave = () => { hoverMesh = null; pathOverlay?.setHover(null); options.onHover(null); applyAppearance() }
+  const preventTouchScroll = (event: TouchEvent) => { if (event.cancelable) event.preventDefault() }
+  const preventContextMenu = (event: Event) => event.preventDefault()
   const cameraChanged = () => {
     if (hoverMesh) pointerLeave()
     else requestRender()
@@ -417,6 +455,8 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     event.preventDefault()
     options.onError('Przeglądarka przerwała wyświetlanie modelu 3D. Odśwież stronę lub otwórz schemat 2D.')
   }
+  canvas.addEventListener('contextmenu', preventContextMenu)
+  canvas.addEventListener('touchmove', preventTouchScroll, { passive: false })
   canvas.addEventListener('pointerdown', pointerDown)
   canvas.addEventListener('pointermove', pointerMove)
   canvas.addEventListener('pointerup', pointerUp)
@@ -471,6 +511,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       }
       pathOverlay?.setScenario(next?.scenario)
       pathOverlay?.setPlayback(next?.playing ?? false,next?.speed ?? 1)
+      pathOverlay?.setActiveNode(next?.activeNodeId)
       animationTime=0
       applyAppearance()
     },
@@ -496,6 +537,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
         pathOverlay?.dispose()
         pathOverlay=createCircuitOverlay(next,playback.circuit,{host,onPick:options.onPick,onEdgePick:index=>playback?.onEdgePick?.(index),onNodePick:id=>playback?.onNodePick?.(id)})
         pathOverlay.setScenario(playback.scenario)
+        pathOverlay.setActiveNode(playback.activeNodeId)
         pathOverlay.setPlayback(playback.playing,playback.speed)
         pathOverlay.setElapsed(elapsed)
         brain.add(pathOverlay.root)
@@ -509,6 +551,9 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     reset: () => setPreset('lateral'),
     dispose() {
       disposed = true
+      clearHold()
+      canvas.removeEventListener('contextmenu', preventContextMenu)
+      canvas.removeEventListener('touchmove', preventTouchScroll)
       cancelAnimationFrame(frame)
       observer.disconnect()
       controls.removeEventListener('change', cameraChanged)

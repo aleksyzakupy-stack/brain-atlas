@@ -436,3 +436,42 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
 @media (max-width: 640px) {
   .home-grid { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(100px, 24%); gap: 8px; }
 }
+
+/* The model owns gestures; only text panes scroll. */
+html, body, #root { height: 100%; overflow: hidden; overscroll-behavior: none; }
+.app-shell { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+.app-header { min-height: 38px; height: 38px; flex-shrink: 0; }
+.app-shell .atlas-workspace, .app-shell .atlas-workspace.is-learning { flex: 1; min-height: 0; height: auto; overflow: hidden; }
+.workspace-scene { min-height: 0; height: 100%; overflow: hidden; display: flex; flex-direction: column; }
+.workspace-reading { min-height: 0; height: 100%; overflow-y: auto; overscroll-behavior: contain; }
+.workspace-scene > .atlas-scene, .home-brain > .atlas-scene { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.atlas-scene > .brain-3d { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.brain-3d .model-stage { flex: 1; min-height: 0; overflow: hidden; }
+.brain-3d:not(.is-fullscreen) .brain-3d-host { height: 100% !important; }
+.compact-empty-heading { display: none; }
+.header-tools .mobile-view-switch { padding: 0; gap: 2px; background: transparent; }
+.header-tools .mobile-view-switch button { width: 30px; height: 30px; min-height: 30px; padding: 6px; border: 0; background: transparent; }
+.header-tools .mobile-view-switch svg { width: 18px; height: 18px; }
+.reading-content { padding: 20px 22px 30px; }.reading-content h1 { font-size: 26px; }
+@media (max-width:1199px) {
+  .workspace-sidebar { display: none; }.directory-trigger { display: grid; place-items: center; }
+  .atlas-workspace { grid-template-columns: minmax(0,1.5fr) minmax(260px,1fr); }
+  .atlas-workspace.without-reading { grid-template-columns: minmax(0,1fr); }
+  .app-header { padding-inline: 8px; gap: 6px; }.mode-nav { gap: 0; }.mode-nav a { font-size: 12px; padding: 8px 10px; }
+  .header-tools { gap: 2px; }.header-tools button, .directory-trigger, .app-menu > summary { min-height: 30px; height: 30px; padding: 5px; }.search-trigger svg { width: 18px; height: 18px; }
+}
+@media (max-width:1199px) and (orientation:landscape) {
+  .app-shell .atlas-workspace { display: grid; }
+  .mobile-diagram .workspace-reading:not([hidden]), .mobile-description .workspace-scene { display: flex; }
+  .mobile-diagram .workspace-reading:not([hidden]) { display: block; }
+  .header-tools .mobile-view-switch { display: none; }
+  .reading-content { padding: 16px 18px 24px; }.reading-content h1 { font-size: 23px; }
+  .lesson-navigation { min-height: 44px; height: 44px; padding-block: 4px; }
+}
+@media (max-width:640px) and (orientation:portrait) {
+  .app-shell .atlas-workspace { display: block; }
+  .mobile-diagram .workspace-reading, .mobile-description .workspace-scene { display: none; }
+  .header-tools .mobile-view-switch { display: flex; }
+  .reading-content { padding: 18px 16px 28px; }.reading-content h1 { font-size: 24px; }
+}
+.app-shell > .app-header { min-height: 38px; height: 38px; }

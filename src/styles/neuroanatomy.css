@@ -26,3 +26,22 @@
 .neuro-section > summary h2 { display: inline; font: inherit; margin: 0; letter-spacing: normal; }
 .app-menu-panel > a { display: block; padding: 9px 12px; font-size: 13px; color: var(--secondary); }
 .additional-pathways summary { font-size: 13px; }.additional-pathways .related-links { font-size: 12px; }.additional-pathways a { padding: 10px 4px; font-size: 12px; }
+
+.article-side { display: inline-block; font: 11px var(--font-body); color: var(--muted); margin-left: 8px; vertical-align: middle; }
+.neuro-article h1 { font-size: clamp(21px,2.2vw,28px); line-height: 1.2; margin: 0 0 12px; }
+.neuro-kind { display: block; margin-bottom: 12px; font-size: 11px; }
+.article-footer-tools { display: flex; gap: 8px; align-items: flex-start; flex-wrap: wrap; padding-top: 12px; }
+.article-extra { margin: 8px 0; }
+.article-extra > summary { display: grid; place-items: center; width: 32px; min-height: 32px; padding: 6px; list-style: none; color: var(--muted); border-radius: 6px; }
+.article-extra > summary::-webkit-details-marker { display: none; }
+.article-extra > summary svg { width: 18px; height: 18px; }
+.article-extra[open] > summary { color: var(--ink); background: #ffffff08; }
+.article-extra-content { padding: 12px 0; }
+.article-extra-content h2 { font-size: 14px; margin-bottom: 12px; }
+.article-extra-content p, .article-extra-content dl { font-size: 13px; }
+.article-footer-tools:has(details[open]) { display: block; }
+.article-names { display: grid; grid-template-columns: 32px 1fr; gap: 8px; }.article-names dd { margin: 0; }
+.neuro-model-links .related-links { font-size: 12px; }.neuro-related summary { font-size: 12px; }
+.neuro-guide h1 { font-size: 24px; margin-bottom: 20px; }
+.article-footer-tools .neuro-model-links { margin-top: 8px; }
+.neuro-catalog-link { position: relative; padding-right: 28px; }.catalog-text-only { position: absolute; right: 4px; top: 12px; color: var(--muted); }.catalog-text-only svg { width: 15px; height: 15px; }

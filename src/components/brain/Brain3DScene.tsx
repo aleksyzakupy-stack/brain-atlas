@@ -8,6 +8,7 @@ import { getStructureName } from '../../utils/terminology'
 import { MinusIcon, PlusIcon, ResetIcon, FullscreenIcon, ViewSettingsIcon } from '../common/Icons'
 import { createBrainViewer } from './three/brainViewer'
 import type { BrainViewer, PathwayPlayback } from './three/brainViewer'
+import { LandscapePrompt } from './LandscapePrompt'
 import { isCortex } from './three/modelTypes'
 import { decodeBrainModel } from './three/loadBrainModel'
 import type { BrainModelData, CameraPreset, Hemisphere, HoveredParcel } from './three/modelTypes'
@@ -72,7 +73,10 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
     } else {
       setFullscreen(true)
       // CSS fills the viewport on browsers without element fullscreen support.
-      void document.documentElement.requestFullscreen?.().catch(() => {})
+      void document.documentElement.requestFullscreen?.().then(() => {
+        const orientation = screen.orientation as ScreenOrientation & { lock?: (mode: string) => Promise<void> }
+        if (window.matchMedia('(pointer: coarse)').matches) void orientation?.lock?.('landscape').catch(() => {})
+      }).catch(() => {})
     }
   }
   useEffect(() => {
@@ -132,7 +136,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
 
   useEffect(() => { viewer.current?.select(selectedId, highlightedIds) }, [selectedId, highlightedIds, model])
   useEffect(() => { viewer.current?.pathway(pathway) }, [pathway, model])
-  useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: !!pathway || labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
+  useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
 
   return <section className={`brain-3d${pathway ? ' pathway-model' : ''}${fullscreen ? ' is-fullscreen' : ''}`} aria-label="Interaktywny model mózgu 3D">
     <details className="model-options" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
@@ -153,6 +157,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
       </div>
     </details>
     <div className="model-stage">
+      <LandscapePrompt />
       <div className="model-display-controls">
         <button ref={fullscreenButton} className="model-fullscreen-toggle" aria-label={fullscreen ? 'Zamknij pełny ekran' : 'Pełny ekran'} title={fullscreen ? 'Zamknij pełny ekran' : 'Pełny ekran'} aria-pressed={fullscreen} onClick={toggleFullscreen}><FullscreenIcon expanded={fullscreen} /></button>
       </div>
@@ -162,7 +167,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
       {ready && <>
         {vessels && !pathway && !interior && !(isolate && canIsolate) && <div className="model-vessel-legend"><span><i className="vessel-artery" />Tętnice</span><span><i className="vessel-vein" />Żyły</span><small>Przebieg ilustracyjny</small></div>}
         <div className="zoom-controls" role="group" aria-label="Powiększenie modelu 3D"><button aria-label="Pomniejsz model" onClick={() => viewer.current?.zoom(1.2)}><MinusIcon /></button><button aria-label="Przywróć model" onClick={() => viewer.current?.reset()}><ResetIcon /></button><button aria-label="Powiększ model" onClick={() => viewer.current?.zoom(0.83)}><PlusIcon /></button></div>
-        {(region || hovered || caption) && <div className="model-caption" aria-live="polite" title={hovered?.label}>
+        {!pathway && (region || hovered || caption) && <div className="model-caption" aria-live="polite" title={hovered?.label}>
           <span className="category-dot" style={{ background: region?.color ?? (caption ? categoryById[caption.categoryId].color : 'var(--muted)') }} />
           <span>{region ? regionLabel(region,language) : hovered && !hovered.structureId ? hovered.label : caption ? getStructureName(caption, language) : ''}{approximate && !region && !hovered && <abbr title="Przybliżenie funkcjonalne" className="approximation-mark"> ≈</abbr>}</span>
         </div>}

@@ -2,7 +2,7 @@ import { CatmullRomCurve3, ConeGeometry, Group, Mesh, MeshBasicMaterial, Quatern
 import type { PerspectiveCamera } from 'three'
 import { bindingsForCircuit, spatialAnchors, spatialGroups, spatialGuides } from '../../../data/pathwaySpatial'
 import type { SpatialAnchor } from '../../../data/pathwaySpatial'
-import { changeColor, changeSymbols, pathwayNodeLabel } from '../../../data/pathwayScenarios'
+import { changeColor, pathwayNodeLabel } from '../../../data/pathwayScenarios'
 import type { BrainCircuit, PathwayScenario, TerminologyLanguage } from '../../../types/atlas'
 import type { BrainLayers, BrainModelData } from './modelTypes'
 
@@ -44,9 +44,8 @@ export function resolveSpatialNodes(circuit: BrainCircuit, model: BrainModelData
 }
 
 const material = (color: string, opacity: number) => new MeshBasicMaterial({color,transparent:true,opacity,depthTest:false,depthWrite:false,toneMapped:false})
-const precisionNote = { region:'Punkt reprezentujący region źródłowej siatki', landmark:'Orientacyjny punkt anatomiczny; jądro nie jest osobno segmentowane', microcircuit:'Powiększony schemat populacji komórek, nie lokalizacja pojedynczych neuronów', external:'Element poza modelem mózgu; położenie na ilustracji umowne' }
 type Connection = { curve: CatmullRomCurve3; particles: Mesh[]; trace: MeshBasicMaterial; logicalIndex: number; external: boolean }
-type Label = { node: SpatialNode; element: HTMLButtonElement | HTMLSpanElement; marker: Mesh; line: SVGPathElement; height: number; halo: Mesh; name: HTMLSpanElement; route: HTMLElement; note: HTMLElement }
+type Label = { node: SpatialNode; element: HTMLButtonElement | HTMLSpanElement; marker: Mesh; line: SVGPathElement; height: number; halo: Mesh; name: HTMLSpanElement }
 
 export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircuit, options?: { host: HTMLElement; onPick: (id: string) => void; onEdgePick?: (index: number) => void; onNodePick?: (id: string) => void }) {
   const root = new Group()
@@ -60,7 +59,8 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
   let signature = ''
   let scenario: PathwayScenario | undefined
   let language: TerminologyLanguage = 'pl'
-  const edgeLabels: { element: HTMLButtonElement; curve: CatmullRomCurve3; index: number }[] = []
+  let hoveredId: string | null = null
+  let activeNodeId: string | undefined
   let playing = false, speed = 1, elapsed = 0
   const labelLayer = options ? document.createElement('div') : null
   if (labelLayer) { labelLayer.className = 'pathway-3d-labels'; labelLayer.setAttribute('aria-label','Węzły szlaku na modelu 3D'); options!.host.appendChild(labelLayer) }
@@ -74,7 +74,7 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
   const clear = () => {
     geometries.forEach(g=>g.dispose()); geometries.clear()
     materials.forEach(m=>m.dispose()); materials.clear()
-    root.clear(); connections.length=0; edgeLabels.forEach(label=>label.element.remove()); edgeLabels.length=0; labels.forEach(l=>l.element.remove()); labels.length=0; leaders?.replaceChildren()
+    root.clear(); connections.length=0; labels.forEach(l=>l.element.remove()); labels.length=0; leaders?.replaceChildren()
   }
   function rebuild() {
     clear()
@@ -90,31 +90,26 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
         seenNodes.add(identity)
         const mat = ownMaterial(node.precision === 'external' ? signalColors.hormone : '#d1f3e7', .95)
         const marker = mesh(new SphereGeometry(node.precision === 'region' ? 2.1 : 1.7,12,8),mat,32)
-        marker.position.copy(node.position); marker.userData.nodeId = node.nodeId
+        marker.position.copy(node.position); marker.userData.nodeId = node.nodeId; marker.userData.spatialId = node.id
         if (labelLayer && leaders) {
           const element = document.createElement(node.structureId || options?.onNodePick ? 'button' : 'span')
           element.className='pathway-3d-label'
-          const qualifier = node.precision === 'region' ? '' : node.precision === 'external' ? ' · poza mózgiem' : node.precision === 'microcircuit' ? ' · powiększenie' : ' ≈'
           const name = document.createElement('span')
-          name.textContent = node.label + qualifier
-          const route = document.createElement('small')
-          route.className = 'pathway-node-route'
-          const note = document.createElement('small')
-          element.append(name, route, note)
+          name.textContent = node.label
+          element.append(name)
           const halo = mesh(new SphereGeometry(4.8,16,12),ownMaterial(changeColor,.25),31)
           halo.position.copy(node.position); halo.visible = false
-          element.title = precisionNote[node.precision]
           element.dataset.nodeId = node.nodeId
           element.dataset.precision = node.precision
           if (options?.onNodePick) element.addEventListener('click',()=>options.onNodePick!(node.nodeId))
           else if (node.structureId) element.addEventListener('click',()=>options!.onPick(node.structureId!))
           // Both sides remain in 3D; one set of callouts keeps the view readable.
-          element.hidden = state.hemisphere === 'both' && node.hemisphere === 'right'
+          element.hidden = true
           labelLayer.appendChild(element)
           const line=document.createElementNS('http://www.w3.org/2000/svg','path')
           line.setAttribute('fill','none'); line.setAttribute('stroke','#88d8bb90'); line.setAttribute('stroke-width','1')
           leaders.appendChild(line)
-          labels.push({node,element,marker,line,height:0,halo,name,route,note})
+          labels.push({node,element,marker,line,height:0,halo,name})
         }
       }
       for (const [logicalIndex, edge] of circuit.edges.entries()) {
@@ -142,17 +137,7 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
           }
           const particles=[0,1].map(()=>mesh(new SphereGeometry(1.65,10,8),ownMaterial(color,1),34))
           connections.push({curve,particles,trace,logicalIndex,external})
-          if (labelLayer && !edgeLabels.some(label=>label.index===logicalIndex)) {
-            const element = document.createElement('button')
-            element.className = 'pathway-edge-label'
-            element.textContent = edge.label
-            element.style.color = color
-            element.setAttribute('aria-label', `Połączenie: ${circuit.nodes.find(n=>n.id===edge.from)?.label} → ${circuit.nodes.find(n=>n.id===edge.to)?.label} · ${edge.label}`)
-            element.title = element.getAttribute('aria-label')!
-            element.addEventListener('click',()=>options?.onEdgePick?.(logicalIndex))
-            labelLayer.appendChild(element)
-            edgeLabels.push({element,curve,index:logicalIndex})
-          }
+
         }
       }
     }
@@ -165,39 +150,47 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
     const phase=(elapsed%duration)/duration
     for(const connection of connections) {
       const stage=phase*circuit.edges.length
+      const focused = !activeNodeId || circuit.edges[connection.logicalIndex].from === activeNodeId
       for(const [i,particle] of connection.particles.entries()) {
         let progress=(phase+i*.5)%1
         if(sequential) { progress=stage-connection.logicalIndex; particle.visible=progress>=0&&progress<1&&i===0 }
         else particle.visible=true
+        particle.visible = particle.visible && focused
         if(circuit.kind==='network'&&i===1)progress=1-progress
         particle.position.copy(connection.curve.getPointAt(Math.min(1,Math.max(0,progress))))
       }
-      connection.trace.opacity=circuit.kind==='network' ? .45+.25*(Math.sin(phase*Math.PI*2)+1)/2 : .88
+      connection.trace.opacity=focused ? circuit.kind==='network' ? .45+.25*(Math.sin(phase*Math.PI*2)+1)/2 : .88 : .2
     }
   }
   function updateAnnotations() {
     for (const label of labels) {
       const change = scenario?.changes.find(item=>item.nodeId===label.node.nodeId)
       label.element.dataset.change = change?.kind ?? ''
-      label.halo.visible = !!change
+      const active = activeNodeId === label.node.nodeId
+      label.halo.visible = !!change || active
+      label.marker.scale.setScalar(active ? 1.6 : 1)
       ;(label.marker.material as MeshBasicMaterial).color.set(change ? changeColor : label.node.precision === 'external' ? signalColors.hormone : '#d1f3e7')
-      label.note.textContent = change ? `${changeSymbols[change.kind]} ${change.label.replace(/^[↑↓≈]\s*/, '')}` : ''
-      label.note.hidden = !change
       const source = circuit.nodes.find(node=>node.id===label.node.nodeId)!
-      const incoming = circuit.edges.filter(edge=>edge.to===source.id)
-      const sourceName = (nodeId: string) => {
-        const node = circuit.nodes.find(item=>item.id===nodeId)!
-        return node.label === 'SN pars compacta' ? 'SNc' : node.label
-      }
-      label.route.textContent = circuit.kind === 'projection' ? incoming.length ? incoming.map(edge=>`← ${sourceName(edge.from)} · ${edge.label}`).join(' / ') : `Źródło · ${circuit.transmitter}` : ''
-      label.route.hidden = !label.route.textContent
-      const text = label.node.label === source.label ? pathwayNodeLabel(source, language) : label.node.label
-      label.name.textContent = text + (label.node.precision === 'region' ? '' : label.node.precision === 'external' ? ' · poza mózgiem' : label.node.precision === 'microcircuit' ? ' · powiększenie' : ' ≈')
+      label.name.textContent = label.node.label === source.label ? pathwayNodeLabel(source, language) : label.node.label
+
     }
   }
   rebuild()
   return {
     root,
+    setActiveNode(id?: string) { activeNodeId = id; updateAnnotations(); updateSignals() },
+    setHover(id: string | null) { hoveredId = id },
+    hit(camera: PerspectiveCamera, width: number, height: number, x: number, y: number) {
+      let closest: Label | undefined, distance = 26
+      root.updateWorldMatrix(true,true)
+      for (const label of labels) {
+        const point = label.marker.getWorldPosition(new Vector3()).project(camera)
+        if (point.z > 1 || point.z < -1) continue
+        const gap = Math.hypot((point.x+1)*width/2-x,(1-point.y)*height/2-y)
+        if (gap < distance) { closest = label; distance = gap }
+      }
+      return closest?.node
+    },
     nodes:()=>currentNodes,
     setScenario(next?: PathwayScenario) { scenario = next; updateAnnotations() },
     setPlayback(nextPlaying: boolean, nextSpeed: number) { playing=nextPlaying; speed=nextSpeed },
@@ -218,7 +211,10 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
       const placed: {label:Label;x:number;y:number;anchorX:number;anchorY:number}[]=[]
       root.updateWorldMatrix(true,true)
       for(const label of labels) {
-        if(state.hemisphere==='both'&&label.node.hemisphere==='right')continue
+        label.element.hidden = true
+        label.line.style.display = 'none'
+        if(label.node.id !== hoveredId && label.node.nodeId !== activeNodeId)continue
+        if(state.hemisphere==='both'&&label.node.hemisphere==='right' && label.node.id !== hoveredId)continue
         const point=label.marker.getWorldPosition(new Vector3()).project(camera)
         const anchorX=(point.x+1)*width/2, anchorY=(1-point.y)*height/2
         label.element.hidden=point.z>1||point.z< -1
@@ -239,22 +235,7 @@ export function createCircuitOverlay(model: BrainModelData, circuit: BrainCircui
           p.label.line.setAttribute('d',`M ${p.anchorX} ${p.anchorY} L ${p.x+(left ? labelWidth/2 : -labelWidth/2)} ${p.y}`)
         }
       }
-      const occupied = placed.map(p=>({x:p.x,y:p.y,w:labelWidth,h:p.label.height}))
-      for (const label of edgeLabels) {
-        const point = root.localToWorld(label.curve.getPointAt(.52)).project(camera)
-        const x = (point.x+1)*width/2, y = (1-point.y)*height/2
-        label.element.hidden = point.z > 1 || point.z < -1
-        if (label.element.hidden) continue
-        const w = label.element.offsetWidth || 48, h = label.element.offsetHeight || 32
-        let px = x, py = y
-        for (const offset of [0, -38, 38, -76, 76, -114, 114]) {
-          px = Math.max(w/2+6,Math.min(width-w/2-6,x+18))
-          py = Math.max(h/2+8,Math.min(height-h/2-44,y+offset))
-          if (!occupied.some(p=>Math.abs(p.x-px)<(p.w+w)/2+6 && Math.abs(p.y-py)<(p.h+h)/2+6)) break
-        }
-        occupied.push({x:px,y:py,w,h})
-        label.element.style.left = `${px}px`; label.element.style.top = `${py}px`
-      }
+
     },
     stats:()=>({id:circuit.id,scenario:scenario?.id ?? 'physiology',changes:scenario?.changes ?? [],logicalEdges:circuit.edges.length,renderedEdges:connections.length,nodeCount:new Set(currentNodes.map(n=>`${n.key}:${n.hemisphere}`)).size,elapsed:+elapsed.toFixed(4),playing,particles:connections.flatMap(c=>c.particles.filter(p=>p.visible).map(p=>p.position.toArray().map(v=>+v.toFixed(3))))}),
     dispose() { clear(); labelLayer?.remove(); root.removeFromParent() },

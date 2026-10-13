@@ -12,7 +12,7 @@ export function BrodmannArticle({ number, compact = false }: { number: number; c
 }
 export function BrodmannPage({ number }: { number: number }) {
   const regions = atlasRegions.filter(item => item.number === number && item.atlas === 'brodmann')
-  return <article className="reading-content"><h1>Pole Brodmanna {number}</h1><BrodmannArticle number={number} /><div className="related-links">{regions.map(region => <Link key={region.id} to={regionUrl(region)}>{regionLabel(region,'pl')} · Model 3D ↗</Link>)}</div>{!regions.length && <p className="neuro-context">Bez odrębnej parceli w modelu PALS-B12.</p>}</article>
+  return <article className="reading-content"><h1>Pole Brodmanna {number}</h1><BrodmannArticle number={number} /><div className="related-links">{regions.map(region => <Link key={region.id} to={regionUrl(region)}>{regionLabel(region,'pl')} ↗</Link>)}</div></article>
 }
 export function RegionContent({ region, language, onSelect }: { region: AtlasRegion; language: TerminologyLanguage; onSelect: (id: string) => void }) {
   const entry = neuroByRegion[region.id]

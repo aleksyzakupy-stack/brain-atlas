@@ -139,3 +139,19 @@
   .pathway-scene .pathway-controls { display: flex; min-height: 44px; padding: 0 12px 6px; gap: 6px; }
   .pathway-scene .pathway-controls .scenario-switch { margin-right: auto; }
 }
+
+.landscape-prompt { display: none; }
+.brain-3d .model-stage .zoom-controls { position: absolute; left: 8px; bottom: 8px; transform: none; margin: 0; background: #181b22b8; border: 0; border-radius: 6px; }
+.brain-3d .model-stage .zoom-controls button { width: 30px; min-width: 30px; height: 30px; min-height: 30px; padding: 6px; }
+.brain-3d .model-stage .zoom-controls svg { width: 16px; height: 16px; }
+.brain-3d .model-caption { font-size: 12px; left: 112px; bottom: 8px; right: 8px; padding: 8px; }
+.brain-3d .model-stage:has(.model-caption) .zoom-controls { bottom: 8px; }
+.brain-3d.is-fullscreen { padding-top: 0; }
+.brain-3d.is-fullscreen .model-display-controls { top: 8px; }
+.brain-3d.is-fullscreen .model-options { top: 8px; }
+.brain-3d .model-stage, .brain-3d-canvas, .brain-3d-host, .anatomy-svg, .brain-transform, .brain-transform-content { touch-action: none; overscroll-behavior: none; -webkit-user-select: none; user-select: none; }
+@media (max-width:640px) and (orientation:portrait) {
+  .landscape-prompt { position: absolute; inset: 0; z-index: 15; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: var(--bg); color: var(--secondary); font-size: 15px; }
+  .landscape-prompt svg { width: 56px; height: 56px; transform: rotate(90deg); }
+  .atlas-scene, .pathway-visual { position: relative; }
+}

@@ -8,5 +8,5 @@ export function CircuitArticle({ circuit, compact = false }: { circuit: BrainCir
 }
 export function PathwayContent({ circuit, language }: { circuit: BrainCircuit; language: TerminologyLanguage; onSelect: (id: string) => void }) {
   const entry = neuroByCircuit[circuit.id]
-  return <div className="reading-content pathway-content">{entry && <NeuroArticle id={entry.id} title={language === 'en' ? circuit.names.en : circuit.names.pl} language={language} initialSection="route" />}</div>
+  return <div className="reading-content pathway-content">{entry && <NeuroArticle id={entry.id} title={language === 'en' ? circuit.names.en : circuit.names.pl} language={language} header={false} initialSection="route" />}</div>
 }
