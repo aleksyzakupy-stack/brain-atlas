@@ -1,5 +1,4 @@
 import { brainStructures } from '../data/structures'
-import { learningPaths } from '../data/learningPaths'
 import { connections } from '../data/connections'
 import type { BrainStructure } from '../types/atlas'
 import { normalizeSearch } from './normalizeSearch'
@@ -66,15 +65,10 @@ export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
   for (const region of atlasRegions) {
     if (matchesRegion(region,rawQuery)) results.unshift({ id: region.id, title: regionLabel(region,'pl'), subtitle: region.source, to: regionUrl(region), type: 'atlas-region' })
   }
-  for (const path of learningPaths) for (const step of path.steps) {
-    if (normalizeSearch([path.title, step.title, step.lead, ...step.paragraphs].join(' ')).includes(query)) results.push({ id: `${path.slug}-${step.id}`, title: step.title, subtitle: path.title, to: `/nauka/${path.slug}/${step.id}`, type: 'lesson' })
-  }
   for (const connection of connections) {
     if (normalizeSearch(`${connection.title} ${connection.description}`).includes(query)) {
-      const path = learningPaths.find(path => path.steps.some(step => step.connectionIds.includes(connection.id)))
-      const step = path?.steps.find(step => step.connectionIds.includes(connection.id))
       const structure = brainStructures.find(structure => structure.id === connection.sourceId)!
-      results.push({ id: connection.id, title: connection.title, subtitle: connection.kind === 'anatomical' ? 'Połączenie anatomiczne' : 'Związek funkcjonalny', to: path && step ? `/nauka/${path.slug}/${step.id}` : `/struktury/${structure.slug}?sekcja=powiazania`, type: 'connection' })
+      results.push({ id: connection.id, title: connection.title, subtitle: connection.kind === 'anatomical' ? 'Połączenie anatomiczne' : 'Związek funkcjonalny', to: `/struktury/${structure.slug}?sekcja=powiazania`, type: 'connection' })
     }
   }
   results.unshift(...searchNeuroEntries(rawQuery).map(entry => ({ id:entry.id, title:entry.names.pl, subtitle:entry.names.en, to:neuroEntryUrl(entry), type:'article' as const })))

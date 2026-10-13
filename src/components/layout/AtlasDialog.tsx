@@ -24,7 +24,7 @@ export function AtlasSearch({ onClose, returnTo }: { onClose: () => void; return
   const [query, setQuery] = useState('')
   const navigate = useNavigate(), results = searchAtlas(query)
   return <AtlasDialog title="Szukaj w atlasie" onClose={onClose} className="search-modal">
-    <div className="search-input"><SearchIcon /><input aria-label="Szukaj struktur, funkcji, lekcji i powiązań" placeholder="Hipokamp, bruzda środkowa, BA 4…" value={query} onChange={event => setQuery(event.target.value)} onKeyDown={event => { if (event.key === 'ArrowDown') { event.preventDefault(); document.querySelector<HTMLButtonElement>('.search-results button')?.focus() } }} /></div>
+    <div className="search-input"><SearchIcon /><input aria-label="Szukaj struktur, funkcji i szlaków" placeholder="Hipokamp, bruzda środkowa, BA 4…" value={query} onChange={event => setQuery(event.target.value)} onKeyDown={event => { if (event.key === 'ArrowDown') { event.preventDefault(); document.querySelector<HTMLButtonElement>('.search-results button')?.focus() } }} /></div>
     <div className="search-results">{query.trim() && <p role="status">{results.length} wyników</p>}{results.map(result => <button key={`${result.type}-${result.id}`} onClick={() => {
       navigate(result.to + (result.type === 'structure' && returnTo ? `?powrot=${encodeURIComponent(returnTo)}` : '')); onClose()
     }}><span><strong>{result.title}</strong></span><span className="result-type">{result.type === 'structure' || result.type === 'atlas-region' ? 'Struktura' : result.type === 'lesson' ? 'Lekcja' : result.type === 'circuit' ? 'Szlak' : result.type === 'brodmann' ? 'Pole BA' : result.type === 'article' ? 'Artykuł' : result.type === 'guide' ? 'Przewodnik' : 'Powiązanie'} ↗</span></button>)}</div>

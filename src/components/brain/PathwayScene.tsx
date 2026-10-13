@@ -1,4 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 import type { BrainCircuit, TerminologyLanguage } from '../../types/atlas'
@@ -22,7 +23,7 @@ export function LessonPathwayScene({ ids, language, onSelect }: { ids: string[];
   const [id, setId] = useState(ids[0])
   return <><label className="lesson-pathway-select">Szlak<select aria-label="Szlak w lekcji" value={id} onChange={event => setId(event.target.value)}>{ids.map(value => <option key={value} value={value}>{circuitById[value].names.pl}</option>)}</select></label><PathwayScene key={id} circuit={circuitById[id]} language={language} onSelect={onSelect} /></>
 }
-export function PathwayScene({ circuit, language, onSelect, initialClinical = false }: { circuit: BrainCircuit; language: TerminologyLanguage; onSelect: (id: string) => void; initialClinical?: boolean }) {
+export function PathwayScene({ circuit, language, onSelect, initialClinical = false, panelTarget, onRegisterPlayerCloser }: { circuit: BrainCircuit; language: TerminologyLanguage; onSelect: (id: string) => void; initialClinical?: boolean; panelTarget?: HTMLElement | null; onRegisterPlayerCloser?: (close: (()=>void) | null) => void }) {
   const [mode, setMode] = useState<'scheme' | 'anatomy'>('anatomy')
   const marker = useId().replace(/:/g, '')
   const reduced = useReducedMotion()
@@ -34,6 +35,8 @@ export function PathwayScene({ circuit, language, onSelect, initialClinical = fa
   const [stepPlaying, setStepPlaying] = useState(false)
   const [hoveredNode, setHoveredNode] = useState<string | null>(null)
   const [dialog, setDialog] = useState<'article' | 'scenario' | number | null>(null)
+  const closePlayer = useCallback(()=>{setStepIndex(null);setStepPlaying(false)},[])
+  useEffect(()=>{onRegisterPlayerCloser?.(closePlayer);return ()=>onRegisterPlayerCloser?.(null)},[closePlayer,onRegisterPlayerCloser])
   const scenario = clinical ? pathwayScenarios[circuit.id] : undefined
   const activeNode = stepIndex === null ? undefined : circuit.nodes[stepIndex]
   const activeEntries = activeNode ? entriesForCircuitNode(circuit,activeNode.id) : []
@@ -59,7 +62,20 @@ export function PathwayScene({ circuit, language, onSelect, initialClinical = fa
   const point = (id: string) => { const index = circuit.nodes.findIndex(node => node.id === id); return {x:160+(index%3)*240,y:100+Math.floor(index/3)*200} }
   const height = Math.max(300,Math.ceil(circuit.nodes.length/3)*200)
   const playerRunning = stepPlaying && stepIndex !== circuit.nodes.length-1
-  return <><section className={`pathway-scene ${activeNode ? 'with-player' : ''}`} aria-label="Widok szlaku" data-scenario={scenario?.id ?? 'physiology'}>
+  const player = activeNode ? <aside className="pathway-player" aria-label="Krok szlaku">
+        <div className="pathway-player-controls"><button className="icon-button" aria-label="Poprzednia struktura" disabled={stepIndex === 0} onClick={() => step(-1)}><PreviousIcon /></button><button className="icon-button" aria-label={playerRunning ? 'Wstrzymaj kroki' : 'Odtwórz kroki'} onClick={() => { if(stepIndex === circuit.nodes.length-1)setStepIndex(0); setStepPlaying(!playerRunning); setPlaying(true) }}>{playerRunning ? <PauseIcon /> : <PlayIcon />}</button><button className="icon-button" aria-label="Następna struktura" disabled={stepIndex === circuit.nodes.length-1} onClick={() => step(1)}><NextIcon /></button><span>{(stepIndex ?? 0)+1}/{circuit.nodes.length}</span><button className="icon-button" aria-label="Zamknij kroki" onClick={() => {setStepIndex(null);setStepPlaying(false)}}><CloseIcon /></button></div>
+        <div className="pathway-step-text" key={activeNode.id}><h2>{pathwayNodeLabel(activeNode,language)}</h2>
+          <span className="step-transmitter">{[...new Set(circuit.edges.filter(edge=>edge.from===activeNode.id || edge.to===activeNode.id).map(edge=>edge.label))].map(transmitterName).join(' · ')}</span>
+          {activeEntries.length === 1 ? <NeuroArticle id={activeEntries[0].id} language={language} header={false} initialSection="function" spatialAnchor={bindingsForCircuit(circuit)[stepIndex ?? 0]} /> : <div className="related-links">{activeEntries.map(entry => <Link key={entry.id} to={neuroEntryUrl(entry)}>{neuroEntryName(entry,language)} ↗</Link>)}</div>}
+          <details className="neuro-section"><summary>Połączenia w szlaku</summary><div className="step-connections">{circuit.edges.filter(edge => edge.from === activeNode.id || edge.to === activeNode.id).map((edge,i) => {
+            const outgoing = edge.from === activeNode.id
+            const other = circuit.nodes.find(node=>node.id===(outgoing ? edge.to : edge.from))!
+            return <button key={i} onClick={()=>pickNode(other.id)}>{outgoing ? '→' : '←'} {pathwayNodeLabel(other,language)}</button>
+          })}</div></details>
+          {scenario?.changes.some(change=>change.nodeId===activeNode.id) && <details className="neuro-section"><summary>Schizofrenia</summary><p>{scenario.mechanism}</p><p>{scenario.manifestation}</p><details className="article-extra"><summary aria-label="Ograniczenia" title="Ograniczenia"><InfoIcon /></summary><p>{scenario.caveat}</p></details></details>}
+        </div>
+      </aside> : null
+  return <><section className={`pathway-scene ${activeNode && !panelTarget ? 'with-player' : ''}`} aria-label="Widok szlaku" data-scenario={scenario?.id ?? 'physiology'}>
     <div className="pathway-heading"><h1>{language === 'en' ? circuit.names.en : circuit.names.pl}</h1>
       <div className="pathway-controls">
         {pathwayScenarios[circuit.id] && <div className="scenario-switch" role="group" aria-label="Stan szlaku"><button aria-pressed={!clinical} onClick={() => setClinical(false)}>Fizjologia</button><button aria-pressed={clinical} onClick={() => setClinical(true)}>Schizofrenia</button></div>}
@@ -85,19 +101,7 @@ export function PathwayScene({ circuit, language, onSelect, initialClinical = fa
           </svg>
         </div>}
       </div>
-      {activeNode && <aside className="pathway-player" aria-label="Krok szlaku">
-        <div className="pathway-player-controls"><button className="icon-button" aria-label="Poprzednia struktura" disabled={stepIndex === 0} onClick={() => step(-1)}><PreviousIcon /></button><button className="icon-button" aria-label={playerRunning ? 'Wstrzymaj kroki' : 'Odtwórz kroki'} onClick={() => { if(stepIndex === circuit.nodes.length-1)setStepIndex(0); setStepPlaying(!playerRunning); setPlaying(true) }}>{playerRunning ? <PauseIcon /> : <PlayIcon />}</button><button className="icon-button" aria-label="Następna struktura" disabled={stepIndex === circuit.nodes.length-1} onClick={() => step(1)}><NextIcon /></button><span>{(stepIndex ?? 0)+1}/{circuit.nodes.length}</span><button className="icon-button" aria-label="Zamknij kroki" onClick={() => {setStepIndex(null);setStepPlaying(false)}}><CloseIcon /></button></div>
-        <div className="pathway-step-text" key={activeNode.id}><h2>{pathwayNodeLabel(activeNode,language)}</h2>
-          <span className="step-transmitter">{[...new Set(circuit.edges.filter(edge=>edge.from===activeNode.id || edge.to===activeNode.id).map(edge=>edge.label))].map(transmitterName).join(' · ')}</span>
-          {activeEntries.length === 1 ? <NeuroArticle id={activeEntries[0].id} language={language} header={false} initialSection="function" spatialAnchor={bindingsForCircuit(circuit)[stepIndex ?? 0]} /> : <div className="related-links">{activeEntries.map(entry => <Link key={entry.id} to={neuroEntryUrl(entry)}>{neuroEntryName(entry,language)} ↗</Link>)}</div>}
-          <details className="neuro-section"><summary>Połączenia w szlaku</summary><div className="step-connections">{circuit.edges.filter(edge => edge.from === activeNode.id || edge.to === activeNode.id).map((edge,i) => {
-            const outgoing = edge.from === activeNode.id
-            const other = circuit.nodes.find(node=>node.id===(outgoing ? edge.to : edge.from))!
-            return <button key={i} onClick={()=>pickNode(other.id)}>{outgoing ? '→' : '←'} {pathwayNodeLabel(other,language)}</button>
-          })}</div></details>
-          {scenario?.changes.some(change=>change.nodeId===activeNode.id) && <details className="neuro-section"><summary>Schizofrenia</summary><p>{scenario.mechanism}</p><p>{scenario.manifestation}</p><details className="article-extra"><summary aria-label="Ograniczenia" title="Ograniczenia"><InfoIcon /></summary><p>{scenario.caveat}</p></details></details>}
-        </div>
-      </aside>}
+      {player && (panelTarget ? createPortal(player,panelTarget) : player)}
     </div>
   </section>
   {dialog !== null && <AtlasDialog title={dialog === 'article' ? circuit.names.pl : dialog === 'scenario' ? 'Schizofrenia' : 'Połączenie'} onClose={closeDialog} className="pathway-dialog">

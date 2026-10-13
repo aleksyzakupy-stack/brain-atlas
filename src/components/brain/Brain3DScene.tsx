@@ -1,3 +1,4 @@
+import { useAtlasFullscreen } from '../../hooks/useAtlasFullscreen'
 import { useEffect, useRef, useState } from 'react'
 import { structureById } from '../../data/structures'
 import { atlasRegionById, regionLabel } from '../../data/anatomicalAtlas'
@@ -45,8 +46,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   const [vessels, setVessels] = useState(false)
   const [colors, setColors] = useState(false)
   const [labels, setLabels] = useState(false)
-  const [fullscreen, setFullscreen] = useState(false)
-  const nativeFullscreen = useRef(false)
+  const { fullscreen, toggleFullscreen } = useAtlasFullscreen()
   const fullscreenButton = useRef<HTMLButtonElement>(null)
   const [isolate, setIsolate] = useState(false)
   const [interiorOverride, setInteriorOverride] = useState<{ key: string; value: boolean } | null>(null)
@@ -65,43 +65,6 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   const approximate = selectionMeshes.some(mesh => mesh.approximate)
   const canIsolate = selectionMeshes.length > 0
   const ready = !!model && !error
-
-  const toggleFullscreen = () => {
-    if (fullscreen) {
-      setFullscreen(false)
-      if (nativeFullscreen.current && document.fullscreenElement) void document.exitFullscreen().catch(() => {})
-    } else {
-      setFullscreen(true)
-      // CSS fills the viewport on browsers without element fullscreen support.
-      void document.documentElement.requestFullscreen?.().then(() => {
-        const orientation = screen.orientation as ScreenOrientation & { lock?: (mode: string) => Promise<void> }
-        if (window.matchMedia('(pointer: coarse)').matches) void orientation?.lock?.('landscape').catch(() => {})
-      }).catch(() => {})
-    }
-  }
-  useEffect(() => {
-    if (!fullscreen) return
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    const button = fullscreenButton.current
-    button?.focus()
-    const changed = () => {
-      nativeFullscreen.current = !!document.fullscreenElement
-    }
-    const escape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && !document.querySelector('[role="dialog"]')) setFullscreen(false)
-    }
-    document.addEventListener('fullscreenchange', changed)
-    document.addEventListener('keydown', escape)
-    return () => {
-      document.body.style.overflow = previousOverflow
-      document.removeEventListener('fullscreenchange', changed)
-      document.removeEventListener('keydown', escape)
-      if (nativeFullscreen.current && document.fullscreenElement) void document.exitFullscreen().catch(() => {})
-      nativeFullscreen.current = false
-      button?.focus()
-    }
-  }, [fullscreen])
 
   useEffect(() => {
     let alive = true
@@ -138,7 +101,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   useEffect(() => { viewer.current?.pathway(pathway) }, [pathway, model])
   useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
 
-  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}${fullscreen ? ' is-fullscreen' : ''}`} aria-label="Interaktywny model mózgu 3D">
+  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}`} aria-label="Interaktywny model mózgu 3D">
     <details className="model-options" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
       <summary aria-label="Widok" title="Widok"><ViewSettingsIcon /></summary>
       <div className="model-options-panel">
