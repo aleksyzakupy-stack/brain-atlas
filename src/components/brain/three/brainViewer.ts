@@ -9,6 +9,8 @@ import { acceleratedRaycast, MeshBVH } from 'three-mesh-bvh'
 import { createTissueMaterial, loadTissueTexture, setTissueDetail } from './tissueMaterial'
 import { createCorticalVessels } from './corticalVessels'
 import { createBrainLighting } from './brainLighting'
+import { createCircuitOverlay } from './circuitOverlay'
+import type { BrainCircuit } from '../../../types/atlas'
 import { categoryById } from '../../../data/categories'
 import { structureById } from '../../../data/structures'
 import { atlasRegionById, regionLabel } from '../../../data/anatomicalAtlas'
@@ -23,6 +25,7 @@ type Options = {
 }
 
 export type BrainViewer = {
+  pathway: (playback?: PathwayPlayback) => void
   upgrade: (data: BrainModelData) => void
   select: (id: string | undefined, highlighted: string[]) => void
   layers: (layers: BrainLayers) => void
@@ -31,6 +34,8 @@ export type BrainViewer = {
   reset: () => void
   dispose: () => void
 }
+
+export type PathwayPlayback = { circuit: BrainCircuit; playing: boolean; speed: number }
 
 export function createBrainViewer(host: HTMLElement, data: BrainModelData, options: Options): BrainViewer {
   const renderer = new WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
@@ -166,6 +171,11 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   let selected: string | undefined
   let highlighted: string[] = []
   let layerState: BrainLayers = { interior: false, hemisphere: 'both', separation: 0, atlas: 'anatomy', texture: true, vessels: true, colors: false, labels: false, language: 'pl' }
+  let activeModel = data
+  let playback: PathwayPlayback | undefined
+  let pathOverlay: ReturnType<typeof createCircuitOverlay> | undefined
+  let animationTime = 0
+  let pageVisible = document.visibilityState !== 'hidden'
   let hoverMesh: Mesh | null = null
   let disposed = false
   let frame = 0
@@ -174,6 +184,10 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   const render = () => {
     frame = 0
     if (disposed || width <= 0 || height <= 0) return
+    const now = performance.now()
+    const animating = !!(pathOverlay && playback?.playing && pageVisible)
+    if (animating) pathOverlay!.advance(animationTime ? Math.min(.05, (now-animationTime)/1000) : 0)
+    animationTime = now
     if (transition) {
       const progress = Math.min(1, (performance.now() - transition.start) / 360)
       const eased = 1 - (1 - progress) ** 3
@@ -183,19 +197,29 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     }
     const moving = controls.update()
     renderer.info.reset()
-    if (highQuality) lighting.render(!layerState.interior && !layerState.isolate)
+    if (highQuality && !pathOverlay) lighting.render(!layerState.interior && !layerState.isolate)
     else renderer.render(scene, camera)
     canvas.dataset.geometryCount = String(renderer.info.memory.geometries)
     canvas.dataset.vessels = String(vessels.root.visible)
     canvas.dataset.renderedFrames = String(Number(canvas.dataset.renderedFrames ?? 0) + 1)
     canvas.dataset.renderEngine = 'Three.js · WebGL2 · PBR'
-    if (moving || transition) {
+    if (pathOverlay) {
+      labelsLayer.hidden = true
+      pathOverlay.updateLabels(camera,width,height)
+      const stats=pathOverlay.stats()
+      canvas.dataset.pathwayId=stats.id
+      canvas.dataset.pathwayEdges=String(stats.renderedEdges)
+      canvas.dataset.pathwayElapsed=String(stats.elapsed)
+      canvas.dataset.pathwayPlaying=String(stats.playing)
+      canvas.dataset.pathwaySignal=JSON.stringify(stats.particles[0] ?? [])
+    } else if (moving || transition) {
       labelsLayer.style.visibility = 'hidden'
       requestRender()
     } else {
       labelsLayer.style.visibility = ''
       updateLabels()
     }
+    if (animating || moving || transition) requestRender()
   }
   const requestRender = () => { if (!disposed && !frame) frame = requestAnimationFrame(render) }
   const isActive = (item: BrainMeshData) => selected ? item.id === selected || item.structureIds.includes(selected) : highlighted.some(id => item.structureIds.includes(id))
@@ -213,10 +237,11 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       if (item.kind === 'white-matter' && !active) mesh.visible = false
       if (!cortical && item.kind !== 'cerebellum' && !layerState.interior && !active) mesh.visible = false
       if (layerState.isolate && !active && !cortical) mesh.visible = false
+      if (pathOverlay && !cortical && !active && item.kind !== 'cerebellum' && !['Brain-Stem','Left-VentralDC','Right-VentralDC'].includes(item.id)) mesh.visible = false
       mesh.position.x = isLeft(item.hemisphere) ? -layerState.separation : isRight(item.hemisphere) ? layerState.separation : 0
-      const transparent = !!(layerState.interior || layerState.isolate) && cortical && !active && !hovered
+      const transparent = pathOverlay ? (layerState.interior && cortical) || !cortical && !active : !!(layerState.interior || layerState.isolate) && cortical && !active && !hovered
       mesh.material.transparent = transparent
-      mesh.material.opacity = transparent ? layerState.isolate ? 0.025 : 0.075 : 1
+      mesh.material.opacity = transparent ? pathOverlay ? active ? .3 : cortical ? .12 : .18 : layerState.isolate ? 0.025 : 0.075 : 1
       mesh.material.depthWrite = !transparent
       mesh.castShadow = !transparent
       mesh.renderOrder = transparent ? 2 : 0
@@ -231,6 +256,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       mesh.material.needsUpdate = true
     }
     vessels.update(layerState)
+    pathOverlay?.updateLayers(layerState)
     const surfaceTriangles = parts.reduce((sum, { mesh }) => sum + (mesh.visible ? (mesh.geometry.index?.count ?? 0) / 3 : 0), 0)
     const vesselTriangles = vessels.root.visible ? vessels.root.children.reduce((sum, child) => sum + (child.visible ? ((child as Mesh).geometry.index?.count ?? 0) / 3 : 0), 0) : 0
     canvas.dataset.triangles = String(surfaceTriangles + vesselTriangles)
@@ -395,6 +421,12 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   controls.addEventListener('change', cameraChanged)
   const motionChanged = () => { controls.enableDamping = !reducedMotion.matches; requestRender() }
   reducedMotion.addEventListener('change', motionChanged)
+  const visibilityChanged = () => {
+    pageVisible = document.visibilityState !== 'hidden'
+    animationTime = 0
+    if (pageVisible) requestRender()
+  }
+  document.addEventListener('visibilitychange',visibilityChanged)
   const observer = new ResizeObserver(() => {
     width = host.clientWidth; height = host.clientHeight
     if (width <= 0 || height <= 0) return
@@ -412,7 +444,22 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   applyAppearance()
 
   return {
+    pathway(next) {
+      const changed=playback?.circuit.id!==next?.circuit.id
+      playback=next
+      if(changed) {
+        pathOverlay?.dispose()
+        pathOverlay=next ? createCircuitOverlay(activeModel,next.circuit,{host,onPick:options.onPick}) : undefined
+        if(pathOverlay)brain.add(pathOverlay.root)
+        labelsLayer.hidden=!!pathOverlay
+        if(!pathOverlay)for(const key of ['pathwayId','pathwayEdges','pathwayElapsed','pathwayPlaying','pathwaySignal'])delete canvas.dataset[key]
+      }
+      pathOverlay?.setPlayback(next?.playing ?? false,next?.speed ?? 1)
+      animationTime=0
+      applyAppearance()
+    },
     upgrade(next) {
+      activeModel=next
       highQuality = Object.values(next.surfaces ?? {}).some(s => s.positions.length > 300000)
       hoverMesh = null
       options.onHover(null)
@@ -428,6 +475,14 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       vessels.dispose()
       vessels = createCorticalVessels(next)
       brain.add(vessels.root)
+      if(playback) {
+        const elapsed=pathOverlay?.elapsed() ?? 0
+        pathOverlay?.dispose()
+        pathOverlay=createCircuitOverlay(next,playback.circuit,{host,onPick:options.onPick})
+        pathOverlay.setPlayback(playback.playing,playback.speed)
+        pathOverlay.setElapsed(elapsed)
+        brain.add(pathOverlay.root)
+      }
       applyAppearance()
     },
     select(id, ids) { selected = id; highlighted = ids; pointerLeave() },
@@ -442,6 +497,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       controls.removeEventListener('change', cameraChanged)
       controls.dispose()
       reducedMotion.removeEventListener('change', motionChanged)
+      document.removeEventListener('visibilitychange',visibilityChanged)
       canvas.removeEventListener('pointerdown', pointerDown)
       canvas.removeEventListener('pointermove', pointerMove)
       canvas.removeEventListener('pointerup', pointerUp)
@@ -451,6 +507,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       canvas.removeEventListener('webglcontextlost', contextLost)
       parts.forEach(({ mesh }) => { mesh.geometry.dispose(); mesh.material.dispose() })
       vessels.dispose()
+      pathOverlay?.dispose()
       lighting.dispose()
       tissueTexture.dispose()
       environment.dispose()

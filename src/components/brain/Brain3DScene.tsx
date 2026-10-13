@@ -7,7 +7,7 @@ import type { TerminologyLanguage } from '../../types/atlas'
 import { getStructureName } from '../../utils/terminology'
 import { MinusIcon, PlusIcon, ResetIcon } from '../common/Icons'
 import { createBrainViewer } from './three/brainViewer'
-import type { BrainViewer } from './three/brainViewer'
+import type { BrainViewer, PathwayPlayback } from './three/brainViewer'
 import { isCortex } from './three/modelTypes'
 import { decodeBrainModel } from './three/loadBrainModel'
 import type { BrainModelData, CameraPreset, Hemisphere, HoveredParcel } from './three/modelTypes'
@@ -16,6 +16,7 @@ type Props = {
   selectedId?: string; highlightedIds?: string[]; language: TerminologyLanguage;
   onSelect: (id: string) => void; onFallback: () => void;
   atlasMode?: AtlasMode; onAtlasMode?: (mode: AtlasMode) => void;
+  pathway?: PathwayPlayback;
 }
 const emptyIds: string[] = []
 type Quality = 'standard' | 'high'
@@ -28,7 +29,7 @@ function loadModel(quality: Quality) {
   return modelPromises[quality]!
 }
 
-export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, language, onSelect, onFallback, atlasMode = 'anatomy', onAtlasMode }: Props) {
+export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, language, onSelect, onFallback, atlasMode = 'anatomy', onAtlasMode, pathway }: Props) {
   const host = useRef<HTMLDivElement>(null)
   const viewer = useRef<BrainViewer | null>(null)
   const [model, setModel] = useState<BrainModelData | null>(null)
@@ -49,10 +50,10 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   useEffect(() => { callbacks.current = { onSelect } }, [onSelect])
   const ids = selectedId ? [selectedId] : highlightedIds
   const selectionKey = ids.join(',')
-  const hemisphere = hemisphereOverride?.key === selectionKey ? hemisphereOverride.value : 'both'
+  const hemisphere = hemisphereOverride?.key === selectionKey ? hemisphereOverride.value : pathway ? 'left' : 'both'
   const selectionMeshes = model?.meshes.filter(mesh => (mesh.atlas === atlasMode || mesh.atlas === 'both') && ids.some(id => mesh.id === id || mesh.structureIds.includes(id))) ?? []
   const needsInterior = selectionMeshes.some(mesh => !isCortex(mesh)) || ids.some(id => ['insula', 'auditory-cortex', 'acc', 'pcc', 'vmpfc'].includes(id))
-  const interior = interiorOverride?.key === selectionKey ? interiorOverride.value : needsInterior
+  const interior = interiorOverride?.key === selectionKey ? interiorOverride.value : !!pathway || needsInterior
   const selected = selectedId ? structureById[selectedId] : undefined
   const region = atlasRegionById[hovered?.regionId ?? selectedId ?? '']
   const caption = hovered?.structureId ? structureById[hovered.structureId] : selected
@@ -93,21 +94,22 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   }, [])
 
   useEffect(() => { viewer.current?.select(selectedId, highlightedIds) }, [selectedId, highlightedIds, model])
-  useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels, colors: colors || atlasMode === 'brodmann', labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model])
+  useEffect(() => { viewer.current?.pathway(pathway) }, [pathway, model])
+  useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
 
-  return <section className="brain-3d" aria-label="Interaktywny model mózgu 3D">
+  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}`} aria-label="Interaktywny model mózgu 3D">
     <div className="model-tools">
       {onAtlasMode && <div className="model-hemispheres" role="group" aria-label="Atlas"><button aria-pressed={atlasMode === 'anatomy'} onClick={() => onAtlasMode('anatomy')}>Anatomia</button><button aria-pressed={atlasMode === 'brodmann'} onClick={() => onAtlasMode('brodmann')}>Brodmann</button></div>}
       <button className="interior-toggle" disabled={!ready} aria-pressed={interior} onClick={() => setInteriorOverride({ key: selectionKey, value: !interior })}>Wnętrze</button>
       <div className="model-hemispheres" role="group" aria-label="Widoczne półkule">{([['both', 'Obie'], ['left', 'Lewa'], ['right', 'Prawa']] as const).map(([value, label]) => <button key={value} disabled={!ready} aria-pressed={hemisphere === value} onClick={() => setHemisphereOverride({key:selectionKey,value})}>{label}</button>)}</div>
     </div>
-    <div className="model-layer-tools" role="group" aria-label="Warstwy modelu"><button disabled={!ready} aria-pressed={texture} onClick={() => setTexture(!texture)}>Tekstura</button><button disabled={!ready} aria-pressed={vessels} onClick={() => setVessels(!vessels)} title="Ilustracyjne naczynia powierzchniowe">Naczynia</button><button disabled={!ready || atlasMode === 'brodmann'} aria-pressed={colors || atlasMode === 'brodmann'} onClick={() => setColors(!colors)}>Kolory atlasu</button><button disabled={!ready} aria-pressed={labels} onClick={() => setLabels(!labels)}>Podpisy</button><button disabled={!ready || !canIsolate} aria-pressed={isolate && canIsolate} onClick={() => setIsolate(!isolate)}>Izoluj</button></div>
+    <div className="model-layer-tools" role="group" aria-label="Warstwy modelu"><button disabled={!ready} aria-pressed={texture} onClick={() => setTexture(!texture)}>Tekstura</button>{!pathway && <><button disabled={!ready} aria-pressed={vessels} onClick={() => setVessels(!vessels)} title="Ilustracyjne naczynia powierzchniowe">Naczynia</button><button disabled={!ready || atlasMode === 'brodmann'} aria-pressed={colors || atlasMode === 'brodmann'} onClick={() => setColors(!colors)}>Kolory atlasu</button></>}<button disabled={!ready} aria-pressed={labels} onClick={() => setLabels(!labels)}>Podpisy</button>{!pathway && <button disabled={!ready || !canIsolate} aria-pressed={isolate && canIsolate} onClick={() => setIsolate(!isolate)}>Izoluj</button>}</div>
     <div className="model-stage">
       <span className="model-badge" aria-live="polite">{quality !== loadedQuality ? `Ładowanie ${quality === 'high' ? 'HQ' : 'Standard'}…` : loadedQuality === 'high' ? 'HQ · 655 360 trójkątów kory' : 'Standard · 163 840 trójkątów kory'}</span>
       <div className="brain-3d-host" ref={host} aria-hidden={error ? true : undefined} />
       {!ready && <div className="model-message" aria-live="polite">{error ? <><strong>Model 3D jest niedostępny</strong><p>{error}</p><button className="secondary-button" onClick={onFallback}>Otwórz schemat 2D</button></> : <><span className="model-loading" aria-hidden="true" /><p>Ładowanie anatomii 3D…</p></>}</div>}
       {ready && <>
-        {vessels && !interior && !(isolate && canIsolate) && <div className="model-vessel-legend"><span><i className="vessel-artery" />Tętnice</span><span><i className="vessel-vein" />Żyły</span><small>Przebieg ilustracyjny</small></div>}
+        {vessels && !pathway && !interior && !(isolate && canIsolate) && <div className="model-vessel-legend"><span><i className="vessel-artery" />Tętnice</span><span><i className="vessel-vein" />Żyły</span><small>Przebieg ilustracyjny</small></div>}
         <div className="model-presets" role="group" aria-label="Ustawienie kamery">{([['lateral', 'Bok'], ['front', 'Przód'], ['top', 'Góra']] as [CameraPreset, string][]).map(([value, label]) => <button key={value} onClick={() => viewer.current?.preset(value)}>{label}</button>)}</div>
         <div className="zoom-controls" role="group" aria-label="Powiększenie modelu 3D"><button aria-label="Pomniejsz model" onClick={() => viewer.current?.zoom(1.2)}><MinusIcon /></button><button aria-label="Przywróć model" onClick={() => viewer.current?.reset()}><ResetIcon /></button><button aria-label="Powiększ model" onClick={() => viewer.current?.zoom(0.83)}><PlusIcon /></button></div>
         {(region || hovered || caption) && <div className="model-caption" aria-live="polite" title={hovered?.label}>

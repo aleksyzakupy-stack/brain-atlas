@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      run_tests:
+        description: Uruchom testy przed publikacją
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -41,6 +46,7 @@ jobs:
         run: npm run lint
 
       - name: Uruchom testy
+        if: github.event_name != 'workflow_dispatch' || inputs.run_tests
         run: npm test
 
       - name: Zbuduj aplikację

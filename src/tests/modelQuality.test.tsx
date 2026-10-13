@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import Brain3DScene from '../components/brain/Brain3DScene'
-const viewer = vi.hoisted(()=>({upgrade:vi.fn(),select:vi.fn(),layers:vi.fn(),preset:vi.fn(),zoom:vi.fn(),reset:vi.fn(),dispose:vi.fn()}))
+const viewer = vi.hoisted(()=>({pathway:vi.fn(),upgrade:vi.fn(),select:vi.fn(),layers:vi.fn(),preset:vi.fn(),zoom:vi.fn(),reset:vi.fn(),dispose:vi.fn()}))
 const create = vi.hoisted(()=>vi.fn(()=>viewer))
 vi.mock('../components/brain/three/brainViewer',()=>({createBrainViewer:create}))
 const model = {version:1,coordinateSystem:'surface-RAS',meshes:[{id:'lh_Brodmann.4',label:'BA4',kind:'cortex',hemisphere:'left',structureIds:['motor-cortex'],approximate:false,positions:[0,0,0,1,0,0,0,1,0],indices:[0,1,2]}]}

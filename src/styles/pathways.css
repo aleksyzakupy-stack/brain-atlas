@@ -6,6 +6,11 @@
 .pathway-animation-tools label { display: flex; gap: 8px; align-items: center; }
 .pathway-animation-tools select { font-size: 12px; }
 .pathway-particle { filter: drop-shadow(0 0 6px #88d8bb80); }
+.pathway-model .brain-3d-host { height: clamp(440px, 59vh, 650px); }
+.pathway-3d-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.pathway-3d-label { position: absolute; transform: translate(-50%,-50%); width: 156px; padding: 6px 9px; min-height: 34px; border: 1px solid #88d8bb65; border-radius: 7px; background: #16272bef; color: #e4f5ef; font-size: 12px; line-height: 1.35; text-align: center; pointer-events: auto; box-shadow: 0 4px 16px #0005; }
+.pathway-3d-label[hidden], .pathway-3d-labels[hidden] { display: none; }
+.pathway-3d-label[data-precision="external"] { border-style: dashed; border-color: #e3a7ce80; }
 .pathway-graph { position: relative; width: 100%; max-width: 720px; margin: 12px auto; }
 .pathway-graph svg { display: block; width: 100%; height: auto; }
 .pathway-node { position: absolute; left: 50%; transform: translate(-50%, -50%); width: 38%; min-height: 52px; }
@@ -21,6 +26,8 @@
 .structure-directory .text-only-ba { opacity: .8; }
 .pathway-course-links { padding-top: 20px; }
 @media (max-width: 640px) {
+  .pathway-model .brain-3d-host { height: 390px; }
+  .pathway-3d-label { width: 120px; font-size: 11px; padding: 5px 6px; }
   .pathway-node > button, .pathway-node > span { font-size: 12px; min-height: 42px; padding: 6px; }
   .pathway-graph text { font-size: 24px; }
   .pathway-animation-tools select, .lesson-pathway-select select { font-size: 16px; }

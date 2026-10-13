@@ -29,6 +29,7 @@ describe('szlaki, animacja i pełny katalog BA', () => {
   it('animuje każdą krawędź wszystkich schematów, a sieci nie udają jednokierunkowych traktów', () => {
     for (const circuit of brainCircuits) {
       const {container, unmount} = render(<PathwayScene circuit={circuit} language="pl" onSelect={vi.fn()} />)
+      fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
       expect(container.querySelectorAll('animateMotion, path > animate')).toHaveLength(circuit.edges.length)
       expect(container.querySelectorAll('path[marker-end]')).toHaveLength(circuit.kind === 'network' ? 0 : circuit.edges.length)
       expect(container.querySelector('svg')).toHaveAttribute('data-playing','true')
@@ -40,6 +41,7 @@ describe('szlaki, animacja i pełny katalog BA', () => {
     const select=vi.fn()
     const pause=vi.fn(), resume=vi.fn()
     const {container} = render(<PathwayScene circuit={circuitById['basal-direct']} language="pl" onSelect={select} />)
+    fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
     const svg = container.querySelector('svg')!
     Object.assign(svg,{pauseAnimations:pause,unpauseAnimations:resume})
     fireEvent.click(screen.getByRole('button',{name:'Pauza'}))
@@ -58,6 +60,7 @@ describe('szlaki, animacja i pełny katalog BA', () => {
     window.matchMedia=vi.fn().mockImplementation(query=>({matches:true,media:query,addEventListener:vi.fn(),removeEventListener:vi.fn()}))
     try {
       const {container}=render(<PathwayScene circuit={circuitById.mesolimbic} language="pl" onSelect={vi.fn()} />)
+      fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
       expect(container.querySelector('svg')).toHaveAttribute('data-playing','false')
       fireEvent.click(screen.getByRole('button',{name:'Odtwórz'}))
       expect(container.querySelector('svg')).toHaveAttribute('data-playing','true')
@@ -78,6 +81,7 @@ describe('szlaki, animacja i pełny katalog BA', () => {
   it('zachowuje powrót z karty do szlaku i odrzuca obce adresy powrotu', async () => {
     window.location.hash='#/szlaki/mesolimbic'
     render(<App />)
+    fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
     fireEvent.click(screen.getAllByRole('button',{name:/Jądro półleżące ↗/})[0])
     await screen.findByRole('heading',{name:'Jądro półleżące',level:1})
     fireEvent.click(screen.getByRole('link',{name:'← Wróć do szlaku'}))
