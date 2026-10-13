@@ -54,7 +54,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   useEffect(() => { callbacks.current = { onSelect } }, [onSelect])
   const ids = selectedId ? [selectedId] : highlightedIds
   const selectionKey = ids.join(',')
-  const hemisphere = hemisphereOverride?.key === selectionKey ? hemisphereOverride.value : pathway ? 'left' : 'both'
+  const hemisphere = hemisphereOverride?.key === selectionKey ? hemisphereOverride.value : 'both'
   const selectionMeshes = model?.meshes.filter(mesh => (mesh.atlas === atlasMode || mesh.atlas === 'both') && ids.some(id => mesh.id === id || mesh.structureIds.includes(id))) ?? []
   const needsInterior = selectionMeshes.some(mesh => !isCortex(mesh)) || ids.some(id => ['insula', 'auditory-cortex', 'acc', 'pcc', 'vmpfc'].includes(id))
   const interior = interiorOverride?.key === selectionKey ? interiorOverride.value : !!pathway || needsInterior
