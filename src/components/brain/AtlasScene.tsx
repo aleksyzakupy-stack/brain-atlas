@@ -91,6 +91,7 @@ function AtlasScene2D({ view, onView, selectedId, step, highlightedIds, language
   const [hovered, setHovered] = useState<string | null>(null)
   const [deepSide, setDeepSide] = useState(false)
   const [showAnatomy, setShowAnatomy] = useState(false)
+  const [touchScroll] = useState(() => window.matchMedia('(pointer: coarse)').matches)
   const gesture = useRef<{ x: number; y: number; moved: boolean } | null>(null)
   const projection = getProjection(view, selectedId === 'cerebellum' || deepSide)
   const allRegions = teachingRegions(projection).filter(region => structureById[region.id])
@@ -100,7 +101,7 @@ function AtlasScene2D({ view, onView, selectedId, step, highlightedIds, language
   const isNetwork = step?.scene === 'connections' && !showAnatomy
   const isSeparate = selectedId && separateSchematicIds.includes(selectedId) && view === 'deep'
   const selected = selectedId ? structureById[selectedId] : undefined
-  const caption = hovered ? structureById[hovered] : selected
+  const caption = hovered && (!highlighted.length || highlighted.includes(hovered)) ? structureById[hovered] : selected
   const pick = (id: string) => { if (!gesture.current?.moved) onSelect(id) }
 
   return <section className="scene-panel" aria-label="Interaktywny schemat mózgu">
@@ -111,7 +112,7 @@ function AtlasScene2D({ view, onView, selectedId, step, highlightedIds, language
     </div>
     {!isNetwork && view === 'deep' && !isSeparate && <div className="projection-line"><label>Projekcja <select aria-label="Projekcja struktur głębokich" value={projection === 'deepSide' ? 'side' : 'front'} onChange={event => setDeepSide(event.target.value === 'side')} disabled={selectedId === 'cerebellum'}><option value="front">Czołowa</option><option value="side">Strzałkowa</option></select></label></div>}
     <TransformWrapper key={`${projection}-${isNetwork}-${isSeparate ? selectedId : ''}`} minScale={1} maxScale={3.5} smooth={!reduced}
-      wheel={{ activationKeys: ['Control'] }} doubleClick={{ disabled: true }} panning={{ velocityDisabled: true }}
+      wheel={{ activationKeys: ['Control'] }} doubleClick={{ disabled: true }} panning={{ velocityDisabled: true, disabled: touchScroll }}
       keyboard={{ disabled: false, animationTime: reduced ? 0 : 150 }} velocityAnimation={{ disabled: true }}
       zoomAnimation={{ disabled: reduced }} autoAlignment={{ disabled: reduced }}>
       <div className="scene-surface" data-reduced-motion={reduced}>
@@ -126,7 +127,7 @@ function AtlasScene2D({ view, onView, selectedId, step, highlightedIds, language
               {regions.map(region => {
                 const structure = structureById[region.id], active = highlighted.includes(region.id)
                 return <path key={region.id} d={region.path} data-structure-id={region.id} data-layer={region.approximate ? 'functional-overlay' : 'anatomy'}
-                  className={`teaching-region ${active ? 'is-selected' : ''} ${region.approximate ? 'approximate-region' : ''}`}
+                  className={`teaching-region ${active ? 'is-selected' : highlighted.length ? 'is-context-muted' : ''} ${region.approximate ? 'approximate-region' : ''}`}
                   style={{ '--category': categoryById[structure.categoryId].color } as CSSProperties}
                   role="button" tabIndex={0} aria-label={getStructureName(structure, language)} aria-pressed={active}
                   onClick={() => pick(region.id)} onKeyDown={event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onSelect(region.id) } }}
@@ -145,7 +146,7 @@ function AtlasScene2D({ view, onView, selectedId, step, highlightedIds, language
       {!isSeparate && <div className="diagram-key">{isNetwork ? <><span><i className="line-sample" />Połączenie anatomiczne</span><span><i className="line-sample dashed" />Związek funkcjonalny</span></> : <><span><i className="area-sample" />Kontur anatomiczny</span><span><i className="area-sample dashed" />Przybliżony obszar funkcjonalny</span></>}
         {!isNetwork && <button className="text-button" aria-pressed={labels} onClick={() => setLabels(!labels)}>{labels ? 'Ukryj podpisy' : 'Pokaż podpisy'}</button>}
       </div>}
-      {!isNetwork && <div className="structure-chips" aria-label="Podpisy struktur">{regions.filter(region => labels || highlighted.includes(region.id) || (!highlighted.length && ['motor-cortex', 'visual-cortex', 'hippocampus', 'precuneus'].includes(region.id))).map(region => <button key={region.id} onClick={() => onSelect(region.id)} style={{ '--category': categoryById[structureById[region.id].categoryId].color } as CSSProperties}><span className="category-dot" />{getStructureName(structureById[region.id], language)}</button>)}</div>}
+      {!isNetwork && <div className="structure-chips" aria-label="Podpisy struktur">{regions.filter(region => highlighted.length ? highlighted.includes(region.id) : labels || ['motor-cortex', 'visual-cortex', 'hippocampus', 'precuneus'].includes(region.id)).map(region => <button key={region.id} onClick={() => onSelect(region.id)} style={{ '--category': categoryById[structureById[region.id].categoryId].color } as CSSProperties}><span className="category-dot" />{getStructureName(structureById[region.id], language)}</button>)}</div>}
       {!isNetwork && highlighted.some(id => !visibleIds.has(id) && !separateSchematicIds.includes(id)) && <div className="off-view">Poza tą projekcją: {highlighted.filter(id => !visibleIds.has(id)).map(id => <button className="text-button" key={id} onClick={() => onSelect(id)}>{getStructureName(structureById[id], language)} ↗</button>)}</div>}
     </div>
   </section>

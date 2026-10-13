@@ -44,6 +44,10 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   const [vessels, setVessels] = useState(false)
   const [colors, setColors] = useState(false)
   const [labels, setLabels] = useState(false)
+  const [fullscreen, setFullscreen] = useState(false)
+  const [touchInteractive, setTouchInteractive] = useState(false)
+  const nativeFullscreen = useRef(false)
+  const fullscreenButton = useRef<HTMLButtonElement>(null)
   const [isolate, setIsolate] = useState(false)
   const [interiorOverride, setInteriorOverride] = useState<{ key: string; value: boolean } | null>(null)
   const callbacks = useRef({ onSelect })
@@ -61,6 +65,40 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   const approximate = selectionMeshes.some(mesh => mesh.approximate)
   const canIsolate = selectionMeshes.length > 0
   const ready = !!model && !error
+
+  const toggleFullscreen = () => {
+    if (fullscreen) {
+      setFullscreen(false)
+      if (nativeFullscreen.current && document.fullscreenElement) void document.exitFullscreen().catch(() => {})
+    } else {
+      setFullscreen(true)
+      // CSS fills the viewport on browsers without element fullscreen support.
+      void document.documentElement.requestFullscreen?.().catch(() => {})
+    }
+  }
+  useEffect(() => {
+    if (!fullscreen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const button = fullscreenButton.current
+    button?.focus()
+    const changed = () => {
+      nativeFullscreen.current = !!document.fullscreenElement
+    }
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && !document.querySelector('[role="dialog"]')) setFullscreen(false)
+    }
+    document.addEventListener('fullscreenchange', changed)
+    document.addEventListener('keydown', escape)
+    return () => {
+      document.body.style.overflow = previousOverflow
+      document.removeEventListener('fullscreenchange', changed)
+      document.removeEventListener('keydown', escape)
+      if (nativeFullscreen.current && document.fullscreenElement) void document.exitFullscreen().catch(() => {})
+      nativeFullscreen.current = false
+      button?.focus()
+    }
+  }, [fullscreen])
 
   useEffect(() => {
     let alive = true
@@ -97,7 +135,7 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   useEffect(() => { viewer.current?.pathway(pathway) }, [pathway, model])
   useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: !!pathway || labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
 
-  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}`} aria-label="Interaktywny model mózgu 3D">
+  return <section className={`brain-3d${pathway ? ' pathway-model' : ''}${fullscreen ? ' is-fullscreen' : ''}${touchInteractive ? ' is-touch-interactive' : ''}`} aria-label="Interaktywny model mózgu 3D">
     <details className="model-options" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
       <summary>Widok</summary>
       <div className="model-options-panel">
@@ -116,6 +154,10 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
       </div>
     </details>
     <div className="model-stage">
+      <div className="model-display-controls">
+        {!fullscreen && <button className="model-touch-toggle" aria-pressed={touchInteractive} onClick={() => setTouchInteractive(!touchInteractive)}>{touchInteractive ? 'Przewijaj stronę' : 'Obracaj model'}</button>}
+        <button ref={fullscreenButton} className="model-fullscreen-toggle" aria-pressed={fullscreen} onClick={toggleFullscreen}>{fullscreen ? 'Zamknij pełny ekran' : 'Pełny ekran'}</button>
+      </div>
       {quality !== loadedQuality && <span className="model-badge" aria-live="polite">Ładowanie {quality === 'high' ? 'HQ' : 'Standard'}…</span>}
       <div className="brain-3d-host" ref={host} aria-hidden={error ? true : undefined} />
       {!ready && <div className="model-message" aria-live="polite">{error ? <><strong>Model 3D jest niedostępny</strong><p>{error}</p><button className="secondary-button" onClick={onFallback}>Otwórz schemat 2D</button></> : <><span className="model-loading" aria-hidden="true" /><p>Ładowanie anatomii 3D…</p></>}</div>}

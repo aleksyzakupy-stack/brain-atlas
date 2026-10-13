@@ -14,7 +14,7 @@ export function CircuitArticle({ circuit, compact = false }: { circuit: BrainCir
     <details className="reading-detail"><summary>Fizjologia</summary><p>{circuit.physiology}</p></details>
     <details className="reading-detail"><summary>W psychiatrii</summary><p>{circuit.psychiatry}</p></details>
     <details className="reading-detail"><summary>Farmakologia</summary><p>{circuit.pharmacology}</p></details>
-    <details className="source-details"><summary>Badania i źródła</summary><p>{circuit.evidence}</p>{circuit.hainesPages && <p>Haines, wyd. 9, s. {circuit.hainesPages} (numeracja drukowana).</p>}<Sources references={resolveReferences(circuit.referenceIds)} /></details>
+    <Sources references={resolveReferences(circuit.referenceIds)}><p>{circuit.evidence}</p>{circuit.hainesPages && <p>Haines, wyd. 9, s. {circuit.hainesPages}.</p>}</Sources>
   </section>
 }
 

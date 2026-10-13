@@ -19,7 +19,7 @@ export function BrodmannArticle({ number, compact = false }: { number: number; c
     <h2>Znaczenie kliniczne</h2><p>{description.clinical}</p>
     <h2>Lateralizacja</h2><p>{description.lateralization}</p>
     {description.uncertainty && <p className="interpretation">{description.uncertainty}</p>}
-    <details className="source-details"><summary>Badania i źródła</summary><p>Numer BA określa cytoarchitekturę, nie jedno wyłączne zadanie. Granice PALS-B12 są projekcją atlasową, a nie histologicznym pomiarem tej konkretnej półkuli.</p><Sources references={resolveReferences(description.referenceIds)} /></details>
+    <Sources references={resolveReferences(description.referenceIds)}><p>BA: podział cytoarchitektoniczny. Granice PALS-B12 są projekcją atlasową.</p></Sources>
   </section>
 }
 
@@ -30,5 +30,5 @@ export function BrodmannPage({ number }: { number: number }) {
 
 export function RegionContent({ region, language, onSelect }: { region: AtlasRegion; language: TerminologyLanguage; onSelect: (id: string) => void }) {
   const metadata = <><dl className="atlas-region-data"><div><dt>Półkula</dt><dd>{region.hemisphere === 'left' ? 'Lewa' : region.hemisphere === 'right' ? 'Prawa' : 'Struktura pośrodkowa'}</dd></div><div><dt>EN</dt><dd>{region.names.en}</dd></div><div><dt>LAT</dt><dd>{region.names.lat}</dd></div><div><dt>Atlas</dt><dd>{region.source}</dd></div><div><dt>Identyfikator źródłowy</dt><dd>{region.sourceRegion}</dd></div></dl><div className="about-links"><a target="_blank" rel="noreferrer" href={region.source === 'PALS-B12' ? 'https://surfer.nmr.mgh.harvard.edu/fswiki/PALS_B12' : region.source === 'Destrieux' ? 'https://pubmed.ncbi.nlm.nih.gov/20547229/' : 'https://surfer.nmr.mgh.harvard.edu/fswiki/SubcorticalSegmentation'}>{region.source} ↗</a></div></>
-  return <article className="reading-content"><h1>{regionName(region, language)}</h1>{region.number && <BrodmannArticle number={region.number} />}{region.number ? <details className="source-details"><summary>Dane atlasowe</summary>{metadata}</details> : metadata}<div className="related-links">{atlasRegions.filter(item => item.sourceRegion === region.sourceRegion && item.id !== region.id).map(item => <button key={item.id} onClick={() => onSelect(item.id)}>{regionLabel(item, language)} ↗</button>)}</div></article>
+  return <article className="reading-content"><h1>{regionName(region, language)}</h1>{region.number && <BrodmannArticle number={region.number} />}<Sources references={[]}>{metadata}</Sources><div className="related-links">{atlasRegions.filter(item => item.sourceRegion === region.sourceRegion && item.id !== region.id).map(item => <button key={item.id} onClick={() => onSelect(item.id)}>{regionLabel(item, language)} ↗</button>)}</div></article>
 }

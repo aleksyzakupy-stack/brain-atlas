@@ -10,6 +10,7 @@ import { createTissueMaterial, loadTissueTexture, setTissueDetail } from './tiss
 import { createCorticalVessels } from './corticalVessels'
 import { createBrainLighting } from './brainLighting'
 import { createCircuitOverlay } from './circuitOverlay'
+import { bindingsForCircuit, spatialAnchors, spatialGroups } from '../../../data/pathwaySpatial'
 import type { BrainCircuit, PathwayScenario } from '../../../types/atlas'
 import { categoryById } from '../../../data/categories'
 import { structureById } from '../../../data/structures'
@@ -223,13 +224,15 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     if (animating || moving || transition) requestRender()
   }
   const requestRender = () => { if (!disposed && !frame) frame = requestAnimationFrame(render) }
-  const isActive = (item: BrainMeshData) => selected ? item.id === selected || item.structureIds.includes(selected) : highlighted.some(id => item.structureIds.includes(id))
+  let pathwayRegions = new Set<string>()
+  const hasFocus = () => !!playback || !!selected || highlighted.length > 0
+  const isActive = (item: BrainMeshData) => playback ? pathwayRegions.has(item.id) : selected ? item.id === selected || item.structureIds.includes(selected) : highlighted.some(id => item.id === id || item.structureIds.includes(id))
 
   const applyAppearance = () => {
     for (const { mesh, data: item } of parts) {
       const cortical = isCortex(item)
       const active = isActive(item)
-      const hovered = mesh === hoverMesh
+      const hovered = mesh === hoverMesh && (!hasFocus() || active)
       const id = active && selected ? selected : item.structureIds[0]
       const category = id && structureById[id] ? categoryById[structureById[id].categoryId] : undefined
       mesh.visible = layerState.hemisphere === 'both' ||
@@ -250,7 +253,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       const color = active && selected && structureById[selected] ? category?.color ?? item.color ?? '#d3ba8a' : item.color ?? category?.color ?? '#d3ba8a'
       mesh.material.vertexColors = !!layerState.texture
       setTissueDetail(mesh.material, !!layerState.texture && textureAvailable)
-      mesh.material.color.set(active || hovered || layerState.colors ? color : neutral)
+      mesh.material.color.set(active || hovered || (layerState.colors && !hasFocus()) ? color : neutral)
       if (hovered && !active) mesh.material.color.lerp(new Color('#ffffff'), 0.12)
       mesh.material.emissive.copy(new Color(active ? color : '#000000'))
       mesh.material.emissiveIntensity = active ? 0.12 : 0
@@ -300,7 +303,8 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     for (const { mesh, data: item, anchor, normal, label } of candidates) {
       if (!label) continue
       label.hidden = true
-      if (!layerState.labels || !mesh.visible || mesh.material.opacity < 0.5 || placed.length >= limit) continue
+      const active = isActive(item)
+      if ((!layerState.labels && !active) || (hasFocus() && !active) || !mesh.visible || mesh.material.opacity < 0.5 || placed.length >= limit) continue
       const region = atlasRegionById[item.id]
       const world = mesh.localToWorld(anchor.clone())
       const direction = camera.position.clone().sub(world).normalize()
@@ -369,7 +373,8 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       return
     }
     if (event.pointerType === 'touch') return
-    const hit = hitAt(event)
+    const candidate = hitAt(event)
+    const hit = candidate && (!hasFocus() || isActive(candidate.userData.parcel)) ? candidate : undefined
     if ((hit ?? null) === hoverMesh) return
     hoverMesh = hit ?? null
     const item: BrainMeshData | undefined = hit?.userData.parcel
@@ -448,6 +453,15 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     pathway(next) {
       const changed=playback?.circuit.id!==next?.circuit.id
       playback=next
+      // Only segmented nodes belong to the pathway highlight. Landmarks must
+      // not light up a larger parent structure as if it were that nucleus.
+      pathwayRegions = new Set(next ? bindingsForCircuit(next.circuit).flatMap(key =>
+        (spatialGroups[key] ?? [{ key }]).flatMap(binding => {
+          const anchor = spatialAnchors[binding.key]
+          return anchor.precision === 'region' && anchor.region
+            ? [anchor.region, anchor.region.replace(/^Left-/, 'Right-').replace(/^lh_/, 'rh_')]
+            : []
+        })) : [])
       if(changed) {
         pathOverlay?.dispose()
         pathOverlay=next ? createCircuitOverlay(activeModel,next.circuit,{host,onPick:options.onPick,onEdgePick:index=>playback?.onEdgePick?.(index),onNodePick:id=>playback?.onNodePick?.(id)}) : undefined
