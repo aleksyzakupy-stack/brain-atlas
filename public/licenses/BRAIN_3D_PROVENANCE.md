@@ -1,5 +1,7 @@
 # Model mózgu 3D — pochodzenie i ograniczenia
 
+Ten dokument opisuje poprzedni model DK o niższej rozdzielczości. Aktualny model: [fsaverage6, Destrieux, PALS-B12 i ASEG](./BRAIN_DETAILED_PROVENANCE.md).
+
 All or portions of this licensed product (such portions are the "Software") have been obtained under license from The General Hospital Corporation "MGH" and are subject to the following terms and conditions:
 
 Pełne warunki: [FreeSurfer Software License Agreement](./FreeSurfer-LICENSE.txt).

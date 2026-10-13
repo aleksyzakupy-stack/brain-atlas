@@ -3,8 +3,8 @@
 Statyczny, polskojęzyczny atlas edukacyjny w React, TypeScript, Vite, Three.js i SVG.
 
 - Nauka: trzy kompletne trasy — Pamięć i kontekst, Emocje i regulacja, Kontrola poznawcza. Każda ma sześć kroków, schemat, objaśnienie, szczegóły i źródła.
-- Atlas: 28 kart z sekcjami W skrócie / Powiązania / W psychiatrii / Źródła.
-- Domyślny model 3D: obie półkule z zakrętami i bruzdami, obrót, powiększanie, wybór struktur i otwieranie kart. Przezroczystość kory odsłania wnętrze; można ukryć półkulę lub rozsunąć obie.
+- Atlas: 148 obszarów korowych Destrieux, 38 struktur ASEG i 82 regiony pól Brodmanna (41 w każdej półkuli), wybierane bezpośrednio na modelu i z listy; nazwy PL / EN / LAT. Osobny indeks Funkcje zachowuje 28 kart edukacyjnych.
+- Model 3D: fsaverage6, czterokrotnie więcej trójkątów kory niż poprzednio; płynne tłumienie obrotu i przejścia kamery, tekstura z rzeczywistych danych o głębokości bruzd, oryginalne kolory atlasów i podpisy z kontrolą widoczności. Przezroczystość kory odsłania wnętrze; można ukryć półkulę lub rozsunąć obie. Preferencja ograniczenia ruchu wyłącza bezwładność i animowane przejścia.
 - Schematy 2D: boczny, przyśrodkowy i struktury głębokie (projekcje czołowa / strzałkowa). Pozostają dostępne także bez WebGL. Lekcje o połączeniach rozpoczynają się od schematu relacji.
 - Wyszukiwanie struktur, funkcji, lekcji i powiązań z obsługą PL / EN / LAT i tekstu bez polskich znaków.
 - Powrót z karty do lekcji, dowolny wybór kroku, lokalny postęp w formacie `brainAtlas.learning.v1`; brak localStorage nie blokuje nauki.
@@ -34,11 +34,11 @@ GitHub Pages jest publikowany przez istniejący workflow po zmianie `main`; wyko
 
 ### Model 3D
 
-Lokalny `public/models/brain-atlas.json` zawiera 89 siatek: powierzchnie pial fsaverage5 podzielone na parcele DK, struktury głębokie i móżdżek z aseg. Wszystkie są w tym samym układzie surface-RAS. Model ładuje się z aplikacji, bez zewnętrznego API; Three.js jest ładowany w osobnym module dopiero dla widoku 3D. Plik JSON ma ok. 2,9 MB przed kompresją.
+Aktywny `public/models/brain-detailed.json` zawiera współdzielone powierzchnie fsaverage6 (40 962 wierzchołki i 81 920 trójkątów na półkulę), oddzielne partycje Destrieux i PALS-B12 oraz 38 etykiet ASEG. Całość pozostaje w surface-RAS. Klient pobiera skompresowany plik (~6,9 MB, ~24 MB po rozpakowaniu), z obsługą kompresji transportowej i pliku gzip; starsze przeglądarki mogą pobrać zwykły JSON. Three.js ładuje się osobno. Poprzedni model DK pozostaje jako archiwalny, odtwarzalny eksport, nie aktywna siatka.
 
-22 z 28 kart mają przypisane siatki. Podwzgórze, VTA, istota czarna, miejsce sinawe, jądra szwu i PAG nie mają osobnej geometrii w źródle; aplikacja jawnie wskazuje brak zamiast tworzyć fikcyjne bryły. Przypisania obszarów funkcjonalnych do parcel DK są przybliżeniami dydaktycznymi. Rozsuwanie półkul zmienia naturalne relacje przestrzenne i służy wyłącznie eksploracji.
+PALS-B12 dostarcza pola 1–11, 17–33 i 35–47. Brakujące numery nie otrzymują wymyślonych granic. Podwzgórze, VTA, istota czarna, miejsce sinawe, jądra szwu i PAG nie mają osobnej geometrii; VentralDC nie jest osobną segmentacją podwzgórza. Przypisania kart funkcjonalnych przez nakładanie z DK są przybliżeniami dydaktycznymi i nie wyznaczają granic Brodmanna. Rozsuwanie półkul zmienia naturalne relacje przestrzenne.
 
-Reprodukowalny eksporter, sumy SHA-256, współrzędne i ograniczenia: [pochodzenie 3D](public/licenses/BRAIN_3D_PROVENANCE.md). Model wymaga WebGL2; awaria GPU lub pobrania pliku udostępnia przejście do 2D, bez blokowania kart i lekcji.
+Reprodukowalny eksporter, sumy SHA-256, współrzędne i ograniczenia: [pochodzenie szczegółowego modelu 3D](public/licenses/BRAIN_DETAILED_PROVENANCE.md). Eksport: `scripts/export-detailed-atlas.py`; słownik nazw: `scripts/atlas-names.json`. Model wymaga WebGL2; awaria GPU lub pobrania pliku udostępnia 2D, bez blokowania kart i lekcji. Przykład bezpośredniego wyboru: `/#/atlas?warstwa=brodmann&obszar=lh_Brodmann.4`.
 
 ### Schematy 2D
 

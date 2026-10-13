@@ -40,5 +40,6 @@ describe('geometria modelu 3D', () => {
       expect(() => validateBrainModel({ meshes: [{ ...triangle, positions }] })).toThrow('Nieprawidłowa geometria modelu.')
     }
     expect(() => validateBrainModel({ meshes: [] })).toThrow('Brak geometrii w pliku modelu.')
+    expect(() => validateBrainModel({ meshes: [null] })).toThrow('Nieprawidłowa geometria modelu.')
   })
 })

@@ -8,18 +8,24 @@ export type BrainMeshData = {
   positions: number[]
   normals?: number[]
   indices: number[]
+  atlas?: 'anatomy' | 'brodmann' | 'both'
+  surfaceId?: string
+  relief?: number[]
+  color?: string
+  selectable?: boolean
 }
 
 export type BrainModelData = {
   version: number
   coordinateSystem: string
   meshes: BrainMeshData[]
+  surfaces?: Record<string, { positions: number[]; normals: number[]; relief: number[] }>
 }
 
 export type Hemisphere = 'both' | 'left' | 'right'
-export type BrainLayers = { interior: boolean; hemisphere: Hemisphere; separation: number }
+export type BrainLayers = { interior: boolean; hemisphere: Hemisphere; separation: number; atlas?: 'anatomy' | 'brodmann'; texture?: boolean; colors?: boolean; labels?: boolean; isolate?: boolean; language?: 'pl' | 'en' | 'la' }
 export type CameraPreset = 'lateral' | 'front' | 'top'
-export type HoveredParcel = { label: string; structureId?: string; hemisphere: string }
+export type HoveredParcel = { label: string; structureId?: string; hemisphere: string; regionId?: string }
 
 export const isCortex = (mesh: BrainMeshData) => mesh.kind === 'cortex' || mesh.kind === 'cortical'
 export const isLeft = (hemisphere: string) => ['left', 'lh', 'L'].includes(hemisphere)
@@ -29,14 +35,30 @@ export function validateBrainModel(value: unknown): asserts value is BrainModelD
   if (!value || typeof value !== 'object' || !('meshes' in value) || !Array.isArray(value.meshes) || !value.meshes.length) {
     throw new Error('Brak geometrii w pliku modelu.')
   }
+  const checkedSurfaces = new Set<string>()
   for (const mesh of value.meshes as BrainMeshData[]) {
+    if (!mesh || typeof mesh !== 'object') throw new Error('Nieprawidłowa geometria modelu.')
+    if (mesh.surfaceId) {
+      const surfaces = (value as BrainModelData).surfaces
+      const surface = surfaces?.[mesh.surfaceId]
+      if (!surface) throw new Error('Nieprawidłowa powierzchnia modelu.')
+      if (!checkedSurfaces.has(mesh.surfaceId)) {
+        if (!surface || !Array.isArray(surface.positions) || !surface.positions.length || surface.positions.length % 3 || !surface.positions.every(Number.isFinite) ||
+          !Array.isArray(surface.normals) || surface.normals.length !== surface.positions.length || !surface.normals.every(Number.isFinite) ||
+          !Array.isArray(surface.relief) || surface.relief.length !== surface.positions.length / 3 || !surface.relief.every(n => Number.isFinite(n) && n >= 0 && n <= 1)) throw new Error('Nieprawidłowa powierzchnia modelu.')
+        checkedSurfaces.add(mesh.surfaceId)
+      }
+      mesh.positions = surface.positions
+      mesh.normals = surface.normals
+      mesh.relief = surface.relief
+    }
     if (!mesh || typeof mesh !== 'object' || typeof mesh.id !== 'string' || typeof mesh.label !== 'string' ||
       typeof mesh.hemisphere !== 'string' || typeof mesh.kind !== 'string' ||
       !Array.isArray(mesh.positions) || !mesh.positions.length || mesh.positions.length % 3 ||
       !Array.isArray(mesh.indices) || !mesh.indices.length || mesh.indices.length % 3 ||
       !Array.isArray(mesh.structureIds) || !mesh.structureIds.every(id => typeof id === 'string') ||
-      (mesh.normals !== undefined && (!Array.isArray(mesh.normals) || mesh.normals.length !== mesh.positions.length || !mesh.normals.every(Number.isFinite))) ||
-      !mesh.positions.every(Number.isFinite) ||
+      (!mesh.surfaceId && mesh.normals !== undefined && (!Array.isArray(mesh.normals) || mesh.normals.length !== mesh.positions.length || !mesh.normals.every(Number.isFinite))) ||
+      (!mesh.surfaceId && !mesh.positions.every(Number.isFinite)) ||
       !mesh.indices.every(index => Number.isInteger(index) && index >= 0 && index < mesh.positions.length / 3)) {
       throw new Error('Nieprawidłowa geometria modelu.')
     }

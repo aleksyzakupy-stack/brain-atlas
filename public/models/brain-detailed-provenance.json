@@ -1,0 +1,155 @@
+{
+  "asset": "brain-detailed.json",
+  "outputSha256": "ca429dcb30201bcebe946a872f622e044191c43acd145d68be30c63e28f646de",
+  "compressedAsset": "brain-detailed.json.gz",
+  "compressedSha256": "8e55f740512d81f86b189d6703db6d809d732381831f4979ea5fd5bb067a1666",
+  "sources": [
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/surf/lh.pial",
+      "sha256": "e31e4b615abcad1bc5c6b69401bbfcbc1cc00a484257ae9e7c3df080cc68654c"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/surf/lh.sphere.reg",
+      "sha256": "9d1b6805f9e4831f903f358d7677d7c3378b6fca9b70300e3e72aeff503b001f"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/surf/lh.sulc",
+      "sha256": "8e684b1405e86b6d3fa05e4f26628cb6c2b1080b95982faf24caa7345cfdf7a5"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/label/lh.aparc.a2009s.annot",
+      "sha256": "33edfcdd9ccf3d12472ab461856a4783111185f8c8c55408dabfb2b2b8b4a28d"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/label/lh.aparc.annot",
+      "sha256": "2c90df9c87304e1cc60e955de54598c859718824b0c544e79b1980ccfd2c1175"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/surf/rh.pial",
+      "sha256": "3d64a3fa1be6f93353d535688fbc89990e2a29d2e7e6f5db81467c09e186b36e"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/surf/rh.sphere.reg",
+      "sha256": "9d1b6805f9e4831f903f358d7677d7c3378b6fca9b70300e3e72aeff503b001f"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/surf/rh.sulc",
+      "sha256": "5965fc43400b0079bd1495cf64da5ce1a7235fbb91897df80edb71e9ca416e7c"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/label/rh.aparc.a2009s.annot",
+      "sha256": "b65564e4f1bea1cd47d6b2e2bdca8635bed49265998dab7f68f8933b57c56494"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage6/label/rh.aparc.annot",
+      "sha256": "7ecc52d5b2ffd5a2d9e6fa29ab2a94c4b29bcca5334261f7c8fa2c99733990e7"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage/surf/lh.sphere.reg",
+      "sha256": "fddcf0eeecc6e0f62142164f7c0ac24fda1f0be8cb653d3f037970184c5ba98f"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage/surf/rh.sphere.reg",
+      "sha256": "fddcf0eeecc6e0f62142164f7c0ac24fda1f0be8cb653d3f037970184c5ba98f"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage/label/lh.PALS_B12.labels.gii",
+      "sha256": "7c4e21c8e74fefb32d1043f77d2473a3e54977a38512ece466b08abc7cab534e"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage/label/rh.PALS_B12.labels.gii",
+      "sha256": "5a24633bfcfec84c7905596734146849035b33b44f46a6d392466a07e316ce41"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/subjects/fsaverage5/mri/aseg.mgz",
+      "sha256": "f69a16aad073471cef634db1002f6cae1ef7cd9548ab1b028ca7963861f136f3"
+    },
+    {
+      "url": "https://www.freesurfer.net/pub/dist/freesurfer/tutorial_versions_centos6/freesurfer/FreeSurferColorLUT.txt",
+      "sha256": "b040ad6c0c4e26dd0f27ea84317fd25ae871a78e2e33bf463e2636473ee14052"
+    }
+  ],
+  "cortex": [
+    {
+      "hemisphere": "left",
+      "atlas": "anatomy",
+      "namedRegions": 74,
+      "vertices": 40962,
+      "triangles": 81920,
+      "sphereMaxDistance": 0.0
+    },
+    {
+      "hemisphere": "left",
+      "atlas": "brodmann",
+      "namedRegions": 41,
+      "vertices": 40962,
+      "triangles": 81920,
+      "sphereMaxDistance": 0.0
+    },
+    {
+      "hemisphere": "right",
+      "atlas": "anatomy",
+      "namedRegions": 74,
+      "vertices": 40962,
+      "triangles": 81920,
+      "sphereMaxDistance": 0.0
+    },
+    {
+      "hemisphere": "right",
+      "atlas": "brodmann",
+      "namedRegions": 41,
+      "vertices": 40962,
+      "triangles": 81920,
+      "sphereMaxDistance": 0.0
+    }
+  ],
+  "deepRegions": 38,
+  "catalogRegions": 268,
+  "triangleCountPerLayer": 537540,
+  "voxelToSurfaceRAS": [
+    [
+      -1.0,
+      0.0,
+      0.0,
+      128.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      -128.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      128.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "unavailableStructureIds": [
+    "hypothalamus",
+    "vta",
+    "substantia-nigra",
+    "locus-coeruleus",
+    "raphe-nuclei",
+    "pag"
+  ],
+  "processing": [
+    "Original fsaverage6 pial triangles; shared full-hemisphere normals.",
+    "Destrieux and original PALS-B12 Brodmann GIFTI label keys (not merged annotation RGB codes).",
+    "fsaverage spherical registration matched to fsaverage6; exact vertex subset verified.",
+    "Triangle label: majority vertex, first vertex in a three-way tie.",
+    "Relief from actual FreeSurfer sulc, clipped (sulc + 2) / 5; not photographic tissue texture.",
+    "ASEG Gaussian sigma 0.5, marching cubes step 1 (white matter 2), level 0.5, vox2ras_tkr.",
+    "Teaching-card associations via DK overlap >=20 percent are approximate; not Brodmann boundaries."
+  ],
+  "license": "../licenses/FreeSurfer-LICENSE.txt",
+  "modified": true,
+  "exporter": "scripts/export-detailed-atlas.py"
+}

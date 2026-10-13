@@ -16,6 +16,8 @@ import type { AtlasView } from '../types/atlas'
 import { lessonUrl, validReturnPath } from '../utils/learningProgress'
 import { getStructureName } from '../utils/terminology'
 import { AtlasProvider } from './AtlasProvider'
+import { atlasRegionById, atlasRegions, hemisphereName, matchesRegion, regionLabel, regionName, regionUrl, regionsForMode } from '../data/anatomicalAtlas'
+import type { AtlasMode } from '../data/anatomicalAtlas'
 
 function Workspace() {
   const location = useLocation(), navigate = useNavigate()
@@ -23,6 +25,12 @@ function Workspace() {
   const path = lessonMatch ? learningPaths.find(item => item.slug === lessonMatch.params.slug) : undefined
   const step = path?.steps.find(item => item.id === lessonMatch?.params.stepId)
   const structure = structureMatch ? brainStructures.find(item => item.slug === structureMatch.params.slug) : undefined
+  const query = new URLSearchParams(location.search)
+  const region = location.pathname === '/atlas' ? atlasRegionById[query.get('obszar') ?? ''] : undefined
+  const atlasMode: AtlasMode = region?.atlas === 'brodmann' || query.get('warstwa') === 'brodmann' ? 'brodmann' : 'anatomy'
+  const [regionQuery, setRegionQuery] = useState('')
+  const [functionalIndex, setFunctionalIndex] = useState(false)
+  const anatomicalIndex = !step && !structure && !functionalIndex
   const { state } = useAtlas()
   const { progress, complete } = useLearningProgress(step ? path?.slug : undefined, step?.id)
   const [viewOverride, setViewOverride] = useState<{ route: string; view: AtlasView } | null>(null)
@@ -34,7 +42,7 @@ function Workspace() {
   const valid = home || location.pathname === '/atlas' || !!structure || !!step
   const returnTo = step && path ? lessonUrl(path.slug, step.id) : validReturnPath(new URLSearchParams(location.search).get('powrot'))
   const view = viewOverride?.route === location.pathname ? viewOverride.view : step?.view ?? (structure ? preferredView(structure.id) : 'lateral')
-  const selectedId = structure?.id
+  const selectedId = region?.id ?? structure?.id
   const index = path && step ? path.steps.indexOf(step) : 0
   const last = progress.lastStep
   const lastPath = last ? learningPathBySlug[last.pathSlug] : undefined
@@ -53,15 +61,23 @@ function Workspace() {
   }, [])
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [location.pathname])
-  useEffect(() => { document.title = `${step?.title ?? structure?.names.pl ?? 'Mózg w psychiatrii'} · Neuroatlas` }, [step?.title, structure?.names.pl])
+  useEffect(() => { document.title = `${step?.title ?? region?.names.pl ?? structure?.names.pl ?? 'Mózg w psychiatrii'} · Neuroatlas` }, [step?.title, structure?.names.pl, region?.names.pl])
 
   function select(id: string, keepModel = false) {
+    const parcel = atlasRegionById[id]
+    if (parcel) {
+      navigate(regionUrl(parcel) + (returnTo ? `&powrot=${encodeURIComponent(returnTo)}` : ''))
+      setMobilePane(keepModel ? 'diagram' : 'description')
+      setDrawerOpen(false)
+      return
+    }
     const target = structureById[id]
     if (!target) return
     navigate(`/struktury/${target.slug}${returnTo ? `?powrot=${encodeURIComponent(returnTo)}` : ''}`)
     setMobilePane(keepModel ? 'diagram' : 'description')
     setDrawerOpen(false)
   }
+  const changeAtlas = (mode: AtlasMode) => { navigate(`/atlas?warstwa=${mode}`); setFunctionalIndex(false); setRegionQuery('') }
   const sidebar = step && path ? <>
     <Link className="back-to-paths" to="/">← Wszystkie trasy</Link>
     <h2>{path.title}</h2>
@@ -69,8 +85,14 @@ function Workspace() {
     <div className="learning-progress"><span>{progress.completed[path.slug]?.length ?? 0} z 6 kroków ukończonych</span><progress max={6} value={progress.completed[path.slug]?.length ?? 0} aria-label="Postęp trasy" /></div>
   </> : <>
     <h2>Struktury mózgu</h2>
-    <label className="category-filter">Obszar funkcjonalny<select value={category} onChange={event => setCategory(event.target.value)}><option value="all">Wszystkie obszary</option>{functionalCategories.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
-    <nav className="structure-directory" aria-label="Struktury mózgu">{brainStructures.filter(item => category === 'all' || item.categoryId === category).map(item => <button key={item.id} onClick={() => select(item.id)} aria-current={selectedId === item.id ? 'page' : undefined} style={{ '--category': categoryById[item.categoryId].color } as CSSProperties}><span className="category-dot" /><span>{getStructureName(item, language)}</span>{item.names.abbreviation && <small>{item.names.abbreviation}</small>}</button>)}</nav>
+    <div className="atlas-index-switch"><button aria-pressed={anatomicalIndex && atlasMode === 'anatomy'} onClick={() => changeAtlas('anatomy')}>Anatomia</button><button aria-pressed={anatomicalIndex && atlasMode === 'brodmann'} onClick={() => changeAtlas('brodmann')}>Brodmann</button><button aria-pressed={!anatomicalIndex} onClick={() => setFunctionalIndex(true)}>Funkcje</button></div>
+    {anatomicalIndex ? <>
+      <input className="region-filter" aria-label="Filtruj obszary atlasu" placeholder="Nazwa lub BA…" value={regionQuery} onChange={event => setRegionQuery(event.target.value)} />
+      <nav className="structure-directory" aria-label="Struktury mózgu">{regionsForMode(atlasMode).filter(item => matchesRegion(item,regionQuery)).map(item => <button key={item.id} onClick={() => select(item.id)} aria-current={selectedId === item.id ? 'page' : undefined} style={{ '--category': item.color } as CSSProperties}><span className="category-dot" /><span>{regionName(item,language)}</span><small>{hemisphereName(item.hemisphere)}</small></button>)}</nav>
+    </> : <>
+      <label className="category-filter">Obszar funkcjonalny<select value={category} onChange={event => setCategory(event.target.value)}><option value="all">Wszystkie obszary</option>{functionalCategories.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label>
+      <nav className="structure-directory" aria-label="Struktury mózgu">{brainStructures.filter(item => category === 'all' || item.categoryId === category).map(item => <button key={item.id} onClick={() => select(item.id)} aria-current={selectedId === item.id ? 'page' : undefined} style={{ '--category': categoryById[item.categoryId].color } as CSSProperties}><span className="category-dot" /><span>{getStructureName(item, language)}</span>{item.names.abbreviation && <small>{item.names.abbreviation}</small>}</button>)}</nav>
+    </>}
   </>
 
   return <><div className="app-shell" inert={anyModal}>
@@ -84,7 +106,7 @@ function Workspace() {
         {last && lastPath && lastStep && <Link className="resume-card" to={lessonUrl(last.pathSlug, last.stepId)}><span className="resume-symbol">↗</span><span><strong>{progress.completed[last.pathSlug]?.length === 6 ? 'Wróć do ukończonej trasy' : 'Kontynuuj naukę'}</strong><small>{lastPath.title} · {lastStep.title}</small></span><ChevronRightIcon /></Link>}
       </div>
       {showCompletion && <div className="completion-notice" role="status">✓ Trasa „{completedPath.title}” ukończona.</div>}
-      <div className="home-grid"><div className="home-brain"><AtlasScene view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} language={language} onSelect={select} onSelect3d={id => select(id, true)} /><div className="home-brain-caption"><Link to="/atlas">Otwórz pełny atlas ↗</Link></div></div>
+      <div className="home-grid"><div className="home-brain"><AtlasScene view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} language={language} atlasMode={atlasMode} onAtlasMode={changeAtlas} onSelect={select} onSelect3d={id => select(id, true)} /><div className="home-brain-caption"><Link to="/atlas">Otwórz pełny atlas ↗</Link></div></div>
         <section className="path-selection"><div className="section-heading"><h2>Trasy nauki</h2></div>{learningPaths.map(item => {
           const done = progress.completed[item.slug]?.length ?? 0
           return <Link className="path-card" key={item.slug} to={lessonUrl(item.slug, item.steps[0].id)} style={{ '--category': categoryById[item.categoryId].color } as CSSProperties}><div className="path-card-top"><span>{item.minutes} min</span>{done > 0 && <span className="path-done">{done}/6 ✓</span>}</div><h3>{item.title}</h3><div className="path-card-bottom"><span>{done === 6 ? 'Powtórz trasę' : 'Rozpocznij trasę'}</span><span>↗</span></div></Link>
@@ -94,8 +116,8 @@ function Workspace() {
       <div className="mobile-view-switch" role="group" aria-label="Widok treści"><button aria-pressed={mobilePane === 'diagram'} onClick={() => setMobilePane('diagram')}>Mózg</button><button aria-pressed={mobilePane === 'description'} onClick={() => setMobilePane('description')}>Opis</button></div>
       <main id="main" tabIndex={-1} className={`atlas-workspace mobile-${mobilePane} ${step ? 'is-learning' : ''}`}>
         <aside className="workspace-sidebar">{sidebar}</aside>
-        <div className="workspace-scene"><AtlasScene key={step ? `${path?.slug}-${step.id}` : 'atlas'} view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} selectedId={selectedId} step={step} language={language} onSelect={select} onSelect3d={id => select(id, true)} /></div>
-        <aside className="workspace-reading" key={location.pathname} aria-label="Opis">{step && path ? <LessonContent path={path} step={step} language={language} onSelect={select} /> : structure ? <StructureContent key={structure.id} structure={structure} language={language} onSelect={select} returnTo={returnTo} /> : <article className="reading-content atlas-welcome"><h1>Struktury mózgu</h1><ul className="category-legend">{functionalCategories.map(item => <li key={item.id}><span className="category-dot" style={{ background: item.color }} />{item.label}</li>)}</ul></article>}</aside>
+        <div className="workspace-scene"><AtlasScene key={step ? `${path?.slug}-${step.id}` : 'atlas'} view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} selectedId={selectedId} step={step} language={language} atlasMode={atlasMode} onAtlasMode={changeAtlas} onSelect={select} onSelect3d={id => select(id, true)} /></div>
+        <aside className="workspace-reading" key={location.pathname} aria-label="Opis">{step && path ? <LessonContent path={path} step={step} language={language} onSelect={select} /> : structure ? <StructureContent key={structure.id} structure={structure} language={language} onSelect={select} returnTo={returnTo} /> : region ? <article className="reading-content"><h1>{regionName(region,language)}</h1><dl className="atlas-region-data"><div><dt>Półkula</dt><dd>{region.hemisphere === 'left' ? 'Lewa' : region.hemisphere === 'right' ? 'Prawa' : 'Struktura pośrodkowa'}</dd></div><div><dt>EN</dt><dd>{region.names.en}</dd></div><div><dt>LAT</dt><dd>{region.names.lat}</dd></div><div><dt>Atlas</dt><dd>{region.source}</dd></div><div><dt>Identyfikator źródłowy</dt><dd>{region.sourceRegion}</dd></div></dl><div className="about-links"><a target="_blank" rel="noreferrer" href={region.source === 'PALS-B12' ? 'https://surfer.nmr.mgh.harvard.edu/fswiki/PALS_B12' : region.source === 'Destrieux' ? 'https://pubmed.ncbi.nlm.nih.gov/20547229/' : 'https://surfer.nmr.mgh.harvard.edu/fswiki/SubcorticalSegmentation'}>{region.source} ↗</a></div>{atlasRegions.filter(item => item.sourceRegion === region.sourceRegion && item.id !== region.id).map(item => <button key={item.id} className="text-button" onClick={() => select(item.id,true)}>{regionLabel(item,language)} ↗</button>)}</article> : <article className="reading-content atlas-welcome"><h1>{atlasMode === 'brodmann' ? 'Pola Brodmanna' : 'Anatomia mózgu'}</h1><dl className="atlas-region-data"><div><dt>Destrieux</dt><dd>74 obszary × 2 półkule</dd></div><div><dt>PALS-B12</dt><dd>41 pól Brodmanna × 2 półkule</dd></div><div><dt>ASEG</dt><dd>38 struktur</dd></div></dl><div className="about-links"><a href="https://pubmed.ncbi.nlm.nih.gov/20547229/" target="_blank" rel="noreferrer">Destrieux ↗</a><a href="https://surfer.nmr.mgh.harvard.edu/fswiki/PALS_B12" target="_blank" rel="noreferrer">PALS-B12 ↗</a><a href={`${import.meta.env.BASE_URL}models/brain-detailed-provenance.json`} target="_blank" rel="noreferrer">Dane modelu ↗</a></div></article>}</aside>
       </main>
       {path && step && <footer className="lesson-navigation"><Link className="secondary-button" to={index === 0 ? '/' : lessonUrl(path.slug, path.steps[index - 1].id)}>← Wstecz</Link><span><strong>{index + 1} / 6</strong><small>{step.stage}</small></span><button className="primary-button" onClick={() => { complete(path.slug, step.id); navigate(index === 5 ? `/?ukonczono=${path.slug}` : lessonUrl(path.slug, path.steps[index + 1].id)) }}>{index === 5 ? 'Zakończ trasę' : 'Dalej'} →</button></footer>}
       {returnTo && !step && <div className="lesson-return-bar"><Link to={returnTo}>← Wróć do lekcji · {learningPathBySlug[returnTo.split('/')[2]]?.title}</Link></div>}

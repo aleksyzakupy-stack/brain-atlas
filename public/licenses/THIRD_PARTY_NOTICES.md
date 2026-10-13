@@ -1,6 +1,12 @@
 # Pochodzenie ilustracji i biblioteki
 
-## Model 3D FreeSurfer fsaverage5
+## Active 3D model: fsaverage6 / Destrieux / PALS-B12 / ASEG
+
+The active model uses checksum-pinned FreeSurfer fsaverage6 pial surfaces and sulcal-depth values, Destrieux parcellation, original PALS-B12 GIFTI Brodmann labels, and fsaverage5 ASEG segmentations. It is a modified derivative under the [FreeSurfer license](./FreeSurfer-LICENSE.txt).
+
+[Sources, citations, coverage, translations and processing](./BRAIN_DETAILED_PROVENANCE.md). [Source and output checksum manifest](../models/brain-detailed-provenance.json). Brodmann boundary data are separate from approximate teaching-card associations. Texture is source-derived sulcal shading, not a specimen photograph.
+
+## Previous 3D model: FreeSurfer fsaverage5
 
 Interaktywny model 3D używa oryginalnych powierzchni pial obu półkul, parcellacji DK oraz struktur odtworzonych z segmentacji ASEG, pobranych z oficjalnego serwera FreeSurfer. Jest zmodyfikowaną pochodną danych FreeSurfer na warunkach [FreeSurfer Software License Agreement](./FreeSurfer-LICENSE.txt).
 

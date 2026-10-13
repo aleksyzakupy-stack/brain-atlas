@@ -1,0 +1,4022 @@
+[
+  {
+    "id": "lh_G_and_S_frontomargin",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#17dc3c",
+    "names": {
+      "pl": "Zakręt i bruzda czołowo-brzeżna",
+      "en": "Frontomarginal gyrus and sulcus",
+      "lat": "Gyrus et sulcus frontomarginalis"
+    },
+    "sourceRegion": "G_and_S_frontomargin",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_occipital_inf",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#173cb4",
+    "names": {
+      "pl": "Zakręt i bruzda potyliczna dolna",
+      "en": "Inferior occipital gyrus and sulcus",
+      "lat": "Gyrus et sulcus occipitalis inferior"
+    },
+    "sourceRegion": "G_and_S_occipital_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_paracentral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3f643c",
+    "names": {
+      "pl": "Płacik okołośrodkowy",
+      "en": "Paracentral lobule and sulcus",
+      "lat": "Lobulus paracentralis"
+    },
+    "sourceRegion": "G_and_S_paracentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_subcentral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3f14dc",
+    "names": {
+      "pl": "Zakręt i bruzdy podśrodkowe",
+      "en": "Subcentral gyrus and sulci",
+      "lat": "Gyrus et sulci subcentrales"
+    },
+    "sourceRegion": "G_and_S_subcentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_transv_frontopol",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#0d00fa",
+    "names": {
+      "pl": "Poprzeczne zakręty i bruzdy bieguna czołowego",
+      "en": "Transverse frontopolar gyri and sulci",
+      "lat": "Gyri et sulci frontopolares transversi"
+    },
+    "sourceRegion": "G_and_S_transv_frontopol",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_cingul-Ant",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1a3c00",
+    "names": {
+      "pl": "Przednia część zakrętu obręczy",
+      "en": "Anterior cingulate gyrus and sulcus",
+      "lat": "Pars anterior gyri cinguli"
+    },
+    "sourceRegion": "G_and_S_cingul-Ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_cingul-Mid-Ant",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1a3c4b",
+    "names": {
+      "pl": "Przednia część środkowego zakrętu obręczy",
+      "en": "Anterior mid-cingulate gyrus and sulcus",
+      "lat": "Pars media anterior gyri cinguli"
+    },
+    "sourceRegion": "G_and_S_cingul-Mid-Ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_and_S_cingul-Mid-Post",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1a3c96",
+    "names": {
+      "pl": "Tylna część środkowego zakrętu obręczy",
+      "en": "Posterior mid-cingulate gyrus and sulcus",
+      "lat": "Pars media posterior gyri cinguli"
+    },
+    "sourceRegion": "G_and_S_cingul-Mid-Post",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_cingul-Post-dorsal",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#193cfa",
+    "names": {
+      "pl": "Grzbietowa część tylnego zakrętu obręczy",
+      "en": "Dorsal posterior cingulate gyrus",
+      "lat": "Pars dorsalis posterior gyri cinguli"
+    },
+    "sourceRegion": "G_cingul-Post-dorsal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_cingul-Post-ventral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c1919",
+    "names": {
+      "pl": "Brzuszna część tylnego zakrętu obręczy",
+      "en": "Ventral posterior cingulate gyrus",
+      "lat": "Pars ventralis posterior gyri cinguli"
+    },
+    "sourceRegion": "G_cingul-Post-ventral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_cuneus",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b41414",
+    "names": {
+      "pl": "Klin",
+      "en": "Cuneus",
+      "lat": "Cuneus"
+    },
+    "sourceRegion": "G_cuneus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_front_inf-Opercular",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dc1464",
+    "names": {
+      "pl": "Część wieczkowa zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, opercular part",
+      "lat": "Pars opercularis gyri frontalis inferioris"
+    },
+    "sourceRegion": "G_front_inf-Opercular",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_front_inf-Orbital",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8c3c3c",
+    "names": {
+      "pl": "Część oczodołowa zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, orbital part",
+      "lat": "Pars orbitalis gyri frontalis inferioris"
+    },
+    "sourceRegion": "G_front_inf-Orbital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_front_inf-Triangul",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b4dc8c",
+    "names": {
+      "pl": "Część trójkątna zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, triangular part",
+      "lat": "Pars triangularis gyri frontalis inferioris"
+    },
+    "sourceRegion": "G_front_inf-Triangul",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_front_middle",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8c64b4",
+    "names": {
+      "pl": "Zakręt czołowy środkowy",
+      "en": "Middle frontal gyrus",
+      "lat": "Gyrus frontalis medius"
+    },
+    "sourceRegion": "G_front_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_front_sup",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b4148c",
+    "names": {
+      "pl": "Zakręt czołowy górny",
+      "en": "Superior frontal gyrus",
+      "lat": "Gyrus frontalis superior"
+    },
+    "sourceRegion": "G_front_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_Ins_lg_and_S_cent_ins",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#170a0a",
+    "names": {
+      "pl": "Zakręt długi i bruzda środkowa wyspy",
+      "en": "Long insular gyrus and central insular sulcus",
+      "lat": "Gyrus longus et sulcus centralis insulae"
+    },
+    "sourceRegion": "G_Ins_lg_and_S_cent_ins",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_insular_short",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#e18c8c",
+    "names": {
+      "pl": "Zakręty krótkie wyspy",
+      "en": "Short insular gyri",
+      "lat": "Gyri breves insulae"
+    },
+    "sourceRegion": "G_insular_short",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_occipital_middle",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b43cb4",
+    "names": {
+      "pl": "Zakręt potyliczny środkowy",
+      "en": "Middle occipital gyrus",
+      "lat": "Gyrus occipitalis medius"
+    },
+    "sourceRegion": "G_occipital_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_occipital_sup",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#14dc3c",
+    "names": {
+      "pl": "Zakręt potyliczny górny",
+      "en": "Superior occipital gyrus",
+      "lat": "Gyrus occipitalis superior"
+    },
+    "sourceRegion": "G_occipital_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_oc-temp_lat-fusifor",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c148c",
+    "names": {
+      "pl": "Zakręt wrzecionowaty",
+      "en": "Fusiform gyrus",
+      "lat": "Gyrus fusiformis"
+    },
+    "sourceRegion": "G_oc-temp_lat-fusifor",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_oc-temp_med-Lingual",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcb48c",
+    "names": {
+      "pl": "Zakręt językowaty",
+      "en": "Lingual gyrus",
+      "lat": "Gyrus lingualis"
+    },
+    "sourceRegion": "G_oc-temp_med-Lingual",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_oc-temp_med-Parahip",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#416414",
+    "names": {
+      "pl": "Zakręt przyhipokampowy",
+      "en": "Parahippocampal gyrus",
+      "lat": "Gyrus parahippocampalis"
+    },
+    "sourceRegion": "G_oc-temp_med-Parahip",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_orbital",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dc3c14",
+    "names": {
+      "pl": "Zakręty oczodołowe",
+      "en": "Orbital gyri",
+      "lat": "Gyri orbitales"
+    },
+    "sourceRegion": "G_orbital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_pariet_inf-Angular",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#143cdc",
+    "names": {
+      "pl": "Zakręt kątowy",
+      "en": "Angular gyrus",
+      "lat": "Gyrus angularis"
+    },
+    "sourceRegion": "G_pariet_inf-Angular",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_pariet_inf-Supramar",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#64643c",
+    "names": {
+      "pl": "Zakręt nadbrzeżny",
+      "en": "Supramarginal gyrus",
+      "lat": "Gyrus supramarginalis"
+    },
+    "sourceRegion": "G_pariet_inf-Supramar",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_parietal_sup",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcb4dc",
+    "names": {
+      "pl": "Płacik ciemieniowy górny",
+      "en": "Superior parietal lobule",
+      "lat": "Lobulus parietalis superior"
+    },
+    "sourceRegion": "G_parietal_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_postcentral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#14b48c",
+    "names": {
+      "pl": "Zakręt zaśrodkowy",
+      "en": "Postcentral gyrus",
+      "lat": "Gyrus postcentralis"
+    },
+    "sourceRegion": "G_postcentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_precentral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c8cb4",
+    "names": {
+      "pl": "Zakręt przedśrodkowy",
+      "en": "Precentral gyrus",
+      "lat": "Gyrus precentralis"
+    },
+    "sourceRegion": "G_precentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_precuneus",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#19148c",
+    "names": {
+      "pl": "Przedklinek",
+      "en": "Precuneus",
+      "lat": "Precuneus"
+    },
+    "sourceRegion": "G_precuneus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_rectus",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#143c64",
+    "names": {
+      "pl": "Zakręt prosty",
+      "en": "Straight gyrus",
+      "lat": "Gyrus rectus"
+    },
+    "sourceRegion": "G_rectus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_subcallosal",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3cdc14",
+    "names": {
+      "pl": "Pole podspoidłowe",
+      "en": "Subcallosal area",
+      "lat": "Area subcallosa"
+    },
+    "sourceRegion": "G_subcallosal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_temp_sup-G_T_transv",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c3cdc",
+    "names": {
+      "pl": "Zakręty skroniowe poprzeczne Heschla",
+      "en": "Transverse temporal gyri of Heschl",
+      "lat": "Gyri temporales transversi"
+    },
+    "sourceRegion": "G_temp_sup-G_T_transv",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_temp_sup-Lateral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dc3cdc",
+    "names": {
+      "pl": "Zakręt skroniowy górny",
+      "en": "Superior temporal gyrus, lateral aspect",
+      "lat": "Gyrus temporalis superior"
+    },
+    "sourceRegion": "G_temp_sup-Lateral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_temp_sup-Plan_polar",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#41dc3c",
+    "names": {
+      "pl": "Płaszczyzna biegunowa",
+      "en": "Planum polare",
+      "lat": "Planum polare"
+    },
+    "sourceRegion": "G_temp_sup-Plan_polar",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_temp_sup-Plan_tempo",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#198c14",
+    "names": {
+      "pl": "Płaszczyzna skroniowa",
+      "en": "Planum temporale",
+      "lat": "Planum temporale"
+    },
+    "sourceRegion": "G_temp_sup-Plan_tempo",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_temporal_inf",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcdc64",
+    "names": {
+      "pl": "Zakręt skroniowy dolny",
+      "en": "Inferior temporal gyrus",
+      "lat": "Gyrus temporalis inferior"
+    },
+    "sourceRegion": "G_temporal_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_G_temporal_middle",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b43c3c",
+    "names": {
+      "pl": "Zakręt skroniowy środkowy",
+      "en": "Middle temporal gyrus",
+      "lat": "Gyrus temporalis medius"
+    },
+    "sourceRegion": "G_temporal_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_Lat_Fis-ant-Horizont",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d14dc",
+    "names": {
+      "pl": "Gałąź przednia bruzdy bocznej",
+      "en": "Anterior horizontal ramus of lateral sulcus",
+      "lat": "Ramus anterior sulci lateralis"
+    },
+    "sourceRegion": "Lat_Fis-ant-Horizont",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_Lat_Fis-ant-Vertical",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d143c",
+    "names": {
+      "pl": "Gałąź wstępująca bruzdy bocznej",
+      "en": "Anterior ascending ramus of lateral sulcus",
+      "lat": "Ramus ascendens sulci lateralis"
+    },
+    "sourceRegion": "Lat_Fis-ant-Vertical",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_Lat_Fis-post",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d3c64",
+    "names": {
+      "pl": "Tylna część bruzdy bocznej",
+      "en": "Posterior ramus of lateral sulcus",
+      "lat": "Pars posterior sulci lateralis"
+    },
+    "sourceRegion": "Lat_Fis-post",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_Pole_occipital",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8c143c",
+    "names": {
+      "pl": "Biegun potyliczny",
+      "en": "Occipital pole",
+      "lat": "Polus occipitalis"
+    },
+    "sourceRegion": "Pole_occipital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_Pole_temporal",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcb414",
+    "names": {
+      "pl": "Biegun skroniowy",
+      "en": "Temporal pole",
+      "lat": "Polus temporalis"
+    },
+    "sourceRegion": "Pole_temporal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_calcarine",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3fb4b4",
+    "names": {
+      "pl": "Bruzda ostrogowa",
+      "en": "Calcarine sulcus",
+      "lat": "Sulcus calcarinus"
+    },
+    "sourceRegion": "S_calcarine",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_central",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd140a",
+    "names": {
+      "pl": "Bruzda środkowa",
+      "en": "Central sulcus",
+      "lat": "Sulcus centralis"
+    },
+    "sourceRegion": "S_central",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_cingul-Marginalis",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd1464",
+    "names": {
+      "pl": "Gałąź brzeżna bruzdy obręczy",
+      "en": "Marginal ramus of cingulate sulcus",
+      "lat": "Ramus marginalis sulci cinguli"
+    },
+    "sourceRegion": "S_cingul-Marginalis",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_circular_insula_ant",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd3c8c",
+    "names": {
+      "pl": "Przednia część bruzdy okólnej wyspy",
+      "en": "Anterior circular sulcus of insula",
+      "lat": "Pars anterior sulci circularis insulae"
+    },
+    "sourceRegion": "S_circular_insula_ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_circular_insula_inf",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd14dc",
+    "names": {
+      "pl": "Dolna część bruzdy okólnej wyspy",
+      "en": "Inferior circular sulcus of insula",
+      "lat": "Pars inferior sulci circularis insulae"
+    },
+    "sourceRegion": "S_circular_insula_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_circular_insula_sup",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3ddcdc",
+    "names": {
+      "pl": "Górna część bruzdy okólnej wyspy",
+      "en": "Superior circular sulcus of insula",
+      "lat": "Pars superior sulci circularis insulae"
+    },
+    "sourceRegion": "S_circular_insula_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_collat_transv_ant",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#64c8c8",
+    "names": {
+      "pl": "Przednia poprzeczna bruzda poboczna",
+      "en": "Anterior transverse collateral sulcus",
+      "lat": "Sulcus collateralis transversus anterior"
+    },
+    "sourceRegion": "S_collat_transv_ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_collat_transv_post",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#0ac8c8",
+    "names": {
+      "pl": "Tylna poprzeczna bruzda poboczna",
+      "en": "Posterior transverse collateral sulcus",
+      "lat": "Sulcus collateralis transversus posterior"
+    },
+    "sourceRegion": "S_collat_transv_post",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_front_inf",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dddc14",
+    "names": {
+      "pl": "Bruzda czołowa dolna",
+      "en": "Inferior frontal sulcus",
+      "lat": "Sulcus frontalis inferior"
+    },
+    "sourceRegion": "S_front_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_front_middle",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8d1464",
+    "names": {
+      "pl": "Bruzda czołowa środkowa",
+      "en": "Middle frontal sulcus",
+      "lat": "Sulcus frontalis medius"
+    },
+    "sourceRegion": "S_front_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_front_sup",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3ddc64",
+    "names": {
+      "pl": "Bruzda czołowa górna",
+      "en": "Superior frontal sulcus",
+      "lat": "Sulcus frontalis superior"
+    },
+    "sourceRegion": "S_front_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_interm_prim-Jensen",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8d3c14",
+    "names": {
+      "pl": "Bruzda pośrednia pierwsza Jensena",
+      "en": "First intermediate sulcus of Jensen",
+      "lat": "Sulcus intermedius primus"
+    },
+    "sourceRegion": "S_interm_prim-Jensen",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_intrapariet_and_P_trans",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8f14dc",
+    "names": {
+      "pl": "Bruzda śródciemieniowa i poprzeczne bruzdy ciemieniowe",
+      "en": "Intraparietal and transverse parietal sulci",
+      "lat": "Sulcus intraparietalis et sulci parietales transversi"
+    },
+    "sourceRegion": "S_intrapariet_and_P_trans",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_oc_middle_and_Lunatus",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#653cdc",
+    "names": {
+      "pl": "Bruzda potyliczna środkowa i bruzda księżycowata",
+      "en": "Middle occipital and lunate sulci",
+      "lat": "Sulcus occipitalis medius et sulcus lunatus"
+    },
+    "sourceRegion": "S_oc_middle_and_Lunatus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_oc_sup_and_transversal",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#15148c",
+    "names": {
+      "pl": "Bruzda potyliczna górna i bruzda potyliczna poprzeczna",
+      "en": "Superior and transverse occipital sulci",
+      "lat": "Sulcus occipitalis superior et transversus"
+    },
+    "sourceRegion": "S_oc_sup_and_transversal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_occipital_ant",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d14b4",
+    "names": {
+      "pl": "Bruzda potyliczna przednia",
+      "en": "Anterior occipital sulcus",
+      "lat": "Sulcus occipitalis anterior"
+    },
+    "sourceRegion": "S_occipital_ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_oc-temp_lat",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd8c14",
+    "names": {
+      "pl": "Bruzda potyliczno-skroniowa boczna",
+      "en": "Lateral occipitotemporal sulcus",
+      "lat": "Sulcus occipitotemporalis lateralis"
+    },
+    "sourceRegion": "S_oc-temp_lat",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_oc-temp_med_and_Lingual",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8d64dc",
+    "names": {
+      "pl": "Bruzda potyliczno-skroniowa przyśrodkowa i bruzda językowata",
+      "en": "Medial occipitotemporal and lingual sulci",
+      "lat": "Sulcus occipitotemporalis medialis et sulcus lingualis"
+    },
+    "sourceRegion": "S_oc-temp_med_and_Lingual",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_orbital_lateral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd6414",
+    "names": {
+      "pl": "Bruzda oczodołowa boczna",
+      "en": "Lateral orbital sulcus",
+      "lat": "Sulcus orbitalis lateralis"
+    },
+    "sourceRegion": "S_orbital_lateral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_orbital_med-olfact",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b5c814",
+    "names": {
+      "pl": "Bruzda węchowa",
+      "en": "Olfactory sulcus",
+      "lat": "Sulcus olfactorius"
+    },
+    "sourceRegion": "S_orbital_med-olfact",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_orbital-H_Shaped",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#651414",
+    "names": {
+      "pl": "Bruzdy oczodołowe",
+      "en": "H-shaped orbital sulci",
+      "lat": "Sulci orbitales"
+    },
+    "sourceRegion": "S_orbital-H_Shaped",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_parieto_occipital",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#6564b4",
+    "names": {
+      "pl": "Bruzda ciemieniowo-potyliczna",
+      "en": "Parieto-occipital sulcus",
+      "lat": "Sulcus parietooccipitalis"
+    },
+    "sourceRegion": "S_parieto_occipital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_pericallosal",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b5dc14",
+    "names": {
+      "pl": "Bruzda ciała modzelowatego",
+      "en": "Pericallosal sulcus",
+      "lat": "Sulcus corporis callosi"
+    },
+    "sourceRegion": "S_pericallosal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_postcentral",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#158cc8",
+    "names": {
+      "pl": "Bruzda zaśrodkowa",
+      "en": "Postcentral sulcus",
+      "lat": "Sulcus postcentralis"
+    },
+    "sourceRegion": "S_postcentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_precentral-inf-part",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1514f0",
+    "names": {
+      "pl": "Dolna część bruzdy przedśrodkowej",
+      "en": "Inferior precentral sulcus",
+      "lat": "Pars inferior sulci precentralis"
+    },
+    "sourceRegion": "S_precentral-inf-part",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_precentral-sup-part",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1514c8",
+    "names": {
+      "pl": "Górna część bruzdy przedśrodkowej",
+      "en": "Superior precentral sulcus",
+      "lat": "Pars superior sulci precentralis"
+    },
+    "sourceRegion": "S_precentral-sup-part",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_suborbital",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#15143c",
+    "names": {
+      "pl": "Bruzda podoczodołowa",
+      "en": "Suborbital sulcus",
+      "lat": "Sulcus suborbitalis"
+    },
+    "sourceRegion": "S_suborbital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_subparietal",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#653c3c",
+    "names": {
+      "pl": "Bruzda podciemieniowa",
+      "en": "Subparietal sulcus",
+      "lat": "Sulcus subparietalis"
+    },
+    "sourceRegion": "S_subparietal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_temporal_inf",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#15b4b4",
+    "names": {
+      "pl": "Bruzda skroniowa dolna",
+      "en": "Inferior temporal sulcus",
+      "lat": "Sulcus temporalis inferior"
+    },
+    "sourceRegion": "S_temporal_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_temporal_sup",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dfdc3c",
+    "names": {
+      "pl": "Bruzda skroniowa górna",
+      "en": "Superior temporal sulcus",
+      "lat": "Sulcus temporalis superior"
+    },
+    "sourceRegion": "S_temporal_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_S_temporal_transverse",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd3c3c",
+    "names": {
+      "pl": "Bruzda skroniowa poprzeczna",
+      "en": "Transverse temporal sulcus",
+      "lat": "Sulcus temporalis transversus"
+    },
+    "sourceRegion": "S_temporal_transverse",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "lh_Brodmann.8",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#007674",
+    "names": {
+      "pl": "Pole Brodmanna 8",
+      "en": "Brodmann area 8",
+      "lat": "Area Brodmann 8"
+    },
+    "sourceRegion": "Brodmann.8",
+    "number": 8,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.6",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#cc0044",
+    "names": {
+      "pl": "Pole Brodmanna 6",
+      "en": "Brodmann area 6",
+      "lat": "Area Brodmann 6"
+    },
+    "sourceRegion": "Brodmann.6",
+    "number": 6,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.4",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff1166",
+    "names": {
+      "pl": "Pole Brodmanna 4",
+      "en": "Brodmann area 4",
+      "lat": "Area Brodmann 4"
+    },
+    "sourceRegion": "Brodmann.4",
+    "number": 4,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.9",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#0077cc",
+    "names": {
+      "pl": "Pole Brodmanna 9",
+      "en": "Brodmann area 9",
+      "lat": "Area Brodmann 9"
+    },
+    "sourceRegion": "Brodmann.9",
+    "number": 9,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.3",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffbbbb",
+    "names": {
+      "pl": "Pole Brodmanna 3",
+      "en": "Brodmann area 3",
+      "lat": "Area Brodmann 3"
+    },
+    "sourceRegion": "Brodmann.3",
+    "number": 3,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.1",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff8888",
+    "names": {
+      "pl": "Pole Brodmanna 1",
+      "en": "Brodmann area 1",
+      "lat": "Area Brodmann 1"
+    },
+    "sourceRegion": "Brodmann.1",
+    "number": 1,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.5",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff4433",
+    "names": {
+      "pl": "Pole Brodmanna 5",
+      "en": "Brodmann area 5",
+      "lat": "Area Brodmann 5"
+    },
+    "sourceRegion": "Brodmann.5",
+    "number": 5,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.7",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#cc4411",
+    "names": {
+      "pl": "Pole Brodmanna 7",
+      "en": "Brodmann area 7",
+      "lat": "Area Brodmann 7"
+    },
+    "sourceRegion": "Brodmann.7",
+    "number": 7,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.2",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff6677",
+    "names": {
+      "pl": "Pole Brodmanna 2",
+      "en": "Brodmann area 2",
+      "lat": "Area Brodmann 2"
+    },
+    "sourceRegion": "Brodmann.2",
+    "number": 2,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.31",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#603c94",
+    "names": {
+      "pl": "Pole Brodmanna 31",
+      "en": "Brodmann area 31",
+      "lat": "Area Brodmann 31"
+    },
+    "sourceRegion": "Brodmann.31",
+    "number": 31,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.40",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#dd1100",
+    "names": {
+      "pl": "Pole Brodmanna 40",
+      "en": "Brodmann area 40",
+      "lat": "Area Brodmann 40"
+    },
+    "sourceRegion": "Brodmann.40",
+    "number": 40,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.44",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#3400b6",
+    "names": {
+      "pl": "Pole Brodmanna 44",
+      "en": "Brodmann area 44",
+      "lat": "Area Brodmann 44"
+    },
+    "sourceRegion": "Brodmann.44",
+    "number": 44,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.45",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#8800cc",
+    "names": {
+      "pl": "Pole Brodmanna 45",
+      "en": "Brodmann area 45",
+      "lat": "Area Brodmann 45"
+    },
+    "sourceRegion": "Brodmann.45",
+    "number": 45,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.23",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#2222ff",
+    "names": {
+      "pl": "Pole Brodmanna 23",
+      "en": "Brodmann area 23",
+      "lat": "Area Brodmann 23"
+    },
+    "sourceRegion": "Brodmann.23",
+    "number": 23,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.39",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#aa4411",
+    "names": {
+      "pl": "Pole Brodmanna 39",
+      "en": "Brodmann area 39",
+      "lat": "Area Brodmann 39"
+    },
+    "sourceRegion": "Brodmann.39",
+    "number": 39,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.43",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#f01e1e",
+    "names": {
+      "pl": "Pole Brodmanna 43",
+      "en": "Brodmann area 43",
+      "lat": "Area Brodmann 43"
+    },
+    "sourceRegion": "Brodmann.43",
+    "number": 43,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.19",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffdd77",
+    "names": {
+      "pl": "Pole Brodmanna 19",
+      "en": "Brodmann area 19",
+      "lat": "Area Brodmann 19"
+    },
+    "sourceRegion": "Brodmann.19",
+    "number": 19,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.47",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#a94300",
+    "names": {
+      "pl": "Pole Brodmanna 47",
+      "en": "Brodmann area 47",
+      "lat": "Area Brodmann 47"
+    },
+    "sourceRegion": "Brodmann.47",
+    "number": 47,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.41",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#a18000",
+    "names": {
+      "pl": "Pole Brodmanna 41",
+      "en": "Brodmann area 41",
+      "lat": "Area Brodmann 41"
+    },
+    "sourceRegion": "Brodmann.41",
+    "number": 41,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.30",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#6600dd",
+    "names": {
+      "pl": "Pole Brodmanna 30",
+      "en": "Brodmann area 30",
+      "lat": "Area Brodmann 30"
+    },
+    "sourceRegion": "Brodmann.30",
+    "number": 30,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.22",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#00cc00",
+    "names": {
+      "pl": "Pole Brodmanna 22",
+      "en": "Brodmann area 22",
+      "lat": "Area Brodmann 22"
+    },
+    "sourceRegion": "Brodmann.22",
+    "number": 22,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.42",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff4300",
+    "names": {
+      "pl": "Pole Brodmanna 42",
+      "en": "Brodmann area 42",
+      "lat": "Area Brodmann 42"
+    },
+    "sourceRegion": "Brodmann.42",
+    "number": 42,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.21",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#11dd55",
+    "names": {
+      "pl": "Pole Brodmanna 21",
+      "en": "Brodmann area 21",
+      "lat": "Area Brodmann 21"
+    },
+    "sourceRegion": "Brodmann.21",
+    "number": 21,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.38",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#c1033b",
+    "names": {
+      "pl": "Pole Brodmanna 38",
+      "en": "Brodmann area 38",
+      "lat": "Area Brodmann 38"
+    },
+    "sourceRegion": "Brodmann.38",
+    "number": 38,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.37",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#99ff55",
+    "names": {
+      "pl": "Pole Brodmanna 37",
+      "en": "Brodmann area 37",
+      "lat": "Area Brodmann 37"
+    },
+    "sourceRegion": "Brodmann.37",
+    "number": 37,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.20",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#223300",
+    "names": {
+      "pl": "Pole Brodmanna 20",
+      "en": "Brodmann area 20",
+      "lat": "Area Brodmann 20"
+    },
+    "sourceRegion": "Brodmann.20",
+    "number": 20,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.32",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#00aaff",
+    "names": {
+      "pl": "Pole Brodmanna 32",
+      "en": "Brodmann area 32",
+      "lat": "Area Brodmann 32"
+    },
+    "sourceRegion": "Brodmann.32",
+    "number": 32,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.24",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#4444ff",
+    "names": {
+      "pl": "Pole Brodmanna 24",
+      "en": "Brodmann area 24",
+      "lat": "Area Brodmann 24"
+    },
+    "sourceRegion": "Brodmann.24",
+    "number": 24,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.10",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#44ccff",
+    "names": {
+      "pl": "Pole Brodmanna 10",
+      "en": "Brodmann area 10",
+      "lat": "Area Brodmann 10"
+    },
+    "sourceRegion": "Brodmann.10",
+    "number": 10,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.25",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#bbffff",
+    "names": {
+      "pl": "Pole Brodmanna 25",
+      "en": "Brodmann area 25",
+      "lat": "Area Brodmann 25"
+    },
+    "sourceRegion": "Brodmann.25",
+    "number": 25,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.11",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#cc66ff",
+    "names": {
+      "pl": "Pole Brodmanna 11",
+      "en": "Brodmann area 11",
+      "lat": "Area Brodmann 11"
+    },
+    "sourceRegion": "Brodmann.11",
+    "number": 11,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.46",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#664433",
+    "names": {
+      "pl": "Pole Brodmanna 46",
+      "en": "Brodmann area 46",
+      "lat": "Area Brodmann 46"
+    },
+    "sourceRegion": "Brodmann.46",
+    "number": 46,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.17",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffff88",
+    "names": {
+      "pl": "Pole Brodmanna 17",
+      "en": "Brodmann area 17",
+      "lat": "Area Brodmann 17"
+    },
+    "sourceRegion": "Brodmann.17",
+    "number": 17,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.18",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffff66",
+    "names": {
+      "pl": "Pole Brodmanna 18",
+      "en": "Brodmann area 18",
+      "lat": "Area Brodmann 18"
+    },
+    "sourceRegion": "Brodmann.18",
+    "number": 18,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.27",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#c1573b",
+    "names": {
+      "pl": "Pole Brodmanna 27",
+      "en": "Brodmann area 27",
+      "lat": "Area Brodmann 27"
+    },
+    "sourceRegion": "Brodmann.27",
+    "number": 27,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.36",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#770022",
+    "names": {
+      "pl": "Pole Brodmanna 36",
+      "en": "Brodmann area 36",
+      "lat": "Area Brodmann 36"
+    },
+    "sourceRegion": "Brodmann.36",
+    "number": 36,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.35",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#771111",
+    "names": {
+      "pl": "Pole Brodmanna 35",
+      "en": "Brodmann area 35",
+      "lat": "Area Brodmann 35"
+    },
+    "sourceRegion": "Brodmann.35",
+    "number": 35,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.28",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#775745",
+    "names": {
+      "pl": "Pole Brodmanna 28",
+      "en": "Brodmann area 28",
+      "lat": "Area Brodmann 28"
+    },
+    "sourceRegion": "Brodmann.28",
+    "number": 28,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.29",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#440088",
+    "names": {
+      "pl": "Pole Brodmanna 29",
+      "en": "Brodmann area 29",
+      "lat": "Area Brodmann 29"
+    },
+    "sourceRegion": "Brodmann.29",
+    "number": 29,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.26",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#c1333b",
+    "names": {
+      "pl": "Pole Brodmanna 26",
+      "en": "Brodmann area 26",
+      "lat": "Area Brodmann 26"
+    },
+    "sourceRegion": "Brodmann.26",
+    "number": 26,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "lh_Brodmann.33",
+    "hemisphere": "left",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffffff",
+    "names": {
+      "pl": "Pole Brodmanna 33",
+      "en": "Brodmann area 33",
+      "lat": "Area Brodmann 33"
+    },
+    "sourceRegion": "Brodmann.33",
+    "number": 33,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_G_and_S_frontomargin",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#17dc3c",
+    "names": {
+      "pl": "Zakręt i bruzda czołowo-brzeżna",
+      "en": "Frontomarginal gyrus and sulcus",
+      "lat": "Gyrus et sulcus frontomarginalis"
+    },
+    "sourceRegion": "G_and_S_frontomargin",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_occipital_inf",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#173cb4",
+    "names": {
+      "pl": "Zakręt i bruzda potyliczna dolna",
+      "en": "Inferior occipital gyrus and sulcus",
+      "lat": "Gyrus et sulcus occipitalis inferior"
+    },
+    "sourceRegion": "G_and_S_occipital_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_paracentral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3f643c",
+    "names": {
+      "pl": "Płacik okołośrodkowy",
+      "en": "Paracentral lobule and sulcus",
+      "lat": "Lobulus paracentralis"
+    },
+    "sourceRegion": "G_and_S_paracentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_subcentral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3f14dc",
+    "names": {
+      "pl": "Zakręt i bruzdy podśrodkowe",
+      "en": "Subcentral gyrus and sulci",
+      "lat": "Gyrus et sulci subcentrales"
+    },
+    "sourceRegion": "G_and_S_subcentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_transv_frontopol",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#0d00fa",
+    "names": {
+      "pl": "Poprzeczne zakręty i bruzdy bieguna czołowego",
+      "en": "Transverse frontopolar gyri and sulci",
+      "lat": "Gyri et sulci frontopolares transversi"
+    },
+    "sourceRegion": "G_and_S_transv_frontopol",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_cingul-Ant",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1a3c00",
+    "names": {
+      "pl": "Przednia część zakrętu obręczy",
+      "en": "Anterior cingulate gyrus and sulcus",
+      "lat": "Pars anterior gyri cinguli"
+    },
+    "sourceRegion": "G_and_S_cingul-Ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_cingul-Mid-Ant",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1a3c4b",
+    "names": {
+      "pl": "Przednia część środkowego zakrętu obręczy",
+      "en": "Anterior mid-cingulate gyrus and sulcus",
+      "lat": "Pars media anterior gyri cinguli"
+    },
+    "sourceRegion": "G_and_S_cingul-Mid-Ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_and_S_cingul-Mid-Post",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1a3c96",
+    "names": {
+      "pl": "Tylna część środkowego zakrętu obręczy",
+      "en": "Posterior mid-cingulate gyrus and sulcus",
+      "lat": "Pars media posterior gyri cinguli"
+    },
+    "sourceRegion": "G_and_S_cingul-Mid-Post",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_cingul-Post-dorsal",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#193cfa",
+    "names": {
+      "pl": "Grzbietowa część tylnego zakrętu obręczy",
+      "en": "Dorsal posterior cingulate gyrus",
+      "lat": "Pars dorsalis posterior gyri cinguli"
+    },
+    "sourceRegion": "G_cingul-Post-dorsal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_cingul-Post-ventral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c1919",
+    "names": {
+      "pl": "Brzuszna część tylnego zakrętu obręczy",
+      "en": "Ventral posterior cingulate gyrus",
+      "lat": "Pars ventralis posterior gyri cinguli"
+    },
+    "sourceRegion": "G_cingul-Post-ventral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_cuneus",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b41414",
+    "names": {
+      "pl": "Klin",
+      "en": "Cuneus",
+      "lat": "Cuneus"
+    },
+    "sourceRegion": "G_cuneus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_front_inf-Opercular",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dc1464",
+    "names": {
+      "pl": "Część wieczkowa zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, opercular part",
+      "lat": "Pars opercularis gyri frontalis inferioris"
+    },
+    "sourceRegion": "G_front_inf-Opercular",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_front_inf-Orbital",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8c3c3c",
+    "names": {
+      "pl": "Część oczodołowa zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, orbital part",
+      "lat": "Pars orbitalis gyri frontalis inferioris"
+    },
+    "sourceRegion": "G_front_inf-Orbital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_front_inf-Triangul",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b4dc8c",
+    "names": {
+      "pl": "Część trójkątna zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, triangular part",
+      "lat": "Pars triangularis gyri frontalis inferioris"
+    },
+    "sourceRegion": "G_front_inf-Triangul",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_front_middle",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8c64b4",
+    "names": {
+      "pl": "Zakręt czołowy środkowy",
+      "en": "Middle frontal gyrus",
+      "lat": "Gyrus frontalis medius"
+    },
+    "sourceRegion": "G_front_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_front_sup",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b4148c",
+    "names": {
+      "pl": "Zakręt czołowy górny",
+      "en": "Superior frontal gyrus",
+      "lat": "Gyrus frontalis superior"
+    },
+    "sourceRegion": "G_front_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_Ins_lg_and_S_cent_ins",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#170a0a",
+    "names": {
+      "pl": "Zakręt długi i bruzda środkowa wyspy",
+      "en": "Long insular gyrus and central insular sulcus",
+      "lat": "Gyrus longus et sulcus centralis insulae"
+    },
+    "sourceRegion": "G_Ins_lg_and_S_cent_ins",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_insular_short",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#e18c8c",
+    "names": {
+      "pl": "Zakręty krótkie wyspy",
+      "en": "Short insular gyri",
+      "lat": "Gyri breves insulae"
+    },
+    "sourceRegion": "G_insular_short",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_occipital_middle",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b43cb4",
+    "names": {
+      "pl": "Zakręt potyliczny środkowy",
+      "en": "Middle occipital gyrus",
+      "lat": "Gyrus occipitalis medius"
+    },
+    "sourceRegion": "G_occipital_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_occipital_sup",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#14dc3c",
+    "names": {
+      "pl": "Zakręt potyliczny górny",
+      "en": "Superior occipital gyrus",
+      "lat": "Gyrus occipitalis superior"
+    },
+    "sourceRegion": "G_occipital_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_oc-temp_lat-fusifor",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c148c",
+    "names": {
+      "pl": "Zakręt wrzecionowaty",
+      "en": "Fusiform gyrus",
+      "lat": "Gyrus fusiformis"
+    },
+    "sourceRegion": "G_oc-temp_lat-fusifor",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_oc-temp_med-Lingual",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcb48c",
+    "names": {
+      "pl": "Zakręt językowaty",
+      "en": "Lingual gyrus",
+      "lat": "Gyrus lingualis"
+    },
+    "sourceRegion": "G_oc-temp_med-Lingual",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_oc-temp_med-Parahip",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#416414",
+    "names": {
+      "pl": "Zakręt przyhipokampowy",
+      "en": "Parahippocampal gyrus",
+      "lat": "Gyrus parahippocampalis"
+    },
+    "sourceRegion": "G_oc-temp_med-Parahip",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_orbital",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dc3c14",
+    "names": {
+      "pl": "Zakręty oczodołowe",
+      "en": "Orbital gyri",
+      "lat": "Gyri orbitales"
+    },
+    "sourceRegion": "G_orbital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_pariet_inf-Angular",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#143cdc",
+    "names": {
+      "pl": "Zakręt kątowy",
+      "en": "Angular gyrus",
+      "lat": "Gyrus angularis"
+    },
+    "sourceRegion": "G_pariet_inf-Angular",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_pariet_inf-Supramar",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#64643c",
+    "names": {
+      "pl": "Zakręt nadbrzeżny",
+      "en": "Supramarginal gyrus",
+      "lat": "Gyrus supramarginalis"
+    },
+    "sourceRegion": "G_pariet_inf-Supramar",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_parietal_sup",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcb4dc",
+    "names": {
+      "pl": "Płacik ciemieniowy górny",
+      "en": "Superior parietal lobule",
+      "lat": "Lobulus parietalis superior"
+    },
+    "sourceRegion": "G_parietal_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_postcentral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#14b48c",
+    "names": {
+      "pl": "Zakręt zaśrodkowy",
+      "en": "Postcentral gyrus",
+      "lat": "Gyrus postcentralis"
+    },
+    "sourceRegion": "G_postcentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_precentral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c8cb4",
+    "names": {
+      "pl": "Zakręt przedśrodkowy",
+      "en": "Precentral gyrus",
+      "lat": "Gyrus precentralis"
+    },
+    "sourceRegion": "G_precentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_precuneus",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#19148c",
+    "names": {
+      "pl": "Przedklinek",
+      "en": "Precuneus",
+      "lat": "Precuneus"
+    },
+    "sourceRegion": "G_precuneus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_rectus",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#143c64",
+    "names": {
+      "pl": "Zakręt prosty",
+      "en": "Straight gyrus",
+      "lat": "Gyrus rectus"
+    },
+    "sourceRegion": "G_rectus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_subcallosal",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3cdc14",
+    "names": {
+      "pl": "Pole podspoidłowe",
+      "en": "Subcallosal area",
+      "lat": "Area subcallosa"
+    },
+    "sourceRegion": "G_subcallosal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_temp_sup-G_T_transv",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3c3cdc",
+    "names": {
+      "pl": "Zakręty skroniowe poprzeczne Heschla",
+      "en": "Transverse temporal gyri of Heschl",
+      "lat": "Gyri temporales transversi"
+    },
+    "sourceRegion": "G_temp_sup-G_T_transv",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_temp_sup-Lateral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dc3cdc",
+    "names": {
+      "pl": "Zakręt skroniowy górny",
+      "en": "Superior temporal gyrus, lateral aspect",
+      "lat": "Gyrus temporalis superior"
+    },
+    "sourceRegion": "G_temp_sup-Lateral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_temp_sup-Plan_polar",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#41dc3c",
+    "names": {
+      "pl": "Płaszczyzna biegunowa",
+      "en": "Planum polare",
+      "lat": "Planum polare"
+    },
+    "sourceRegion": "G_temp_sup-Plan_polar",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_temp_sup-Plan_tempo",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#198c14",
+    "names": {
+      "pl": "Płaszczyzna skroniowa",
+      "en": "Planum temporale",
+      "lat": "Planum temporale"
+    },
+    "sourceRegion": "G_temp_sup-Plan_tempo",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_temporal_inf",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcdc64",
+    "names": {
+      "pl": "Zakręt skroniowy dolny",
+      "en": "Inferior temporal gyrus",
+      "lat": "Gyrus temporalis inferior"
+    },
+    "sourceRegion": "G_temporal_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_G_temporal_middle",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b43c3c",
+    "names": {
+      "pl": "Zakręt skroniowy środkowy",
+      "en": "Middle temporal gyrus",
+      "lat": "Gyrus temporalis medius"
+    },
+    "sourceRegion": "G_temporal_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_Lat_Fis-ant-Horizont",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d14dc",
+    "names": {
+      "pl": "Gałąź przednia bruzdy bocznej",
+      "en": "Anterior horizontal ramus of lateral sulcus",
+      "lat": "Ramus anterior sulci lateralis"
+    },
+    "sourceRegion": "Lat_Fis-ant-Horizont",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_Lat_Fis-ant-Vertical",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d143c",
+    "names": {
+      "pl": "Gałąź wstępująca bruzdy bocznej",
+      "en": "Anterior ascending ramus of lateral sulcus",
+      "lat": "Ramus ascendens sulci lateralis"
+    },
+    "sourceRegion": "Lat_Fis-ant-Vertical",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_Lat_Fis-post",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d3c64",
+    "names": {
+      "pl": "Tylna część bruzdy bocznej",
+      "en": "Posterior ramus of lateral sulcus",
+      "lat": "Pars posterior sulci lateralis"
+    },
+    "sourceRegion": "Lat_Fis-post",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_Pole_occipital",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8c143c",
+    "names": {
+      "pl": "Biegun potyliczny",
+      "en": "Occipital pole",
+      "lat": "Polus occipitalis"
+    },
+    "sourceRegion": "Pole_occipital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_Pole_temporal",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dcb414",
+    "names": {
+      "pl": "Biegun skroniowy",
+      "en": "Temporal pole",
+      "lat": "Polus temporalis"
+    },
+    "sourceRegion": "Pole_temporal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_calcarine",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3fb4b4",
+    "names": {
+      "pl": "Bruzda ostrogowa",
+      "en": "Calcarine sulcus",
+      "lat": "Sulcus calcarinus"
+    },
+    "sourceRegion": "S_calcarine",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_central",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd140a",
+    "names": {
+      "pl": "Bruzda środkowa",
+      "en": "Central sulcus",
+      "lat": "Sulcus centralis"
+    },
+    "sourceRegion": "S_central",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_cingul-Marginalis",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd1464",
+    "names": {
+      "pl": "Gałąź brzeżna bruzdy obręczy",
+      "en": "Marginal ramus of cingulate sulcus",
+      "lat": "Ramus marginalis sulci cinguli"
+    },
+    "sourceRegion": "S_cingul-Marginalis",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_circular_insula_ant",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd3c8c",
+    "names": {
+      "pl": "Przednia część bruzdy okólnej wyspy",
+      "en": "Anterior circular sulcus of insula",
+      "lat": "Pars anterior sulci circularis insulae"
+    },
+    "sourceRegion": "S_circular_insula_ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_circular_insula_inf",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd14dc",
+    "names": {
+      "pl": "Dolna część bruzdy okólnej wyspy",
+      "en": "Inferior circular sulcus of insula",
+      "lat": "Pars inferior sulci circularis insulae"
+    },
+    "sourceRegion": "S_circular_insula_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_circular_insula_sup",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3ddcdc",
+    "names": {
+      "pl": "Górna część bruzdy okólnej wyspy",
+      "en": "Superior circular sulcus of insula",
+      "lat": "Pars superior sulci circularis insulae"
+    },
+    "sourceRegion": "S_circular_insula_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_collat_transv_ant",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#64c8c8",
+    "names": {
+      "pl": "Przednia poprzeczna bruzda poboczna",
+      "en": "Anterior transverse collateral sulcus",
+      "lat": "Sulcus collateralis transversus anterior"
+    },
+    "sourceRegion": "S_collat_transv_ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_collat_transv_post",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#0ac8c8",
+    "names": {
+      "pl": "Tylna poprzeczna bruzda poboczna",
+      "en": "Posterior transverse collateral sulcus",
+      "lat": "Sulcus collateralis transversus posterior"
+    },
+    "sourceRegion": "S_collat_transv_post",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_front_inf",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dddc14",
+    "names": {
+      "pl": "Bruzda czołowa dolna",
+      "en": "Inferior frontal sulcus",
+      "lat": "Sulcus frontalis inferior"
+    },
+    "sourceRegion": "S_front_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_front_middle",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8d1464",
+    "names": {
+      "pl": "Bruzda czołowa środkowa",
+      "en": "Middle frontal sulcus",
+      "lat": "Sulcus frontalis medius"
+    },
+    "sourceRegion": "S_front_middle",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_front_sup",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3ddc64",
+    "names": {
+      "pl": "Bruzda czołowa górna",
+      "en": "Superior frontal sulcus",
+      "lat": "Sulcus frontalis superior"
+    },
+    "sourceRegion": "S_front_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_interm_prim-Jensen",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8d3c14",
+    "names": {
+      "pl": "Bruzda pośrednia pierwsza Jensena",
+      "en": "First intermediate sulcus of Jensen",
+      "lat": "Sulcus intermedius primus"
+    },
+    "sourceRegion": "S_interm_prim-Jensen",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_intrapariet_and_P_trans",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8f14dc",
+    "names": {
+      "pl": "Bruzda śródciemieniowa i poprzeczne bruzdy ciemieniowe",
+      "en": "Intraparietal and transverse parietal sulci",
+      "lat": "Sulcus intraparietalis et sulci parietales transversi"
+    },
+    "sourceRegion": "S_intrapariet_and_P_trans",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_oc_middle_and_Lunatus",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#653cdc",
+    "names": {
+      "pl": "Bruzda potyliczna środkowa i bruzda księżycowata",
+      "en": "Middle occipital and lunate sulci",
+      "lat": "Sulcus occipitalis medius et sulcus lunatus"
+    },
+    "sourceRegion": "S_oc_middle_and_Lunatus",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_oc_sup_and_transversal",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#15148c",
+    "names": {
+      "pl": "Bruzda potyliczna górna i bruzda potyliczna poprzeczna",
+      "en": "Superior and transverse occipital sulci",
+      "lat": "Sulcus occipitalis superior et transversus"
+    },
+    "sourceRegion": "S_oc_sup_and_transversal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_occipital_ant",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#3d14b4",
+    "names": {
+      "pl": "Bruzda potyliczna przednia",
+      "en": "Anterior occipital sulcus",
+      "lat": "Sulcus occipitalis anterior"
+    },
+    "sourceRegion": "S_occipital_ant",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_oc-temp_lat",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd8c14",
+    "names": {
+      "pl": "Bruzda potyliczno-skroniowa boczna",
+      "en": "Lateral occipitotemporal sulcus",
+      "lat": "Sulcus occipitotemporalis lateralis"
+    },
+    "sourceRegion": "S_oc-temp_lat",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_oc-temp_med_and_Lingual",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#8d64dc",
+    "names": {
+      "pl": "Bruzda potyliczno-skroniowa przyśrodkowa i bruzda językowata",
+      "en": "Medial occipitotemporal and lingual sulci",
+      "lat": "Sulcus occipitotemporalis medialis et sulcus lingualis"
+    },
+    "sourceRegion": "S_oc-temp_med_and_Lingual",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_orbital_lateral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd6414",
+    "names": {
+      "pl": "Bruzda oczodołowa boczna",
+      "en": "Lateral orbital sulcus",
+      "lat": "Sulcus orbitalis lateralis"
+    },
+    "sourceRegion": "S_orbital_lateral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_orbital_med-olfact",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b5c814",
+    "names": {
+      "pl": "Bruzda węchowa",
+      "en": "Olfactory sulcus",
+      "lat": "Sulcus olfactorius"
+    },
+    "sourceRegion": "S_orbital_med-olfact",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_orbital-H_Shaped",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#651414",
+    "names": {
+      "pl": "Bruzdy oczodołowe",
+      "en": "H-shaped orbital sulci",
+      "lat": "Sulci orbitales"
+    },
+    "sourceRegion": "S_orbital-H_Shaped",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_parieto_occipital",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#6564b4",
+    "names": {
+      "pl": "Bruzda ciemieniowo-potyliczna",
+      "en": "Parieto-occipital sulcus",
+      "lat": "Sulcus parietooccipitalis"
+    },
+    "sourceRegion": "S_parieto_occipital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_pericallosal",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#b5dc14",
+    "names": {
+      "pl": "Bruzda ciała modzelowatego",
+      "en": "Pericallosal sulcus",
+      "lat": "Sulcus corporis callosi"
+    },
+    "sourceRegion": "S_pericallosal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_postcentral",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#158cc8",
+    "names": {
+      "pl": "Bruzda zaśrodkowa",
+      "en": "Postcentral sulcus",
+      "lat": "Sulcus postcentralis"
+    },
+    "sourceRegion": "S_postcentral",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_precentral-inf-part",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1514f0",
+    "names": {
+      "pl": "Dolna część bruzdy przedśrodkowej",
+      "en": "Inferior precentral sulcus",
+      "lat": "Pars inferior sulci precentralis"
+    },
+    "sourceRegion": "S_precentral-inf-part",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_precentral-sup-part",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#1514c8",
+    "names": {
+      "pl": "Górna część bruzdy przedśrodkowej",
+      "en": "Superior precentral sulcus",
+      "lat": "Pars superior sulci precentralis"
+    },
+    "sourceRegion": "S_precentral-sup-part",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_suborbital",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#15143c",
+    "names": {
+      "pl": "Bruzda podoczodołowa",
+      "en": "Suborbital sulcus",
+      "lat": "Sulcus suborbitalis"
+    },
+    "sourceRegion": "S_suborbital",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_subparietal",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#653c3c",
+    "names": {
+      "pl": "Bruzda podciemieniowa",
+      "en": "Subparietal sulcus",
+      "lat": "Sulcus subparietalis"
+    },
+    "sourceRegion": "S_subparietal",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_temporal_inf",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#15b4b4",
+    "names": {
+      "pl": "Bruzda skroniowa dolna",
+      "en": "Inferior temporal sulcus",
+      "lat": "Sulcus temporalis inferior"
+    },
+    "sourceRegion": "S_temporal_inf",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_temporal_sup",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dfdc3c",
+    "names": {
+      "pl": "Bruzda skroniowa górna",
+      "en": "Superior temporal sulcus",
+      "lat": "Sulcus temporalis superior"
+    },
+    "sourceRegion": "S_temporal_sup",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_S_temporal_transverse",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "anatomy",
+    "color": "#dd3c3c",
+    "names": {
+      "pl": "Bruzda skroniowa poprzeczna",
+      "en": "Transverse temporal sulcus",
+      "lat": "Sulcus temporalis transversus"
+    },
+    "sourceRegion": "S_temporal_transverse",
+    "number": null,
+    "source": "Destrieux"
+  },
+  {
+    "id": "rh_Brodmann.8",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#007674",
+    "names": {
+      "pl": "Pole Brodmanna 8",
+      "en": "Brodmann area 8",
+      "lat": "Area Brodmann 8"
+    },
+    "sourceRegion": "Brodmann.8",
+    "number": 8,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.6",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#cc0044",
+    "names": {
+      "pl": "Pole Brodmanna 6",
+      "en": "Brodmann area 6",
+      "lat": "Area Brodmann 6"
+    },
+    "sourceRegion": "Brodmann.6",
+    "number": 6,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.4",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff1166",
+    "names": {
+      "pl": "Pole Brodmanna 4",
+      "en": "Brodmann area 4",
+      "lat": "Area Brodmann 4"
+    },
+    "sourceRegion": "Brodmann.4",
+    "number": 4,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.9",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#0077cc",
+    "names": {
+      "pl": "Pole Brodmanna 9",
+      "en": "Brodmann area 9",
+      "lat": "Area Brodmann 9"
+    },
+    "sourceRegion": "Brodmann.9",
+    "number": 9,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.3",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffbbbb",
+    "names": {
+      "pl": "Pole Brodmanna 3",
+      "en": "Brodmann area 3",
+      "lat": "Area Brodmann 3"
+    },
+    "sourceRegion": "Brodmann.3",
+    "number": 3,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.1",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff8888",
+    "names": {
+      "pl": "Pole Brodmanna 1",
+      "en": "Brodmann area 1",
+      "lat": "Area Brodmann 1"
+    },
+    "sourceRegion": "Brodmann.1",
+    "number": 1,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.5",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff4433",
+    "names": {
+      "pl": "Pole Brodmanna 5",
+      "en": "Brodmann area 5",
+      "lat": "Area Brodmann 5"
+    },
+    "sourceRegion": "Brodmann.5",
+    "number": 5,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.7",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#cc4411",
+    "names": {
+      "pl": "Pole Brodmanna 7",
+      "en": "Brodmann area 7",
+      "lat": "Area Brodmann 7"
+    },
+    "sourceRegion": "Brodmann.7",
+    "number": 7,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.2",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff6677",
+    "names": {
+      "pl": "Pole Brodmanna 2",
+      "en": "Brodmann area 2",
+      "lat": "Area Brodmann 2"
+    },
+    "sourceRegion": "Brodmann.2",
+    "number": 2,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.31",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#603c94",
+    "names": {
+      "pl": "Pole Brodmanna 31",
+      "en": "Brodmann area 31",
+      "lat": "Area Brodmann 31"
+    },
+    "sourceRegion": "Brodmann.31",
+    "number": 31,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.40",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#dd1100",
+    "names": {
+      "pl": "Pole Brodmanna 40",
+      "en": "Brodmann area 40",
+      "lat": "Area Brodmann 40"
+    },
+    "sourceRegion": "Brodmann.40",
+    "number": 40,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.44",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#3400b6",
+    "names": {
+      "pl": "Pole Brodmanna 44",
+      "en": "Brodmann area 44",
+      "lat": "Area Brodmann 44"
+    },
+    "sourceRegion": "Brodmann.44",
+    "number": 44,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.45",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#8800cc",
+    "names": {
+      "pl": "Pole Brodmanna 45",
+      "en": "Brodmann area 45",
+      "lat": "Area Brodmann 45"
+    },
+    "sourceRegion": "Brodmann.45",
+    "number": 45,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.23",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#2222ff",
+    "names": {
+      "pl": "Pole Brodmanna 23",
+      "en": "Brodmann area 23",
+      "lat": "Area Brodmann 23"
+    },
+    "sourceRegion": "Brodmann.23",
+    "number": 23,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.39",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#aa4411",
+    "names": {
+      "pl": "Pole Brodmanna 39",
+      "en": "Brodmann area 39",
+      "lat": "Area Brodmann 39"
+    },
+    "sourceRegion": "Brodmann.39",
+    "number": 39,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.43",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#f01e1e",
+    "names": {
+      "pl": "Pole Brodmanna 43",
+      "en": "Brodmann area 43",
+      "lat": "Area Brodmann 43"
+    },
+    "sourceRegion": "Brodmann.43",
+    "number": 43,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.19",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffdd77",
+    "names": {
+      "pl": "Pole Brodmanna 19",
+      "en": "Brodmann area 19",
+      "lat": "Area Brodmann 19"
+    },
+    "sourceRegion": "Brodmann.19",
+    "number": 19,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.47",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#a94300",
+    "names": {
+      "pl": "Pole Brodmanna 47",
+      "en": "Brodmann area 47",
+      "lat": "Area Brodmann 47"
+    },
+    "sourceRegion": "Brodmann.47",
+    "number": 47,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.41",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#a18000",
+    "names": {
+      "pl": "Pole Brodmanna 41",
+      "en": "Brodmann area 41",
+      "lat": "Area Brodmann 41"
+    },
+    "sourceRegion": "Brodmann.41",
+    "number": 41,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.30",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#6600dd",
+    "names": {
+      "pl": "Pole Brodmanna 30",
+      "en": "Brodmann area 30",
+      "lat": "Area Brodmann 30"
+    },
+    "sourceRegion": "Brodmann.30",
+    "number": 30,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.22",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#00cc00",
+    "names": {
+      "pl": "Pole Brodmanna 22",
+      "en": "Brodmann area 22",
+      "lat": "Area Brodmann 22"
+    },
+    "sourceRegion": "Brodmann.22",
+    "number": 22,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.42",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ff4300",
+    "names": {
+      "pl": "Pole Brodmanna 42",
+      "en": "Brodmann area 42",
+      "lat": "Area Brodmann 42"
+    },
+    "sourceRegion": "Brodmann.42",
+    "number": 42,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.21",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#11dd55",
+    "names": {
+      "pl": "Pole Brodmanna 21",
+      "en": "Brodmann area 21",
+      "lat": "Area Brodmann 21"
+    },
+    "sourceRegion": "Brodmann.21",
+    "number": 21,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.38",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#c1033b",
+    "names": {
+      "pl": "Pole Brodmanna 38",
+      "en": "Brodmann area 38",
+      "lat": "Area Brodmann 38"
+    },
+    "sourceRegion": "Brodmann.38",
+    "number": 38,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.37",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#99ff55",
+    "names": {
+      "pl": "Pole Brodmanna 37",
+      "en": "Brodmann area 37",
+      "lat": "Area Brodmann 37"
+    },
+    "sourceRegion": "Brodmann.37",
+    "number": 37,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.20",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#223300",
+    "names": {
+      "pl": "Pole Brodmanna 20",
+      "en": "Brodmann area 20",
+      "lat": "Area Brodmann 20"
+    },
+    "sourceRegion": "Brodmann.20",
+    "number": 20,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.32",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#00aaff",
+    "names": {
+      "pl": "Pole Brodmanna 32",
+      "en": "Brodmann area 32",
+      "lat": "Area Brodmann 32"
+    },
+    "sourceRegion": "Brodmann.32",
+    "number": 32,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.24",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#4444ff",
+    "names": {
+      "pl": "Pole Brodmanna 24",
+      "en": "Brodmann area 24",
+      "lat": "Area Brodmann 24"
+    },
+    "sourceRegion": "Brodmann.24",
+    "number": 24,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.10",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#44ccff",
+    "names": {
+      "pl": "Pole Brodmanna 10",
+      "en": "Brodmann area 10",
+      "lat": "Area Brodmann 10"
+    },
+    "sourceRegion": "Brodmann.10",
+    "number": 10,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.25",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#bbffff",
+    "names": {
+      "pl": "Pole Brodmanna 25",
+      "en": "Brodmann area 25",
+      "lat": "Area Brodmann 25"
+    },
+    "sourceRegion": "Brodmann.25",
+    "number": 25,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.11",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#cc66ff",
+    "names": {
+      "pl": "Pole Brodmanna 11",
+      "en": "Brodmann area 11",
+      "lat": "Area Brodmann 11"
+    },
+    "sourceRegion": "Brodmann.11",
+    "number": 11,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.46",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#664433",
+    "names": {
+      "pl": "Pole Brodmanna 46",
+      "en": "Brodmann area 46",
+      "lat": "Area Brodmann 46"
+    },
+    "sourceRegion": "Brodmann.46",
+    "number": 46,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.17",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffff88",
+    "names": {
+      "pl": "Pole Brodmanna 17",
+      "en": "Brodmann area 17",
+      "lat": "Area Brodmann 17"
+    },
+    "sourceRegion": "Brodmann.17",
+    "number": 17,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.18",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffff66",
+    "names": {
+      "pl": "Pole Brodmanna 18",
+      "en": "Brodmann area 18",
+      "lat": "Area Brodmann 18"
+    },
+    "sourceRegion": "Brodmann.18",
+    "number": 18,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.27",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#c1573b",
+    "names": {
+      "pl": "Pole Brodmanna 27",
+      "en": "Brodmann area 27",
+      "lat": "Area Brodmann 27"
+    },
+    "sourceRegion": "Brodmann.27",
+    "number": 27,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.36",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#770022",
+    "names": {
+      "pl": "Pole Brodmanna 36",
+      "en": "Brodmann area 36",
+      "lat": "Area Brodmann 36"
+    },
+    "sourceRegion": "Brodmann.36",
+    "number": 36,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.35",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#771111",
+    "names": {
+      "pl": "Pole Brodmanna 35",
+      "en": "Brodmann area 35",
+      "lat": "Area Brodmann 35"
+    },
+    "sourceRegion": "Brodmann.35",
+    "number": 35,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.28",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#775745",
+    "names": {
+      "pl": "Pole Brodmanna 28",
+      "en": "Brodmann area 28",
+      "lat": "Area Brodmann 28"
+    },
+    "sourceRegion": "Brodmann.28",
+    "number": 28,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.29",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#440088",
+    "names": {
+      "pl": "Pole Brodmanna 29",
+      "en": "Brodmann area 29",
+      "lat": "Area Brodmann 29"
+    },
+    "sourceRegion": "Brodmann.29",
+    "number": 29,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.26",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#c1333b",
+    "names": {
+      "pl": "Pole Brodmanna 26",
+      "en": "Brodmann area 26",
+      "lat": "Area Brodmann 26"
+    },
+    "sourceRegion": "Brodmann.26",
+    "number": 26,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "rh_Brodmann.33",
+    "hemisphere": "right",
+    "kind": "cortex",
+    "atlas": "brodmann",
+    "color": "#ffbbbb",
+    "names": {
+      "pl": "Pole Brodmanna 33",
+      "en": "Brodmann area 33",
+      "lat": "Area Brodmann 33"
+    },
+    "sourceRegion": "Brodmann.33",
+    "number": 33,
+    "source": "PALS-B12"
+  },
+  {
+    "id": "Left-Cerebral-White-Matter",
+    "hemisphere": "left",
+    "kind": "white-matter",
+    "atlas": "both",
+    "color": "#f5f5f5",
+    "names": {
+      "pl": "Istota biała półkuli",
+      "en": "Cerebral white matter",
+      "lat": "Substantia alba cerebri"
+    },
+    "sourceRegion": "Left-Cerebral-White-Matter",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Lateral-Ventricle",
+    "hemisphere": "left",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#781286",
+    "names": {
+      "pl": "Komora boczna",
+      "en": "Lateral ventricle",
+      "lat": "Ventriculus lateralis"
+    },
+    "sourceRegion": "Left-Lateral-Ventricle",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Inf-Lat-Vent",
+    "hemisphere": "left",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#c43afa",
+    "names": {
+      "pl": "Róg dolny komory bocznej",
+      "en": "Inferior horn of lateral ventricle",
+      "lat": "Cornu inferius ventriculi lateralis"
+    },
+    "sourceRegion": "Left-Inf-Lat-Vent",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Cerebellum-White-Matter",
+    "hemisphere": "left",
+    "kind": "white-matter",
+    "atlas": "both",
+    "color": "#dcf8a4",
+    "names": {
+      "pl": "Istota biała móżdżku",
+      "en": "Cerebellar white matter",
+      "lat": "Substantia alba cerebelli"
+    },
+    "sourceRegion": "Left-Cerebellum-White-Matter",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Cerebellum-Cortex",
+    "hemisphere": "left",
+    "kind": "cerebellum",
+    "atlas": "both",
+    "color": "#e69422",
+    "names": {
+      "pl": "Kora móżdżku",
+      "en": "Cerebellar cortex",
+      "lat": "Cortex cerebelli"
+    },
+    "sourceRegion": "Left-Cerebellum-Cortex",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Thalamus-Proper",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#00760e",
+    "names": {
+      "pl": "Wzgórze",
+      "en": "Thalamus",
+      "lat": "Thalamus"
+    },
+    "sourceRegion": "Left-Thalamus-Proper",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Caudate",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#7abadc",
+    "names": {
+      "pl": "Jądro ogoniaste",
+      "en": "Caudate nucleus",
+      "lat": "Nucleus caudatus"
+    },
+    "sourceRegion": "Left-Caudate",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Putamen",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#ec0db0",
+    "names": {
+      "pl": "Skorupa",
+      "en": "Putamen",
+      "lat": "Putamen"
+    },
+    "sourceRegion": "Left-Putamen",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Pallidum",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#0c30ff",
+    "names": {
+      "pl": "Gałka blada",
+      "en": "Globus pallidus",
+      "lat": "Globus pallidus"
+    },
+    "sourceRegion": "Left-Pallidum",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "3rd-Ventricle",
+    "hemisphere": "midline",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#ccb68e",
+    "names": {
+      "pl": "Komora trzecia",
+      "en": "Third ventricle",
+      "lat": "Ventriculus tertius"
+    },
+    "sourceRegion": "3rd-Ventricle",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "4th-Ventricle",
+    "hemisphere": "midline",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#2acca4",
+    "names": {
+      "pl": "Komora czwarta",
+      "en": "Fourth ventricle",
+      "lat": "Ventriculus quartus"
+    },
+    "sourceRegion": "4th-Ventricle",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Brain-Stem",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#779fb0",
+    "names": {
+      "pl": "Pień mózgu",
+      "en": "Brainstem",
+      "lat": "Truncus encephali"
+    },
+    "sourceRegion": "Brain-Stem",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Hippocampus",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#dcd814",
+    "names": {
+      "pl": "Hipokamp",
+      "en": "Hippocampus",
+      "lat": "Hippocampus"
+    },
+    "sourceRegion": "Left-Hippocampus",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Amygdala",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#67ffff",
+    "names": {
+      "pl": "Ciało migdałowate",
+      "en": "Amygdala",
+      "lat": "Corpus amygdaloideum"
+    },
+    "sourceRegion": "Left-Amygdala",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "CSF",
+    "hemisphere": "midline",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#3c3c3c",
+    "names": {
+      "pl": "Płyn mózgowo-rdzeniowy",
+      "en": "Cerebrospinal fluid",
+      "lat": "Liquor cerebrospinalis"
+    },
+    "sourceRegion": "CSF",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-Accumbens-area",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#ffa500",
+    "names": {
+      "pl": "Jądro półleżące",
+      "en": "Nucleus accumbens",
+      "lat": "Nucleus accumbens"
+    },
+    "sourceRegion": "Left-Accumbens-area",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-VentralDC",
+    "hemisphere": "left",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#a52a2a",
+    "names": {
+      "pl": "Brzuszna część międzymózgowia",
+      "en": "Ventral diencephalon",
+      "lat": "Pars ventralis diencephali"
+    },
+    "sourceRegion": "Left-VentralDC",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Left-choroid-plexus",
+    "hemisphere": "left",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#00c8c8",
+    "names": {
+      "pl": "Splot naczyniówkowy",
+      "en": "Choroid plexus",
+      "lat": "Plexus choroideus"
+    },
+    "sourceRegion": "Left-choroid-plexus",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Cerebral-White-Matter",
+    "hemisphere": "right",
+    "kind": "white-matter",
+    "atlas": "both",
+    "color": "#f5f5f5",
+    "names": {
+      "pl": "Istota biała półkuli",
+      "en": "Cerebral white matter",
+      "lat": "Substantia alba cerebri"
+    },
+    "sourceRegion": "Right-Cerebral-White-Matter",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Lateral-Ventricle",
+    "hemisphere": "right",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#781286",
+    "names": {
+      "pl": "Komora boczna",
+      "en": "Lateral ventricle",
+      "lat": "Ventriculus lateralis"
+    },
+    "sourceRegion": "Right-Lateral-Ventricle",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Inf-Lat-Vent",
+    "hemisphere": "right",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#c43afa",
+    "names": {
+      "pl": "Róg dolny komory bocznej",
+      "en": "Inferior horn of lateral ventricle",
+      "lat": "Cornu inferius ventriculi lateralis"
+    },
+    "sourceRegion": "Right-Inf-Lat-Vent",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Cerebellum-White-Matter",
+    "hemisphere": "right",
+    "kind": "white-matter",
+    "atlas": "both",
+    "color": "#dcf8a4",
+    "names": {
+      "pl": "Istota biała móżdżku",
+      "en": "Cerebellar white matter",
+      "lat": "Substantia alba cerebelli"
+    },
+    "sourceRegion": "Right-Cerebellum-White-Matter",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Cerebellum-Cortex",
+    "hemisphere": "right",
+    "kind": "cerebellum",
+    "atlas": "both",
+    "color": "#e69422",
+    "names": {
+      "pl": "Kora móżdżku",
+      "en": "Cerebellar cortex",
+      "lat": "Cortex cerebelli"
+    },
+    "sourceRegion": "Right-Cerebellum-Cortex",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Thalamus-Proper",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#00760e",
+    "names": {
+      "pl": "Wzgórze",
+      "en": "Thalamus",
+      "lat": "Thalamus"
+    },
+    "sourceRegion": "Right-Thalamus-Proper",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Caudate",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#7abadc",
+    "names": {
+      "pl": "Jądro ogoniaste",
+      "en": "Caudate nucleus",
+      "lat": "Nucleus caudatus"
+    },
+    "sourceRegion": "Right-Caudate",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Putamen",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#ec0db0",
+    "names": {
+      "pl": "Skorupa",
+      "en": "Putamen",
+      "lat": "Putamen"
+    },
+    "sourceRegion": "Right-Putamen",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Pallidum",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#0d30ff",
+    "names": {
+      "pl": "Gałka blada",
+      "en": "Globus pallidus",
+      "lat": "Globus pallidus"
+    },
+    "sourceRegion": "Right-Pallidum",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Hippocampus",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#dcd814",
+    "names": {
+      "pl": "Hipokamp",
+      "en": "Hippocampus",
+      "lat": "Hippocampus"
+    },
+    "sourceRegion": "Right-Hippocampus",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Amygdala",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#67ffff",
+    "names": {
+      "pl": "Ciało migdałowate",
+      "en": "Amygdala",
+      "lat": "Corpus amygdaloideum"
+    },
+    "sourceRegion": "Right-Amygdala",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-Accumbens-area",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#ffa500",
+    "names": {
+      "pl": "Jądro półleżące",
+      "en": "Nucleus accumbens",
+      "lat": "Nucleus accumbens"
+    },
+    "sourceRegion": "Right-Accumbens-area",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-VentralDC",
+    "hemisphere": "right",
+    "kind": "ventricle",
+    "atlas": "both",
+    "color": "#a52a2a",
+    "names": {
+      "pl": "Brzuszna część międzymózgowia",
+      "en": "Ventral diencephalon",
+      "lat": "Pars ventralis diencephali"
+    },
+    "sourceRegion": "Right-VentralDC",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Right-choroid-plexus",
+    "hemisphere": "right",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#00c8dd",
+    "names": {
+      "pl": "Splot naczyniówkowy",
+      "en": "Choroid plexus",
+      "lat": "Plexus choroideus"
+    },
+    "sourceRegion": "Right-choroid-plexus",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "Optic-Chiasm",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#eaa91e",
+    "names": {
+      "pl": "Skrzyżowanie wzrokowe",
+      "en": "Optic chiasm",
+      "lat": "Chiasma opticum"
+    },
+    "sourceRegion": "Optic-Chiasm",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "CC_Posterior",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#000040",
+    "names": {
+      "pl": "Ciało modzelowate — część tylna",
+      "en": "Corpus callosum, posterior segment",
+      "lat": "Pars posterior corporis callosi"
+    },
+    "sourceRegion": "CC_Posterior",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "CC_Mid_Posterior",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#000070",
+    "names": {
+      "pl": "Ciało modzelowate — część środkowo-tylna",
+      "en": "Corpus callosum, mid-posterior segment",
+      "lat": "Pars media posterior corporis callosi"
+    },
+    "sourceRegion": "CC_Mid_Posterior",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "CC_Central",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#0000a0",
+    "names": {
+      "pl": "Ciało modzelowate — część środkowa",
+      "en": "Corpus callosum, central segment",
+      "lat": "Pars centralis corporis callosi"
+    },
+    "sourceRegion": "CC_Central",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "CC_Mid_Anterior",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#0000d0",
+    "names": {
+      "pl": "Ciało modzelowate — część środkowo-przednia",
+      "en": "Corpus callosum, mid-anterior segment",
+      "lat": "Pars media anterior corporis callosi"
+    },
+    "sourceRegion": "CC_Mid_Anterior",
+    "number": null,
+    "source": "ASEG"
+  },
+  {
+    "id": "CC_Anterior",
+    "hemisphere": "midline",
+    "kind": "subcortex",
+    "atlas": "both",
+    "color": "#0000ff",
+    "names": {
+      "pl": "Ciało modzelowate — część przednia",
+      "en": "Corpus callosum, anterior segment",
+      "lat": "Pars anterior corporis callosi"
+    },
+    "sourceRegion": "CC_Anterior",
+    "number": null,
+    "source": "ASEG"
+  }
+]

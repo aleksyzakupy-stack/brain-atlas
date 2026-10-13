@@ -6,3 +6,4 @@ coverage
 output/playwright/
 output/base-build/
 .playwright-cli/
+__pycache__/

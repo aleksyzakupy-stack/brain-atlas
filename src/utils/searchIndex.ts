@@ -3,6 +3,7 @@ import { learningPaths } from '../data/learningPaths'
 import { connections } from '../data/connections'
 import type { BrainStructure } from '../types/atlas'
 import { normalizeSearch } from './normalizeSearch'
+import { atlasRegions, matchesRegion, regionLabel, regionUrl } from '../data/anatomicalAtlas'
 
 export type StructureSearchResult = {
   type: 'structure'
@@ -49,11 +50,14 @@ export const searchStructures = (rawQuery: string): StructureSearchResult[] => {
     .sort((a, b) => b.score - a.score || a.structure.names.pl.localeCompare(b.structure.names.pl, 'pl'))
 }
 
-export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' }
+export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' | 'atlas-region' }
 export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
   const query = normalizeSearch(rawQuery)
   if (!query) return []
   const results: AtlasSearchResult[] = searchStructures(rawQuery).map(({ structure }) => ({ id: structure.id, title: structure.names.pl, subtitle: structure.names.en, to: `/struktury/${structure.slug}`, type: 'structure' }))
+  for (const region of atlasRegions) {
+    if (matchesRegion(region,rawQuery)) results.unshift({ id: region.id, title: regionLabel(region,'pl'), subtitle: region.source, to: regionUrl(region), type: 'atlas-region' })
+  }
   for (const path of learningPaths) for (const step of path.steps) {
     if (normalizeSearch([path.title, step.title, step.lead, ...step.paragraphs].join(' ')).includes(query)) results.push({ id: `${path.slug}-${step.id}`, title: step.title, subtitle: path.title, to: `/nauka/${path.slug}/${step.id}`, type: 'lesson' })
   }
