@@ -27,8 +27,8 @@ describe('nauka i integralność materiału', () => {
     expect(readProgress(localStorage.getItem(PROGRESS_KEY)).completed[path.slug]).toHaveLength(6)
     app.unmount()
     render(<App />)
-    fireEvent.click(screen.getByRole('link', { name: /Wróć do ukończonej trasy/ }))
-    await screen.findByRole('heading', { name: path.steps[5].title, level: 1 })
+    fireEvent.click(screen.getByRole('link', { name: new RegExp(path.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) }))
+    await screen.findByRole('heading', { name: path.steps[0].title, level: 1 })
   })
 
   it('ma kompletne źródła i identyfikatory oraz wyszukuje bez polskich znaków', () => {

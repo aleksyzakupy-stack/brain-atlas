@@ -1,0 +1,196 @@
+[
+  {
+    "id": "system-brain",
+    "names": {
+      "pl": "Mózg",
+      "en": "Brain",
+      "lat": "Encephalon"
+    },
+    "category": "system",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectHierarchyIds": [
+      "brain"
+    ],
+    "anatomy": "Węzeł projektu obejmuje całe mózgowie: kresomózgowie z półkulami, międzymózgowie, śródmózgowie, most, rdzeń przedłużony i móżdżek. Nazwa interfejsu „Mózg” jest tutaj szersza od wąskiego znaczenia anatomicznego cerebrum; łacińskie Encephalon odpowiada mózgowiu. Istota szara tworzy korę i jądra, a istota biała drogi łączące ich neurony. Wewnątrz przebiega układ komorowy z płynem mózgowo-rdzeniowym.",
+    "function": "Współpraca tych części umożliwia percepcję, ruch, pamięć, język, regulację emocji i utrzymanie środowiska wewnętrznego. Czuwanie zależy od współdziałania pnia, międzymózgowia i rozległych sieci półkulowych. Zadanie poznawcze zwykle angażuje wiele węzłów, a jego wykonanie zależy również od informacji z ciała.",
+    "connections": "Włókna kojarzeniowe łączą obszary jednej półkuli, spoidłowe obie półkule, a rzutowe różne piętra układu nerwowego. Drogi wstępujące dostarczają informacji czuciowej, zstępujące regulują wykonanie ruchów i funkcje autonomiczne. Połączenia zwrotne pozwalają korygować reakcje.",
+    "clinical": "Objawy uszkodzenia zależą od lokalizacji, rozległości i zajęcia połączeń. Mały udar w miejscu skupienia włókien może wywołać znaczny deficyt; rozlane zaburzenie metaboliczne może upośledzać świadomość bez pojedynczego ogniska korowego.",
+    "laterality": "Wiele dróg ruchowych i czuciowych ma reprezentację przeciwstronną, ale miejsce skrzyżowania jest swoiste dla drogi. Funkcje poznawcze wykazują względną asymetrię i współpracę obu półkul.",
+    "limitations": "Drzewo projektu jest nawigacją edukacyjną. Miesza podziały topograficzne i funkcjonalne, dlatego jego grupy częściowo się nakładają i nie stanowią rozłącznego podziału całego mózgowia.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 12, 14–16: istota szara i biała, podziały mózgowia, układ komorowy; s. 20–21: włókna półkul; s. 33–36: pień i układ siatkowaty."
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–124: tablice 104–107, powierzchnie mózgowia i komory."
+      }
+    ]
+  },
+  {
+    "id": "system-cerebral-cortex",
+    "names": {
+      "pl": "Kora mózgowa",
+      "en": "Cerebral cortex",
+      "lat": "Cortex cerebri"
+    },
+    "category": "system",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectHierarchyIds": [
+      "cerebral-cortex"
+    ],
+    "anatomy": "Kora pokrywa półkule kresomózgowia, tworząc zakręty i ściany bruzd. Większość stanowi kora nowa o sześciu warstwach; formacja hipokampowa i niektóre okolice węchowe mają inną organizację. Podział na płaty i parcele powierzchniowe opisuje topografię, natomiast pola cytoarchitektoniczne wyróżnia się według budowy tkanki. Granice obu podziałów nie muszą się pokrywać.",
+    "function": "Pola pierwotne uczestniczą w przetwarzaniu określonych modalności czuciowych lub sterowaniu ruchem. Pola asocjacyjne integrują informacje potrzebne do języka, uwagi, pamięci i planowania. Złożona funkcja wynika z pracy sieci, obejmującej także wzgórze, jądra podstawy i móżdżek.",
+    "connections": "Komórki piramidowe wysyłają przede wszystkim projekcje glutaminergiczne, a miejscowe interneurony GABA-ergiczne regulują ich aktywność. Włókna U, długie pęczki kojarzeniowe i spoidła łączą pola korowe; promienistości wzgórzowe oraz drogi zstępujące wiążą korę z głębszymi piętrami.",
+    "clinical": "Uszkodzenie może wywołać afazję, apraksję, agnozję, zaniedbywanie, niedowład lub korowe zaburzenia czucia, zależnie od obszaru i połączeń. Objawy te nie są prostymi etykietami pojedynczych zakrętów. Napad padaczkowy może szerzyć się poza korę, w której się rozpoczął.",
+    "laterality": "Kontrola kończyn i podstawowa reprezentacja czucia są głównie przeciwstronne. Dominacja językowa często jest lewostronna, a uwaga przestrzenna wykazuje przewagę prawej sieci, z istotną zmiennością osobniczą.",
+    "limitations": "Kontur parceli atlasowej nie wyznacza indywidualnej granicy funkcji. Bruzda jest punktem orientacyjnym; funkcje przypisuje się tkance jej ścian i powiązanej sieci, a nie samej szczelinie.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21: kora, warstwy, pola i istota biała; klasyczne lokalizacje wymagają uwzględnienia ograniczeń współczesnego opisu."
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i zasady parcelacji: 74 makroskopowe etykiety zakrętów i bruzd na półkulę."
+      },
+      {
+        "sourceId": "geyer-1999",
+        "locator": "Abstrakt: zmienność granic BA3a, BA3b i BA1 względem makroskopowej powierzchni."
+      }
+    ]
+  },
+  {
+    "id": "system-limbic-system",
+    "names": {
+      "pl": "Układ limbiczny",
+      "en": "Limbic system",
+      "lat": "Systema limbicum"
+    },
+    "category": "system",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectHierarchyIds": [
+      "limbic-system"
+    ],
+    "anatomy": "Układ limbiczny jest historyczną koncepcją grupującą powiązane obszary korowe i podkorowe, a nie jednym narządem o wyraźnej granicy. W projekcie obejmuje przede wszystkim hipokamp, ciało migdałowate i zakręt przyhipokampowy. Szersze opisy uwzględniają części obręczy, przegrodę, ciała suteczkowate i wybrane jądra wzgórza. Te struktury różnią się budową i połączeniami.",
+    "function": "Hipokamp uczestniczy w tworzeniu pamięci epizodycznej i reprezentacji kontekstu, a kompleks migdałowaty w uczeniu znaczenia bodźców i organizacji odpowiedzi autonomicznych. Kora przyhipokampowa pomaga reprezentować otoczenie. Emocje powstają przy współpracy rozległych sieci; układ limbiczny nie jest ich jedynym ośrodkiem ani przeciwieństwem „racjonalnej” kory.",
+    "connections": "Sklepienie łączy formację hipokampową z celami przegrodowymi i międzymózgowymi. Obwód Papeza obejmuje ciała suteczkowate, jądra przednie wzgórza i okolice obręczy. Prążek krańcowy oraz brzuszna droga migdałowato-odśrodkowa prowadzą odmienne projekcje kompleksu migdałowatego.",
+    "clinical": "Obustronne uszkodzenie sieci hipokampowej może znacznie utrudniać uczenie nowych zdarzeń. Ogniska przyśrodkowej skroni mogą wywoływać napady z objawami pamięciowymi lub autonomicznymi. Objaw lękowy sam nie lokalizuje zmiany do ciała migdałowatego.",
+    "laterality": "Obie półkule współpracują. Względne różnice pamięci werbalnej i przestrzennej zależą od materiału, dominacji językowej i rozległości uszkodzenia; nie ma prostej strony wszystkich emocji.",
+    "limitations": "Lista składników zależy od przyjętej definicji. Podział projektu służy odnajdywaniu struktur, a wspólna etykieta nie oznacza identycznej funkcji ani jednego mechanizmu chorobowego.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 29–31: historyczny zakres układu i krąg Papeza; ryc. 20–21."
+      },
+      {
+        "sourceId": "deep-web-amygdala-neuroscience-online",
+        "locator": "Rozdział 6, sekcje 6.2–6.6: projekcje amygdali, uczenie awersyjne i nagradzające oraz odróżnienie pamięci jawnej od reakcji warunkowych."
+      },
+      {
+        "sourceId": "parahippocampal-scenes-1998",
+        "locator": "Abstrakt pierwotnego badania fMRI: preferencyjna odpowiedź części kory przyhipokampowej na sceny."
+      }
+    ]
+  },
+  {
+    "id": "system-basal-ganglia",
+    "names": {
+      "pl": "Jądra podstawy",
+      "en": "Basal ganglia",
+      "lat": "Nuclei basales"
+    },
+    "category": "system",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectHierarchyIds": [
+      "basal-ganglia"
+    ],
+    "anatomy": "Jądra podstawy w znaczeniu funkcjonalnym obejmują prążkowie, gałkę bladą, jądro niskowzgórzowe i istotę czarną. Prążkowie grzbietowe tworzą jądro ogoniaste i skorupa; część brzuszna obejmuje m.in. jądro półleżące. Istota czarna leży w śródmózgowiu, a jądro niskowzgórzowe w międzymózgowiu, więc układ przekracza granice kresomózgowia.",
+    "function": "Uczestniczą w doborze, skalowaniu i automatyzacji działań oraz uczeniu na podstawie konsekwencji. Obwody ruchowe, asocjacyjne i limbiczne mają częściowo odmienne terytoria, ale wymieniają informacje. Nie stanowią osobnej drogi przekazującej gotowe polecenia bezpośrednio do mięśni.",
+    "connections": "Kora i wzgórze dostarczają pobudzających wejść do prążkowia. Wyjścia GPi i SNr są głównie GABA-ergiczne i oddziałują na wzgórze oraz cele pniowe. Drogi bezpośrednia, pośrednia i hiperbezpośrednia organizują hamowanie oraz odhamowanie. Dopamina z SNc moduluje pobudliwość i plastyczność prążkowia.",
+    "clinical": "Uszkodzenie lub degeneracja może powodować bradykinezję, sztywność albo ruchy nadmierne, zależnie od zajętych populacji. Parkinsonizm nie jest tym samym co niedowład piramidowy. Zaburzenia pętli asocjacyjnych i limbicznych mogą współtworzyć apatię lub trudności kontroli zachowania.",
+    "laterality": "Pętle korowo-podkorowe są przede wszystkim ipsilateralne, natomiast objawy kończynowe często przeważają po przeciwnej stronie ciała wskutek organizacji dalszych dróg ruchowych.",
+    "limitations": "Drzewo projektu pokazuje wybrane węzły, a nie kompletny skład układu. Klasyczny bilans D1/D2 jest modelem dydaktycznym; aktywność populacji i czasowanie wyładowań nie sprowadzają się do dwóch niezależnych przełączników.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 22–24: topografia prążkowia i gałki bladej oraz ich przekaźniki; s. 27: jądro niskowzgórzowe."
+      },
+      {
+        "sourceId": "deep-web-basal-ganglia-neuroscience-online",
+        "locator": "Rozdział 4, sekcje 4.1–4.6: skład układu, wejścia, wyjścia, drogi bezpośrednia i pośrednia oraz funkcje ruchowe; opis pętli jest modelem uproszczonym."
+      }
+    ]
+  },
+  {
+    "id": "system-diencephalon",
+    "names": {
+      "pl": "Międzymózgowie",
+      "en": "Diencephalon",
+      "lat": "Diencephalon"
+    },
+    "category": "system",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectHierarchyIds": [
+      "diencephalon"
+    ],
+    "anatomy": "Międzymózgowie otacza komorę III i łączy się ku dołowi ze śródmózgowiem. Obejmuje wzgórze, podwzgórze, nadwzgórze i niskowzgórze. Ciała kolankowate bywają wyróżniane jako zawzgórze. Nadwzgórze zawiera m.in. szyszynkę i uzdeczki; niskowzgórze obejmuje jądro niskowzgórzowe i strefę niepewną. Dwa węzły widoczne w drzewie projektu nie wyczerpują tego podziału.",
+    "function": "Wzgórze uczestniczy w selekcji i przekazywaniu informacji czuciowych, ruchowych i poznawczych oraz regulacji stanu kory. Podwzgórze integruje gospodarkę wodną, temperaturę, pobieranie pokarmu, rytmy dobowe i odpowiedzi hormonalne. Poszczególne jądra wykonują odmienne zadania; cała okolica nie jest jedną stacją przekaźnikową.",
+    "connections": "Wzajemne połączenia wzgórzowo-korowe biegną przez promienistości wzgórzowe i torebkę wewnętrzną. Podwzgórze komunikuje się z układem autonomicznym oraz przysadką drogą nerwową i naczyniami wrotnymi. Jądro niskowzgórzowe należy do obwodów jąder podstawy, a jądra przednie wzgórza do sieci pamięciowej.",
+    "clinical": "Uszkodzenia mogą wywoływać przeciwstronne zaburzenia czucia, zaburzenia pamięci lub czuwania; nie każdy objaw występuje po każdym ognisku. Zajęcie podwzgórza może zaburzać pragnienie, sen i regulację hormonalną. Istotna jest ocena konkretnego jądra i sąsiednich włókien.",
+    "laterality": "Przeciwstronność czucia wzgórzowego wynika głównie z wcześniejszych skrzyżowań dróg. Efekty hormonalne i homeostatyczne dotyczą całego organizmu i nie mają takiej samej reguły strony.",
+    "limitations": "Zbiorcza segmentacja wzgórza lub brzusznego międzymózgowia nie rozdziela wiarygodnie wszystkich małych jąder. Topografia, połączenia i objawy wymagają dokładniejszego poziomu opisu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 25–29: podział międzymózgowia, grupy jąder wzgórza, niskowzgórze, podwzgórze i drogi neuroendokrynne; ryc. 15–19."
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30: jądra przednie wzgórza i połączenia obwodu Papeza."
+      }
+    ]
+  },
+  {
+    "id": "system-brainstem-system",
+    "names": {
+      "pl": "Pień mózgu i móżdżek",
+      "en": "Brainstem and cerebellum",
+      "lat": "Truncus encephali et cerebellum"
+    },
+    "category": "system",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectHierarchyIds": [
+      "brainstem-system"
+    ],
+    "anatomy": "Ta grupa nawigacyjna łączy dwie odrębne części mózgowia. Pień tworzą śródmózgowie, most i rdzeń przedłużony. Móżdżek leży grzbietowo od mostu i rdzenia przedłużonego, łącząc się z pniem trzema parami konarów; nie jest częścią pnia. Zawiera korę, istotę białą i jądra głębokie, a pień liczne jądra oraz przechodzące drogi.",
+    "function": "Pień uczestniczy w regulacji oddychania, krążenia, czuwania, odruchów, ruchów oczu i czynności głowy. Jego układy modulujące wpływają na pracę odległych sieci. Móżdżek koordynuje czasowanie, siłę i dokładność działania, wspiera równowagę oraz uczenie korekty ruchu.",
+    "connections": "Przez pień biegną drogi czuciowe i ruchowe oraz połączenia nerwów czaszkowych. Jądra mostu przekazują informację korową do przeciwległej półkuli móżdżku przez konar środkowy. Konar dolny prowadzi liczne wejścia rdzeniowe i opuszkowe, a górny ważne wyjścia jąder głębokich do śródmózgowia i wzgórza.",
+    "clinical": "Uszkodzenie pnia może łączyć deficyt nerwu czaszkowego z przeciwstronnym ubytkiem kończynowym; taki wzorzec zależy od konkretnego poziomu. Zajęcie móżdżku może powodować dysmetrię, ataksję, dyzartrię i zaburzenia gałkoruchowe. Ataksja wymaga odróżnienia od utraty propriocepcji i zaburzenia przedsionkowego.",
+    "laterality": "Objawy kończynowe półkuli móżdżku zwykle występują po jej stronie. Pień zawiera włókna przed i po różnych skrzyżowaniach, dlatego nie obowiązuje jedna reguła lateralizacji całej grupy.",
+    "limitations": "Lista VTA, LC, szwu i PAG przedstawia tylko wybrane układy pnia. Ich modulujące projekcje nie zastępują opisu jąder nerwów czaszkowych, dróg długich ani poszczególnych części móżdżku.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 33–38: budowa pnia, twór siatkowaty, konary i części móżdżku; s. 89–90: ataksja oraz różnicowanie objawów ruchowych."
+      },
+      {
+        "sourceId": "haines-local",
+        "locator": "PDF s. 242–243 (druk. 228–229): jądra i nerwy gałkoruchowe, MLF oraz kliniczna lateralizacja uszkodzeń; PDF s. 256 (druk. 242): wejścia rdzeniowo-móżdżkowe."
+      }
+    ]
+  }
+]

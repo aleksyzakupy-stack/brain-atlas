@@ -1,3 +1,4 @@
+import { MemoryRouter } from 'react-router-dom'
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { App } from '../app/App'
@@ -8,7 +9,7 @@ import { referenceById } from '../data/references'
 
 describe('porównanie fizjologii i scenariusza klinicznego', () => {
   it('oznacza wyłącznie opisany cel i zachowuje geometrię oraz tempo schematu', () => {
-    const {container} = render(<PathwayScene circuit={circuitById.nigrostriatal} language="pl" onSelect={vi.fn()} />)
+    const {container} = render(<MemoryRouter><PathwayScene circuit={circuitById.nigrostriatal} language="pl" onSelect={vi.fn()} /></MemoryRouter>)
     fireEvent.click(screen.getByRole('button', {name: 'Schemat'}))
     fireEvent.click(screen.getByRole('button', {name: 'Pauza'}))
     const paths = [...container.querySelectorAll('path[marker-end]')].map(path=>path.getAttribute('d'))
@@ -16,13 +17,14 @@ describe('porównanie fizjologii i scenariusza klinicznego', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Schizofrenia'}))
     expect(container.querySelectorAll('.pathway-node[data-change]')).toHaveLength(1)
     expect(container.querySelector('.pathway-node[data-change]')).toHaveTextContent('Jądro ogoniaste')
-    expect(container.querySelector('svg')).toHaveAttribute('data-playing', 'false')
+    expect(container.querySelector('.pathway-graph svg')).toHaveAttribute('data-playing', 'false')
     expect(container.querySelector('animateMotion')).toBe(animation)
     expect(animation).toHaveAttribute('dur', '2.6s')
     expect([...container.querySelectorAll('path[marker-end]')].map(path=>path.getAttribute('d'))).toEqual(paths)
     fireEvent.click(screen.getByRole('button', {name: 'Co się zmienia? ↗'}))
     const dialog = screen.getByRole('dialog')
     expect(within(dialog).getByText(/PET nie określa częstotliwości/)).toBeInTheDocument()
+    fireEvent.click(within(dialog).getByLabelText('Źródła'))
     expect(within(dialog).getByRole('link', {name: /Increased Synaptic Dopamine/})).toHaveAttribute('href', referenceById['kegeles-striatum'].url)
     fireEvent.keyDown(document, {key:'Escape'})
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
@@ -31,7 +33,7 @@ describe('porównanie fizjologii i scenariusza klinicznego', () => {
   })
 
   it('odróżnia hipotezę istotności od pomiaru i pokazuje opis połączenia z klawiatury', () => {
-    render(<PathwayScene circuit={circuitById.mesolimbic} language="pl" onSelect={vi.fn()} />)
+    render(<MemoryRouter><PathwayScene circuit={circuitById.mesolimbic} language="pl" onSelect={vi.fn()} /></MemoryRouter>)
     fireEvent.click(screen.getByRole('button', {name:'Schemat'}))
     fireEvent.click(screen.getByRole('button', {name:'Schizofrenia'}))
     expect(screen.getByText('Model mechanizmu')).toBeInTheDocument()

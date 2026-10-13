@@ -8,6 +8,7 @@ import tsParser from '@typescript-eslint/parser'
 export default [
   { ignores: ['dist', 'coverage', 'output'] },
   js.configs.recommended,
+  { files: ['scripts/build-neuroanatomy.mjs', 'docs/neuroanatomy/inventory.mjs'], languageOptions: { globals: globals.node } },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {

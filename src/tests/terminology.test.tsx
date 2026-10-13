@@ -19,7 +19,7 @@ describe('przełącznik terminologii PL / EN / LAT', () => {
     fireEvent.click(screen.getByLabelText('Menu atlasu'))
     fireEvent.click(screen.getByRole('button', { name: 'EN' }))
     await waitFor(() => expect(screen.getAllByRole('heading', { name: 'Prefrontal cortex' }).length).toBeGreaterThan(0))
-    expect(screen.getByRole('heading', { name: 'Lokalizacja' })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Anatomia i topografia' })).toBeInTheDocument()
 
     fireEvent.click(screen.getByRole('button', { name: 'LAT' }))
     await waitFor(() => expect(screen.getAllByRole('heading', { name: 'Cortex praefrontalis' }).length).toBeGreaterThan(0))

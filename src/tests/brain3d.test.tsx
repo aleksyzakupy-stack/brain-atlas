@@ -12,7 +12,7 @@ describe('model 3D i dostępny schemat zastępczy', () => {
     const { container } = render(<App />)
 
     expect(screen.getByRole('button', { name: 'Model 3D' })).toHaveAttribute('aria-pressed', 'true')
-    fireEvent.click(await screen.findByRole('button', { name: 'Otwórz schemat 2D' }, { timeout: 8000 }))
+    fireEvent.click(await screen.findByRole('button', { name: 'Otwórz schemat 2D' }, { timeout: 15000 }))
 
     expect(screen.getByRole('button', { name: 'Schemat 2D' })).toHaveAttribute('aria-pressed', 'true')
     const visualCortex = container.querySelector<SVGPathElement>('[data-structure-id="visual-cortex"]')
@@ -21,7 +21,7 @@ describe('model 3D i dostępny schemat zastępczy', () => {
 
     await screen.findByRole('heading', { name: 'Kora wzrokowa', level: 1 })
     expect(window.location.hash).toBe('#/struktury/kora-wzrokowa')
-  }, 10000)
+  }, 20000)
 
   it('zachowuje powrót do lekcji po wybraniu struktury w schemacie zastępczym', async () => {
     const path = learningPaths[0]

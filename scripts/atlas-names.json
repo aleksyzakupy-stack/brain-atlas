@@ -92,9 +92,9 @@
   "VentralDC": ["Brzuszna część międzymózgowia", "Ventral diencephalon", "Pars ventralis diencephali"],
   "choroid-plexus": ["Splot naczyniówkowy", "Choroid plexus", "Plexus choroideus"],
   "Optic-Chiasm": ["Skrzyżowanie wzrokowe", "Optic chiasm", "Chiasma opticum"],
-  "CC_Posterior": ["Ciało modzelowate — część tylna", "Corpus callosum, posterior segment", "Pars posterior corporis callosi"],
-  "CC_Mid_Posterior": ["Ciało modzelowate — część środkowo-tylna", "Corpus callosum, mid-posterior segment", "Pars media posterior corporis callosi"],
-  "CC_Central": ["Ciało modzelowate — część środkowa", "Corpus callosum, central segment", "Pars centralis corporis callosi"],
-  "CC_Mid_Anterior": ["Ciało modzelowate — część środkowo-przednia", "Corpus callosum, mid-anterior segment", "Pars media anterior corporis callosi"],
-  "CC_Anterior": ["Ciało modzelowate — część przednia", "Corpus callosum, anterior segment", "Pars anterior corporis callosi"]
+  "CC_Posterior": ["Ciało modzelowate — segment tylny (ASEG)", "Corpus callosum, posterior segment (ASEG)", "Pars posterior corporis callosi (ASEG)"],
+  "CC_Mid_Posterior": ["Ciało modzelowate — segment środkowo-tylny (ASEG)", "Corpus callosum, mid-posterior segment (ASEG)", "Pars media posterior corporis callosi (ASEG)"],
+  "CC_Central": ["Ciało modzelowate — segment środkowy (ASEG)", "Corpus callosum, central segment (ASEG)", "Pars centralis corporis callosi (ASEG)"],
+  "CC_Mid_Anterior": ["Ciało modzelowate — segment środkowo-przedni (ASEG)", "Corpus callosum, mid-anterior segment (ASEG)", "Pars media anterior corporis callosi (ASEG)"],
+  "CC_Anterior": ["Ciało modzelowate — segment przedni (ASEG)", "Corpus callosum, anterior segment (ASEG)", "Pars anterior corporis callosi (ASEG)"]
 }

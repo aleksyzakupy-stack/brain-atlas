@@ -3,11 +3,14 @@ import { useReducedMotion } from '../../hooks/useReducedMotion'
 import type { BrainCircuit, TerminologyLanguage } from '../../types/atlas'
 import { circuitById } from '../../data/circuits'
 import { changeSymbols, pathwayNodeLabel, pathwayScenarios, transmitterName } from '../../data/pathwayScenarios'
-import { structureById } from '../../data/structures'
 import { resolveReferences } from '../../data/references'
 import { AtlasDialog } from '../layout/AtlasDialog'
 import { PathwayContent } from '../panels/PathwayContent'
 import { Sources } from '../panels/Sources'
+import { Link } from 'react-router-dom'
+import { bindingsForCircuit } from '../../data/pathwaySpatial'
+import { entriesForCircuitNode, neuroByCircuit, neuroEntryName, neuroEntryUrl } from '../../data/neuroanatomy'
+import { NeuroArticle } from '../neuroanatomy/NeuroArticle'
 import { Model3DIcon, Model2DIcon } from '../common/Icons'
 import '../../styles/pathways.css'
 import '../../styles/brain3d.css'
@@ -35,7 +38,7 @@ export function PathwayScene({ circuit, language, onSelect, initialClinical = fa
   const pickEdge = useCallback((index: number) => setDialog(index), [])
   const pickNode = useCallback((nodeId: string) => setDialog({nodeId}), [])
   const selectedNode = dialog && typeof dialog === 'object' ? circuit.nodes.find(node=>node.id===dialog.nodeId) : undefined
-  const selectedStructure = selectedNode?.structureId ? structureById[selectedNode.structureId] : undefined
+  const selectedEntries = selectedNode ? entriesForCircuitNode(circuit,selectedNode.id) : []
   const playback = useMemo(() => ({ circuit, playing: playing && dialog === null, speed, scenario, onEdgePick: pickEdge, onNodePick: pickNode }), [circuit,playing,speed,scenario,pickEdge,pickNode,dialog])
   const selectedEdge = typeof dialog === 'number' ? circuit.edges[dialog] : undefined
   const fromNode = selectedEdge && circuit.nodes.find(node => node.id === selectedEdge.from)
@@ -99,12 +102,12 @@ export function PathwayScene({ circuit, language, onSelect, initialClinical = fa
   </section>
   {dialog !== null && <AtlasDialog title={dialogTitle} onClose={closeDialog} className="pathway-dialog">
     {dialog === 'article' ? <PathwayContent circuit={circuit} language={language} onSelect={id => { closeDialog(); onSelect(id) }} /> : dialog === 'scenario' && scenario ? <div className="reading-content"><span className="insight-kicker">{scenario.evidenceLabel}</span><h3>Co się zmienia</h3><p>{scenario.mechanism}</p><h3>Znaczenie kliniczne</h3><p>{scenario.manifestation}</p><h3>Ograniczenia</h3><p>{scenario.caveat}</p><Sources references={resolveReferences(scenario.referenceIds)} /></div> : selectedNode ? <div className="reading-content">
-      {selectedStructure && <p>{selectedStructure.shortRole}</p>}
+      {selectedEntries.length === 1 ? <NeuroArticle id={selectedEntries[0].id} language={language} header={false} spatialAnchor={bindingsForCircuit(circuit)[circuit.nodes.indexOf(selectedNode)]} /> : <div className="neuro-links-short">{selectedEntries.map(entry => <Link key={entry.id} to={neuroEntryUrl(entry)}>{neuroEntryName(entry,language)} ↗</Link>)}</div>}
       <h3>Połączenia</h3>
       <div className="node-connections">{circuit.edges.map((edge,index) => edge.from === selectedNode.id || edge.to === selectedNode.id ? <button key={index} onClick={() => pickEdge(index)}>{pathwayNodeLabel(circuit.nodes.find(node=>node.id===edge.from)!,language)} {circuit.kind === 'network' ? '↔' : '→'} {pathwayNodeLabel(circuit.nodes.find(node=>node.id===edge.to)!,language)}<small>{transmitterName(edge.label)}</small></button> : null)}</div>
       {scenario?.changes.some(change=>change.nodeId===selectedNode.id) && <><h3>Schizofrenia</h3><p>{scenario.mechanism}</p><p>{scenario.caveat}</p><Sources references={resolveReferences(scenario.referenceIds)} /></>}
       {selectedNode.structureId && <button className="text-button" onClick={() => { closeDialog(); onSelect(selectedNode.structureId!) }}>Otwórz pełną kartę ↗</button>}
-    </div> : selectedEdge && fromNode && toNode ? <div className="reading-content"><h3>{pathwayNodeLabel(fromNode,language)} → {pathwayNodeLabel(toNode,language)}</h3><p className="connection-transmitter">{transmitterName(selectedEdge.label)} · {effects[selectedEdge.effect]}</p><p>{circuit.physiology}</p>{scenario?.changes.some(change=>change.nodeId===toNode.id) && <><h3>Schizofrenia</h3><p>{scenario.mechanism}</p><p>{scenario.caveat}</p></>}<details><summary>Receptory i farmakologia</summary><p>{circuit.pharmacology}</p></details><Sources references={resolveReferences(scenario ? [...circuit.referenceIds,...scenario.referenceIds] : circuit.referenceIds)} /></div> : null}
+    </div> : selectedEdge && fromNode && toNode ? <div className="reading-content"><h3>{pathwayNodeLabel(fromNode,language)} → {pathwayNodeLabel(toNode,language)}</h3><p className="connection-transmitter">{transmitterName(selectedEdge.label)} · {effects[selectedEdge.effect]}</p>{neuroByCircuit[circuit.id] && <NeuroArticle id={neuroByCircuit[circuit.id]!.id} language={language} header={false} initialSection="route" />}{scenario?.changes.some(change=>change.nodeId===toNode.id) && <><h3>Schizofrenia</h3><p>{scenario.mechanism}</p><p>{scenario.caveat}</p></>}<Sources references={resolveReferences(scenario ? [...circuit.referenceIds,...scenario.referenceIds] : circuit.referenceIds)} /></div> : null}
   </AtlasDialog>}
   </>
 }

@@ -162,7 +162,7 @@ def main():
         signed = np.einsum('ij,ij->i',vertices[faces[:,0]],np.cross(vertices[faces[:,1]],vertices[faces[:,2]])).sum()
         if signed < 0: faces = faces[:,[0,2,1]]
         side = 'left' if label.startswith('Left-') else 'right' if label.startswith('Right-') else 'midline'
-        kind = 'white-matter' if 'White-Matter' in label else 'cerebellum' if 'Cerebellum' in label else 'ventricle' if 'Vent' in label or label == 'CSF' else 'subcortex'
+        kind = 'white-matter' if ('White-Matter' in label or label.startswith('CC_')) else 'cerebellum' if 'Cerebellum' in label else 'ventricle' if (('Vent' in label and not label.endswith('VentralDC')) or label == 'CSF') else 'subcortex'
         mesh = base.compact_mesh(label, side, kind, vertices, faces, base.normals(vertices,faces), deep_ids.get(code,[]),False)
         mesh.update({'atlas': 'both', 'color': '#' + ''.join(f'{c:02x}' for c in rgb), 'selectable': True})
         meshes.append(mesh)

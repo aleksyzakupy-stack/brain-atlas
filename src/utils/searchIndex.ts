@@ -6,6 +6,7 @@ import { normalizeSearch } from './normalizeSearch'
 import { atlasRegions, matchesRegion, regionLabel, regionUrl } from '../data/anatomicalAtlas'
 import { brainCircuits } from '../data/circuits'
 import { brodmannDescriptions } from '../data/brodmann'
+import { searchNeuroEntries, neuroEntryUrl } from '../data/neuroanatomy'
 
 export type StructureSearchResult = {
   type: 'structure'
@@ -52,7 +53,7 @@ export const searchStructures = (rawQuery: string): StructureSearchResult[] => {
     .sort((a, b) => b.score - a.score || a.structure.names.pl.localeCompare(b.structure.names.pl, 'pl'))
 }
 
-export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' | 'atlas-region' | 'circuit' | 'brodmann' }
+export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' | 'atlas-region' | 'circuit' | 'brodmann' | 'article' | 'guide' }
 export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
   const query = normalizeSearch(rawQuery)
   if (!query) return []
@@ -76,5 +77,7 @@ export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
       results.push({ id: connection.id, title: connection.title, subtitle: connection.kind === 'anatomical' ? 'Połączenie anatomiczne' : 'Związek funkcjonalny', to: path && step ? `/nauka/${path.slug}/${step.id}` : `/struktury/${structure.slug}?sekcja=powiazania`, type: 'connection' })
     }
   }
+  results.unshift(...searchNeuroEntries(rawQuery).map(entry => ({ id:entry.id, title:entry.names.pl, subtitle:entry.names.en, to:neuroEntryUrl(entry), type:'article' as const })))
+  if (normalizeSearch('Przewodnik anatomii skrzyżowania unaczynienie lokalizacja kliniczna').includes(query)) results.unshift({id:'guide',title:'Przewodnik anatomii i lokalizacji klinicznej',subtitle:'Skrzyżowania i unaczynienie',to:'/przewodnik',type:'guide'})
   return results
 }

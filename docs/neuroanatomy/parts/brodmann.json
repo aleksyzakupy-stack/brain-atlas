@@ -1,0 +1,2295 @@
+[
+  {
+    "id": "ba-01",
+    "number": 1,
+    "names": {
+      "pl": "Pole Brodmanna 1 — S1 — analiza cech dotyku",
+      "en": "Brodmann area 1",
+      "lat": "Area Brodmann 1"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.1",
+      "rh_Brodmann.1"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt zaśrodkowy, za BA3. Pole stanowi część kory somatosensorycznej o wyraźnej organizacji warstwowej. Jego granicy z BA3 i BA2 nie wyznacza sama widoczna bruzda. Reprezentacje ręki i twarzy zajmują dużą powierzchnię ze względu na rozdzielczość czuciową.",
+    "function": "Analiza faktury i cech bodźca skórnego. Łączenie informacji z receptorów skóry. Współpraca z BA2 w rozpoznawaniu dotykiem. Informacja wzgórzowa i sygnały z innych części S1 tworzą reprezentację somatotopową. BA1 nie jest samodzielnym ośrodkiem całego czucia; przetwarzanie zależy od wejść BA3b oraz sieci ciemieniowych.",
+    "connections": "Wejścia: przede wszystkim inne obszary S1, zwłaszcza BA3b, oraz aferentacja wzgórzowa. Wyjścia: BA2, wtórna kora somatosensoryczna i tylna kora ciemieniowa. Informacja nie płynie wyłącznie w jednym kierunku; połączenia zwrotne umożliwiają wpływ uwagi i ruchu na czucie.",
+    "clinical": "Uszkodzenie S1 może zaburzać rozróżnianie bodźców. Zmienione doznania cielesne w psychiatrii nie dowodzą uszkodzenia BA1 i nie są swoiste dla tej parceli. Przy ocenie korowego zaburzenia czucia trzeba odróżnić wykrywanie dotyku od rozróżniania jego faktury. Należy też sprawdzić drogę obwodową i wzgórzową: nieprawidłowe rozpoznawanie przedmiotu nie oznacza automatycznie ogniska w BA1.",
+    "laterality": "Reprezentacja ciała jest w dużej mierze przeciwstronna. Dolna kończyna ma reprezentację przyśrodkową, a twarz bardziej boczną.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 1; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "somatosensory-primary-2001",
+        "locator": "abstrakt: przetwarzanie kształtu dotykowego w obszarach 3b, 1, 2 i korze ciemieniowej"
+      },
+      {
+        "sourceId": "geyer-1999",
+        "locator": "abstrakt; cytoarchitektonika BA3a/3b/1, zmienność granic względem zakrętów i bruzd"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-02",
+    "number": 2,
+    "names": {
+      "pl": "Pole Brodmanna 2 — S1 — kształt i propriocepcja",
+      "en": "Brodmann area 2",
+      "lat": "Area Brodmann 2"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.2",
+      "rh_Brodmann.2"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Tylna część zakrętu zaśrodkowego. Tylna część S1 leży między bardziej przednimi polami czuciowymi a korą ciemieniową asocjacyjną. Łączenie reprezentacji skóry i pozycji stawów umożliwia interpretację trójwymiarowego przedmiotu w dłoni.",
+    "function": "Integracja dotyku i informacji o położeniu kończyn. Rozpoznawanie kształtu i wielkości przedmiotu dotykiem. Reprezentacja konfiguracji ciała. BA2 łączy sygnały skórne i proprioceptywne w bardziej złożone reprezentacje. Współpracuje z BA1, BA3 i tylną korą ciemieniową; stereognozja wymaga całej sieci, nie tylko BA2.",
+    "connections": "BA2 otrzymuje sygnały z BA3a, BA3b i BA1 oraz połączenia wzgórzowe; przekazuje je do S2 i pól BA5/7. Dzięki wzajemnym połączeniom z korą ruchową czucie może aktualizować chwyt w trakcie manipulacji.",
+    "clinical": "Uszkodzenia mogą utrudniać interpretowanie bodźca mimo zachowanego wykrycia dotyku. Zaburzenia obrazu ciała i interocepcji angażują również wyspę i korę asocjacyjną. Astereognozję interpretuje się dopiero przy dostatecznie zachowanym czuciu podstawowym, uwadze i rozumieniu polecenia. Objaw może wynikać z uszkodzenia szerszej sieci ciemieniowej, a nie izolowanego pola 2.",
+    "laterality": "Reprezentacja ciała jest w dużej mierze przeciwstronna. Dolna kończyna ma reprezentację przyśrodkową, a twarz bardziej boczną.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 2; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "somatosensory-primary-2001",
+        "locator": "abstrakt: przetwarzanie kształtu dotykowego w obszarach 3b, 1, 2 i korze ciemieniowej"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-03",
+    "number": 3,
+    "names": {
+      "pl": "Pole Brodmanna 3 — S1 — wejście czuciowe",
+      "en": "Brodmann area 3",
+      "lat": "Area Brodmann 3"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.3",
+      "rh_Brodmann.3"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Tylna ściana bruzdy środkowej i przedni fragment zakrętu zaśrodkowego. BA3a jest położone bliżej dna bruzdy środkowej, a BA3b na jej tylnej ścianie. Wspólna etykieta BA3 w projekcie nie rozdziela tych pól ani kolejnych reprezentacji poszczególnych części ciała.",
+    "function": "BA3b: wczesne przetwarzanie bodźców skórnych. BA3a: znaczny udział sygnałów proprioceptywnych. Somatotopowa reprezentacja ciała. BA3a i BA3b są mikrostrukturalnie oraz funkcjonalnie różne. Wejścia wzgórzowo-korowe rozpoczynają kilka równoległych etapów przetwarzania. PALS-B12 pokazuje BA3 łącznie i nie rozdziela tych podobszarów.",
+    "connections": "Jądra VPL i VPM wzgórza przesyłają odpowiednio informacje z ciała i twarzy przez promienistość wzgórzową. BA3b przekazuje informacje skórne do BA1/2 i S2, a BA3a uczestniczy w obiegu informacji proprioceptywnej z układami ruchowymi.",
+    "clinical": "Deficyty czucia mogą pomagać lokalizować uszkodzenia neurologiczne. Ból, derealizacja lub nietypowe odczucia nie pozwalają przypisać przyczyny do BA3 bez dodatkowych danych. Korowy ubytek czucia zwykle ma układ somatotopowy i przeciwstronny. Zajęcie przyśrodkowej części reprezentacji dotyczy bardziej kończyny dolnej, a bocznej ręki lub twarzy; wielkość ogniska i podkorowe włókna zmieniają ten wzorzec.",
+    "laterality": "Reprezentacja ciała jest w dużej mierze przeciwstronna. Dolna kończyna ma reprezentację przyśrodkową, a twarz bardziej boczną.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 3; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "somatosensory-primary-2001",
+        "locator": "abstrakt: przetwarzanie kształtu dotykowego w obszarach 3b, 1, 2 i korze ciemieniowej"
+      },
+      {
+        "sourceId": "geyer-1999",
+        "locator": "abstrakt; cytoarchitektonika BA3a/3b/1, zmienność granic względem zakrętów i bruzd"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-04",
+    "number": 4,
+    "names": {
+      "pl": "Pole Brodmanna 4 — Pierwotna kora ruchowa",
+      "en": "Brodmann area 4",
+      "lat": "Area Brodmann 4"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.4",
+      "rh_Brodmann.4"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt przedśrodkowy i przednia część płacika okołośrodkowego. Jest to kora agranularna z dużymi neuronami piramidowymi warstwy V, w tym komórkami Betza. Nie wszystkie neurony drogi korowo-rdzeniowej są komórkami Betza i nie wszystkie pochodzą z BA4.",
+    "function": "Sterowanie wykonaniem ruchów dowolnych. Kontrola siły i wzorców aktywności mięśni. Precyzyjne ruchy ręki i aparatu artykulacyjnego. Projekcje korowo-rdzeniowe i korowo-jądrowe współpracują z pętlami móżdżku i jąder podstawy. Somatotopia nie jest sztywną mapą pojedynczych mięśni: populacje neuronów kodują złożone parametry ruchu.",
+    "connections": "Aferenty dochodzą z kory przedruchowej, S1 i wzgórza przekaźnikowego pętli jąder podstawy oraz móżdżku. Eferenty biegną przez wieniec promienisty i torebkę wewnętrzną do pnia i rdzenia. Większość włókien korowo-rdzeniowych krzyżuje się w dolnym rdzeniu przedłużonym.",
+    "clinical": "Uszkodzenie może wywołać przeciwstronny niedowład. Spowolnienie psychoruchowe lub katatonia nie są równoznaczne z uszkodzeniem BA4; obejmują szerszą organizację działania. Uszkodzenie powyżej skrzyżowania piramid powoduje przewagę niedowładu przeciwstronnego, utratę sprawności precyzyjnej i późniejsze cechy zespołu ośrodkowego. W ostrym okresie napięcie i odruchy nie muszą jeszcze być wzmożone. Wyładowania napadowe mogą dawać objawy ruchowe narastające somatotopowo.",
+    "laterality": "Reprezentacja ciała jest w dużej mierze przeciwstronna. Dolna kończyna ma reprezentację przyśrodkową, a twarz bardziej boczną.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 4; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "tablica 15.4, s. druk. 361, obraz EPUB 380; eferentne projekcje korowe"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "basal",
+      "cerebellum"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-05",
+    "number": 5,
+    "names": {
+      "pl": "Pole Brodmanna 5 — Czuciowa kora asocjacyjna",
+      "en": "Brodmann area 5",
+      "lat": "Area Brodmann 5"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.5",
+      "rh_Brodmann.5"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Górny płacik ciemieniowy, za pierwotną korą czuciową. Pole leży ku tyłowi od kory zaśrodkowej w górnej części płata ciemieniowego. Stanowi obszar kojarzeniowy, dlatego jego roli nie opisuje się prostą mapą pojedynczych receptorów.",
+    "function": "Integracja bodźców somatycznych. Reprezentacja położenia ciała. Przygotowanie działania na podstawie informacji czuciowej. Łączenie dotyku i propriocepcji wspiera schemat ciała oraz dobór ruchu. BA5 współpracuje z S1, BA7 i korą przedruchową; reprezentacja zależy od działania i kontekstu.",
+    "connections": "Łączy sygnały z S1, S2 i sąsiednich pól ciemieniowych; współpracuje z korą przedruchową. Krótkie włókna kojarzeniowe i dłuższe połączenia czołowo-ciemieniowe przenoszą informację potrzebną do dopasowania ruchu do ułożenia kończyny.",
+    "clinical": "Uszkodzenia sieci ciemieniowej mogą zaburzać rozpoznawanie dotykiem i planowanie działania. Stereognozja i praksja nie mają jednego wspólnego ośrodka BA5. Uszkodzenie może utrudniać identyfikację konfiguracji kończyny i wykorzystanie czucia w ruchu. Apraksję należy odróżniać od niedowładu, ataksji i zaburzenia rozumienia instrukcji.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 5; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "anatomy",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-06",
+    "number": 6,
+    "names": {
+      "pl": "Pole Brodmanna 6 — Kora przedruchowa i SMA",
+      "en": "Brodmann area 6",
+      "lat": "Area Brodmann 6"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.6",
+      "rh_Brodmann.6"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przed BA4; część boczna i przyśrodkowa płata czołowego. Boczna część pola obejmuje korę przedruchową, a przyśrodkowa dodatkowe obszary ruchowe. SMA właściwa i pre-SMA różnią się połączeniami oraz stopniem bezpośredniego związku z wykonaniem ruchu.",
+    "function": "Przygotowanie i wybór ruchów. Sekwencjonowanie działań i ruchy samodzielnie inicjowane. Koordynacja ruchów obustronnych. BA6 obejmuje odmienne obszary przedruchowe, SMA i pre-SMA. Przetwarzanie sygnałów zewnętrznych, intencji i kolejności jest rozdzielone między podobszary, które współpracują z pętlami jąder podstawy.",
+    "connections": "Wejścia z kory ciemieniowej, PFC i wzgórza są integrowane przed przekazaniem planu do BA4. Istnieją również własne projekcje zstępujące i połączenia prążkowiowe. Połączenia spoidłowe pomagają koordynować działania obu rąk.",
+    "clinical": "Znaczenie obejmuje apraksję, zaburzenia inicjacji, tiki i badania katatonii. Wynik ruchowy zależy także od BA4, pnia, móżdżku i motywacji. Zespół po uszkodzeniu SMA może obejmować przejściową akinezję, ograniczenie spontanicznej mowy i trudność inicjacji mimo względnie zachowanej siły. Nie każdy taki zespół odpowiada trwałemu zniszczeniu całego pola BA6.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 6; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "tablica 15.4, s. druk. 361, obraz EPUB 380; eferentne projekcje korowe"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "basal-pathways",
+      "control"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-07",
+    "number": 7,
+    "names": {
+      "pl": "Pole Brodmanna 7 — Integracja wzrokowo-przestrzenna",
+      "en": "Brodmann area 7",
+      "lat": "Area Brodmann 7"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.7",
+      "rh_Brodmann.7"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Górna kora ciemieniowa, z udziałem okolicy przedklinka. Pole obejmuje heterogeniczną korę ciemieniową boczną i przyśrodkową. Historyczne granice BA7 nie odpowiadają dokładnie pojedynczemu współczesnemu polu śródciemieniowemu ani całemu przedklinkowi.",
+    "function": "Łączenie informacji wzrokowej i somatycznej. Orientowanie uwagi i ruchu w przestrzeni. Reprezentacja relacji między ciałem a otoczeniem. BA7 łączy reprezentacje bodźca z planem działania. Jej podobszary mają różne cele i współpracują z czołowo-ciemieniowymi układami uwagi oraz sieciami pamięci.",
+    "connections": "Wejścia wzrokowe z kory pozaprążkowej łączą się z sygnałami somatosensorycznymi i informacją o ruchach oczu. Wyjścia do kory przedruchowej oraz pól gałkoruchowych wspierają sięganie i orientowanie spojrzenia. Sieć działa przez liczne wzajemne projekcje.",
+    "clinical": "Uszkodzenia mogą zaburzać sięganie pod kontrolą wzroku lub orientację przestrzenną. Deficyt uwagi w psychiatrii nie określa jednoznacznie tej lokalizacji. Obustronne uszkodzenia ciemieniowo-potyliczne mogą dawać zespół Bálinta: ataksję wzrokową, trudność dowolnego kierowania spojrzeniem i symultanagnozję. Jest to zespół sieciowy, którego nie należy utożsamiać z samą BA7.",
+    "laterality": "Prawa sieć ciemieniowa ma szczególne znaczenie dla uwagi przestrzennej, ale BA7 działa obustronnie.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 7; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "control",
+      "episodic"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-08",
+    "number": 8,
+    "names": {
+      "pl": "Pole Brodmanna 8 — Orientowanie spojrzenia i uwagi",
+      "en": "Brodmann area 8",
+      "lat": "Area Brodmann 8"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.8",
+      "rh_Brodmann.8"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Grzbietowa kora czołowa, przed okolicami przedruchowymi. Klasyczne pole gałkoruchowe czołowe jest orientacyjnie wiązane z tylną częścią okolicy czołowej. U człowieka lokalizacje określane przez sakkady i mikrostrukturę nie pokrywają się jednoznacznie z obrysem BA8.",
+    "function": "Dowolne ruchy gałek ocznych. Selekcja miejsca uwagi. Udział w przewidywaniu i kontroli spojrzenia. Klasyczne mapy wiążą BA8 z czołowymi polami gałkoruchowymi. Ich funkcjonalne granice mogą sięgać BA6 i nie są tożsame z całą BA8. Układ współpracuje z korą ciemieniową, wzgórzem i wzgórkiem górnym.",
+    "connections": "Kora ciemieniowa i wzgórze dostarczają sygnałów o celu spojrzenia. Projekcje do wzgórka górnego i ośrodków pnia uczestniczą w sakkadach; pętla ogoniaste–SNr–wzgórek górny reguluje dopuszczenie odpowiedzi. Sterowanie poziome w pniu wymaga PPRF, jądra VI i MLF.",
+    "clinical": "Zadania sakkadowe badają kontrolę działania m.in. w schizofrenii. Błąd antysakkady nie jest testem izolowanej BA8. Destrukcyjne ostre uszkodzenie jednostronnej sieci czołowej może powodować zwrot oczu ku ognisku, a drażnienie napadowe przeciwnie. Ta reguła zależy od fazy i rozległości zmiany; nie służy samodzielnemu rozpoznaniu BA8.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 8; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "tablica 15.4, s. druk. 361, obraz EPUB 380; eferentne projekcje korowe"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "control",
+      "haines"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-09",
+    "number": 9,
+    "names": {
+      "pl": "Pole Brodmanna 9 — Przedczołowa kontrola informacji",
+      "en": "Brodmann area 9",
+      "lat": "Area Brodmann 9"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.9",
+      "rh_Brodmann.9"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Grzbietowo-boczna i część przyśrodkowej kory przedczołowej. Obszar zawiera korę asocjacyjną o połączeniach z wieloma modalnościami. BA9 i BA46 częściowo współtworzą opisywaną funkcjonalnie dlPFC, ale nazwy te nie są wymienne.",
+    "function": "Podtrzymywanie celu i informacji zadaniowej. Dobór reguł oraz kontrola uwagi. Udział w planowaniu i ocenie informacji. BA9 jest częścią rozległej PFC; jej rola zależy od podobszaru i połączeń. Współpracuje z BA46, korą ciemieniową oraz pętlami asocjacyjnymi prążkowia. Nie pokrywa się z całą dlPFC.",
+    "connections": "Połączenia z korą ciemieniową, innymi polami czołowymi i wzgórzem mediodorsalnym wspierają przetwarzanie informacji zadaniowej. Projekcje do jądra ogoniastego włączają BA9 w asocjacyjne pętle korowo-prążkowiowo-wzgórzowe.",
+    "clinical": "Znaczenie obejmuje badania funkcji wykonawczych w schizofrenii, depresji i ADHD. Zmiana aktywacji w zadaniu nie jest swoistym biomarkerem rozpoznania. W ogniskowych zespołach czołowych mogą dominować trudności utrzymania reguły, podatność na dystraktory i perseveracje. Sama słaba pamięć robocza ma jednak wiele przyczyn i nie identyfikuje uszkodzenia BA9.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 9; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture",
+      "working-memory"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-10",
+    "number": 10,
+    "names": {
+      "pl": "Pole Brodmanna 10 — Kora czołowo-biegunowa",
+      "en": "Brodmann area 10",
+      "lat": "Area Brodmann 10"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.10",
+      "rh_Brodmann.10"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Biegun czołowy na powierzchni bocznej i przyśrodkowej. Pole czołowo-biegunowe leży przed większością innych pól przedczołowych i jest zróżnicowane przyśrodkowo-bocznie. Rozmiar i granice zależą od osobnika i zastosowanej mapy mikrostrukturalnej.",
+    "function": "Utrzymywanie intencji dotyczącej przyszłego działania. Koordynowanie kilku celów. Metapoznanie i porównywanie alternatyw. Podobszary BA10 uczestniczą w różny sposób w przetwarzaniu wewnętrznym i zadaniach skierowanych na otoczenie. Integracja bardziej abstrakcyjnych celów współpracuje z pozostałą PFC, a nie zastępuje jej funkcji.",
+    "connections": "Łączy się przede wszystkim z korą asocjacyjną przedczołową, obręczą i obszarami skroniowymi, a także pośrednio uczestniczy w pętlach wzgórzowo-prążkowiowych. Wieloetapowe planowanie wymaga wymiany informacji między tymi regionami.",
+    "clinical": "W badaniach klinicznych analizuje się planowanie, pamięć prospektywną i refleksję nad własnym wykonaniem. Objawy tych domen są nieswoiste anatomicznie. Uszkodzenie może ujawniać się przy organizacji złożonych czynności dnia codziennego, nawet gdy proste zadania i orientacja są zachowane. Nie ustala się lokalizacji ani stopnia funkcjonalnej samodzielności wyłącznie na podstawie etykiety BA10.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 10; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture",
+      "control"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-11",
+    "number": 11,
+    "names": {
+      "pl": "Pole Brodmanna 11 — Kora oczodołowo-czołowa",
+      "en": "Brodmann area 11",
+      "lat": "Area Brodmann 11"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.11",
+      "rh_Brodmann.11"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Powierzchnia oczodołowa płata czołowego. Kora oczodołowa sąsiaduje od przodu i przyśrodkowo z bruzdą węchową i zakrętem prostym. Części OFC różnią się ziarnistością i wejściami; BA11 nie obejmuje całej kory oczodołowej.",
+    "function": "Ocena wartości wyników. Aktualizacja oczekiwań po zmianie konsekwencji. Łączenie informacji sensorycznej z nagrodą. OFC porównuje możliwe wyniki i ich aktualną wartość. Uczenie odwrócenia relacji bodziec–wynik wymaga współpracy z prążkowiem, amygdalą i innymi obszarami czołowymi.",
+    "connections": "Informacje z obszarów zmysłowych, ciała migdałowatego i przyśrodkowej kory skroniowej docierają do OFC. Wyjścia do prążkowia brzusznego, wzgórza i układów limbicznych wiążą ocenę wyniku z kolejnym wyborem zachowania.",
+    "clinical": "Znaczenie obejmuje impulsywność po uszkodzeniach, kompulsje i uzależnienia. BA11 nie jest jednolitym „hamulcem moralnym” ani samodzielnym ośrodkiem uzależnienia. Ogniska oczodołowo-czołowe, np. pourazowe, mogą wywołać rozhamowanie, zmianę zachowań społecznych lub zaburzenie uczenia na konsekwencjach. Związek ma charakter sieciowy i nie oznacza utraty wszystkich zdolności intelektualnych.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 11; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "addiction-circuits",
+      "cstc"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-12",
+    "number": 12,
+    "names": {
+      "pl": "Pole Brodmanna 12 — Okolica oczodołowa — nomenklatura porównawcza",
+      "en": "Brodmann area 12",
+      "lat": "Area Brodmann 12"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Oznaczenie używane w historycznych i porównawczych mapach PFC. Numeracja porównawcza OFC/vlPFC; brak jednoznacznego obrysu w modelu.",
+    "function": "Udział szerszej OFC / vlPFC w ocenie wyniku i doborze informacji. Granice i numeracja BA12 różnią się między mapami ludzi i małp. Współczesne określenie 47/12 uwzględnia porównania cytoarchitektoniczne, a nie prostą tożsamość wszystkich numerów.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Ocena konsekwencji, kompulsje i impulsywność dotyczą sieci OFC–prążkowie. Brak granicy BA12 w PALS-B12 nie uprawnia do narysowania jej ręcznie. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis tekstowy; brak odrębnej parceli w użytej mapie 3D.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 12; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-13",
+    "number": 13,
+    "names": {
+      "pl": "Pole Brodmanna 13 — Numeracja wyspowo-skroniowa — mapy porównawcze",
+      "en": "Brodmann area 13",
+      "lat": "Area Brodmann 13"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Historyczne mapy wyspy, okolic oczodołowych i skroniowych różnią się użyciem numerów 13–16. Numer historyczny stosowany do części kory wyspowej w wybranych mapach.",
+    "function": "Interocepcja, integracja trzewna i wartościowanie dotyczą szerszych sieci wyspowo-limbicznych. Nie utożsamiamy numerów z różnych map i gatunków. Dane o przedniej wyspie lub OFC nie dowodzą osobnej, ludzkiej funkcji każdej etykiety BA13–16. Do precyzyjnej anatomii wyspy potrzebny jest jawnie wskazany atlas mikrostrukturalny.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Znaczenie sieci wyspy dla istotności, czucia ciała i emocji nie pozwala ustalać diagnozy na podstawie jednego numeru. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis nomenklatury, bez odrębnej granicy 3D i bez wymyślonego wyspecjalizowanego zadania.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 13; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "salience",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-14",
+    "number": 14,
+    "names": {
+      "pl": "Pole Brodmanna 14 — Numeracja wyspowo-skroniowa — mapy porównawcze",
+      "en": "Brodmann area 14",
+      "lat": "Area Brodmann 14"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Historyczne mapy wyspy, okolic oczodołowych i skroniowych różnią się użyciem numerów 13–16. Numer stosowany odmiennie w mapach wyspy oraz przyśrodkowej kory oczodołowej.",
+    "function": "Interocepcja, integracja trzewna i wartościowanie dotyczą szerszych sieci wyspowo-limbicznych. Nie utożsamiamy numerów z różnych map i gatunków. Dane o przedniej wyspie lub OFC nie dowodzą osobnej, ludzkiej funkcji każdej etykiety BA13–16. Do precyzyjnej anatomii wyspy potrzebny jest jawnie wskazany atlas mikrostrukturalny.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Znaczenie sieci wyspy dla istotności, czucia ciała i emocji nie pozwala ustalać diagnozy na podstawie jednego numeru. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis nomenklatury, bez odrębnej granicy 3D i bez wymyślonego wyspecjalizowanego zadania.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 14; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "salience",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-15",
+    "number": 15,
+    "names": {
+      "pl": "Pole Brodmanna 15 — Numeracja wyspowo-skroniowa — mapy porównawcze",
+      "en": "Brodmann area 15",
+      "lat": "Area Brodmann 15"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Historyczne mapy wyspy, okolic oczodołowych i skroniowych różnią się użyciem numerów 13–16. Historyczne oznaczenie z map porównawczych, wiązane m.in. z przednią okolicą skroniową.",
+    "function": "Interocepcja, integracja trzewna i wartościowanie dotyczą szerszych sieci wyspowo-limbicznych. Nie utożsamiamy numerów z różnych map i gatunków. Dane o przedniej wyspie lub OFC nie dowodzą osobnej, ludzkiej funkcji każdej etykiety BA13–16. Do precyzyjnej anatomii wyspy potrzebny jest jawnie wskazany atlas mikrostrukturalny.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Znaczenie sieci wyspy dla istotności, czucia ciała i emocji nie pozwala ustalać diagnozy na podstawie jednego numeru. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis nomenklatury, bez odrębnej granicy 3D i bez wymyślonego wyspecjalizowanego zadania.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 15; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "salience",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-16",
+    "number": 16,
+    "names": {
+      "pl": "Pole Brodmanna 16 — Numeracja wyspowo-skroniowa — mapy porównawcze",
+      "en": "Brodmann area 16",
+      "lat": "Area Brodmann 16"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Historyczne mapy wyspy, okolic oczodołowych i skroniowych różnią się użyciem numerów 13–16. Numer spotykany w historycznych mapach wyspy; nie jest osobną parcelą modelu.",
+    "function": "Interocepcja, integracja trzewna i wartościowanie dotyczą szerszych sieci wyspowo-limbicznych. Nie utożsamiamy numerów z różnych map i gatunków. Dane o przedniej wyspie lub OFC nie dowodzą osobnej, ludzkiej funkcji każdej etykiety BA13–16. Do precyzyjnej anatomii wyspy potrzebny jest jawnie wskazany atlas mikrostrukturalny.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Znaczenie sieci wyspy dla istotności, czucia ciała i emocji nie pozwala ustalać diagnozy na podstawie jednego numeru. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis nomenklatury, bez odrębnej granicy 3D i bez wymyślonego wyspecjalizowanego zadania.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 16; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "salience",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-17",
+    "number": 17,
+    "names": {
+      "pl": "Pole Brodmanna 17 — Pierwotna kora wzrokowa V1",
+      "en": "Brodmann area 17",
+      "lat": "Area Brodmann 17"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.17",
+      "rh_Brodmann.17"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Brzegi bruzdy ostrogowej: klin i zakręt językowaty. Kora prążkowa wyróżnia się prążkiem Gennariego i silnie rozwiniętą warstwą IV. Górny brzeg bruzdy ostrogowej reprezentuje dolną część przeciwległego pola widzenia, a dolny brzeg jego część górną. Reprezentacja centralna leży bardziej ku biegunowi.",
+    "function": "Retinotopowa reprezentacja pola widzenia. Wczesna analiza kontrastu i orientacji. Przekazywanie informacji do dalszych etapów widzenia. Główne wejścia docierają z ciała kolankowatego bocznego. Górna i dolna część V1 reprezentują przeciwne kwadranty pola widzenia; złożone rozpoznawanie przedmiotu angażuje szerszą korę potyliczno-skroniową.",
+    "connections": "Komórki zwojowe siatkówki → nerw II → skrzyżowanie z przejściem włókien nosowych → pasmo wzrokowe → ciało kolankowate boczne → promienistość wzrokowa → V1. Wyjścia V1 do pól pozaprążkowych mają liczne połączenia zwrotne.",
+    "clinical": "Uszkodzenie może powodować ubytek przeciwstronnego pola widzenia. Omamy wzrokowe mają liczne mechanizmy i nie muszą oznaczać izolowanej dysfunkcji V1. Jednostronne uszkodzenie zwykle daje jednoimienny przeciwstronny ubytek pola; obustronne rozległe uszkodzenie może prowadzić do ślepoty korowej. Odruch źreniczny może pozostać zachowany, ponieważ jego pętla odgałęzia się przed korą. Oszczędzenie widzenia plamkowego nie jest regułą bez wyjątków.",
+    "laterality": "Każda półkula reprezentuje przede wszystkim przeciwległą połowę pola widzenia, nie jedno oko.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 17; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 136, tablica 119; przebieg i retinotopia drogi wzrokowej"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain",
+      "anatomy"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-18",
+    "number": 18,
+    "names": {
+      "pl": "Pole Brodmanna 18 — Wczesna kora pozaprążkowa",
+      "en": "Brodmann area 18",
+      "lat": "Area Brodmann 18"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.18",
+      "rh_Brodmann.18"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Okolica potyliczna sąsiadująca z V1. Pole otacza korę prążkową, przechodząc na powierzchnię przyśrodkową i boczną potylicy. Współczesna mapa V2 wymaga lokalizatora retinotopowego; kolor atlasu nie wyznacza jej indywidualnej granicy.",
+    "function": "Integracja podstawowych cech obrazu. Przetwarzanie konturów i relacji między elementami. Przekazywanie informacji do szlaków grzbietowego i brzusznego. BA18 obejmuje klasycznie znaczną część V2, ale granice mikrostrukturalne i funkcjonalne nie nakładają się idealnie. Połączenia zwrotne wpływają na przetwarzanie już na wczesnych etapach.",
+    "connections": "Wymiana V1 ↔ V2 oraz połączenia z dalszą korą wzrokową wspierają analizę konturów i struktur obrazu. Informacja rozdziela się między sieci grzbietowe związane z działaniem a brzuszne związane z identyfikacją, przy zachowaniu licznych połączeń między nimi.",
+    "clinical": "Uszkodzenia mogą zmieniać analizę wzrokową. Zaburzenia percepcji w psychiatrii angażują również uwagę, pamięć i przewidywanie, nie tylko BA18. Znaczenie uszkodzenia zależy od retinotopii i odłączenia połączeń wzrokowych. Należy oddzielić ubytek pola od trudności interpretacji obrazu: osoba może wykrywać bodziec, lecz błędnie odczytywać jego relacje przestrzenne.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 18; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 136, tablica 119; przebieg i retinotopia drogi wzrokowej"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-19",
+    "number": 19,
+    "names": {
+      "pl": "Pole Brodmanna 19 — Wzrokowa kora asocjacyjna",
+      "en": "Brodmann area 19",
+      "lat": "Area Brodmann 19"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.19",
+      "rh_Brodmann.19"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Pozaprążkowe okolice potyliczne. Rozległa pozaprążkowa okolica potyliczna ma wiele podobszarów o odmiennej mikrostrukturze i preferencjach. Jedno oznaczenie BA19 przykrywa bardziej szczegółową organizację współczesnych map.",
+    "function": "Analiza złożonych cech wzrokowych. Udział w ruchu, kształcie i orientacji przestrzennej. Współpraca z korą skroniową i ciemieniową. BA19 jest dużą historyczną kategorią obejmującą kilka współczesnych pól wzrokowych. Nie należy utożsamiać jej w całości z jednym polem V3, V4 lub MT.",
+    "connections": "Połączenia z BA17/18, tylną korą skroniową i ciemieniową dostarczają cech obrazu do systemów rozpoznawania i kontroli ruchu. Informacja zwrotna z sieci uwagi wpływa na selekcję cech oraz obiektów.",
+    "clinical": "Deficyty mogą dotyczyć różnych aspektów widzenia zależnie od podobszaru. Samo rozpoznanie omamów nie identyfikuje pola wzrokowego. Uszkodzenia mogą zaburzać widzenie barw, ruchu lub rozpoznawanie zależnie od podobszaru i istoty białej. Akinezjopsji i achromatopsji nie można przypisać całej BA19 jako jednej funkcjonalnej jednostce.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 19; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 136, tablica 119; przebieg i retinotopia drogi wzrokowej"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain",
+      "anatomy"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-20",
+    "number": 20,
+    "names": {
+      "pl": "Pole Brodmanna 20 — Dolna kora skroniowa",
+      "en": "Brodmann area 20",
+      "lat": "Area Brodmann 20"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.20",
+      "rh_Brodmann.20"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt skroniowy dolny, brzuszny układ wzrokowy. Brzuszno-boczna kora skroniowa stanowi dalszy etap przetwarzania wzrokowego. Leży bocznie względem części układów przyhipokampowych; BA20 nie jest segmentacją hipokampa.",
+    "function": "Rozpoznawanie złożonych obiektów. Reprezentacje cech przedmiotu. Współpraca percepcji z pamięcią i znaczeniem. Hierarchia skroniowa integruje cechy obrazu w reprezentacje przydatne do identyfikacji. BA20 współpracuje z korą potyliczną, okołowęchową i przednimi obszarami skroniowymi.",
+    "connections": "Informacja z pozaprążkowej potylicy i okolicy wrzecionowatej dociera do dolnej kory skroniowej, następnie do przedniej kory skroniowej i okołowęchowej. Długie połączenia potyliczno-skroniowe, w tym ILF, wspierają ten przepływ.",
+    "clinical": "Uszkodzenia brzusznego układu mogą powodować agnozje. Trudności rozpoznawania przedmiotów różnią się od utraty ostrości wzroku i od zaburzeń pamięci. Przy agnozji wzrokowej trzeba odróżnić zbudowanie reprezentacji kształtu od nadania jej znaczenia. Zachowane rozpoznawanie dotykiem przy trudności rozpoznawania wzrokiem wspiera zaburzenie bardziej swoiste dla sieci wzrokowej.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 20; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "perirhinal",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-21",
+    "number": 21,
+    "names": {
+      "pl": "Pole Brodmanna 21 — Środkowa kora skroniowa",
+      "en": "Brodmann area 21",
+      "lat": "Area Brodmann 21"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.21",
+      "rh_Brodmann.21"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt skroniowy środkowy. Zakręt skroniowy środkowy rozciąga się od części przednich ku granicy ciemieniowo-potylicznej. Funkcjonalne podobszary jego części tylnej i przedniej różnią się znacznie.",
+    "function": "Przetwarzanie znaczenia słów i pojęć. Integracja informacji językowej. Udział w analizie złożonych zdarzeń. Podobszary BA21 mają odmienne funkcje: językowe, semantyczne i związane z percepcją społeczną. Przetwarzanie znaczenia odbywa się w rozproszonej sieci skroniowo-ciemieniowo-czołowej.",
+    "connections": "Połączenia z górną korą skroniową dostarczają informacji językowej, a z korą brzuszną informacji o obiektach. Połączenia z dolną korą czołową wspierają wybór znaczenia; włókna brzuszne i grzbietowe mają różne udziały zależnie od podobszaru.",
+    "clinical": "Zmiany skroniowe są istotne w afazjach i zaburzeniach neurodegeneracyjnych. Formalnych zaburzeń myślenia nie można lokalizować do pojedynczej BA21. Zaburzenia rozumienia słów i nazywania mogą wynikać z uszkodzenia lewej sieci skroniowej. Konieczne jest rozróżnienie semantycznego deficytu pojęć, deficytu dostępu do nazwy i pierwotnego zaburzenia słuchu.",
+    "laterality": "U większości osób silniejsza specjalizacja językowa występuje po lewej, lecz obie półkule uczestniczą w komunikacji. Dominacji nie ustala się z samej ręczności.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 21; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "language-modern",
+      "memory-systems"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-22",
+    "number": 22,
+    "names": {
+      "pl": "Pole Brodmanna 22 — Górna kora skroniowa",
+      "en": "Brodmann area 22",
+      "lat": "Area Brodmann 22"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.22",
+      "rh_Brodmann.22"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt skroniowy górny, z częścią tylną klasycznej okolicy Wernickego. Pole otacza bardziej pierwotne obszary słuchowe i ma część przednią oraz tylną. Kliniczna okolica Wernickego bywa definiowana różnie i może obejmować obszary poza BA22.",
+    "function": "Analiza dźwięków i mowy. Reprezentacja fonologiczna. Współpraca produkcji i rozumienia języka. BA22 nie jest synonimem całej sieci rozumienia mowy. Współczesne dane rozdzielają przetwarzanie dźwięku, formy słowa i znaczenia; granice tradycyjnej okolicy Wernickego są zmienne.",
+    "connections": "Sygnały z rdzenia i pasa słuchowego łączą się z połączeniami skroniowo-ciemieniowymi oraz skroniowo-czołowymi. Grzbietowy system pomaga wiązać postać dźwiękową z artykulacją, a brzuszny dźwięk z reprezentacją znaczenia.",
+    "clinical": "Udział w afazjach i sieciach omamów słuchowych jest istotny, ale omam nie dowodzi uszkodzenia „ośrodka słuchu”. Należy odróżniać percepcję mowy od jej znaczenia. W zaburzeniach afatycznych ocenia się oddzielnie rozumienie, powtarzanie, nazywanie i płynność. Jednostronna zmiana korowa nie powinna być automatycznie interpretowana jako całkowita głuchota przeciwnego ucha.",
+    "laterality": "U większości osób silniejsza specjalizacja językowa występuje po lewej, lecz obie półkule uczestniczą w komunikacji. Dominacji nie ustala się z samej ręczności.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 22; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "language-modern",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-23",
+    "number": 23,
+    "names": {
+      "pl": "Pole Brodmanna 23 — Tylna kora obręczy",
+      "en": "Brodmann area 23",
+      "lat": "Area Brodmann 23"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.23",
+      "rh_Brodmann.23"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Tylna powierzchnia przyśrodkowa, nad ciałem modzelowatym. BA23 znajduje się w tylnej obręczy; odróżnia się ją od bardziej grzbietowej BA31 i retrosplenialnych BA29/30. Granice cytoarchitektoniczne nie są widoczne jako jedna bruzda na powierzchni.",
+    "function": "Przetwarzanie autobiograficzne i pamięciowe. Ocena kontekstu wewnętrznego. Współpraca w sieci stanu domyślnego. PCC jest węzłem łączącym pamięć, uwagę wewnętrzną i informacje kontekstowe. BA23 ma kilka podobszarów i nie pokrywa się z całą siecią DMN.",
+    "connections": "Pęczek obręczy i projekcje korowe łączą okolicę z przyśrodkową PFC, przedklinkiem i korą przyhipokampową. Połączenia ze wzgórzem oraz innymi węzłami pamięci uczestniczą w orientacji w bieżącym kontekście.",
+    "clinical": "W badaniach depresji analizuje się m.in. ruminacje i łączność wewnętrzną. Zmiana DMN nie jest swoista dla depresji ani nie oznacza automatycznie „zbyt aktywnej BA23”. Dezorientację lub zaburzenia pamięci po uszkodzeniu tylnej kory przyśrodkowej rozpatruje się wraz z funkcją hipokampa i wzgórza. Obniżony metabolizm PCC w badaniu grupowym nie jest swoisty dla jednego rozpoznania.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 23; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "memory-systems",
+      "episodic"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-24",
+    "number": 24,
+    "names": {
+      "pl": "Pole Brodmanna 24 — Przednia / środkowa kora obręczy",
+      "en": "Brodmann area 24",
+      "lat": "Area Brodmann 24"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.24",
+      "rh_Brodmann.24"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt obręczy przed i nad kolanem ciała modzelowatego, z podobszarami ku tyłowi. Kora obręczy o słabo zaznaczonej warstwie ziarnistej obejmuje podobszary przednie i środkowe. Część kaudalna ma silniejsze związki z wyborem i wykonaniem działania niż okolica podkolanowa.",
+    "function": "Monitorowanie działania i wyników. Wysiłek oraz wybór reakcji. Udział w afekcie, bólu i regulacji autonomicznej. Rostralne i kaudalne części BA24 różnią się połączeniami. Współczesny podział ACC/MCC nie jest identyczny z jedną etykietą atlasową. Sygnały wartości, błędu i bólu współpracują z PFC i wyspą.",
+    "connections": "Wejścia z kory przedczołowej, wyspy, wzgórza i układów limbicznych są łączone z wyjściami prążkowiowymi, korowo-ruchowymi i autonomicznymi. Te same szerokie regiony mogą reagować na wysiłek, znaczenie bodźca i ból, lecz nie dowodzi to identyczności mechanizmów.",
+    "clinical": "Badania obejmują depresję, OCD, motywację i ból. Jeden wzrost BOLD nie pozwala rozróżnić konfliktu, wysiłku i reakcji autonomicznej. Obustronne duże zmiany przyśrodkowo-czołowe mogą powodować znaczną abulię lub mutyzm akinetyczny. Przypisanie ich izolowanej BA24 byłoby zbyt wąskie: istotne są włókna i sąsiednie obszary.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 24; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "cingulate-architecture",
+      "control"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-25",
+    "number": 25,
+    "names": {
+      "pl": "Pole Brodmanna 25 — Podkolanowa kora obręczy",
+      "en": "Brodmann area 25",
+      "lat": "Area Brodmann 25"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.25",
+      "rh_Brodmann.25"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Poniżej kolana ciała modzelowatego. Pole podkolanowe leży pod kolanem ciała modzelowatego, w sąsiedztwie przyśrodkowej kory oczodołowej. Trzeba oddzielić istotę szarą pola od przebiegających obok pęczków istoty białej.",
+    "function": "Regulacja afektu i stanu autonomicznego. Integracja sygnałów limbicznych. Udział w sieciach nastroju. BA25 ma silne związki z układami limbicznymi i trzewnymi. Znaczenie dla nastroju wynika z jej pozycji w sieci, a nie z przechowywania „smutku” w jednym miejscu.",
+    "connections": "Jest częścią układów połączonych z ciałem migdałowatym, podwzgórzem, prążkowiem brzusznym i inną korą przyśrodkową. Przepływ informacji obejmuje wzajemne projekcje i pośrednie pętle regulacyjne, a nie prosty przewód generujący nastrój.",
+    "clinical": "Region i sąsiednia istota biała są badane jako cele neuromodulacji w depresji lekoopornej. Wyniki grupowe i badania DBS nie czynią BA25 uniwersalnym ośrodkiem depresji. Anatomiczna nazwa celu stymulacji nie oznacza, że skutki dotyczą tylko neuronów BA25: stymulacja istoty białej zmienia działanie połączonej sieci. Opis ten wyjaśnia mechanizm badawczy, bez wnioskowania o wskazaniu do zabiegu.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 25; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "subgenual-dbs-2005",
+        "locator": "streszczenie pierwotnego badania sześciu pacjentów; stymulacja istoty białej sąsiadującej z okolicą podkolanową, nie izolowanego pola korowego"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "cingulate-architecture",
+      "hpa"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-26",
+    "number": 26,
+    "names": {
+      "pl": "Pole Brodmanna 26 — Okolica ektosplenialna",
+      "en": "Brodmann area 26",
+      "lat": "Area Brodmann 26"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.26",
+      "rh_Brodmann.26"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Mała strefa przejściowa w sąsiedztwie płata ciała modzelowatego. Etykieta ektosplenialna dotyczy niewielkiego obszaru okołopłatowego i ma ograniczoną zgodność między historycznymi mapami. Obecność etykiety w PALS-B12 potwierdza element mapy, a nie osobną kliniczną funkcję.",
+    "function": "Udział w integracji sieci tylnej okolicy przyśrodkowej. Powiązania z przetwarzaniem kontekstu i pamięci. Historyczna etykieta BA26 jest mniej konsekwentnie używana niż BA29 i BA30. Funkcje najbezpieczniej omawiać na poziomie szerszej okolicy retrosplenialnej, nie jako osobny wyspecjalizowany ośrodek.",
+    "connections": "Połączenia najlepiej opisywać na poziomie sąsiedniej sieci retrosplenialno-hipokampowej. Bez wskazania konkretnej mapy i gatunku nie przypisuje się BA26 oddzielnego, dokładnego zestawu jąder wejściowych i wyjściowych.",
+    "clinical": "Brakuje podstaw do przypisywania BA26 swoistej choroby psychiatrycznej lub pojedynczego objawu. Lokalizacja atlasowa służy orientacji, nie diagnostyce. Dezorientacja topograficzna nie jest testem BA26. W tej karcie rozdziela się znaną rolę szerszej okolicy tylno-przyśrodkowej od słabo ustalonej swoistości historycznego numeru.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Funkcjonalna swoistość BA26 u ludzi jest słabo określona; opis szerszej sieci nie jest dowodem funkcji tej parceli.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 26; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "retrosplenial"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-27",
+    "number": 27,
+    "names": {
+      "pl": "Pole Brodmanna 27 — Okolica presubikularna",
+      "en": "Brodmann area 27",
+      "lat": "Area Brodmann 27"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.27",
+      "rh_Brodmann.27"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przyśrodkowa okolica przyhipokampowa; terminologia historyczna różni się między mapami. W projekcie zachowano historyczną etykietę PALS-B12. Presubiculum, kora gruszkowata i część podkładkowa nie są synonimami; rozbieżność nazewnictwa trzeba podawać zamiast łączyć sprzeczne mapy.",
+    "function": "Udział okolicy presubiculum w orientacji przestrzennej. Współpraca z korą śródwęchową i hipokampem. Współczesne badania opisują presubiculum i układy kierunku głowy, ale nie zawsze odnoszą je do identycznej granicy BA27. Dane nie uzasadniają nazywania całej parceli jednym „ośrodkiem kierunku”.",
+    "connections": "Dla presubiculum jako struktury omawia się współpracę z korą śródwęchową, podkładką, okolicą retrosplenialną i układem kierunku głowy. Nie przenosi się automatycznie wszystkich tych projekcji na dowolną parcelę oznaczoną BA27.",
+    "clinical": "Znaczenie ma sieć orientacji i pamięci przestrzennej. Nie ma ustalonego swoistego mechanizmu objawów psychiatrycznych dla BA27. Zaburzenie orientacji wskazuje na potrzebę analizy całej sieci pamięci przestrzennej. Ogniska ograniczone do jednoznacznie wyznaczonej ludzkiej BA27 rzadko dają podstawę do odrębnego zespołu lokalizacyjnego.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Niektóre skrócone zestawienia nazywają BA27 korą gruszkowatą; historyczne nazwy i granice nie są jednoznaczne. Nie utożsamiamy ich z identyczną strukturą.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 27; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "entorhinal",
+      "papez"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-28",
+    "number": 28,
+    "names": {
+      "pl": "Pole Brodmanna 28 — Kora śródwęchowa",
+      "en": "Brodmann area 28",
+      "lat": "Area Brodmann 28"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.28",
+      "rh_Brodmann.28"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przednia przyśrodkowa okolica zakrętu przyhipokampowego. Kora śródwęchowa jest korą przejściową o swoistej organizacji warstwowej. Stanowi część przyśrodkowego płata skroniowego, lecz nie jest tożsama z hipokampem ani z całym zakrętem przyhipokampowym.",
+    "function": "Integracja informacji o obiektach, miejscu i czasie. Wejście i wyjście układów hipokampowych. Relacyjne kodowanie pamięci. Kora śródwęchowa jest aktywnym przetwórcą, nie biernym przewodem. Jej warstwy mają różne projekcje do formacji hipokampowej. Współczesne podobszary EC nie są identyczne z podziałem BA28/34.",
+    "connections": "Warstwa II wysyła włókna drogi przeszywającej przede wszystkim do zakrętu zębatego i CA3, warstwa III do CA1 i podkładki. Powrót informacji z CA1/podkładki do głębszych warstw EC zamyka obieg z korą asocjacyjną; nie jest to jedyny tor przepływu.",
+    "clinical": "Region ma znaczenie w otępieniach i zaburzeniach pamięci. Obniżone przypominanie nie jest wystarczającym dowodem uszkodzenia EC. Procesy neurodegeneracyjne obejmujące EC i hipokamp mogą upośledzać uczenie nowych epizodów. Izolowany pomiar objętości lub słaby wynik jednego zadania nie określa etiologii zaburzenia.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 28; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdział 16, s. druk. 415, obraz EPUB 434; układ hipokampowy, wejścia/wyjścia i komentarz kliniczny"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "entorhinal",
+      "episodic"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-29",
+    "number": 29,
+    "names": {
+      "pl": "Pole Brodmanna 29 — Ziarnista kora retrosplenialna",
+      "en": "Brodmann area 29",
+      "lat": "Area Brodmann 29"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.29",
+      "rh_Brodmann.29"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Wokół płata ciała modzelowatego, w tylnej okolicy przyśrodkowej. Ziarnista okolica retrosplenialna leży przy płacie ciała modzelowatego i przechodzi w sąsiednie obszary przyhipokampowe. Nie należy utożsamiać jej z samym płatem ciała modzelowatego, który jest istotą białą.",
+    "function": "Łączenie wskazówek przestrzennych z pamięcią. Orientacja i rozpoznawanie kontekstu. Przekładanie różnych perspektyw przestrzennych. Współpracuje z hipokampem, jądrami przednimi wzgórza i korą wzrokową. Ziarnista budowa odróżnia ją od BA30; funkcjonalna współpraca nie wyklucza różnic między podobszarami.",
+    "connections": "Połączenia z jądrami przednimi wzgórza, formacją hipokampową i tylną korą przyśrodkową wspierają wiązanie punktów orientacyjnych z kierunkiem i pamięcią. RSC stanowi element kilku pętli, w tym szerzej rozumianych połączeń Papeza.",
+    "clinical": "Uszkodzenia okolicy mogą zaburzać orientację mimo rozpoznawania pojedynczych miejsc. Związek z pamięcią nie jest swoisty dla jednego rozpoznania psychiatrycznego. Osoba z uszkodzeniem sieci retrosplenialnej może rozpoznawać budynek, lecz nie wyprowadzać z tego informacji o kierunku dalszej drogi. Jest to odmienne od nierozpoznawania samego obiektu i od ubytku pola widzenia.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 29; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "retrosplenial",
+      "papez"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-30",
+    "number": 30,
+    "names": {
+      "pl": "Pole Brodmanna 30 — Dysgranularna kora retrosplenialna",
+      "en": "Brodmann area 30",
+      "lat": "Area Brodmann 30"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.30",
+      "rh_Brodmann.30"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Sąsiedztwo BA29 i płata ciała modzelowatego. Pole dysgranularne otacza część ziarnistą RSC; różnica dotyczy budowy warstw, a nie istnienia jednej dodatkowej funkcji psychicznej. Obrys atlasu pozostaje przybliżeniem indywidualnej anatomii.",
+    "function": "Integracja wskazówek wzrokowych i przestrzennych. Aktualizacja kontekstu otoczenia. Współpraca pamięci z bieżącą orientacją. BA30 ma połączenia z korą asocjacyjną i układami hipokampowymi. Zmiana perspektywy i przewidywanie stanu otoczenia są funkcjami szerszej RSC; nie wyczerpują jej roli.",
+    "connections": "Wymiana z BA29, korą wzrokową asocjacyjną, przedklinkiem i układem przyhipokampowym pomaga dopasować widok otoczenia do pamięci miejsca. Włókna obręczy stanowią jedną z dróg komunikacji, lecz nie wyczerpują wszystkich połączeń.",
+    "clinical": "Dane pomagają rozumieć dezorientację i deficyty kontekstowe. Granica BA30 nie ustanawia granicy pamięci autobiograficznej. Ogniska okolicy mogą zakłócać wykorzystanie punktów orientacyjnych, zwłaszcza przy zmianie perspektywy. Objawy zależą też od połączeń i rozległości zmiany, dlatego nie da się wyznaczyć granic BA30 na podstawie samego badania zachowania.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 30; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "retrosplenial",
+      "episodic"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-31",
+    "number": 31,
+    "names": {
+      "pl": "Pole Brodmanna 31 — Grzbietowa tylna kora obręczy",
+      "en": "Brodmann area 31",
+      "lat": "Area Brodmann 31"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.31",
+      "rh_Brodmann.31"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Tylna kora przyśrodkowa przy granicy z przedklinkiem. Pole leży na przejściu między PCC i przedklinkiem. Jest większą korową strefą asocjacyjną, w której rozdzielenie funkcji wymaga map bardziej szczegółowych niż etykieta BA.",
+    "function": "Łączenie uwagi wewnętrznej z informacją przestrzenną. Udział w pamięci autobiograficznej. Koordynacja kontekstu i stanu sieci. BA31 leży na styku kilku układów tylnej kory. Związek z DMN i sieciami uwagi zależy od podobszaru. Przedklinek oraz PCC są powiązane, lecz nie identyczne anatomicznie.",
+    "connections": "Wzajemne połączenia z korą ciemieniową, retrosplenialną i przedczołową oraz wzgórzem umożliwiają integrację bieżącej sceny, pamięci i wewnętrznego celu. Korelacje fMRI w DMN nie oznaczają istnienia bezpośredniego pęczka między wszystkimi węzłami.",
+    "clinical": "Badania kliniczne opisują zmiany łączności w otępieniach i zaburzeniach nastroju. Nie należy interpretować ich jako jednej specyficznej funkcji BA31. Zaburzenia orientacji i uwagi wewnętrznej są nieswoiste. Interpretacja obrazu wymaga odróżnienia ogniskowego uszkodzenia od rozproszonego procesu, który tylko wtórnie zmienia aktywność PCC.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 31; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "memory-systems",
+      "retrosplenial"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-32",
+    "number": 32,
+    "names": {
+      "pl": "Pole Brodmanna 32 — Przednia kora obręczy — część grzbietowa",
+      "en": "Brodmann area 32",
+      "lat": "Area Brodmann 32"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.32",
+      "rh_Brodmann.32"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przyśrodkowa kora czołowa przy przedniej obręczy. W praktyce nazwa obejmuje okolice nad- i przedkolanowe o różnej ziarnistości i układzie receptorów. BA32 nie jest prostą granicą między emocją a poznaniem.",
+    "function": "Kontrola zadania i ocena działania. Integracja informacji poznawczej i emocjonalnej. Regulacja odpowiedzi zależnej od kontekstu. Pregenualne i bardziej grzbietowe podobszary mają różne profile połączeń. Terminy „dACC” i „BA32” nie są dokładnymi synonimami; część funkcji kontroli dotyczy także środkowej obręczy.",
+    "connections": "Połączenia z PFC, wyspą, korą obręczy, prążkowiem i wzgórzem umożliwiają aktualizację strategii w zależności od błędu, wysiłku i oczekiwanego wyniku. Części brzuszne silniej współpracują z układami limbicznymi niż niektóre części grzbietowe.",
+    "clinical": "Znaczenie obejmuje badania lęku, depresji, OCD i kontroli poznawczej. Nieprawidłowa reakcja na konflikt nie jest markerem jednej parceli. Wynik zadania konfliktowego może zależeć od licznych węzłów sieci. Udział BA32 w badaniach lęku lub depresji nie pozwala odczytać rozpoznania z samej lokalizacji aktywacji.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 32; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "cingulate-architecture",
+      "control"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-33",
+    "number": 33,
+    "names": {
+      "pl": "Pole Brodmanna 33 — Wąska strefa przedniej obręczy",
+      "en": "Brodmann area 33",
+      "lat": "Area Brodmann 33"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.33",
+      "rh_Brodmann.33"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przy bruździe ciała modzelowatego w przedniej części obręczy. Wąski obszar przy bruździe modzelowatej bywa trudny do oddzielenia od sąsiedniej ACC w obrazowaniu o standardowej rozdzielczości. To istotne ograniczenie anatomiczne, a nie brak znaczenia biologicznego.",
+    "function": "Udział w przetwarzaniu afektywnym i trzewnym szerszej ACC. Współpraca z sąsiednimi obszarami obręczy. BA33 jest małym polem, którego niezależna funkcja jest trudna do oddzielenia w typowym fMRI. Anatomia wskazuje na heterogeniczność przedniej obręczy; wynik dla całej ACC nie może być automatycznie przypisany BA33.",
+    "connections": "Połączenia rozpatruje się w kontekście przedniej obręczy oraz układów trzewnych i limbicznych. Dostępne opisy nie uzasadniają przypisywania całej małej parceli osobnego układu kontroli błędu lub konkretnego przekaźnika.",
+    "clinical": "Brak swoistego, klinicznie ustalonego związku jednego objawu z BA33. Funkcje omawia się ostrożnie w kontekście sieci afektywnych i autonomicznych. Przy omawianiu badania dotyczącego całej ACC należy zachować jego rzeczywistą rozdzielczość. Nie wolno zmieniać etykiety dużego regionu zainteresowania na BA33 tylko dlatego, że parcela leży w jego pobliżu.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Swoistość funkcjonalna samej BA33 jest ograniczona; nie utożsamiamy jej z całym układem kontroli błędu.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 33; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "cingulate-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-34",
+    "number": 34,
+    "names": {
+      "pl": "Pole Brodmanna 34 — Kora śródwęchowa — okolica haka",
+      "en": "Brodmann area 34",
+      "lat": "Area Brodmann 34"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Przednia przyśrodkowa okolica skroniowa, w pobliżu haka. Numer stosowany historycznie w okolicy przedniej części haka i grzbietowej EC nie określa jednego współczesnego pola mikrostrukturalnego. W modelu projektu nie ma odrębnego obrysu tego numeru.",
+    "function": "Udział w przetwarzaniu pamięci i informacji węchowej szerszego układu. Integracja informacji z układem hipokampowym. BA34 bywa opisywana jako grzbietowa lub przednia część okolicy śródwęchowej. Współczesna EC ma bardziej szczegółowy podział, którego nie można odtworzyć samą numeracją BA.",
+    "connections": "Jako kontekst można podać połączenia śródwęchowo-hipokampowe oraz wejścia węchowe i asocjacyjne przyśrodkowego płata skroniowego. Ich dokładny rozkład wymaga określenia rzeczywistego podobszaru, a nie samej liczby 34.",
+    "clinical": "Znaczenie ma kontekst otępień i pamięci. Zmiana węchu lub objaw pamięciowy nie lokalizuje dysfunkcji do BA34. Węchowa aura padaczkowa może angażować sieci haka, migdałowate i okołowęchowe. Nie jest swoistym dowodem izolowanego uszkodzenia BA34.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis tekstowy; mapa PALS-B12 nie zawiera osobnej parceli BA34.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 34; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdział 16, s. druk. 415, obraz EPUB 434; układ hipokampowy, wejścia/wyjścia i komentarz kliniczny"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "entorhinal"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-35",
+    "number": 35,
+    "names": {
+      "pl": "Pole Brodmanna 35 — Kora okołowęchowa — część przyśrodkowa",
+      "en": "Brodmann area 35",
+      "lat": "Area Brodmann 35"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.35",
+      "rh_Brodmann.35"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Okolica bruzdy pobocznej i pogranicza śródwęchowego. Przyśrodkowa część kory perirhinalnej leży w okolicy bruzdy pobocznej i sąsiaduje z EC. Bruzda jest punktem orientacyjnym, lecz jej kształt zmienia się między osobami i wpływa na położenie granic.",
+    "function": "Rozpoznawanie znajomości obiektu. Integracja złożonych cech przedmiotu. Współpraca percepcji z pamięcią deklaratywną. BA35 i BA36 współtworzą klasycznie korę perirhinalną. Rozpoznawanie znajomości i przypominanie kontekstu są rozróżnialnymi procesami, lecz sieci nie mają absolutnie odseparowanych funkcji.",
+    "connections": "Wejścia z kory asocjacyjnej skroniowej i części okołowęchowej łączą cechy obiektu. Połączenia do EC umożliwiają włączenie obiektu do pamięci epizodycznej; połączenia zwrotne wspierają rozpoznawanie i interpretację bodźca.",
+    "clinical": "Region jest istotny w zaburzeniach pamięci i otępieniach. Zachowana znajomość bez pełnego przypomnienia epizodu nie jest wynikiem jednego prostego przełącznika. Zaburzenia rozpoznawania należy rozdzielać na utratę znajomości, utratę kontekstu i trudność percepcyjną. Podział perirhinal–hipokamp jest funkcjonalnie użyteczny, ale nie stanowi absolutnego rozdzielenia procesów.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 35; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdział 16, s. druk. 415, obraz EPUB 434; układ hipokampowy, wejścia/wyjścia i komentarz kliniczny"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "perirhinal",
+      "episodic"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-36",
+    "number": 36,
+    "names": {
+      "pl": "Pole Brodmanna 36 — Okolica ektorynalna / okołowęchowa",
+      "en": "Brodmann area 36",
+      "lat": "Area Brodmann 36"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.36",
+      "rh_Brodmann.36"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Bocznie od BA35, w przyśrodkowo-brzusznym płacie skroniowym. Boczniejsza część kory okołowęchowej przechodzi w korę skroniową asocjacyjną. Nazwa ektorynalna odzwierciedla historyczne położenie względem okolicy węchowej i nie oznacza czysto węchowej funkcji.",
+    "function": "Analiza złożonych reprezentacji obiektów. Łączenie informacji wielomodalnej. Udział w rozpoznawaniu i pamięci. BA36 łączy korę skroniową asocjacyjną z układami przyhipokampowymi. Różnica BA35/36 jest mikrostrukturalna i połączeniowa; obu pól nie należy sprowadzać do dwóch niezależnych magazynów pamięci.",
+    "connections": "BA36 wymienia sygnały z dolną korą skroniową, BA35, EC i innymi obszarami przyhipokampowymi. W ten sposób przetwarzanie wielomodalnych obiektów łączy się z pamięcią; nie jest to pojedynczy szlak o jednym kierunku.",
+    "clinical": "Uszkodzenia szerszej kory okołowęchowej wpływają na rozpoznawanie. W psychiatrii znaczenie dotyczy procesów poznawczych, bez swoistego związku diagnostycznego. Uszkodzenie rozleglejszej sieci może utrudniać rozróżnianie podobnych przedmiotów lub uczenie ich znajomości. Kliniczny objaw nie pozwala wiarygodnie rozgraniczyć BA35 od BA36 bez danych anatomicznych.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 36; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdział 16, s. druk. 415, obraz EPUB 434; układ hipokampowy, wejścia/wyjścia i komentarz kliniczny"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "perirhinal",
+      "memory-systems"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-37",
+    "number": 37,
+    "names": {
+      "pl": "Pole Brodmanna 37 — Kora potyliczno-skroniowa",
+      "en": "Brodmann area 37",
+      "lat": "Area Brodmann 37"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.37",
+      "rh_Brodmann.37"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręt wrzecionowaty i sąsiednia dolna kora skroniowa. Okolica wrzecionowata i dolnoskroniowa obejmuje podobszary reagujące na różne kategorie wzrokowe. Pole twarzy i pole związane z formą wzrokową słowa są lokalizowane funkcjonalnie i nie obejmują całej BA37.",
+    "function": "Rozpoznawanie złożonych bodźców wzrokowych. Udział w przetwarzaniu twarzy i pisma. Łączenie reprezentacji wzrokowej z nazwą. Funkcjonalne pola twarzy i słów mają zmienne granice i nie pokrywają się z całą BA37. Specjalizacja wynika z doświadczenia oraz połączeń z układami językowymi i pamięciowymi.",
+    "connections": "Wejścia potyliczne docierają przez połączenia brzusznego strumienia wzrokowego. Połączenia z przednią korą skroniową i siecią języka umożliwiają przejście od wyglądu do tożsamości i nazwy; ILF i inne włókna potyliczno-skroniowe są istotne dla tej integracji.",
+    "clinical": "Znaczenie obejmuje prozopagnozję, aleksję i deficyty identyfikacji. Badania percepcji społecznej nie czynią BA37 izolowanym ośrodkiem relacji międzyludzkich. Prozopagnozja to trudność rozpoznawania tożsamości na podstawie twarzy, nie brak widzenia twarzy. Aleksja może wynikać z uszkodzenia lewych obszarów brzusznych lub ich odłączenia; klasyczna aleksja bez agrafii angażuje również połączenia potyliczno-spoidłowe.",
+    "laterality": "Częściej prawa specjalizacja dla twarzy i lewa dla pisma, z istotnym udziałem obustronnych sieci.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 37; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "language-modern",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-38",
+    "number": 38,
+    "names": {
+      "pl": "Pole Brodmanna 38 — Biegun skroniowy",
+      "en": "Brodmann area 38",
+      "lat": "Area Brodmann 38"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.38",
+      "rh_Brodmann.38"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Najbardziej przednia część płata skroniowego. Biegun skroniowy jest przednim zakończeniem płata skroniowego, gdzie zbiegają się informacje z wielu układów. Nie jest tą samą strukturą co położone głębiej ciało migdałowate.",
+    "function": "Integracja znaczenia pojęć i osób. Łączenie informacji semantycznej z afektem. Udział w wiedzy społecznej i autobiograficznej. Przednie obszary skroniowe łączą informacje wielomodalne z pamięcią i układem limbicznym. BA38 nie jest jedną jednolitą reprezentacją wszystkich pojęć.",
+    "connections": "Połączenia z dolną i środkową korą skroniową, korą oczodołową oraz układem migdałowatym umożliwiają nadanie bodźcom znaczenia emocjonalnego i pojęciowego. Pęczek haczykowaty jest ważnym łącznikiem przednich okolic skroniowych z czołowymi.",
+    "clinical": "Region jest istotny w otępieniach czołowo-skroniowych i zaburzeniach semantycznych. Zmienione zachowanie społeczne angażuje również sieci czołowe i podkorowe. Wariant semantyczny pierwotnej afazji postępującej często wiąże się z dominującym zanikiem przedniej kory skroniowej. Nasilenie prawostronnego procesu może częściej zaburzać znajomość osób i zachowanie społeczne, lecz wzorzec nie jest bezwzględny.",
+    "laterality": "Lewostronne układy silniej uczestniczą w nazwach i języku; prawostronne często w rozpoznawaniu osób i znaczeniu społecznym.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 38; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "language-modern",
+      "memory-systems"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-39",
+    "number": 39,
+    "names": {
+      "pl": "Pole Brodmanna 39 — Zakręt kątowy",
+      "en": "Brodmann area 39",
+      "lat": "Area Brodmann 39"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.39",
+      "rh_Brodmann.39"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Tylna część dolnego płacika ciemieniowego. Pole znajduje się w tylnej części dolnego płacika ciemieniowego w sąsiedztwie tylnej części bruzdy skroniowej górnej. Zakręt kątowy jest heterogeniczny, a jego granice nie są prostą granicą funkcji czytania.",
+    "function": "Integracja znaczenia i informacji wielomodalnej. Czytanie, operacje liczbowe i wydobywanie pamięci. Udział w orientacji uwagi oraz reprezentacji siebie. BA39 obejmuje kilka funkcjonalnych podobszarów. W zależności od zadania współpracuje z sieciami języka, pamięci lub uwagi. Nie stanowi jednego ośrodka czytania i liczenia.",
+    "connections": "Współpracuje z korą skroniową semantyczną, potyliczną, przedczołową i tylną przyśrodkową. Przetwarzanie językowe, liczbowe i pamięciowe korzysta z różnych części tej sieci; wspólny węzeł nie oznacza jednego mechanizmu wszystkich tych funkcji.",
+    "clinical": "Uszkodzenia dominującej sieci ciemieniowej mogą wiązać się z aleksją, agrafią i zaburzeniami obliczeń. Objawy kliniczne zwykle nie odpowiadają idealnie jednej granicy BA. Zespół Gerstmanna obejmuje agrafię, akalkulię, agnozję palców i zaburzenia orientacji prawo–lewo. Klasyczny związek z dominującą okolicą ciemieniową jest użyteczny, lecz pełny zespół może zależeć również od odłączenia podkorowych włókien.",
+    "laterality": "U większości osób silniejsza specjalizacja językowa występuje po lewej, lecz obie półkule uczestniczą w komunikacji. Dominacji nie ustala się z samej ręczności.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 39; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "angular",
+      "language-modern"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-40",
+    "number": 40,
+    "names": {
+      "pl": "Pole Brodmanna 40 — Zakręt nadbrzeżny",
+      "en": "Brodmann area 40",
+      "lat": "Area Brodmann 40"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.40",
+      "rh_Brodmann.40"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przednia część dolnego płacika ciemieniowego. Zakręt nadbrzeżny otacza tylną część bruzdy bocznej i znajduje się przed zakrętem kątowym. Współczesne podziały wyróżniają w nim więcej niż jedną parcelę.",
+    "function": "Przetwarzanie fonologiczne i pamięć brzmienia słów. Integracja czuciowo-ruchowa. Udział w praksji i uwadze. Połączenia skroniowo-ciemieniowo-czołowe umożliwiają wiązanie bodźca z planem artykulacji i działania. Różne podobszary BA40 uczestniczą w języku, czuciu i orientacji.",
+    "connections": "Połączenia z korą słuchową, somatosensoryczną i dolną czołową wspierają fonologię oraz praksję. Części systemu pęczka podłużnego górnego i łukowatego uczestniczą w komunikacji czołowo-ciemieniowo-skroniowej; przebieg zależy od podwiązki.",
+    "clinical": "Znaczenie obejmuje afazje, apraksje i zaburzenia uwagi. Nie jest to jedno pole odpowiedzialne za wszystkie objawy „dezorganizacji”. Zaburzenia powtarzania przy względnie zachowanym rozumieniu mogą wskazywać na grzbietową sieć językową. Apraksja gestów wymaga odróżnienia od niedowładu i zaburzeń czucia; uszkodzenie prawej sieci może bardziej zakłócać uwagę przestrzenną.",
+    "laterality": "U większości osób silniejsza specjalizacja językowa występuje po lewej, lecz obie półkule uczestniczą w komunikacji. Dominacji nie ustala się z samej ręczności.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 40; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "language-modern",
+      "control"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-41",
+    "number": 41,
+    "names": {
+      "pl": "Pole Brodmanna 41 — Pierwotna kora słuchowa",
+      "en": "Brodmann area 41",
+      "lat": "Area Brodmann 41"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.41",
+      "rh_Brodmann.41"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Zakręty poprzeczne skroniowe Heschla, ukryte w bruździe bocznej. Pierwotne pola słuchowe leżą głównie na górnej powierzchni zakrętów Heschla. Liczba i kształt tych zakrętów różnią się osobniczo, a rdzeń słuchowy zawiera kilka map tonotopowych.",
+    "function": "Wczesne przetwarzanie częstotliwości i czasu dźwięku. Tonotopowa reprezentacja słuchowa. Przekazywanie sygnału do dalszych obszarów słuchowych. Wejścia pochodzą przede wszystkim z układu ciała kolankowatego przyśrodkowego. Granice funkcjonalnego rdzenia słuchowego są bardziej złożone niż pojedyncza historyczna etykieta BA41.",
+    "connections": "Informacja biegnie z jąder ślimakowych przez wielostopniowy układ pnia, wzgórek dolny i ciało kolankowate przyśrodkowe do kory. Promienistość słuchowa przechodzi głównie przez część podsoczewkową torebki wewnętrznej (pod jądrem soczewkowatym). Liczne skrzyżowania i projekcje obustronne sprawiają, że każde ucho ma dostęp do obu półkul.",
+    "clinical": "Omamy słuchowe angażują sieci percepcji, języka i monitorowania źródła doświadczenia. Sama BA41 nie wyjaśnia powstawania głosów. Jednostronna zmiana korowa częściej zaburza lokalizację lub analizę złożonych dźwięków niż wywołuje całkowitą głuchotę. Głuchota korowa zwykle wymaga zmian obustronnych lub rozległego obustronnego odłączenia.",
+    "laterality": "Drogi słuchowe reprezentują informacje z obu uszu. Mowa wykazuje specjalizację sieciową, nie prosty podział jedno ucho–jedna półkula.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 41; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdział 14, s. druk. 341, obraz EPUB 360; droga słuchowa i obustronna reprezentacja"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain",
+      "language-modern"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-42",
+    "number": 42,
+    "names": {
+      "pl": "Pole Brodmanna 42 — Wtórna kora słuchowa",
+      "en": "Brodmann area 42",
+      "lat": "Area Brodmann 42"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.42",
+      "rh_Brodmann.42"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Okolica otaczająca rdzeń słuchowy na górnej powierzchni płata skroniowego. Pole sąsiaduje z korą rdzenia słuchowego na górnej powierzchni płata skroniowego. Historyczny podział BA41/42 jest mniej szczegółowy niż współczesne rozróżnienie core, belt i parabelt.",
+    "function": "Analiza bardziej złożonych wzorców dźwięku. Integracja cech czasowych i widmowych. Współpraca z sieciami mowy i uwagi. BA42 odpowiada w przybliżeniu części pozapierwotnych obszarów słuchowych. Nie jest identyczna z całym pasem belt/parabelt ani z całą BA22.",
+    "connections": "Połączenia z BA41, pozapierwotnym wzgórzem słuchowym i BA22 wspierają analizę wzorców dźwięku. Dalej informacja trafia do obszarów identyfikacji, języka i orientowania uwagi; działają również połączenia zwrotne.",
+    "clinical": "Znaczenie kliniczne dotyczy analizy dźwięku i sieci omamów. Zaburzenie rozumienia mowy może powstać także poza pierwotnym i wtórnym słuchem. Nierozpoznawanie dźwięku przy zachowanej detekcji może wskazywać na agnozję słuchową. Nie jest ono równoznaczne z afazją, omamem lub głuchotą obwodową i nie ma jednego swoistego numeru BA.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 42; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdział 14, s. druk. 341, obraz EPUB 360; droga słuchowa i obustronna reprezentacja"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "brain",
+      "language-modern"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-43",
+    "number": 43,
+    "names": {
+      "pl": "Pole Brodmanna 43 — Okolica podśrodkowa / wieczkowa",
+      "en": "Brodmann area 43",
+      "lat": "Area Brodmann 43"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.43",
+      "rh_Brodmann.43"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Pogranicze dolnych zakrętów przed- i zaśrodkowych, przy wieczku. Okolica podśrodkowa obejmuje pogranicze dolnych części zakrętów ruchowych i czuciowych w rejonie wieczka. Lokalizacja jest bliska reprezentacjom ustno-twarzowym.",
+    "function": "Udział w czuciowym przetwarzaniu okolicy ust. Współpraca z siecią smaku i funkcji ustno-twarzowych. Tradycyjne skróty nazywają BA43 korą smakową, ale badania ludzi wskazują na rozległą sieć wyspy i wieczek. Smak nie ma granic tożsamych z BA43.",
+    "connections": "Sygnały smakowe docierają do sieci wyspowo-wieczkowej przez jądro pasma samotnego i wzgórze; sygnały dotykowe jamy ustnej i ruchowe trafiają innymi drogami. Sąsiedztwo tych reprezentacji umożliwia ich współpracę bez tożsamości modalności.",
+    "clinical": "Zmiany smaku i odczuć ustno-twarzowych mają liczne przyczyny obwodowe oraz ośrodkowe. Nie są swoistym objawem dysfunkcji tej parceli. Obustronne uszkodzenie układów wieczkowych może powodować zaburzenie dowolnych ruchów twarzy, języka i połykania przy częściowym zachowaniu automatyzmów. Zespół wieczkowy nie jest zespołem izolowanej BA43.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 43; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      },
+      {
+        "sourceId": "opercular-case-2019",
+        "locator": "opis przypadku i dyskusja dysocjacji automatyczno-dowolnej; zespół nie jest swoisty dla jednej parceli BA43"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "taste",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-44",
+    "number": 44,
+    "names": {
+      "pl": "Pole Brodmanna 44 — Pars opercularis",
+      "en": "Brodmann area 44",
+      "lat": "Area Brodmann 44"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.44",
+      "rh_Brodmann.44"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Część wieczkowa zakrętu czołowego dolnego. Część wieczkowa zakrętu czołowego dolnego ma odmienną cytoarchitekturę od części trójkątnej BA45. Granice mikroskopowe nie muszą pokrywać się z obrysem zakrętu.",
+    "function": "Sekwencjonowanie artykulacji. Udział w przetwarzaniu struktur języka. Kontrola działania i integracja czuciowo-ruchowa. BA44 wraz z BA45 tworzy część klasycznej okolicy Broki. Produkcja mowy wymaga szerszej sieci, a funkcje BA44 nie ograniczają się do ekspresji językowej.",
+    "connections": "Połączenia z korą przedruchową, wyspą i tylnymi okolicami skroniowo-ciemieniowymi uczestniczą w sekwencjonowaniu artykulacji. Grzbietowe połączenia językowe, w tym części pęczka łukowatego, wiążą reprezentację słuchową z planem ruchowym.",
+    "clinical": "Uszkodzenie dominującej sieci czołowej może powodować niepłynną mowę. Zespół afazji nie jest tożsamy z izolowanym uszkodzeniem jednej BA44. Afazję niepłynną odróżnia się od apraksji mowy i dyzartrii. Trwała pełna afazja Broki zwykle wymaga szerszego uszkodzenia niż sama kora BA44, obejmującego sąsiednie obszary i istotę białą.",
+    "laterality": "U większości osób silniejsza specjalizacja językowa występuje po lewej, lecz obie półkule uczestniczą w komunikacji. Dominacji nie ustala się z samej ręczności.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 44; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "language-modern",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-45",
+    "number": 45,
+    "names": {
+      "pl": "Pole Brodmanna 45 — Pars triangularis",
+      "en": "Brodmann area 45",
+      "lat": "Area Brodmann 45"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.45",
+      "rh_Brodmann.45"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Część trójkątna zakrętu czołowego dolnego. Część trójkątna zakrętu czołowego dolnego sąsiaduje z BA44 ku tyłowi i korą oczodołową ku dołowi. Ma bardziej wyraźną warstwę ziarnistą niż sąsiadująca okolica wieczkowa.",
+    "function": "Kontrolowany dostęp do znaczenia. Dobór informacji językowej. Integracja kontekstu podczas komunikacji. BA45 współpracuje z korą skroniową i innymi obszarami PFC w wyborze odpowiedniej reprezentacji. Jest anatomicznie odrębna od BA44, choć oba pola współpracują w wielu zadaniach językowych.",
+    "connections": "Połączenia ze skroniową korą asocjacyjną i innymi polami przedczołowymi umożliwiają wybór właściwego znaczenia wśród konkurujących odpowiedzi. Współpraca z grzbietowym systemem języka łączy selekcję treści z jej artykulacją.",
+    "clinical": "Znaczenie obejmuje afazje i kontrolę semantyczną. Formalne zaburzenia myślenia lub trudność znajdowania słowa nie dowodzą uszkodzenia BA45. Zaburzenie doboru słowa może współistnieć ze względnie prawidłową wymową. Nie wystarcza to do rozpoznania ogniska BA45: podobny efekt może mieć uszkodzenie kory skroniowej, jej połączeń lub zaburzenie uwagi.",
+    "laterality": "U większości osób silniejsza specjalizacja językowa występuje po lewej, lecz obie półkule uczestniczą w komunikacji. Dominacji nie ustala się z samej ręczności.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 45; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture",
+      "language-modern"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-46",
+    "number": 46,
+    "names": {
+      "pl": "Pole Brodmanna 46 — Grzbietowo-boczna PFC",
+      "en": "Brodmann area 46",
+      "lat": "Area Brodmann 46"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.46",
+      "rh_Brodmann.46"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Przede wszystkim zakręt czołowy środkowy. Pole leży przede wszystkim w okolicy zakrętu czołowego środkowego, z niejednakowymi granicami w mapach różnych osobników. Nie stanowi całej kory odpowiedzialnej za funkcje wykonawcze.",
+    "function": "Pamięć robocza i manipulowanie informacją. Utrzymanie celu i reguły. Kontrola wykonawcza zależna od zadania. BA46 współpracuje z BA9, korą ciemieniową i pętlą asocjacyjną jąder podstawy. Aktywność komórek piramidowych, hamowanie interneuronów oraz modulacja DA/NA wspierają selektywność reprezentacji.",
+    "connections": "Wzajemne połączenia z korą ciemieniową i przedczołową oraz pętla przez ogoniaste, pallidum/SNr i wzgórze umożliwiają utrzymanie reguły. Modulacja dopaminowa i noradrenergiczna wpływa na stabilność reprezentacji w zależności od stanu sieci.",
+    "clinical": "Znaczenie obejmuje deficyty poznawcze schizofrenii i badania neuromodulacji depresji. Cel TMS określony jako dlPFC nie musi pokrywać się dokładnie z atlasową BA46. Uszkodzenia mogą ujawniać się jako trudność manipulowania informacją, planowania i zmiany strategii. Wynik zadań wykonawczych zależy też od motywacji, języka, snu i szybkości psychomotorycznej; nie jest izolowanym testem BA46.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 46; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture",
+      "working-memory",
+      "ei"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-47",
+    "number": 47,
+    "names": {
+      "pl": "Pole Brodmanna 47 — Pars orbitalis / brzuszno-boczna PFC",
+      "en": "Brodmann area 47",
+      "lat": "Area Brodmann 47"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [
+      "lh_Brodmann.47",
+      "rh_Brodmann.47"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": false,
+    "anatomy": "Dolna kora czołowa przy części oczodołowej zakrętu czołowego dolnego. Część oczodołowa dolnego zakrętu czołowego przechodzi w boczną korę oczodołową. Oznaczenie 47/12 w badaniach porównawczych wymaga wskazania konkretnego atlasu i gatunku.",
+    "function": "Kontrolowane przetwarzanie semantyczne. Ocena i wybór informacji. Współpraca z wartościowaniem i regulacją odpowiedzi. BA47 i oznaczenie 47/12 w porównaniach naczelnych nie są zupełnie wymiennymi etykietami. Pole obejmuje heterogeniczne podobszary o połączeniach skroniowych i limbicznych.",
+    "connections": "Połączenia z przednią i środkową korą skroniową oraz OFC umożliwiają dobór znaczenia i wartości bodźca. Połączenia z prążkowiem i wzgórzem włączają obszar w szersze pętle wyboru reakcji.",
+    "clinical": "Znaczenie kliniczne dotyczy języka, oceny konsekwencji i regulacji. Nie jest jednym polem odpowiedzialnym za całą kontrolę emocji lub wszystkie kompulsje. Uszkodzenie dominującej sieci brzuszno-czołowej może utrudniać kontrolowane wydobywanie znaczenia. Zmiana zachowania po ognisku oczodołowym wymaga oceny rozległości i połączeń, a nie samego numeru BA47.",
+    "laterality": "Udział językowy bywa silniejszy po lewej; wartościowanie i regulacja mają szeroką organizację obustronną.",
+    "limitations": "Granice Brodmanna wynikają z cytoarchitektury, a granice modelu z mapy atlasowej. Nie są indywidualnym lokalizatorem czynnościowym, obszarem unaczynienia ani rozpoznaniem choroby.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 47; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "rozdz. 3, tablice 3.1–3.7, s. druk. 34–40 (obrazy EPUB 053–059); topografia i podstawowe mapy czynnościowe"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 16–21 (druk. 14–19); anatomia kory, somatotopia i włókna kojarzeniowe; patrz korekty uproszczeń w README"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture",
+      "cstc"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-48",
+    "number": 48,
+    "names": {
+      "pl": "Pole Brodmanna 48 — Okolica retrosubikularna",
+      "en": "Brodmann area 48",
+      "lat": "Area Brodmann 48"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Historycznie okolica przyhipokampowa powiązana z podkładką. Retrosubicular area — historyczna nazwa okolicy przyhipokampowej.",
+    "function": "Udział szerszej sieci hipokampowej w orientacji i pamięci. Mapy i gatunki różnią się użyciem tego numeru. Współczesne badania formacji hipokampowej posługują się nazwami subiculum, presubiculum i parasubiculum oraz ich podobszarów.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Brakuje podstaw do przypisania tej historycznej etykiecie odrębnego rozpoznania psychiatrycznego. Dane o szerszej sieci nie oznaczają swoistości BA48. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Brak parceli w PALS-B12; funkcja samego numeru nie jest jednoznacznie zdefiniowana.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 48; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "entorhinal",
+      "papez"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-49",
+    "number": 49,
+    "names": {
+      "pl": "Pole Brodmanna 49 — Okolica parasubikularna — mapa porównawcza",
+      "en": "Brodmann area 49",
+      "lat": "Area Brodmann 49"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Numer spotykany w mapach kory gryzoni. Parasubicular area — oznaczenie pochodzące z map gryzoni, bez automatycznej homologii u człowieka.",
+    "function": "Orientacja przestrzenna szerszego układu parasubiculum. Parasubiculum współpracuje z układem śródwęchowo-hipokampowym. Nie można przenieść numeru BA49 z mapy gryzonia na identyczną, zweryfikowaną granicę ludzkiej kory.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Badania zwierzęce wspierają modele nawigacji, ale nie ustalają ludzkiego „ośrodka objawu” BA49. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Numer porównawczy, nie zweryfikowana odrębna parcela ludzkiego modelu.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 49; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "entorhinal"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-50",
+    "number": 50,
+    "names": {
+      "pl": "Pole Brodmanna 50 — Numer bez ustalonej parceli w tym atlasie",
+      "en": "Brodmann area 50",
+      "lat": "Area Brodmann 50"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Brak odrębnego obszaru w zastosowanej mapie ludzkiej kory. W tym projekcie numer jest wpisem porządkującym katalog, bez ustalonej parceli.",
+    "function": " Numeracja Brodmanna nie jest ciągłą listą 52 jednakowo ustalonych funkcjonalnych ośrodków ludzkiego mózgu. Historyczne mapy różnych gatunków i późniejsze modyfikacje mają różne zakresy.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Nie przypisujemy funkcji ani choroby do numeru bez uzasadnionej lokalizacji i źródła. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Nie dotyczy.",
+    "limitations": "Brak zweryfikowanej lokalizacji i odrębnej funkcji; nie generujemy granic 3D.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 50; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-51",
+    "number": 51,
+    "names": {
+      "pl": "Pole Brodmanna 51 — Numer bez ustalonej parceli w tym atlasie",
+      "en": "Brodmann area 51",
+      "lat": "Area Brodmann 51"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Brak odrębnego obszaru w zastosowanej mapie ludzkiej kory. W tym projekcie numer jest wpisem porządkującym katalog, bez ustalonej parceli.",
+    "function": " Sama liczba nie definiuje miejsca w ludzkim mózgu. Najpierw trzeba ustalić konkretną mapę, gatunek i granice mikrostrukturalne, a dopiero potem odnosić do nich dane funkcjonalne.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Brak podstaw do wpisania swoistej roli psychiatrycznej dla nieustalonej parceli. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Nie dotyczy.",
+    "limitations": "Brak zweryfikowanej lokalizacji i odrębnej funkcji; nie generujemy granic 3D.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 51; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "pfc-architecture"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  },
+  {
+    "id": "ba-52",
+    "number": 52,
+    "names": {
+      "pl": "Pole Brodmanna 52 — Okolica parainsularna",
+      "en": "Brodmann area 52",
+      "lat": "Area Brodmann 52"
+    },
+    "category": "brodmann",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "supplementary": true,
+    "anatomy": "Pogranicze wyspy i górnej powierzchni płata skroniowego. Parainsular area — słabo określone historyczne pogranicze wyspowo-skroniowe.",
+    "function": "Powiązania z szerszymi obszarami wyspowo-słuchowymi. To słabo badana historyczna etykieta, nie jeden dokładnie określony ośrodek przetwarzania. Nie należy przypisywać jej całej funkcji wyspy, smaku lub słuchu.",
+    "connections": "Nie określa się odrębnego przebiegu włókien na podstawie samego historycznego numeru. Połączenia odpowiedniej okolicy opisano w kartach rzeczywistych struktur i w rozdziale dróg.",
+    "clinical": "Nie ma swoistego, klinicznie ustalonego związku BA52 z jednym zaburzeniem psychiatrycznym. Nie ustala się diagnozy ani lokalizacji ogniska na podstawie tego numeru bez określenia atlasu, gatunku i anatomii.",
+    "laterality": "Przetwarzanie jest obustronne; specjalizacja zależy od podobszaru, zadania i połączeń.",
+    "limitations": "Opis tekstowy; brak parceli w PALS-B12 i ograniczona swoistość funkcjonalna.",
+    "sources": [
+      {
+        "sourceId": "project-brodmann",
+        "locator": "src/data/brodmann.ts; wpis 52; tekst projektu zachowany i rozszerzony, nie niezależne źródło naukowe"
+      },
+      {
+        "sourceId": "yale-brodmann",
+        "locator": "lista historycznych nazw; użyta tylko do porównania nomenklatury, nie jako dowód swoistej funkcji"
+      }
+    ],
+    "inheritedReferenceIds": [
+      "haines",
+      "brodmann-nomenclature",
+      "taste",
+      "brain"
+    ],
+    "evidenceNote": "Anatomia i podstawowe mechanizmy: synteza podręcznikowa. Współczesne przykłady sieciowe zachowują treść i bibliografię projektu; odziedziczone odsyłacze nie oznaczają ponownej weryfikacji każdej publikacji. Rozdział nie przeszedł zewnętrznej recenzji klinicznej."
+  }
+]

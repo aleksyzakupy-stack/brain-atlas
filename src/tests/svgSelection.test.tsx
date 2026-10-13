@@ -19,7 +19,7 @@ describe('interakcja z atlasem SVG', () => {
 
     await waitFor(() => expect(window.location.hash).toBe('#/struktury/cialo-migdalowate'))
     expect(screen.getAllByRole('heading', { name: 'Ciało migdałowate' }).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(/ocenie znaczenia emocjonalnego bodźców/i).length).toBeGreaterThan(0)
+    expect(await screen.findByRole('heading', { name: 'Anatomia i topografia' })).toBeInTheDocument()
   })
 
   it('obsługuje wybór klawiszem Enter', async () => {

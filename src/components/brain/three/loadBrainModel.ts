@@ -8,5 +8,9 @@ export async function decodeBrainModel(response: Response, compressed: boolean):
   const decoded = compressed && !alreadyDecoded && response.body ? new Response(response.body.pipeThrough(new DecompressionStream('gzip'))) : response
   const value: unknown = await decoded.json()
   validateBrainModel(value)
+  for (const mesh of value.meshes) {
+    if (mesh.id.endsWith('VentralDC')) mesh.kind = 'subcortex'
+    if (mesh.id.startsWith('CC_')) mesh.kind = 'white-matter'
+  }
   return value
 }

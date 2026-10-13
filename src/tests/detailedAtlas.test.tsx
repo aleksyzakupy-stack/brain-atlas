@@ -68,7 +68,7 @@ describe('anatomia Destrieux i pola Brodmanna', () => {
     window.location.hash = `#${regionUrl(atlasRegionById['lh_Brodmann.33'])}`
     render(<App />)
     expect(await screen.findByRole('heading',{name:'Pole Brodmanna 33',level:1})).toBeInTheDocument()
-    expect(screen.getByText('Brodmann.33')).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: 'Anatomia i topografia' })).toBeInTheDocument()
     fireEvent.click(screen.getAllByRole('button',{name:'Anatomia'})[0])
     expect(await screen.findByRole('heading',{name:'Anatomia mózgu',level:1})).toBeInTheDocument()
     fireEvent.change(screen.getByRole('textbox',{name:'Filtruj obszary atlasu'}),{target:{value:'bruzda srodkowa'}})

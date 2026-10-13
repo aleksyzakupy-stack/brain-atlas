@@ -85,3 +85,13 @@ W Szlakach model zajmuje całą przestrzeń obok katalogu. Podpisy zawierają na
 „Fizjologia / Schizofrenia” jest dostępne dla trzech przykładów dopaminowych: mezolimbicznego (model istotności), nigrostriatalnego (obserwacja PET dotycząca prążkowia asocjacyjnego) i mezokortykalnego (odpowiedź DA w dlPFC na próbę farmakologiczną). Adnotacje są jakościowe i przypisane do konkretnych węzłów w `src/data/pathwayScenarios.ts`. Nie zmieniają geometrii, kierunku projekcji, kamery ani tempa przewodzenia. Znaczniki ruchu obrazują kierunek sygnału, nie transport cząsteczek mediatora. Modele mechanizmu, wyniki grupowe i ograniczenia lokalizacji są opisane osobno, wraz ze źródłami. Inne szlaki nie otrzymują automatycznie scenariusza choroby.
 
 Bezpośredni przykład: `/#/szlaki/nigrostriatal?stan=schizofrenia`. Scenariusze działają także w schemacie 2D i przy włączonym ograniczeniu ruchu. Otwarcie szczegółów wstrzymuje odtwarzanie; zamknięcie przywraca poprzedni stan.
+
+## Kompendium neuroanatomii
+
+238 pełnych artykułów z przygotowanej bazy polskiej, 55 013 słów i 81 zarejestrowanych źródeł. Katalog: `/#/kompendium`; artykuły: `/#/kompendium/deep-hippocampus`, `/#/kompendium/path-corticospinal`; przewodnik: `/#/przewodnik`. Istniejące adresy regionów, struktur, szlaków i BA otwierają odpowiadające im pełne teksty.
+
+Powiązania główne są jednoznaczne: 268 regionów, 28 kart, 34 obwody, 52 numery BA, 6 grup hierarchii i 65 węzłów przestrzennych. Dodatkowe 25 dróg ma karty opisowe bez dodawania geometrii. Nazwy PL / EN / LAT, skróty i numery BA są wyszukiwane także w globalnym wyszukiwaniu.
+
+Źródła są rozwijane pod ikoną książki, z zachowanymi stronami, tablicami i zakresem weryfikacji. Pełne teksty oraz przewodnik mają osobne pakiety pobierane na żądanie. Książki PDF/EPUB nie trafiają do aplikacji. VentralDC i segmenty CC mają skorygowane kategorie opisowe; pliki geometrii nie zostały zmienione.
+
+Kontrola: `npm run reference:check`, `npm run lint`, `npm test`, `npm run build`. Opis integracji i odtwarzania danych: [docs/neuroanatomy/INTEGRACJA.md](docs/neuroanatomy/INTEGRACJA.md).

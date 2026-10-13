@@ -1,3 +1,4 @@
+import { MemoryRouter } from 'react-router-dom'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { App } from '../app/App'
@@ -28,11 +29,11 @@ describe('szlaki, animacja i pełny katalog BA', () => {
 
   it('animuje każdą krawędź wszystkich schematów, a sieci nie udają jednokierunkowych traktów', () => {
     for (const circuit of brainCircuits) {
-      const {container, unmount} = render(<PathwayScene circuit={circuit} language="pl" onSelect={vi.fn()} />)
+      const {container, unmount} = render(<MemoryRouter><PathwayScene circuit={circuit} language="pl" onSelect={vi.fn()} /></MemoryRouter>)
       fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
       expect(container.querySelectorAll('animateMotion, path > animate')).toHaveLength(circuit.edges.length)
       expect(container.querySelectorAll('path[marker-end]')).toHaveLength(circuit.kind === 'network' ? 0 : circuit.edges.length)
-      expect(container.querySelector('svg')).toHaveAttribute('data-playing','true')
+      expect(container.querySelector('.pathway-graph svg')).toHaveAttribute('data-playing','true')
       unmount()
     }
   })
@@ -40,9 +41,9 @@ describe('szlaki, animacja i pełny katalog BA', () => {
   it('pauzuje całą oś czasu, zmienia tempo i otwiera wybraną strukturę', () => {
     const select=vi.fn()
     const pause=vi.fn(), resume=vi.fn()
-    const {container} = render(<PathwayScene circuit={circuitById['basal-direct']} language="pl" onSelect={select} />)
+    const {container} = render(<MemoryRouter><PathwayScene circuit={circuitById['basal-direct']} language="pl" onSelect={select} /></MemoryRouter>)
     fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
-    const svg = container.querySelector('svg')!
+    const svg = container.querySelector('.pathway-graph svg')!
     Object.assign(svg,{pauseAnimations:pause,unpauseAnimations:resume})
     fireEvent.click(screen.getByRole('button',{name:'Pauza'}))
     expect(pause).toHaveBeenCalledOnce()
@@ -62,11 +63,11 @@ describe('szlaki, animacja i pełny katalog BA', () => {
     const original=window.matchMedia
     window.matchMedia=vi.fn().mockImplementation(query=>({matches:true,media:query,addEventListener:vi.fn(),removeEventListener:vi.fn()}))
     try {
-      const {container}=render(<PathwayScene circuit={circuitById.mesolimbic} language="pl" onSelect={vi.fn()} />)
+      const {container}=render(<MemoryRouter><PathwayScene circuit={circuitById.mesolimbic} language="pl" onSelect={vi.fn()} /></MemoryRouter>)
       fireEvent.click(screen.getByRole('button',{name:'Schemat'}))
-      expect(container.querySelector('svg')).toHaveAttribute('data-playing','false')
+      expect(container.querySelector('.pathway-graph svg')).toHaveAttribute('data-playing','false')
       fireEvent.click(screen.getByRole('button',{name:'Odtwórz'}))
-      expect(container.querySelector('svg')).toHaveAttribute('data-playing','true')
+      expect(container.querySelector('.pathway-graph svg')).toHaveAttribute('data-playing','true')
     } finally { window.matchMedia=original }
   })
 

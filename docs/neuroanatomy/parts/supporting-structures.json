@@ -1,0 +1,78 @@
+[
+  {
+    "id": "supporting-pineal",
+    "names": {
+      "pl": "Szyszynka",
+      "en": "Pineal gland",
+      "lat": "Glandula pinealis"
+    },
+    "category": "supporting",
+    "supplementary": true,
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectSpatialAnchorIds": ["pineal"],
+    "anatomy": "Nieparzysty narząd neuroendokrynny nadwzgórza, położony w linii pośrodkowej za komorą III, poniżej płata ciała modzelowatego i nad grzbietową powierzchnią śródmózgowia. Sąsiaduje ze spoidłem tylnym, okolicą przedpokrywową oraz zbiornikiem blaszki czworaczej. Zachyłek szyszynkowy komory III wnika do jej nasady. Głównymi komórkami wydzielniczymi są pinealocyty, którym towarzyszą komórki glejowe. Okienkowate naczynia włosowate umożliwiają wymianę z krążeniem; szyszynka należy do narządów okołokomorowych i nie ma typowej śródbłonkowej bariery krew–mózg. Nie jest jądrem przekaźnikowym drogi wzrokowej.",
+    "function": "Pinealocyty syntetyzują melatoninę, przekazując organizmowi hormonalną informację o biologicznej nocy. Wydzielanie zwykle wzrasta w ciemnej fazie doby i jest tłumione przez światło docierające do siatkówki. Melatonina uczestniczy w synchronizacji rytmów dobowych oraz regulacji skłonności do snu, ale nie stanowi samodzielnego przełącznika snu i czuwania. Główny zegar synchronizujący pozostaje w jądrze nadskrzyżowaniowym podwzgórza; szyszynka jest jednym z elementów wykonawczych tej organizacji czasowej.",
+    "connections": "Informacja świetlna biegnie z siatkówki drogą siatkówkowo-podwzgórzową do jądra nadskrzyżowaniowego. Dalej wielosynaptyczny układ obejmuje podwzgórze, w tym okolicę przykomorową, neurony współczulne górnych segmentów piersiowych rdzenia i zwój szyjny górny. Jego zazwojowe włókna noradrenergiczne docierają do szyszynki. Nocne uwalnianie noradrenaliny pobudza syntezę melatoniny; nie jest to droga bezpośrednia siatkówka–szyszynka. Wyjście hormonalne odbywa się do krwi i płynu mózgowo-rdzeniowego, a jego zasięg różni się od miejscowego połączenia aksonalnego.",
+    "clinical": "Zmiana rozrostowa okolicy szyszynki może uciskać grzbietowe śródmózgowie i wywoływać zespół Parinauda, zwłaszcza zaburzenie patrzenia ku górze. Zwężenie wodociągu śródmózgowia może prowadzić do wodogłowia obturacyjnego. Są to następstwa położenia guza i ucisku sąsiadów, a nie swoisty objaw niedoboru melatoniny. Obecność zwapnień narastających z wiekiem sama w sobie nie dowodzi niewydolności gruczołu ani przyczyny bezsenności.",
+    "laterality": "Struktura pośrodkowa; jej funkcji nie przypisuje się oddzielnie lewej i prawej półkuli.",
+    "limitations": "Kotwica pineal jest orientacyjnym punktem schematu. Nie przedstawia objętości gruczołu, jego unaczynienia ani rzeczywistego przebiegu wszystkich przekaźników współczulnych. Zaburzenia rytmu dobowego mają wiele możliwych przyczyn; sama geometria szyszynki nie rozstrzyga mechanizmu objawów.",
+    "sources": [
+      {"sourceId": "netter-neuro", "locator": "s. druk. 51, ryc. 3.18 (EPUB 070.jpg): topografia; s. druk. 402, ryc. 16.14 (EPUB 421.jpg): narządy okołokomorowe"},
+      {"sourceId": "repetytorium", "locator": "s. PDF 25: nadwzgórze i wydzielanie melatoniny"},
+      {"sourceId": "haines-local", "locator": "s. PDF 166 / s. druk. 152: Parinaud Syndrome i wodogłowie przy guzach okolicy szyszynki"},
+      {"sourceId": "supporting-pineal-endotext", "locator": "sekcje Anatomy of the Pineal Gland, Main Function of the Pineal Gland oraz Melatonin Metabolism; odczyt indeksowanych fragmentów, 2026-10-13"}
+    ]
+  },
+  {
+    "id": "supporting-pituitary-median-eminence",
+    "names": {
+      "pl": "Przysadka i wyniosłość pośrodkowa",
+      "en": "Pituitary gland and median eminence",
+      "lat": "Hypophysis et eminentia mediana"
+    },
+    "category": "supporting",
+    "supplementary": true,
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectSpatialAnchorIds": ["pituitary", "eminence"],
+    "anatomy": "Przysadka leży w dole przysadki siodła tureckiego, poniżej skrzyżowania wzrokowego, i łączy się z podwzgórzem przez lejek. Część gruczołowa, obejmująca przede wszystkim płat przedni, rozwija się z kieszonki Rathkego i jest gruczołem dokrewnym, a nie skupiskiem neuronów mózgu. Część nerwowa, obejmująca płat tylny, pochodzi z neuroektodermy i zawiera zakończenia aksonów podwzgórzowych oraz komórki podporowe. Wyniosłość pośrodkowa stanowi odrębny obszar podstawy podwzgórza u nasady lejka; jest narządem okołokomorowym z okienkowatymi naczyniami, a nie inną nazwą całej przysadki.",
+    "function": "Przedni płat wytwarza ACTH, TSH, LH, FSH, hormon wzrostu i prolaktynę. Hormony te uczestniczą w regulacji nadnerczy, tarczycy, gonad, wzrastania, metabolizmu oraz laktacji. Tylny płat uwalnia wazopresynę i oksytocynę, syntetyzowane w neuronach olbrzymiokomórkowych jąder nadwzrokowego i przykomorowego. Wazopresyna zwiększa zatrzymywanie wody przez nerki, a oksytocyna uczestniczy w wypływie mleka i skurczach macicy. Wyniosłość pośrodkowa przekształca sygnały nerwowe podwzgórza w sygnały hormonalne kierowane przede wszystkim do płata przedniego.",
+    "connections": "Dwie drogi trzeba rozdzielić. W układzie wrotnym zakończenia neuronów podwzgórza oddają czynniki uwalniające lub hamujące do pierwotnej sieci włosowatej wyniosłości pośrodkowej; żyły wrotne przenoszą je do wtórnej sieci przedniego płata. CRH pobudza oś ACTH–kortyzol, TRH oś TSH–hormony tarczycy, a GnRH wydzielanie gonadotropin. Dopamina hamuje wydzielanie prolaktyny. Natomiast aksony neuronów olbrzymiokomórkowych biegną przez lejek bezpośrednio do płata tylnego, gdzie uwalniają hormony do krążenia ogólnego. Obwodowe hormony uczestniczą w sprzężeniach zwrotnych z przysadką i podwzgórzem.",
+    "clinical": "Gruczolak może wywoływać nadmierne wydzielanie określonego hormonu albo niedoczynność wskutek ucisku pozostałej tkanki. Wzrost nadsiodłowy może uciskać skrzyżowanie wzrokowe i powodować niedowidzenie połowicze dwuskroniowe. Przerwanie dopływu dopaminy przez uszkodzenie szypuły może zwiększać prolaktynę bez guza wydzielającego ten hormon. Uszkodzenie układu wazopresynowego może powodować moczówkę prostą pochodzenia ośrodkowego, z wielomoczem i wzmożonym pragnieniem.",
+    "laterality": "Układ pośrodkowy. Zaburzenia pola widzenia zależą od kierunku wzrostu zmiany oraz zajęcia skrzyżowania i sąsiednich dróg.",
+    "limitations": "Kotwice pituitary i eminence są różnymi orientacyjnymi punktami anatomicznymi. Nie rozdzielają płatów, komórek wydzielniczych ani naczyń. Połączenie obu opisów służy wyjaśnieniu osi neuroendokrynnej; nie oznacza, że przysadka gruczołowa należy do tkanki nerwowej mózgu.",
+    "sources": [
+      {"sourceId": "human-atlas", "locator": "s. PDF 162–163, tablice 145–146: podwzgórze, przysadka i układ wrotny"},
+      {"sourceId": "netter-neuro", "locator": "s. druk. 402, ryc. 16.14 (EPUB 421.jpg); s. druk. 404–405, ryc. 16.16–16.17 (EPUB 423–424.jpg): drogi neuroendokrynne, hormony i klinika"},
+      {"sourceId": "deep-web-hypothalamic-control-of-pituitary-hormone", "locator": "sekcje 2.1–2.2: rozdzielenie transportu aksonalnego i krążenia wrotnego; odczyt 2026-10-13"}
+    ]
+  },
+  {
+    "id": "supporting-bnst-extended-amygdala",
+    "names": {
+      "pl": "Jądro łożyskowe prążka krańcowego i rozszerzone ciało migdałowate",
+      "en": "Bed nucleus of the stria terminalis and extended amygdala",
+      "lat": "Nucleus striae terminalis et complexus amygdaloideus extensus"
+    },
+    "category": "supporting",
+    "supplementary": true,
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "projectSpatialAnchorIds": ["bnst", "extendedAmygdala"],
+    "anatomy": "BNST, nazywane również jądrem łożyskowym prążka krańcowego, jest zespołem małych jąder podstawnego przodomózgowia w sąsiedztwie spoidła przedniego i przegrody. Należy rozróżniać jego komórki nerwowe od prążka krańcowego, który jest pasmem włókien łączących przede wszystkim okolicę migdałowatą z podstawnym przodomózgowiem i podwzgórzem. Rozszerzone ciało migdałowate oznacza szerszą koncepcję organizacji połączonych grup komórek, obejmującą odpowiednie części BNST, jądra migdałowate i strefy łączące je w podstawnym przodomózgowiu. Nie jest dodatkowym płatem mózgu ani drugim, jednolitym ciałem migdałowatym.",
+    "function": "Sieć ta uczestniczy w koordynacji zachowania z odpowiedziami autonomicznymi i stanem motywacyjnym. BNST integruje sygnały dotyczące sytuacji zewnętrznej oraz stanu organizmu i może wpływać na unikanie ryzyka, oddychanie oraz ocenę korzystnego lub niekorzystnego znaczenia bodźców. Nie działa jednokierunkowo: badania optogenetyczne na myszach wykazały, że aktywacja różnych podobszarów może nasilać albo ograniczać wybrane cechy stanu lękowego. Z tego powodu ogólne określenie „pobudzenie BNST” nie wystarcza do przewidzenia zachowania bez informacji o populacji neuronów i jej wyjściu.",
+    "connections": "Połączenia z ciałem migdałowatym obejmują układ prążka krańcowego i dróg brzusznych. BNST pozostaje powiązane z podwzgórzem, podstawowym układem limbicznym przodomózgowia oraz układami pnia. W badaniu na myszach wyróżniono projekcje przednio-grzbietowej części BNST do bocznego podwzgórza, jądra przyramiennego i brzusznego pola nakrywki; ich manipulacja odmiennie zmieniała unikanie ryzyka, częstość oddechów i wartość motywacyjną. To przykład rozdzielenia składowych reakcji na różne drogi wyjściowe, nie kompletna mapa ludzkiego BNST.",
+    "clinical": "BNST jest istotnym obszarem badań nad mechanizmami lęku i adaptacji do obciążających warunków. Nie istnieje jednak jeden rutynowy zespół neurologiczny, którego objawy pozwalałyby pewnie rozpoznać izolowane uszkodzenie tego małego kompleksu. Zmiany w tej okolicy zwykle obejmują także sąsiednie włókna lub jądra. Aktywność w badaniu obrazowym nie rozstrzyga samodzielnie o rozpoznaniu zaburzenia psychicznego ani o przyczynowej roli BNST u konkretnej osoby.",
+    "laterality": "BNST występuje obustronnie. Nie ma podstaw do przypisywania jego lewej i prawej stronie prostych przeciwstawnych emocji.",
+    "limitations": "bnst oznacza składnik większego układu, a extendedAmygdala jego ujęcie sieciowe; tych kotwic nie należy liczyć jako dwóch rozłącznych narządów. Model nie odwzorowuje podjąder ani odrębnych populacji komórkowych. Wyniki eksperymentów zwierzęcych nie stanowią bezpośredniej mapy objawów człowieka.",
+    "sources": [
+      {"sourceId": "netter-neuro", "locator": "s. druk. 385, ryc. 15.26 (EPUB 404.jpg): połączenia podstawnego układu limbicznego; s. druk. 419, ryc. 16.31 (EPUB 438.jpg): powiązania jądra łożyskowego prążka krańcowego z jądrami migdałowatymi"},
+      {"sourceId": "deep-web-amygdala-neuroscience-online", "locator": "sekcje 6.2–6.4: prążek krańcowy i droga migdałowata brzuszna; odczyt 2026-10-13"},
+      {"sourceId": "supporting-bnst-2013", "locator": "pełny abstrakt PubMed, PMID 23515158: przeciwstawne efekty podobszarów BNST i odrębne projekcje u myszy; odczyt 2026-10-13"}
+    ]
+  }
+]

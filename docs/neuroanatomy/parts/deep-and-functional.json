@@ -1,0 +1,1551 @@
+[
+  {
+    "id": "deep-thalamus",
+    "names": {
+      "pl": "Wzgórze",
+      "en": "Thalamus",
+      "lat": "Thalamus"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Thalamus-Proper",
+      "Right-Thalamus-Proper"
+    ],
+    "projectStructureIds": [
+      "thalamus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Parzysty zespół jąder międzymózgowia tworzący górną część bocznej ściany komory III. Bocznie sąsiaduje z torebką wewnętrzną, poniżej z podwzgórzem i niskowzgórzem, z tyłu przechodzi w poduszkę. Blaszka rdzenna wewnętrzna rozdziela grupę przednią, przyśrodkową i boczną; w jej obrębie znajdują się jądra śródblaszkowe. Jądro siatkowate tworzy boczną osłonę wzgórza i jest funkcjonalnie odmienne od jąder wysyłających włókna do kory. Zrost międzywzgórzowy bywa nieobecny; nie jest głównym spoidłem półkul. Anatomiczna nazwa wzgórza obejmuje też ciała kolankowate, lecz zakres konkretnej maski Thalamus-Proper trzeba odróżniać od klasyfikacji opisowej.",
+    "function": "VPL uczestniczy w przekazywaniu informacji somatosensorycznej z tułowia i kończyn, a VPM z twarzy; część drobnokomórkowa VPM należy do drogi smakowej. Ciało kolankowate boczne jest przekaźnikiem wzrokowym, a przyśrodkowe słuchowym. Jądra VA/VL uczestniczą w pętlach ruchowych z jądrami podstawy i móżdżkiem. Jądra przednie są częścią sieci pamięci epizodycznej; jądro przyśrodkowo-grzbietowe współpracuje z korą przedczołową. Poduszka pomaga koordynować przetwarzanie wzrokowe i uwagę. Jądra śródblaszkowe i przyśrodkowej linii wiążą stan pobudzenia z aktywnością kory i prążkowia. Wzgórze aktywnie reguluje przekaz i rytmy sieci, więc określenie „stacja przekaźnikowa” jest niepełne.",
+    "connections": "Wstęga przyśrodkowa i układ przednio-boczny kończą część projekcji w VPL, a drogi trójdzielno-wzgórzowe w VPM. Droga wzrokowa biegnie przez ciało kolankowate boczne i promienistość wzrokową do V1; słuchowa przez ciało kolankowate przyśrodkowe do kory słuchowej. Wyjścia GPi/SNr hamują wybrane jądra ruchowe, a jądra głębokie móżdżku pobudzają odpowiednie sektory wzgórza. Projekcje wzgórzowo-korowe są zasadniczo glutaminergiczne i mają rozbudowane sprzężenia zwrotne z kory. Jądro siatkowate otrzymuje kolaterale tych pętli i hamuje inne jądra wzgórza przez GABA, bez typowego bezpośredniego wyjścia do kory. Pęczek suteczkowo-wzgórzowy łączy ciała suteczkowate z jądrami przednimi.",
+    "clinical": "Mały zawał tylno-bocznego wzgórza może powodować przeciwstronne zaburzenia czucia, niekiedy z późniejszym bólem ośrodkowym. Zajęcie obszarów przyśrodkowych może zaburzać pamięć, inicjatywę i czuwanie; obustronne uszkodzenie paramedialne może powodować ciężkie zaburzenia świadomości. Lewostronne ogniska mogą dawać zaburzenia językowe, prawostronne zaburzenia uwagi przestrzennej. Fenotyp zależy od jąder, dróg oraz unaczynienia, a nie wyłącznie od objętości całego wzgórza.",
+    "laterality": "Projekcje do kory biegną głównie do półkuli tej samej strony; reprezentacja czucia ciała i pola widzenia jest głównie przeciwstronna wskutek wcześniejszych skrzyżowań.",
+    "limitations": "Maska ASEG nie rozróżnia wymienionych jąder. Zmiana całkowitej objętości wzgórza nie pozwala przypisać zaburzenia konkretnemu jądru. Węch dociera do pierwotnej kory bez obowiązkowego wcześniejszego przekaźnika wzgórzowego, ale wtórne przetwarzanie węchowe angażuje wzgórze.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 25–27"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 127 (tablica 110)"
+      },
+      {
+        "sourceId": "deep-web-thalamocortical-radiations-przegl-d-anatomii",
+        "locator": "Doprecyzowanie jąder przekaźnikowych i promienistości; tło podręcznikowe"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-hyperdirect",
+      "basal-indirect",
+      "cerebellar-cognitive",
+      "papez",
+      "thalamocortical"
+    ]
+  },
+  {
+    "id": "deep-hippocampus",
+    "names": {
+      "pl": "Hipokamp i formacja hipokampa",
+      "en": "Hippocampus and hippocampal formation",
+      "lat": "Hippocampus et formatio hippocampi"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Hippocampus",
+      "Right-Hippocampus"
+    ],
+    "projectStructureIds": [
+      "hippocampus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Hipokamp leży w przyśrodkowej części płata skroniowego, przy dnie rogu dolnego komory bocznej. Makroskopowo wyróżnia się głowę, trzon i ogon. Hipokamp właściwy obejmuje pola CA; w szerszym pojęciu formacja hipokampa zawiera także zakręt zębaty i podporę. Koryto hipokampa i strzępek gromadzą włókna przechodzące w odnogę sklepienia. Kora śródwęchowa stanowi główny korowy interfejs wejścia i wyjścia, ale nie jest tożsama z hipokampem. Pola CA1, CA2 i CA3 różnią się połączeniami i podatnością na uszkodzenie. Określenie CA4 bywa używane dla obszaru wnęki zakrętu zębatego, a jego granice zależą od przyjętej nomenklatury.",
+    "function": "Umożliwia wiązanie elementów zdarzenia w pamięć epizodyczną i reprezentację relacji przestrzennych oraz czasowych. Nie jest magazynem wszystkich wspomnień ani jedynym miejscem pamięci długotrwałej. Zakręt zębaty pomaga rozdzielać podobne wzorce; sieci nawrotne CA3 sprzyjają odtwarzaniu pełniejszej reprezentacji z fragmentarycznej wskazówki. CA1 integruje informacje z CA3 i kory śródwęchowej, a podpora przekazuje przetworzone sygnały do licznych odbiorców. To użyteczne modele obliczeniowe, nie wyłączne funkcje pojedynczych pól. Oś przednio-tylna wykazuje gradienty połączeń i funkcji: tylnie silniejsze są powiązania z dokładnością reprezentacji przestrzennych, przednio z szerszym kontekstem i przetwarzaniem emocjonalnym.",
+    "connections": "Schemat trisynaptyczny: kora śródwęchowa → droga przeszywająca → zakręt zębaty → włókna kiciaste → CA3 → kolaterale Schaffera → CA1. Istnieją także drogi bezpośrednie ze śródwęchowej do CA1 i podpory oraz liczne sprzężenia lokalne; schemat trzech synaps nie przedstawia całego obwodu. Wyjście przez podporę i sklepienie dociera m.in. do ciał suteczkowatych i jąder przegrody. Krąg Papeza obejmuje dalej pęczek suteczkowo-wzgórzowy, jądra przednie wzgórza, obręcz i korę przyhipokampową. Wejścia przegrodowe cholinergiczne i GABA-ergiczne regulują rytmikę, a noradrenergiczne, dopaminergiczne i serotoninergiczne modulują uczenie i pobudzenie.",
+    "clinical": "Obustronne uszkodzenie formacji hipokampa może powodować ciężką niepamięć następczą przy względnym zachowaniu niektórych umiejętności proceduralnych. CA1 jest szczególnie podatne na niedotlenienie. Stwardnienie hipokampa jest istotnym podłożem części padaczek skroniowych; nie każde zmniejszenie jego objętości oznacza stwardnienie. Zmiany przyśrodkowej części płata skroniowego występują też w chorobach neurodegeneracyjnych, zapaleniach i urazach. Ognisko napadowe może wywoływać zaburzenia pamięci, poczucie znajomości lub obcości i zaburzenia świadomości poprzez szerszą sieć.",
+    "laterality": "Wiele osób wykazuje względnie silniejszy udział lewego układu w pamięci materiału werbalnego, a prawego w przestrzennym; rozdział jest częściowy i zależy od zadania, dominacji językowej oraz reorganizacji.",
+    "limitations": "Obustronne maski ASEG nie stanowią segmentacji CA1–CA4, zakrętu zębatego ani podpory. Nie należy interpretować niewielkiej asymetrii jako rozpoznania klinicznego. Definicja formacji hipokampa jest szersza od pojedynczej etykiety projektu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 29–31"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 124, 128 (tablice 107, 111)"
+      },
+      {
+        "sourceId": "deep-web-hippocampus-neuroscience-online",
+        "locator": "Topografia formacji hipokampa, sklepienie i klinika pamięci"
+      },
+      {
+        "sourceId": "deep-web-similarity-in-form-and-function-of-the-hippocampus",
+        "locator": "Mikroobwód zakręt zębaty–CA3–CA1 i projekcje śródwęchowe"
+      }
+    ],
+    "relatedCircuitIds": [
+      "fear-extinction",
+      "hpa",
+      "mesolimbic",
+      "papez",
+      "septohippocampal",
+      "serotonin-median"
+    ]
+  },
+  {
+    "id": "deep-amygdala",
+    "names": {
+      "pl": "Ciało migdałowate",
+      "en": "Amygdala",
+      "lat": "Corpus amygdaloideum"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Amygdala",
+      "Right-Amygdala"
+    ],
+    "projectStructureIds": [
+      "amygdala"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Ciało migdałowate jest zespołem jąder przedniej części przyśrodkowego płata skroniowego, położonym głównie przed hipokampem i powyżej przedniego końca rogu dolnego komory bocznej. Kompleks podstawno-boczny obejmuje jądra boczne, podstawne i dodatkowe podstawne, a funkcjonalnie odrębną grupę stanowią jądro środkowe, przyśrodkowe oraz okolice korowe. Komórki wtrącone, położone między większymi grupami, uczestniczą w hamowaniu przepływu informacji. Cały zespół zawiera różne typy komórek i nie jest jednorodnym „ośrodkiem strachu”.",
+    "function": "Uczy związku bodźców z biologicznie istotnymi następstwami, zarówno awersyjnymi, jak i nagradzającymi. Wspiera rozpoznawanie znaczenia społecznego, kierowanie uwagi i modulowanie utrwalania wspomnień pod wpływem pobudzenia. Kompleks podstawno-boczny integruje informacje czuciowe i kontekstowe; wyjścia środkowe i przyśrodkowe silniej łączą ocenę sytuacji z odpowiedzią autonomiczną i zachowaniem. Uczenie wygaszania oznacza powstanie nowego, zależnego od kontekstu uczenia bezpieczeństwa, a nie proste skasowanie pierwotnego śladu. Subiektywne przeżycie lęku wymaga szerszych sieci korowych i podkorowych.",
+    "connections": "Docierają tu projekcje kory skroniowej, wyspy, wzgórza, hipokampa i kory przedczołowej. Prążek krańcowy biegnie łukiem przy jądrze ogoniastym do okolic przegrody i podwzgórza, a brzuszna droga migdałowa prowadzi krócej przez podstawę przodomózgowia. Wyjścia do podwzgórza, istoty szarej okołowodociągowej i pnia mózgu wpływają na reakcje autonomiczne, czujność i zachowania obronne. Połączenia z prążkowiem brzusznym nadają uczeniu znaczenie motywacyjne; współpraca z hipokampem dostarcza kontekstu, a połączenia z vmPFC uczestniczą w regulacji zależnej od warunków. Kierunek wpływu zależy od konkretnego jądra i pośrednich interneuronów.",
+    "clinical": "Uszkodzenia obustronne mogą utrudniać rozpoznawanie sygnałów zagrożenia i uczenie awersyjne. Rozległe obustronne uszkodzenia przednich płatów skroniowych mogą dawać elementy zespołu Klüvera–Bucy’ego; nie jest to czysty test funkcji pojedynczego jądra. Napady skroniowe mogą obejmować nagły lęk i objawy autonomiczne. Różnice reaktywności migdałowatej opisywane w badaniach zaburzeń lękowych są wynikami grupowymi i nie stanowią samodzielnego biomarkera.",
+    "laterality": "Oba zespoły uczestniczą w przetwarzaniu emocjonalnym; doniesienia o różnicach czasowych i materiałowych między stronami nie pozwalają na prosty podział emocji na lewą i prawą półkulę.",
+    "limitations": "Etykieta ASEG nie rozdziela jąder. Pobudzenie BOLD nie rozstrzyga, czy struktura była przyczyną emocji, jej skutkiem czy elementem uwagi. Lokalizacja objawu wymaga oceny całej sieci i kontekstu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 23–24, 29–31"
+      },
+      {
+        "sourceId": "deep-web-amygdala-neuroscience-online",
+        "locator": "Podział jąder, wyjścia autonomiczne i uczenie emocjonalne"
+      }
+    ],
+    "relatedCircuitIds": [
+      "amygdala-output",
+      "fear-extinction",
+      "hpa",
+      "mesolimbic"
+    ]
+  },
+  {
+    "id": "functional-striatum",
+    "names": {
+      "pl": "Prążkowie",
+      "en": "Striatum",
+      "lat": "Corpus striatum (sensu functionali)"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "striatum"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "W ujęciu funkcjonalnym prążkowie grzbietowe obejmuje jądro ogoniaste i skorupę, a brzuszne m.in. jądro półleżące i obszary ich brzusznego pogranicza. Historyczne pojęcie „ciała prążkowanego” bywało szersze i obejmowało gałkę bladą; w opisie współczesnych obwodów trzeba te terminy rozdzielać. Dominują neurony projekcyjne kolczyste średniej wielkości, uwalniające GABA. Lokalne interneurony GABA-ergiczne i duże interneurony cholinergiczne modulują czas oraz selektywność odpowiedzi. Mozaika striosomów i macierzy przecina prosty podział na odrębne jądra.",
+    "function": "Prążkowie łączy kontekst, sygnały sensoryczne, cele i wcześniejsze wzmocnienia z wyborem działania. Uczestniczy w nauce umiejętności, tworzeniu nawyków, motywacji i zmianie strategii. Terytoria czuciowo-ruchowe, asocjacyjne i limbiczne tworzą częściowo równoległe, ale komunikujące się obwody. Działanie dopaminy zależy od receptorów, czasu uwolnienia oraz aktywności wejść korowych. Dopamina nie jest tożsama z przyjemnością, a aktywność całego prążkowia nie ma jednego znaku pobudzenia lub hamowania.",
+    "connections": "Kora i wybrane jądra wzgórza dostarczają wejścia glutaminergicznego; SNc i VTA dopaminergicznego. W modelu grzbietowym neurony drogi bezpośredniej hamują GPi/SNr, co może odhamować wybrane wyjścia wzgórzowe i pniowe. Droga pośrednia biegnie przez GPe i STN, modulując te same wyjścia. Droga hiperbezpośrednia omija prążkowie na odcinku kora–STN. Oba główne zespoły neuronów mogą aktywować się podczas tego samego działania; opozycja „ruch włączony/wyłączony” jest modelem dydaktycznym. W prążkowiu brzusznym organizacja projekcji do gałki brzusznej i śródmózgowia nie odpowiada idealnie schematowi grzbietowemu.",
+    "clinical": "W chorobie Huntingtona degeneracja prążkowia współtworzy zaburzenia ruchowe, poznawcze i behawioralne. Niedobór dopaminy w obwodach czuciowo-ruchowych jest ważny w parkinsonizmie. Zaburzenia wyboru i utrwalania działań są badane w uzależnieniach oraz zachowaniach kompulsyjnych, lecz rozpoznania tych zaburzeń nie można odczytać z objętości czy aktywacji prążkowia. Ogniskowe uszkodzenie może zaburzać ruch, motywację lub kontrolę wykonawczą w zależności od terytorium.",
+    "laterality": "Pętle korowo-prążkowiowo-wzgórzowe pozostają przeważnie w obrębie jednej półkuli; efekt ruchowy dotyczy zwykle przeciwnej połowy ciała poprzez skrzyżowane układy wykonawcze.",
+    "limitations": "Karta funkcjonalna nie ma jednej odpowiadającej jej maski. Należy odwoływać się do oddzielnych etykiet ogoniastego, skorupy i jądra półleżącego. Funkcji prążkowia nie należy sumować z nimi jako niezależnych struktur.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 23–24, 51–53"
+      },
+      {
+        "sourceId": "deep-web-basal-ganglia-neuroscience-online",
+        "locator": "Weryfikacja wejść i wyjść oraz ograniczeń uproszczonego modelu"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-indirect",
+      "nigrostriatal"
+    ]
+  },
+  {
+    "id": "deep-caudate",
+    "names": {
+      "pl": "Jądro ogoniaste",
+      "en": "Caudate nucleus",
+      "lat": "Nucleus caudatus"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Caudate",
+      "Right-Caudate"
+    ],
+    "projectStructureIds": [
+      "caudate"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Jądro ogoniaste jest częścią prążkowia grzbietowego. Jego głowa leży przy rogu przednim komory bocznej, trzon biegnie wzdłuż części środkowej, a ogon zawija do płata skroniowego i kończy się w pobliżu ciała migdałowatego. Od skorupy oddzielają je pęczki torebki wewnętrznej, między którymi zachowują się mosty istoty szarej. W części brzusznej ogoniaste i skorupa przechodzą w prążkowie brzuszne. Podział na głowę, trzon i ogon ma znaczenie orientacyjne; terytoria połączeń nie pokrywają się z nim bez reszty.",
+    "function": "Silnie uczestniczy w obwodach asocjacyjnych: uczeniu związku działania z wynikiem, doborze strategii i aktualizowaniu reguł. Poszczególne sektory integrują informacje przedczołowe, ciemieniowe i skroniowe. Obwody okoruchowe pomagają wybierać cele sakkad i ograniczać reakcje niepasujące do zadania. Ogon ma rozbudowane powiązania z przetwarzaniem wzrokowym i utrwalonym znaczeniem bodźców. Podział „ogoniaste poznawcze, skorupa ruchowa” opisuje gradient dominujących wejść, a nie bezwzględną granicę funkcji. Przy uczeniu na podstawie informacji zwrotnej znaczenie ma nie tylko obecna odpowiedź, lecz także przewidywany skutek i możliwość zmiany strategii. Z tego powodu zaburzenie pętli może ujawniać się dopiero w zadaniu wymagającym elastyczności, mimo zachowania prostych, automatycznych czynności.",
+    "connections": "Pobudzające włókna korowo-prążkowiowe i wzgórzowo-prążkowiowe zbiegają się na neuronach GABA-ergicznych. Projekcja z części zbitej istoty czarnej moduluje plastyczność oraz responsywność. Wyjścia do GPi/SNr i GPe włączają jądro do dróg bezpośredniej i pośredniej. Część okoruchowa wpływa przez SNr na wzgórek górny, a część asocjacyjna wraca przez wzgórze do kory przedczołowej. Torebka wewnętrzna leżąca tuż obok przewodzi wiele innych dróg; objawy uszkodzenia pogranicza nie muszą pochodzić z ogoniastego.",
+    "clinical": "Ognisko w głowie może dawać apatię, spowolnienie, zaburzenie strategii i perseweracje, czasem rozhamowanie. Współistnienie niedowładu sugeruje ocenę sąsiednich włókien rzutowych. Zanik ogoniastego jest charakterystycznym, lecz niewystarczającym samodzielnie elementem obrazu niektórych chorób, zwłaszcza Huntingtona. Wyniki neuropsychologiczne i obrazowe trzeba wiązać z wywiadem oraz zakresem uszkodzenia.",
+    "laterality": "Obwody są obustronne. Lewostronne uszkodzenia mogą częściej wpływać na operacje językowe, prawostronne na przestrzenne, ale obserwacje te zależą od dominacji i rozległości ogniska.",
+    "limitations": "Maska nie rozdziela terytoriów asocjacyjnych i okoruchowych ani striosomów i macierzy. Stereotypowy objaw psychiczny nie lokalizuje się jednoznacznie do tego jądra.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 23–24, 51–53"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-indirect",
+      "nigrostriatal"
+    ]
+  },
+  {
+    "id": "deep-putamen",
+    "names": {
+      "pl": "Skorupa",
+      "en": "Putamen",
+      "lat": "Putamen"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Putamen",
+      "Right-Putamen"
+    ],
+    "projectStructureIds": [
+      "putamen"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Skorupa stanowi boczną część jądra soczewkowatego i część prążkowia grzbietowego. Przyśrodkowo sąsiaduje z gałką bladą, od której oddziela ją blaszka rdzenna zewnętrzna; bocznie leżą torebka zewnętrzna, przedmurze, torebka ostatnia i wyspa. Jej połączenia z jądrem ogoniastym przebiegają między włóknami torebki wewnętrznej. Komórki projekcyjne są głównie GABA-ergiczne, a lokalne interneurony regulują pobudliwość i czasowanie. Przednie i tylne obszary skorupy różnią się dominującymi partnerami korowymi.",
+    "function": "Szczególnie istotna jest w organizacji wyuczonych działań ruchowych, automatyzacji sekwencji i powiązaniu informacji czuciowej z ruchem. Tylno-boczne terytoria silniej uczestniczą w pętlach czuciowo-ruchowych, przednie w bardziej asocjacyjnym sterowaniu zachowaniem. Skorupa pomaga dobierać i skalować działanie w aktualnej sytuacji; nie generuje bezpośrednio skurczu mięśnia. Uczenie proceduralne jest wynikiem plastyczności całej pętli z korą, wzgórzem i śródmózgowiem, a nie pojedynczego „zapisu nawyku” w tej strukturze.",
+    "connections": "Otrzymuje glutaminergiczne projekcje z M1, obszarów przedruchowych, dodatkowego pola ruchowego i kory somatosensorycznej, a także wejścia wzgórzowe. Dopamina z SNc moduluje neurony dróg bezpośredniej i pośredniej. Wyjście biegnie do GPi/SNr oraz GPe; przez wzgórze obwód powraca do kory ruchowej. Uporządkowanie somatotopowe jest częściowo zachowane, ale reprezentacje i połączenia nakładają się. Połączenia z przednią korą uczestniczą również w zadaniach językowych i poznawczych wymagających sekwencjonowania.",
+    "clinical": "Uszkodzenia mogą wywoływać zaburzenia ruchowe, w tym dystonię lub spowolnienie, zależnie od zakresu i czasu po uszkodzeniu. Krwotok w okolicy skorupy często obejmuje także torebkę wewnętrzną; ciężki niedowład jest wtedy konsekwencją zajęcia dróg rzutowych. Ubytek dopaminowego unerwienia tylnej skorupy jest ważnym składnikiem patologii choroby Parkinsona. Sama różnica objętości nie ustala mechanizmu objawów ani rozpoznania. Uszkodzenie dopływu czuciowego do pętli może utrudnić poprawne skalowanie ruchu nawet bez całkowitego ubytku siły. Ocena kliniczna powinna zatem rozdzielać szybkość, amplitudę, automatyzm, precyzję i obecność ruchów mimowolnych, ponieważ odpowiadają one różnym właściwościom sieci.",
+    "laterality": "Każda skorupa jest połączona głównie z korą tej samej półkuli; objawy ruchowe wynikające z zaburzenia pętli często dominują po przeciwnej stronie ciała.",
+    "limitations": "Nie należy utożsamiać całej skorupy z funkcją wyłącznie ruchową. ASEG nie pokazuje neuroprzekaźników, receptorów ani terytoriów funkcjonalnych.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 23–24, 51–53"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-indirect",
+      "nigrostriatal"
+    ]
+  },
+  {
+    "id": "deep-pallidum",
+    "names": {
+      "pl": "Gałka blada",
+      "en": "Globus pallidus",
+      "lat": "Globus pallidus"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Pallidum",
+      "Right-Pallidum"
+    ],
+    "projectStructureIds": [
+      "globus-pallidus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Gałka blada stanowi przyśrodkową część jądra soczewkowatego, pomiędzy skorupą a torebką wewnętrzną. Blaszka rdzenna wewnętrzna rozdziela segment zewnętrzny GPe i wewnętrzny GPi. Segmenty różnią się połączeniami mimo podobnego obrazu makroskopowego. Brzuszna gałka blada, powiązana z prążkowiem brzusznym, stanowi odrębne pojęcie funkcjonalne i nie jest automatycznie równoważna całej etykiecie Pallidum. Liczne zmielinizowane włókna nadają strukturze stosunkowo jasny wygląd.",
+    "function": "GPi jest ważnym wyjściem jąder podstawy i utrzymuje toniczną aktywność hamującą wobec odbiorców we wzgórzu i pniu. Zmiany tego hamowania pomagają selekcjonować oraz skalować zachowania. GPe uczestniczy w rozbudowanej regulacji sieci, w tym pętli ze STN; nie jest biernym przekaźnikiem jednego szlaku. Poza domeną ruchową istnieją terytoria asocjacyjne i limbiczne. Klinicznie istotne są nie tylko średnia częstość wyładowań, ale również ich rytm, synchronizacja i relacja do zdarzeń.",
+    "connections": "Prążkowie wysyła hamujące projekcje do obu segmentów. STN dostarcza pobudzających projekcji glutaminergicznych. GPe hamuje STN i inne elementy sieci; GPi wysyła głównie projekcje GABA-ergiczne do wzgórza oraz celów pniowych. Włókna gałkowo-wzgórzowe biegną m.in. pętlą soczewkową i pęczkiem soczewkowym, łącząc się w obrębie pól podwzgórzowych Forela. Z kory sygnał może dotrzeć do STN drogą hiperbezpośrednią i szybko zmienić wyjście GPi. Funkcjonalnym partnerem GPi jako wyjścia jest część siatkowata istoty czarnej.",
+    "clinical": "Uszkodzenia obustronne mogą prowadzić do zaburzeń ruchowych i motywacyjnych; gałka blada jest wrażliwa na część zatruć i stanów niedotlenienia. Dystonia i parkinsonizm wiążą się z nieprawidłową czynnością szerszych obwodów, w których GPi jest istotnym węzłem. Zmiany w tej okolicy mogą także wynikać z chorób metabolicznych lub zwyrodnieniowych. Obraz radiologiczny wymaga interpretacji z etiologią, a nie wyłącznie z modelem „nadmiernego hamowania”.",
+    "laterality": "Pętle powracają głównie do kory tej samej półkuli; ich wpływ na kończyny jest zwykle przeciwstronny. Kontrola postawy i osi ciała obejmuje również połączenia obustronne.",
+    "limitations": "ASEG Pallidum nie rozdziela GPi i GPe. Termin „toniczne hamowanie ruchu” jest skrótem: hamowane są określone neurony odbiorcze, a efekt zachowania zależy od kontekstu całej sieci.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 23–24, 51–53"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-hyperdirect",
+      "basal-indirect"
+    ]
+  },
+  {
+    "id": "deep-accumbens",
+    "names": {
+      "pl": "Jądro półleżące",
+      "en": "Nucleus accumbens",
+      "lat": "Nucleus accumbens"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-Accumbens-area",
+      "Right-Accumbens-area"
+    ],
+    "projectStructureIds": [
+      "nucleus-accumbens"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Jądro półleżące leży w brzusznym połączeniu głowy jądra ogoniastego i skorupy, przy podstawie przodomózgowia. Jest częścią prążkowia brzusznego. Wyróżnia się rdzeń i powłokę, różniące się połączeniami oraz organizacją komórkową; rozdział ten jest wyraźniejszy w badaniach histologicznych i porównawczych niż w typowym obrazowaniu strukturalnym człowieka. Większość neuronów projekcyjnych jest GABA-ergiczna. Otaczające struktury, w tym gałka brzuszna i pole przegrody, nie są synonimami jądra półleżącego.",
+    "function": "Łączy wartość wyniku i wskazówek środowiskowych z gotowością do działania oraz kosztem wysiłku. Bierze udział w uczeniu przez wzmocnienie, kierowaniu motywacji i reagowaniu na bodźce wcześniej skojarzone z nagrodą lub zagrożeniem. „Chcenie”, uczenie wartości i przyjemność są rozdzielnymi procesami. Opis jądra jako ośrodka przyjemności pomija jego reakcje na bodźce awersyjne i rolę w organizacji działań. Funkcja zależy od podregionu, projekcji, neuroprzekaźnika i sytuacji. Wybór działania zależy od konkurujących celów. Ta sama nagroda może prowadzić do większego lub mniejszego zaangażowania zależnie od wysiłku, opóźnienia i stanu organizmu. Taki opis jest precyzyjniejszy niż przypisywanie aktywności jądra wyłącznie pozytywnej emocji.",
+    "connections": "Dopaminowe włókna VTA biegną szlakiem mezolimbicznym. Wejścia glutaminergiczne pochodzą z kory przedczołowej, hipokampa, ciała migdałowatego i wzgórza, dostarczając informacji o celu, kontekście i znaczeniu bodźca. GABA-ergiczne wyjścia do gałki brzusznej oraz śródmózgowia umożliwiają wpływ na dalsze pętle wzgórzowo-korowe i motoryczne. Powiązania powłoki z podwzgórzem oraz podstawą przodomózgowia łączą stan wewnętrzny z zachowaniem. W prążkowiu brzusznym prosty podział D1–droga bezpośrednia i D2–pośrednia wymaga większej ostrożności niż w modelu grzbietowym.",
+    "clinical": "Zmiany tych obwodów są istotne dla uzależnień, zaburzeń motywacji i anhedonii, ale żadna z tych kategorii klinicznych nie jest skutkiem izolowanej czynności jednego jądra. Silna odpowiedź na wskazówki związane z substancją może odzwierciedlać wyuczone znaczenie, a nie aktualną przyjemność. Ogniskowe uszkodzenia podstawy przodomózgowia mogą wpływać na inicjatywę i zachowanie; zwykle obejmują więcej niż jądro półleżące.",
+    "laterality": "Sieć działa obustronnie; nie istnieje wiarygodny uniwersalny podział na lewe jądro „nagrody” i prawe „kary”.",
+    "limitations": "Etykieta Accumbens-area nie odtwarza rdzenia i powłoki. Skojarzenie z zaburzeniem w badaniach grupowych nie jest narzędziem rozpoznawania go u konkretnej osoby.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 23–24, 29–31"
+      },
+      {
+        "sourceId": "deep-web-basal-ganglia-neuroscience-online",
+        "locator": "Położenie prążkowia brzusznego; ogólna organizacja obwodów"
+      }
+    ],
+    "relatedCircuitIds": [
+      "mesolimbic"
+    ]
+  },
+  {
+    "id": "functional-hypothalamus",
+    "names": {
+      "pl": "Podwzgórze",
+      "en": "Hypothalamus",
+      "lat": "Hypothalamus"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "hypothalamus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Podwzgórze leży poniżej bruzdy podwzgórzowej, tworząc dno i dolne części bocznych ścian komory III. Od strony podstawnej orientację wyznaczają skrzyżowanie wzrokowe, guz popielaty z wyniosłością pośrodkową i lejkiem oraz ciała suteczkowate. Wyróżnia się okolice przedwzrokową i przednią, guzową oraz tylną, a w osi przyśrodkowo-bocznej strefę okołokomorową, przyśrodkową i boczną. Małe jądra i rozproszone populacje komórek sąsiadują z przechodzącymi pęczkami, dlatego jest to struktura trudna do wyodrębnienia w rutynowym MRI. Przysadka pozostaje z nim ściśle związana, ale jest odrębnym narządem.",
+    "function": "Integruje równowagę wodno-elektrolitową, temperaturę, stan energetyczny, rytmy dobowe, rozmnażanie, stres i czuwanie. Jądro nadskrzyżowaniowe synchronizuje rytmy z cyklem światło–ciemność. Neurony wielkokomórkowe jądra nadwzrokowego i przykomorowego wytwarzają wazopresynę i oksytocynę: przypisanie wyłącznie ADH pierwszemu, a oksytocyny drugiemu jest niepoprawnym uproszczeniem. Drobne neurony PVN regulują m.in. oś CRH–ACTH–kortyzol i autonomiczną odpowiedź stresową. Jądro łukowate integruje sygnały metaboliczne i hormonalne; jego neurony dopaminergiczne regulują prolaktynę. Okolica przedwzrokowa uczestniczy w termoregulacji i śnie, a neurony oreksynowe okolicy bocznej stabilizują czuwanie. Jądro guzowo-suteczkowate jest źródłem histaminowej neuromodulacji. Ciała suteczkowate uczestniczą w sieci pamięci. Kontrola jedzenia jest rozproszona; dawne etykiety pojedynczego „ośrodka głodu” i „sytości” nie opisują pełnego mechanizmu. Okolica brzuszno-boczna przedwzrokowa VLPO zawiera komórki GABA-ergiczne i galaninergiczne sprzyjające snu przez hamowanie układów pobudzenia. Jądra grzbietowo-przyśrodkowe i brzuszno-przyśrodkowe uczestniczą w integracji metabolicznej, autonomicznej i zachowaniowej, nie są jedynie oddzielnymi przełącznikami głodu i sytości.",
+    "connections": "Droga siatkówkowo-podwzgórzowa dostarcza informacji o oświetleniu do SCN. Jądro pasma samotnego i okolice przyramienne przekazują sygnały trzewne. Hipokamp łączy się przez sklepienie, ciało migdałowate przez prążek krańcowy i drogę migdałową brzuszną, a pień i przodomózgowie przez pęczek przyśrodkowy przodomózgowia. Pęczek podłużny grzbietowy i drogi podwzgórzowo-rdzeniowe umożliwiają wpływ na układ autonomiczny. Hormony uwalniające i hamujące trafiają z wyniosłości pośrodkowej przez krążenie wrotne do przedniego płata przysadki; ADH i oksytocyna są transportowane aksonami do tylnego płata. Są to dwa różne sposoby przekazu. Oś stresowa obejmuje dalszą drogę hormonalną we krwi i sprzężenie zwrotne glikokortykosteroidów.",
+    "clinical": "Uszkodzenia mogą powodować zaburzenia pragnienia, gospodarki wodnej, temperatury, snu, łaknienia, wzrastania i osi przysadkowych. Niedobór wazopresyny może wywołać ośrodkową moczówkę prostą. Utrata neuronów oreksynowych jest istotna w narkolepsji typu 1. Uszkodzenie ciał suteczkowatych i powiązanych dróg może współtworzyć zespół amnestyczny. Zmiany okolicy nadsiodłowej mogą jednocześnie uciskać skrzyżowanie wzrokowe, dlatego współistnienie zaburzeń endokrynnych i pola widzenia ma znaczenie lokalizacyjne.",
+    "laterality": "Jądra są zwykle parzyste i silnie współpracują obustronnie. Dla większości podstawowych funkcji homeostatycznych nie stosuje się prostego podziału na lewą i prawą stronę.",
+    "limitations": "Karta hypothalamus nie jest równoważna masce VentralDC. Projekt nie ma osobnych objętości wymienionych jąder. Wyniki doświadczeń na gryzoniach, zwłaszcza dotyczące pojedynczych populacji neuronów, nie przekładają się bezpośrednio na objaw u człowieka.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 27–31"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 162 (tablica 145)"
+      },
+      {
+        "sourceId": "deep-web-hypothalamic-organization-neuroscience-online",
+        "locator": "Strefy, jądra, połączenia i odrębność funkcji homeostatycznych"
+      },
+      {
+        "sourceId": "deep-web-hypothalamic-control-of-pituitary-hormone",
+        "locator": "Rozdział drogi wrotnej i aksonalnej oraz populacje ADH/oksytocyny"
+      },
+      {
+        "sourceId": "deep-web-17943086",
+        "locator": "Badanie pierwotne na myszach: przyczynowy udział neuronów oreksynowych w przejściu do czuwania"
+      }
+    ],
+    "relatedCircuitIds": [
+      "amygdala-output",
+      "circadian",
+      "histaminergic",
+      "hpa",
+      "noradrenergic-visceral",
+      "orexin",
+      "papez",
+      "sleep-gaba",
+      "tuberoinfundibular"
+    ]
+  },
+  {
+    "id": "deep-ventral-diencephalon",
+    "names": {
+      "pl": "Brzuszna okolica międzymózgowia — etykieta segmentacyjna",
+      "en": "Ventral diencephalon segmentation label",
+      "lat": "Pars ventralis diencephali (regio segmentationis)"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [
+      "Left-VentralDC",
+      "Right-VentralDC"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "VentralDC jest zbiorczą etykietą segmentacji anatomicznej, a nie nazwą pojedynczego jądra, komory ani jednorodnej jednostki funkcjonalnej. Protokoły wywodzące się z parcellacji CMA/Neuromorphometrics obejmują pod tym określeniem podwzgórze, ciała suteczkowate, okolice niskowzgórza oraz części graniczące ze śródmózgowiem i zawzgórzem. Zależnie od protokołu w złożony region mogą wchodzić istota czarna, jądro czerwienne, ciała kolankowate i przebiegająca istota biała. Nazwa nie oznacza więc czystego embrionalnego podziału międzymózgowia.",
+    "function": "Nie ma jednej funkcji VentralDC. Poszczególne składniki wiążą się z homeostazą, endokrynologią, pamięcią, selekcją działań, neuromodulacją oraz przekazem wzrokowym i słuchowym. Jest to funkcjonalnie heterogeniczny kontener atlasowy. Opis jego roli musi odsyłać do osobnych haseł podwzgórza, STN, istoty czarnej i wzgórza; nie wolno przypisywać całej masce funkcji jednego z tych elementów.",
+    "connections": "W regionie i jego sąsiedztwie biegną m.in. sklepienie, drogi wzrokowe, włókna gałkowo-wzgórzowe i szlaki łączące podwzgórze z pniem. Zbiorcza powierzchnia 3D nie rozdziela, które z tych włókien znalazły się w granicach zastosowanej segmentacji. Wyjaśnianie kierunku przekazu wymaga wskazania konkretnej struktury i protokołu, a nie narysowania jednego połączenia od VentralDC.",
+    "clinical": "Zmiana objętości lub sygnału tego regionu jest nieswoista. Może odzwierciedlać różne składowe i błędy granic. Nie uprawnia do rozpoznania choroby podwzgórza, parkinsonizmu ani patologii komór. Objawy hormonalne, okoruchowe, ruchowe lub pamięciowe wymagają odrębnej lokalizacji.",
+    "laterality": "Istnieją oddzielne etykiety lewej i prawej strony, ale ich niewielka asymetria nie wskazuje sama w sobie lateralizacji funkcjonalnej.",
+    "limitations": "W aktualnych danych projektu VentralDC przypisano kind=ventricle. Jest to błąd klasyfikacji merytorycznej: region zawiera tkankę nerwową i nie jest przestrzenią płynową. Niniejszy dokument odnotowuje problem, nie zmieniając kodu. Dokładną zawartość maski trzeba potwierdzić w dokumentacji wykorzystanego atlasu i obrazie źródłowym. Przy późniejszej integracji wiedzy z interfejsem bezpiecznym opisem zakresu jest „region zbiorczy; zawiera kilka układów”, z odnośnikami do nazw anatomicznych. Wyświetlenie karty podwzgórza po wybraniu VentralDC powinno być oznaczone jako relacja części do całości. W przeciwnym razie użytkownik mógłby błędnie uznać całą kolorową powierzchnię za podwzgórze i przenieść na nią funkcje hormonalne.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 25–29, 35–36"
+      },
+      {
+        "sourceId": "deep-web-neuromorphometrics-segmentation-ventral-diencephalon",
+        "locator": "Pierwotna dokumentacja protokołu: złożony region, orientacyjne składniki oraz granice; nie dowodzi identyczności każdego wariantu ASEG"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-subthalamic-nucleus",
+    "names": {
+      "pl": "Jądro niskowzgórzowe",
+      "en": "Subthalamic nucleus",
+      "lat": "Nucleus subthalamicus"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "STN to niewielkie parzyste jądro poniżej wzgórza, przyśrodkowo od torebki wewnętrznej i powyżej części istoty czarnej. Należy topograficznie do niskowzgórza, a funkcjonalnie do sieci jąder podstawy. Nie jest jądrem podwzgórza. W pobliżu leżą strefa niepewna i pola włókien Forela. Terytoria grzbietowo-boczne są silniej związane z ruchem, a pozostałe z funkcjami asocjacyjnymi i limbicznymi; granice mają charakter gradientów.",
+    "function": "STN dostarcza pobudzającego wpływu na wyjścia jąder podstawy. Uczestniczy w ograniczaniu reakcji, zmianie progu decyzji i dostosowaniu zachowania do konfliktu lub nieoczekiwanego zdarzenia. W klasycznym modelu pośrednim zwiększa hamowanie wzgórza przez GPi/SNr, a przez drogę hiperbezpośrednią pomaga szybko zmieniać wyjście sieci. Nie działa jako pojedynczy wyłącznik ruchu: aktywność zależy od terytorium i równoległego przebiegu działania. W modelu obwodowym hamowanie GPe przez prążkowie odhamowuje STN; jego większe pobudzenie GPi/SNr może zwiększyć hamowanie określonych celów. Jest to rozumowanie o znakach kolejnych synaps, nie dowód, że aktywność każdego neuronu zmienia się identycznie. Krótkie sygnały zatrzymania, utrzymywanie progu reakcji i dłuższe zmiany stanu ruchowego mogą angażować nakładające się populacje. Wyjaśnianie patologii wymaga także uwzględnienia synchronizacji i połączeń zwrotnych.",
+    "connections": "Otrzymuje hamujące projekcje GABA-ergiczne z GPe oraz pobudzające glutaminergiczne z kory. Wysyła glutaminergiczne włókna do GPi, SNr i GPe, tworząc pętle zwrotne o znaczeniu dla rytmiki jąder podstawy. Droga hiperbezpośrednia ma schemat kora → STN → GPi/SNr; klasyczna pośrednia kora → prążkowie → GPe → STN → GPi/SNr. Sąsiadujące włókna torebki wewnętrznej i szlaki gałkowo-wzgórzowe pozostają odrębnymi strukturami.",
+    "clinical": "Uszkodzenie może wywołać przeciwstronny hemibalizm, ale taki obraz występuje również przy uszkodzeniach innych węzłów sieci. Nieprawidłowa synchronizacja pętli STN–GPe jest badana w parkinsonizmie. Zaburzenia funkcji poznawczych lub impulsywności w kontekście tej okolicy nie muszą wynikać z uszkodzenia całego STN; znaczenie ma terytorium i sąsiednie drogi.",
+    "laterality": "Efekty ruchowe jednostronnego uszkodzenia dotyczą zazwyczaj przeciwnej strony ciała.",
+    "limitations": "Hasło uzupełniające bez osobnej maski i karty w obecnym projekcie. Nie wolno wykorzystywać VentralDC jako swoistej miary STN.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 27, 51–53, 89"
+      }
+    ],
+    "supplementary": true,
+    "relatedCircuitIds": [
+      "basal-indirect",
+      "basal-hyperdirect"
+    ]
+  },
+  {
+    "id": "deep-brainstem",
+    "names": {
+      "pl": "Pień mózgu",
+      "en": "Brainstem",
+      "lat": "Truncus encephali"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [
+      "Brain-Stem"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Pień mózgu obejmuje śródmózgowie, most i rdzeń przedłużony. Łączy półkule, międzymózgowie, móżdżek i rdzeń kręgowy. Zawiera skupiska neuronów, drogi wstępujące i zstępujące oraz sieci tworu siatkowatego. Śródmózgowie ma pokrywę ze wzgórkami górnymi i dolnymi, nakrywkę wokół wodociągu oraz odnogi mózgu. W moście odróżnia się podstawę z jądrami mostu i włóknami poprzecznymi od nakrywki. Rdzeń przedłużony zawiera piramidy, oliwki i jądra sznurów tylnych. Dół równoległoboczny tworzy dno komory IV; jego wyniosłości są orientacyjnymi wskaźnikami głębiej położonych jąder.",
+    "function": "Śródmózgowie integruje ruchy oczu, orientowanie na bodźce, modulację bólu i funkcje dopaminergiczne. Most uczestniczy w przekazie korowo-móżdżkowym, regulacji spojrzenia poziomego, mimice, żuciu i funkcjach snu. Rdzeń przedłużony integruje odruchy trzewne, oddychanie, kontrolę krążenia oraz połykanie i fonację. Twór siatkowaty w całym pniu współtworzy czuwanie i regulację postawy. Żadna z tych funkcji nie jest ograniczona do jednego punktu: automatyczne oddychanie wynika ze współpracy wielu populacji mostowo-rdzeniowych i kontroli nadrzędnej.",
+    "connections": "W śródmózgowiu leżą jądra III i IV, przywspółczulna składowa okoruchowa oraz część układu trójdzielnego odpowiedzialna za propriocepcję. Most zawiera jądra ruchowe i główne czuciowe V, jądro VI, jądro VII i okolice jąder VIII przy granicy mostowo-rdzeniowej. W rdzeniu przedłużonym leżą jądro XII, grzbietowe X, jądro dwuznaczne związane głównie z IX/X oraz jądro pasma samotnego zbierające informację trzewną i smakową z VII/IX/X. Jądro i pasmo rdzeniowe V schodzą przez most i rdzeń przedłużony do górnego rdzenia szyjnego. Główne jądro ruchowe XI znajduje się w rdzeniu szyjnym, dlatego przypisanie całego XI do opuszki jest błędne. Przebiegają tędy drogi korowo-rdzeniowe, korowo-jądrowe, wstęga przyśrodkowa, układ przednio-boczny i drogi słuchowe. Pęczek podłużny przyśrodkowy koordynuje jądra okoruchowe z przedsionkowymi. Konary móżdżku stanowią trzy pary wejść i wyjść do móżdżku.",
+    "clinical": "Uszkodzenie jednostronne może dawać zespół naprzemienny: objawy nerwu czaszkowego po stronie ogniska i zaburzenia ruchu lub czucia po stronie przeciwnej. Ognisko przyśrodkowe rdzenia przedłużonego może łączyć uszkodzenie XII z przeciwstronnym niedowładem i zaburzeniem czucia głębokiego; boczne może powodować dysfagię, chrypkę, ataksję oraz rozszczepione zaburzenia czucia twarzy i ciała. Uszkodzenie brzusznego mostu może wywołać zespół zamknięcia przy zachowanej świadomości, jeżeli sieci czuwania pozostają oszczędzone. Obustronne uszkodzenia nakrywki mogą znacznie zaburzać przytomność. Drobne ognisko daje czasem złożony obraz przez gęste upakowanie dróg.",
+    "laterality": "Strona objawów zależy od poziomu skrzyżowania danej drogi. Włókna ruchowe w większości krzyżują się w dolnym rdzeniu przedłużonym, włókna sznurów tylnych po przełączeniu w jądrach smukłym i klinowatym, a układ bólu i temperatury już w rdzeniu kręgowym. Jądrowe uszkodzenie IV jest szczególnym przypadkiem ze względu na skrzyżowanie nerwu.",
+    "limitations": "Jedna etykieta Brain-Stem nie wskazuje poziomu, jąder ani dróg. Schemat ma charakter anatomiczny; nie służy do rozpoznawania zespołu na podstawie jednego objawu. Jądra neuromodulacyjne omówiono dodatkowo w osobnych kartach.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 33–36, 51"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 130–131 (tablice 113–114)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-substantia-nigra",
+    "names": {
+      "pl": "Istota czarna",
+      "en": "Substantia nigra",
+      "lat": "Substantia nigra"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "substantia-nigra"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Istota czarna leży w śródmózgowiu, pomiędzy odnogą mózgu a głębszymi częściami nakrywki. Wyróżnia się część zbitą SNc, bogatą w neurony dopaminergiczne zawierające neuromelaninę, oraz część siatkowatą SNr z neuronami projekcyjnymi głównie GABA-ergicznymi. Nazwa jednej struktury anatomicznej obejmuje zatem dwa bardzo różne elementy obwodów. Ich granice i subpopulacje nie są widoczne w zbiorczej powierzchni pnia lub VentralDC. Określenie „czarna” odnosi się do pigmentu, a nie do znaku oddziaływania synaptycznego. Część zbita i siatkowata powinny mieć w opisie obwodów osobne role, nawet jeśli aplikacja pokazuje je jako jedną kartę.",
+    "function": "SNc moduluje uczenie i wykonywanie działań przez dopaminowy wpływ na prążkowie. Sygnały części neuronów zależą od oczekiwanego i uzyskanego wyniku, ale nie wszystkie komórki kodują ten sam rodzaj błędu przewidywania. SNr jest wyjściem jąder podstawy, funkcjonalnie podobnym do GPi. Jej toniczne hamowanie celów wzgórzowych i pniowych pomaga regulować wybór odpowiedzi, szczególnie również sakkad. Dopaminergicznej modulacji SNc nie wolno utożsamiać ze znakiem GABA-ergicznego wyjścia SNr.",
+    "connections": "Droga czarno-prążkowiowa prowadzi głównie z SNc do prążkowia grzbietowego, w tym jądra ogoniastego i skorupy. Prążkowie zwrotnie hamuje obszary istoty czarnej; STN dostarcza projekcji pobudzających. SNr wysyła hamujące włókna do wzgórza, wzgórka górnego i innych celów pniowych. Częściowe zmniejszenie aktywności SNr może odhamować określony cel sakkady. Cała organizacja jest topograficzna i obejmuje domeny ruchowe oraz asocjacyjne.",
+    "clinical": "Utrata neuronów SNc i dopaminy w prążkowiu jest kluczowym mechanizmem zespołu ruchowego choroby Parkinsona, jednak choroba obejmuje także inne układy i objawy pozaruchowe. Samo zmniejszenie sygnału czy objętości okolicy śródmózgowia nie rozpoznaje choroby. Uszkodzenia SNr i sąsiednich dróg mogą zaburzać ruchy oczu i kontrolę ruchową. Zrozumienie różnicy SNc/SNr zapobiega mylnemu wnioskowi, że wszystkie komórki istoty czarnej produkują dopaminę.",
+    "laterality": "Projekcje do prążkowia są głównie po tej samej stronie; kliniczne zaburzenia kończyn mogą być bardziej nasilone przeciwstronnie względem dominującego uszkodzenia układu czarno-prążkowiowego.",
+    "limitations": "Karta funkcjonalna nie ma osobnej maski ASEG. Neuromelanina jest cechą części neuronów, nie wskaźnikiem całej funkcji jądra. Model dróg bezpośredniej i pośredniej nie wyjaśnia wszystkich objawów Parkinsona.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 24, 35–36, 51–53"
+      },
+      {
+        "sourceId": "deep-web-9054347",
+        "locator": "Pierwotne badania i model predykcji nagrody; ostrożne odniesienie do części neuronów dopaminowych"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-indirect",
+      "nigrostriatal"
+    ]
+  },
+  {
+    "id": "deep-vta",
+    "names": {
+      "pl": "Pole brzuszne nakrywki",
+      "en": "Ventral tegmental area",
+      "lat": "Area tegmentalis ventralis"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "vta"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "VTA leży w brzuszno-przyśrodkowej nakrywce śródmózgowia, przyśrodkowo od istoty czarnej. Obejmuje kilka skupisk komórek o różnych połączeniach. Znana populacja dopaminergiczna A10 współistnieje z neuronami GABA-ergicznymi i glutaminergicznymi; część komórek może współuwalniać przekaźniki. Obszar nie ma ostrej granicy widocznej na zwykłym MRI i nie odpowiada całej nakrywce.",
+    "function": "Uczestniczy w uczeniu wartości wyniku, motywacji, reagowaniu na nowość i dostosowaniu działania. U części neuronów dopaminowych fazowy sygnał odpowiada różnicy między wynikiem oczekiwanym i otrzymanym: wynik lepszy od oczekiwanego zwiększa aktywność, a pominięcie oczekiwanej nagrody może ją zmniejszać. Inne komórki kodują cechy bodźca, ruchu lub istotności. Neuronalne sygnały związane z unikaniem nieprzyjemnego wyniku również mogą wspierać uczenie. VTA nie jest pojedynczym ośrodkiem szczęścia. W uczeniu przewidywalna nagroda może wywoływać mniejszą odpowiedź niż niespodziewana, a sygnał może przenieść się na wcześniejszą wskazówkę. Brak dużej fazowej odpowiedzi na dobrze przewidziany wynik nie oznacza więc utraty zdolności odczuwania przyjemności. Użycie tego przykładu wymaga zaznaczenia, że opisuje wybrane neurony i warunki uczenia, nie całą aktywność VTA.",
+    "connections": "Szlak mezolimbiczny obejmuje projekcje do prążkowia brzusznego i innych struktur limbicznych, a mezokortykalny do kory przedczołowej. Liczne włókna biegną przez pęczek przyśrodkowy przodomózgowia. Wejścia pochodzą m.in. z podwzgórza, kory, gałki brzusznej oraz pnia. Uzdeczka boczna wpływa na część neuronów dopaminowych pośrednio przez GABA-ergiczne obszary nakrywki. Miejscowe obwody GABA regulują odpowiedź poszczególnych populacji; kierunku działania nie da się opisać jednym znakiem dla całego VTA.",
+    "clinical": "Plastyczność mezolimbiczna ma znaczenie w uzależnieniach i uczeniu reakcji na sygnały środowiskowe. Zaburzenia motywacji w depresji lub psychozie obejmują znacznie szersze sieci i nie mogą być wyjaśnione prostym „nadmiarem” albo „niedoborem” VTA. Badania optogenetyczne wskazują na udział wybranych projekcji w uczeniu wygaszania u zwierząt; nie stanowią bezpośredniego testu diagnostycznego człowieka.",
+    "laterality": "Projekcje mają przewagę ipsilateralną, ale działają w obustronnie połączonych sieciach. Nie ma uniwersalnej lateralizacji nagrody do jednej strony.",
+    "limitations": "Brak swoistej maski w projekcie. Podział mezolimbiczny/mezokortykalny opisuje cele projekcji, a nie dwa całkowicie rozdzielone i jednorodne zespoły komórek.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 35–36"
+      },
+      {
+        "sourceId": "deep-web-9054347",
+        "locator": "Podstawa modelu sygnału błędu przewidywania; nie wszystkie neurony VTA"
+      },
+      {
+        "sourceId": "deep-web-salinas-hern-ndez-i-wsp-extinction",
+        "locator": "Badanie pierwotne na myszach: rola sygnału pominiętej awersji w uczeniu wygaszania"
+      }
+    ],
+    "relatedCircuitIds": [
+      "habenula-lateral",
+      "mesocortical",
+      "mesolimbic"
+    ]
+  },
+  {
+    "id": "deep-locus-coeruleus",
+    "names": {
+      "pl": "Miejsce sinawe",
+      "en": "Locus coeruleus",
+      "lat": "Locus caeruleus"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "locus-coeruleus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Miejsce sinawe jest niewielkim parzystym skupiskiem neuronów w grzbietowo-bocznej części górnego mostu, przy dnie komory IV. Zawiera główną grupę noradrenergiczną A6. U człowieka obecność neuromelaniny nadaje mu charakterystyczne zabarwienie. Nie obejmuje wszystkich neuronów noradrenergicznych mózgu: inne grupy w rdzeniu przedłużonym mają istotne funkcje trzewne. Granice LC i sąsiedniej okolicy podsinawowej trzeba rozróżniać, zwłaszcza przy omawianiu snu REM.",
+    "function": "Moduluje pobudzenie, selektywność uwagi, reakcję na istotne lub nowe zdarzenie oraz utrwalanie pamięci. Aktywność toniczna wiąże się ze stanem organizmu, a odpowiedzi fazowe z wybranymi bodźcami i działaniem. W badaniu pierwotnym u makaków odpowiedzi LC były powiązane z bodźcami istotnymi dla zadania czujności. Nie oznacza to, że każda nowość automatycznie pobudza wszystkie neurony jednakowo. Noradrenalina działa przez różne receptory; zależnie od stężenia i odbiorcy może wzmacniać lub ograniczać określony przekaz.",
+    "connections": "Rozległe projekcje docierają do kory, wzgórza, hipokampa, móżdżku i rdzenia. Wejścia z kory przedczołowej, podwzgórza oraz pnia łączą cele zachowania z potrzebami homeostatycznymi. Wpływ na hipokamp i ciało migdałowate wiąże pobudzenie z plastycznością pamięci, a projekcje zstępujące uczestniczą w modulacji czucia i bólu. Pojedyncze komórki i podzespoły mają odmienne układy celów; rozległość projekcji nie oznacza całkowicie jednorodnego globalnego sygnału. Noradrenergiczna projekcja do kory zmienia jej reakcję na inne wejścia, zamiast przenosić treść konkretnego obrazu lub dźwięku. Rozróżnienie informacji sensorycznej od neuromodulacji jest kluczowe: LC może zmienić wagę przetwarzania, chociaż samo nie stanowi pierwszorzędowej drogi tego bodźca.",
+    "clinical": "Degenerację LC obserwuje się w chorobach neurodegeneracyjnych, a nieprawidłowości regulacji noradrenergicznej są badane w zaburzeniach uwagi, lęku i stresu. Żaden z tych stanów nie ma prostego rozpoznania na podstawie samej aktywności LC. Źrenica reaguje na wiele układów: jej szerokość nie jest bezpośrednim pomiarem wyładowań jądra ani swoistym wskaźnikiem stresu.",
+    "laterality": "Struktura jest obustronna, a jej wpływy rozległe. Strona ogniska nie przekłada się na prostą przeciwstronną reprezentację jednej funkcji poznawczej.",
+    "limitations": "Karta ma lokalizację orientacyjną bez osobnej segmentacji. Znaczna część szczegółowej fizjologii pochodzi z badań zwierzęcych; pomiary MRI i źrenicy u człowieka są wskaźnikami pośrednimi.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 35–36"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "s. 316, ryc. 13.31 (EPUB: obraz 335.jpg); s. 254, ryc. 11.33 (273.jpg)"
+      },
+      {
+        "sourceId": "deep-web-8027789",
+        "locator": "Pierwotna rejestracja aktywności LC u makaków podczas zadania uwagi"
+      },
+      {
+        "sourceId": "deep-web-26711118",
+        "locator": "Pierwotne badanie: korelacja LC i źrenicy z udziałem innych struktur"
+      }
+    ],
+    "relatedCircuitIds": [
+      "noradrenergic-ascending",
+      "orexin",
+      "pain-descending"
+    ]
+  },
+  {
+    "id": "deep-raphe-nuclei",
+    "names": {
+      "pl": "Jądra szwu",
+      "en": "Raphe nuclei",
+      "lat": "Nuclei raphes"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "raphe-nuclei"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Jądra szwu tworzą grupy komórek przy linii pośrodkowej śródmózgowia, mostu i rdzenia przedłużonego. Nie są jednym jądrem. Części rostralne obejmują m.in. jądro grzbietowe i pośrodkowe szwu, a kaudalne m.in. jądro wielkie, blade i zasłonięte szwu. Wiele komórek jest serotoninergicznych, ale obecne są też inne typy neuronów. Położenie przy wodociągu lub komorze IV nie czyni ich elementem płynu czy ściany komorowej w sensie funkcjonalnym.",
+    "function": "Różne populacje modulują stan czuwania, elastyczność zachowania, przetwarzanie następstw działania, ból i funkcje autonomiczne. Serotonina nie koduje jednego wymiaru „dobrego nastroju”. Jej skutek zależy od receptora, rodzaju komórki docelowej, projekcji i skali czasowej. Wiele neuronów zmienia aktywność wraz ze snem, ale istnieje znaczna heterogeniczność odpowiedzi. Wpływ jąder rostralnych na zachowanie i pamięć jest odmienny od zstępujących projekcji kaudalnych. Jedna projekcja może zmieniać reaktywność kory, inna hipokampa, a inna rdzenia. Również w obrębie jednego celu różne receptory serotoninowe działają na odmienne komórki. Z tego powodu znak „serotonina +” albo „serotonina −” na schemacie bez wskazania odbiorcy jest mylący; odpowiedniejsza jest etykieta modulacji.",
+    "connections": "Jądro grzbietowe wysyła liczne projekcje do kory i struktur podkorowych, a jądro pośrodkowe m.in. do układu hipokampowo-przegrodowego. Projekcje z dolniejszych jąder, w tym okolicy jądra wielkiego szwu, docierają do rdzenia i współtworzą układ zstępującej kontroli nocycepcji. Obszar brzuszno-przyśrodkowy rdzenia przedłużonego obejmuje zarówno komórki serotoninergiczne, jak i nieserotoninergiczne; nie jest tożsamy wyłącznie z jądrem szwu. Wpływ na rogi tylne może hamować lub ułatwiać przekazywanie bólu zależnie od warunków.",
+    "clinical": "Zaburzenia układów serotoninergicznych są istotne w badaniach nastroju, lęku, snu i przewlekłego bólu, jednak pojedynczy objaw nie wskazuje konkretnego jądra. Efekty działania substancji wpływających na serotoninę obejmują wiele projekcji i receptorów. Nie można z nich odwróconym wnioskowaniem wyprowadzać prostego, anatomicznego „niedoboru serotoniny” jako wyjaśnienia rozpoznania psychiatrycznego.",
+    "laterality": "Położenie pośrodkowe i obustronne projekcje sprzyjają rozległemu wpływowi. Lateralizacja pojedynczych połączeń nie daje uniwersalnej lateralizacji nastroju.",
+    "limitations": "Karta zbiorcza nie rozdziela jąder ani typów komórek. Źródła anatomiczne opisują układ szerzej niż funkcjonalne wskaźniki neuroobrazowania.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 24, 35–36"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "s. 254, ryc. 11.33 (EPUB: 273.jpg); s. 332, ryc. 14.8 (351.jpg)"
+      },
+      {
+        "sourceId": "deep-web-pain-modulation-neuroscience-online",
+        "locator": "Połączenia PAG–okolica szwu/RVM–rdzeń i modulacja bólu"
+      }
+    ],
+    "relatedCircuitIds": [
+      "pain-descending",
+      "serotonin-descending",
+      "serotonin-dorsal",
+      "serotonin-median"
+    ]
+  },
+  {
+    "id": "deep-pag",
+    "names": {
+      "pl": "Istota szara okołowodociągowa",
+      "en": "Periaqueductal gray",
+      "lat": "Substantia grisea periaqueductalis"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "pag"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "PAG otacza wodociąg mózgu w śródmózgowiu. Jest zespołem istoty szarej z organizacją kolumnową, a nie samym wodociągiem. Wyróżnia się okolice grzbietowo-przyśrodkową, grzbietowo-boczną, boczną i brzuszno-boczną, których połączenia oraz reakcje różnią się. W pobliżu przebiegają jądra i włókna okoruchowe oraz elementy jąder szwu; małe ognisko może obejmować kilka tych układów.",
+    "function": "Integruje nocycepcję, reakcje obronne, stan autonomiczny i zachowania konieczne do przetrwania. Uczestniczy w dostosowaniu oddechu, krążenia i aktywności ruchowej do zagrożenia. Wpływa na zstępującą regulację bólu, ale nie jest prostym wyłącznikiem czucia bólowego. Odpowiedzi zależą od kolumny, rodzaju zagrożenia i kontekstu. Współpracuje również z sieciami wokalizacji i kontroli czynności miednicznych. Istotne jest rozdzielenie uszkodzenia dopływu nocyceptywnego od zmiany jego modulacji. Osłabienie przekazu w układzie zstępującym może zmienić nasilenie lub tolerancję bólu, mimo że obwodowy receptor i droga wstępująca pozostają zachowane. Z kolei odpowiedź obronna obejmuje jednoczesną reorganizację ruchu, oddychania i krążenia. Taki wzorzec wymaga współdziałania PAG z pniem i podwzgórzem, a nie pojedynczej drogi bólowej.",
+    "connections": "Otrzymuje sygnały z podwzgórza, ciała migdałowatego, przyśrodkowej kory czołowej oraz dróg czuciowych. Przez połączenia z brzuszno-przyśrodkową okolicą rdzenia przedłużonego i innymi układami monoaminowymi może zmieniać transmisję w rogach tylnych rdzenia. Lokalne obwody GABA i receptory opioidowe regulują wyjście, m.in. przez odhamowanie wybranych neuronów. Projekcje do sieci mostowo-rdzeniowych łączą ocenę zagrożenia z odpowiedzią autonomiczną. Nie cały efekt PAG biegnie jednym łańcuchem serotoninergicznym.",
+    "clinical": "Okolica jest badana w kontekście bólu przewlekłego, odpowiedzi obronnych i zaburzeń autonomicznych. Ogniska śródmózgowia w sąsiedztwie PAG mogą współwystępować z zaburzeniami ruchów oczu lub wodogłowiem przez zajęcie wodociągu; objawy te nie są czystym testem PAG. Zmiana aktywności w badaniu czynnościowym nie określa jednoznacznie, czy układ hamuje, czy ułatwia ból.",
+    "laterality": "Organizacja jest obustronna wokół osi wodociągu. Zstępujące wpływy nie odpowiadają prostemu homunkulusowi przeciwnej strony ciała.",
+    "limitations": "Brak osobnej maski w projekcie. Kolumny są strukturami funkcjonalno-anatomicznymi o granicach wymagających metod dokładniejszych niż użyty model 3D. Interpretacja wymaga odróżnienia sąsiedniego jądra od przechodzącego pęczka.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 35–36"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "s. 332, ryc. 14.8 (EPUB: obraz 351.jpg)"
+      },
+      {
+        "sourceId": "deep-web-pain-modulation-neuroscience-online",
+        "locator": "Weryfikacja zstępującego układu przeciwbólowego i miejscowych mechanizmów odhamowania"
+      }
+    ],
+    "relatedCircuitIds": [
+      "amygdala-output",
+      "pain-descending"
+    ]
+  },
+  {
+    "id": "deep-cerebellar-cortex",
+    "names": {
+      "pl": "Kora móżdżku i organizacja móżdżku",
+      "en": "Cerebellar cortex and cerebellar organization",
+      "lat": "Cortex cerebelli"
+    },
+    "category": "cerebellum",
+    "projectRegionIds": [
+      "Left-Cerebellum-Cortex",
+      "Right-Cerebellum-Cortex"
+    ],
+    "projectStructureIds": [
+      "cerebellum"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Móżdżek zajmuje tylny dół czaszki. Dwie półkule łączy robak, a jego powierzchnia tworzy wąskie listki. Szczelina pierwsza oddziela płat przedni od tylnego, a tylno-boczna płat grudkowo-kłaczkowy. Podział poprzeczny na płaty różni się od podziału podłużnego na robak, strefę pośrednią i półkule boczne. Kora ma warstwę drobinową, warstwę komórek Purkinjego i ziarnistą. W istocie białej leżą jądra zębate, czopowate, kulkowate i wierzchu; czopowate i kulkowate razem określa się jako jądra wsunięte. Jądra głębokie nie są korą mimo funkcjonalnego związku.",
+    "function": "Móżdżek dostosowuje precyzję, skalę i czas działania, wykorzystując przewidywanie oraz informację zwrotną. Pomaga uczyć się na błędach i porównywać plan z wynikiem. Układ przedsionkowo-móżdżkowy jest szczególnie ważny dla równowagi i stabilizacji spojrzenia; rdzeniowo-móżdżkowy dla bieżącej kontroli postawy i kończyn, a mózgowo-móżdżkowy dla złożonych pętli z korą. Półkule tylne, w tym obszary Crus I/II, uczestniczą również w funkcjach poznawczych i językowych. Historyczne nazwy pramóżdżku, starego i nowego móżdżku nie pokrywają się dokładnie z nowoczesnymi mapami funkcjonalnymi.",
+    "connections": "Włókna kiciaste dostarczają sygnały m.in. z mostu, rdzenia i układu przedsionkowego, pobudzając komórki ziarniste. Ich aksony tworzą włókna równoległe kontaktujące się z komórkami Purkinjego. Włókna pnące pochodzą z przeciwstronnej oliwki dolnej i silnie wpływają na uczenie oraz czasowanie odpowiedzi. Komórki Purkinjego są hamującym wyjściem kory do jąder głębokich lub jąder przedsionkowych. Jądro zębate współpracuje z bocznymi półkulami; wsunięte ze strefą pośrednią; wierzchu z robakiem. Wyjście przez konar górny w dużej mierze krzyżuje się i dociera przez wzgórze do kory. Konar środkowy doprowadza głównie skrzyżowane włókna mostowe, a dolny liczne wejścia rdzeniowe, oliwkowe i przedsionkowe oraz część wyjść.",
+    "clinical": "Uszkodzenie półkuli powoduje zwykle ipsilateralną dysmetrię, rozkład ruchu, drżenie zamiarowe i zaburzenia ruchów naprzemiennych. Uszkodzenie robaka częściej zaburza stabilność tułowia i chód, a okolicy grudkowo-kłaczkowej równowagę i ruchy oczu. Możliwe są dyzartria, oczopląs i hipotonia. Uszkodzenie tylnych obszarów i odpowiednich połączeń może powodować móżdżkowy zespół poznawczo-afektywny: zaburzenia wykonawcze, przestrzenne, językowe i regulacji emocji. Prawidłowa siła mięśniowa nie wyklucza istotnej niesprawności koordynacyjnej.",
+    "laterality": "Wpływ na kończyny jest przeważnie po tej samej stronie wskutek organizacji i wielokrotnych skrzyżowań pętli. Połączenia z korą mózgu są głównie skrzyżowane, więc dominacja funkcji językowych może wiązać lewą korę z prawym móżdżkiem.",
+    "limitations": "Dwie maski kory nie rozdzielają płacików, stref funkcjonalnych ani jąder głębokich. Karta cerebellum obejmuje szerszy narząd niż sama kora, dlatego przypisanie jest relacją zakresu, nie ścisłą identycznością.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 36–38, 89–90"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 129–131 (tablice 112–114)"
+      },
+      {
+        "sourceId": "deep-web-cerebellum-neuroscience-online",
+        "locator": "Mikroobwody i organizacja wejść/wyjść"
+      },
+      {
+        "sourceId": "deep-web-21907811",
+        "locator": "Pierwotne badanie u ludzi: odrębne terytoria ruchowe i poznawcze"
+      }
+    ],
+    "relatedCircuitIds": [
+      "cerebellar-cognitive"
+    ]
+  },
+  {
+    "id": "deep-cerebellar-white-matter",
+    "names": {
+      "pl": "Istota biała móżdżku",
+      "en": "Cerebellar white matter",
+      "lat": "Substantia alba cerebelli"
+    },
+    "category": "white-matter",
+    "projectRegionIds": [
+      "Left-Cerebellum-White-Matter",
+      "Right-Cerebellum-White-Matter"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Istota biała móżdżku tworzy ciało rdzenne i rozgałęzia się do listków, dając na przekroju obraz drzewa życia. Zawiera aksony wchodzące do kory, wyjścia komórek Purkinjego oraz włókna jąder głębokich. W jej obrębie leżą jądra móżdżku, jednak są one istotą szarą i nie powinny być funkcjonalnie utożsamiane z białą. Maska segmentacyjna może obejmować sąsiedztwo niewyróżnionych drobnych struktur.",
+    "function": "Zapewnia terminowy przepływ informacji potrzebny do koordynacji i uczenia. Jej funkcja zależy od zestawu uszkodzonych włókien: wejścia niosą plan ruchu, sygnały czuciowe i przedsionkowe, a wyjścia dostosowane polecenia do sieci nadrzędnych. Uszkodzenie przewodzenia może funkcjonalnie odłączyć prawidłową korę móżdżku od jej partnerów.",
+    "connections": "Konar środkowy zawiera głównie włókna z przeciwstronnych jąder mostu. Konar dolny prowadzi m.in. drogę rdzeniowo-móżdżkową tylną, klinowo-móżdżkową, włókna oliwkowe i przedsionkowe. Konar górny jest przede wszystkim drogą wyjścia jąder głębokich do wzgórza i śródmózgowia, ale przewodzi także wejścia, np. część drogi rdzeniowo-móżdżkowej przedniej. Dlatego określenie „górny wyłącznie odśrodkowy” jest nieścisłe. Większość wyjścia zębato-wzgórzowego krzyżuje się w dolnym śródmózgowiu. Przykładowa pętla ruchowa biegnie z kory do jąder mostu, następnie po skrzyżowaniu do kory przeciwległej półkuli móżdżku, przez jej jądra głębokie i ponowne skrzyżowanie do wzgórza po stronie wyjściowej kory. Dalej wpływa na skrzyżowane drogi wykonawcze. To wyjaśnia, dlaczego połączenie móżdżek–kora jest przeciwstronne, a objaw kończynowy uszkodzenia półkuli móżdżku zwykle ipsilateralny. Należy zawsze podać poziom ogniska względem skrzyżowania konara górnego; zasada strony nie jest uniwersalna dla każdego włókna.",
+    "clinical": "Uszkodzenia naczyniowe, demielinizacyjne lub rozrostowe konarów mogą powodować ataksję, dyzartrię i zaburzenia okoruchowe przy stosunkowo małym uszkodzeniu kory. Objawy zależą od miejsca względem skrzyżowań. Zmiany połączeń mogą również powodować odległe obniżenie czynności w korze mózgu, czyli diaschizę.",
+    "laterality": "Uszkodzenia w obrębie samego móżdżku zwykle dają objawy po tej samej stronie; zmiany dróg po skrzyżowaniu mogą zmieniać tę relację.",
+    "limitations": "Maska całej istoty białej nie jest traktografią i nie wskazuje przebiegu pojedynczego pęczka ani kierunku połączenia. Uszkodzenie włókien może naśladować uszkodzenie ich korowego lub jądrowego celu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 36–38, 44–45"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 129–131 (tablice 112–114)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-cerebral-white-matter",
+    "names": {
+      "pl": "Istota biała półkul mózgu",
+      "en": "Cerebral white matter",
+      "lat": "Substantia alba cerebri"
+    },
+    "category": "white-matter",
+    "projectRegionIds": [
+      "Left-Cerebral-White-Matter",
+      "Right-Cerebral-White-Matter"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Istota biała półkuli obejmuje zmielinizowane i niezmielinizowane aksony wraz z komórkami glejowymi, naczyniami i środowiskiem pozakomórkowym. Leży pod korą i pomiędzy jądrami podkorowymi. Włókna kojarzeniowe łączą obszary tej samej półkuli, spoidłowe obie półkule, a rzutowe korę ze wzgórzem, pniem i rdzeniem. Krótkie włókna U łączą sąsiednie zakręty. Wieniec promienisty zbiera włókna w kierunku torebki wewnętrznej, której przednia odnoga, kolano, tylna odnoga oraz części za- i podsoczewkowa przewodzą różne zestawy projekcji.",
+    "function": "Funkcją jest przekaz informacji i synchronizacja odległych elementów sieci. Znaczenie pęczka zależy od jego celów: łukowaty i część układu podłużnego górnego uczestniczą w funkcjach językowych i uwagi, podłużny dolny w łączeniu przetwarzania wzrokowego ze skroniowym, haczykowaty w komunikacji przedniej skroni z korą oczodołową, a obręcz w sieciach pamięci i regulacji. Pojedynczy pęczek może współuczestniczyć w wielu funkcjach, a jedna funkcja korzystać z kilku tras.",
+    "connections": "Włókna korowo-rdzeniowe i korowo-jądrowe przekazują kontrolę ruchową. Promienistości wzgórzowe przenoszą wzajemny przekaz kory i wzgórza; wzrokowa biegnie do okolicy ostrogowej, a słuchowa przez okolicę podsoczewkową do zakrętów poprzecznych. Pętla Meyera prowadzi część dolnych włókien promienistości wzrokowej przez płat skroniowy i reprezentuje przeciwstronny górny kwadrant pola widzenia. Ciało modzelowate łączy rozległe obszary obu półkul, a spoidło przednie także obszary skroniowe. Sklepienie łączy formację hipokampa z celami podkorowymi.",
+    "clinical": "Małe uszkodzenie torebki wewnętrznej może dać duży przeciwstronny deficyt ruchowy, ponieważ włókna są gęsto upakowane. Choroby małych naczyń, demielinizacja i uraz rozlany mogą powodować spowolnienie przetwarzania i zespoły odłączenia. Uszkodzenie pętli Meyera może prowadzić do przeciwstronnej górnej kwadrantanopsji. Zaburzenia języka lub uwagi mogą wynikać z przerwania komunikacji mimo oszczędzonej części kory. Zespół odłączenia należy odróżniać od pierwotnego uszkodzenia samej kory.",
+    "laterality": "Strona objawów zależy od drogi: korowo-rdzeniowa daje zasadniczo efekt przeciwstronny powyżej skrzyżowania piramid; kojarzeniowe ujawniają profil sieci dominującej lub niedominującej.",
+    "limitations": "Maska istoty białej nie rozdziela pęczków. Traktografia również jest estymacją przebiegu, nie bezpośrednim dowodem synaps i kierunku przewodzenia. Nie wolno wnioskować o rodzaju przekaźnika z samego koloru atlasu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 20–21, 51, 90"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "functional-prefrontal-cortex",
+    "names": {
+      "pl": "Kora przedczołowa",
+      "en": "Prefrontal cortex",
+      "lat": "Cortex prefrontalis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "prefrontal-cortex"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Kora przedczołowa obejmuje rozległe przednie części płata czołowego przed głównymi obszarami przedruchowymi. Składają się na nią okolice boczne, przyśrodkowe, oczodołowe i biegunowe o różnej cytoarchitekturze. Nie jest pojedynczym zakrętem ani polem Brodmanna. W projekcie osobne karty DLPFC, vmPFC i OFC opisują częściowo nakładające się podobszary tej większej całości, a ACC pozostaje powiązaną, lecz odrębnie definiowaną korą obręczy.",
+    "function": "Pomaga organizować zachowanie zgodnie z aktualnym celem przy odroczeniu nagrody, konflikcie lub zmiennych regułach. Wspiera pamięć roboczą, planowanie, monitorowanie skutków, ocenę wartości i dostosowanie zachowania społecznego. Funkcje te są realizowane we współpracy z korą ciemieniową i skroniową, wzgórzem, prążkowiem i strukturami pamięci. Prawidłowy wynik prostego testu wiedzy może współistnieć z istotnym zaburzeniem organizacji codziennego działania. PFC nie jest pojedynczym „zarządcą” oddzielonym od reszty mózgu; jej aktywność zależy od informacji dostarczanych przez inne sieci.",
+    "connections": "Dwukierunkowe połączenia korowo-korowe łączą ją z obszarami sensorycznymi i asocjacyjnymi. Jądro przyśrodkowo-grzbietowe wzgórza uczestniczy w pętlach przedczołowych, a projekcje korowo-prążkowiowe prowadzą do terytoriów asocjacyjnych i limbicznych. Drogi kojarzeniowe obejmują części pęczka podłużnego górnego, haczykowatego i obręczy; ich znaczenie zależy od dokładnego podobszaru. Dopamina z VTA, noradrenalina z LC i acetylocholina z podstawy przodomózgowia modulują czułość oraz stabilność przetwarzania. Zasadniczy przekaz dalekich projekcji korowych pozostaje glutaminergiczny, a nie dopaminergiczny.",
+    "clinical": "Uszkodzenia mogą powodować trudności planowania, perseweracje, podatność na rozproszenie, apatię lub rozhamowanie. Profil zależy od lokalizacji i odłączenia dróg. Rozległy termin „zespół czołowy” obejmuje różne obrazy i nie powinien zastępować opisu zachowania. Nieprawidłowości aktywności przedczołowej w zaburzeniach psychicznych są zwykle nieswoiste i grupowe; nie oznaczają prostego ubytku zdolności ani określonej osobowości.",
+    "laterality": "Obie półkule współpracują; część procesów werbalnych częściej angażuje lewą, a przestrzennych prawą, lecz nie ma uniwersalnego podziału PFC na stronę logiczną i emocjonalną.",
+    "limitations": "Karta jest parasolowym pojęciem funkcjonalnym. Granice nie pokrywają się z jedną maską Destrieux ani sumą kilku pól Brodmanna; nie wolno liczyć jej objętości razem z podobszarami jako niezależnej tkanki.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18–21, 29–31"
+      },
+      {
+        "sourceId": "deep-web-association-and-executive-processing",
+        "locator": "Ogólne funkcje asocjacyjne i przedczołowe; historyczne uproszczenia nie są przejmowane"
+      }
+    ],
+    "relatedCircuitIds": [
+      "cortical-gaba",
+      "corticocortical",
+      "mesocortical"
+    ]
+  },
+  {
+    "id": "functional-dlpfc",
+    "names": {
+      "pl": "Grzbietowo-boczna kora przedczołowa",
+      "en": "Dorsolateral prefrontal cortex",
+      "lat": "Cortex prefrontalis dorsolateralis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "dlpfc"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "DLPFC obejmuje części bocznej powierzchni kory przedczołowej, przede wszystkim w zakręcie czołowym środkowym i przyległych obszarach. Często odnosi się do pól 9 i 46, lecz definicje zależą od atlasu, badania i sposobu lokalizacji. Granice funkcjonalne nie przebiegają identycznie jak bruzdy. Jest węzłem sieci czołowo-ciemieniowych, a nie autonomicznym miejscem przechowywania każdej informacji roboczej.",
+    "function": "Utrzymuje i aktualizuje reguły oraz reprezentacje potrzebne do wykonania zadania. Uczestniczy w manipulowaniu informacją pamięci roboczej, wybieraniu strategii, kontroli rozpraszania i monitorowaniu kolejnych kroków. Gdy czynność staje się dobrze wyuczona, zależność od stałej kontroli może maleć, ale nie jest to reguła dla każdego zadania. Podtrzymywanie celu może wzmacniać przetwarzanie istotnych cech w bardziej tylnych obszarach. Aktywność zależy od trudności i przyjętej strategii, dlatego większy sygnał BOLD nie oznacza automatycznie lepszej sprawności.",
+    "connections": "Połączenia z korą ciemieniową biegną przez układy kojarzeniowe, w tym części pęczka podłużnego górnego. Pętle z jądrem ogoniastym, gałką bladą i wzgórzem wspierają selekcję i aktualizację działania. Współpraca z grzbietową obręczą łączy sygnał konfliktu lub błędu ze zmianą kontroli. Dopamina i noradrenalina regulują właściwości lokalnych obwodów; ich wpływ zależy od receptorów i poziomu pobudzenia, nie sprowadza się do zasady „więcej przekaźnika = lepiej”. Połączenia z przeciwległą korą przez ciało modzelowate wspierają zadania obustronne.",
+    "clinical": "Uszkodzenie może prowadzić do trudności z utrzymaniem zestawu reguł, przełączaniem strategii, planowaniem i kontrolą interferencji. Pacjent może rozumieć instrukcję, lecz gubić cel podczas wieloetapowego działania. Podobny profil może wynikać z uszkodzeń wzgórza lub połączeń, więc test wykonawczy nie lokalizuje się swoiście do DLPFC. Różnice tej sieci występują w wielu stanach neurologicznych i psychiatrycznych. Istotne jest porównanie zadania prostego z wieloetapowym: poprawna pojedyncza odpowiedź może współistnieć z gubieniem reguły po rozproszeniu. To różnica między zachowaną kompetencją a możliwością jej stabilnego zastosowania.",
+    "laterality": "Przetwarzanie werbalne częściej angażuje lewostronne, a przestrzenne prawostronne sektory, przy znacznym nakładaniu i obustronnej kontroli.",
+    "limitations": "Nie należy utożsamiać karty z całym zakrętem czołowym środkowym ani z jedną parą numerów BA. Mapa funkcjonalna wymaga definicji zadania i indywidualnej anatomii.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18–21"
+      },
+      {
+        "sourceId": "deep-web-14963333",
+        "locator": "Pierwotne badanie Stroopa: relacja aktywności ACC do późniejszej rekrutacji przedczołowej"
+      }
+    ],
+    "relatedCircuitIds": [
+      "cortical-gaba",
+      "corticocortical",
+      "mesocortical"
+    ]
+  },
+  {
+    "id": "functional-vmpfc",
+    "names": {
+      "pl": "Brzuszno-przyśrodkowa kora przedczołowa",
+      "en": "Ventromedial prefrontal cortex",
+      "lat": "Cortex prefrontalis ventromedialis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "vmpfc"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "vmPFC jest funkcjonalnym określeniem dolno-przyśrodkowej powierzchni przedniego płata czołowego. Zależnie od autora obejmuje część przyśrodkowej kory oczodołowej, przyśrodkowego bieguna czołowego i okolicy przed lub poniżej kolana ciała modzelowatego. Nie ma jednej uniwersalnej granicy i częściowo nakłada się z OFC oraz podkolanową obręczą. Porównywanie badań wymaga sprawdzenia dokładnej lokalizacji, a nie wyłącznie skrótu.",
+    "function": "Integruje wartość potencjalnych wyników z doświadczeniem, stanem wewnętrznym i kontekstem społecznym. Uczestniczy w podejmowaniu decyzji, ocenie osobistej istotności oraz uczeniu bezpieczeństwa i wydobywaniu pamięci wygaszania. Nie jest po prostu hamulcem emocji: określone projekcje mogą wzmacniać albo ograniczać różne reakcje zależnie od sytuacji. Współpracuje z siecią stanu domyślnego podczas procesów odnoszących się do siebie i innych. Oddzielanie wartości subiektywnej, nagrody, pewności i regulacji emocji jest konieczne przy interpretacji konkretnego eksperymentu.",
+    "connections": "Połączenia z ciałem migdałowatym i hipokampem wiążą znaczenie emocjonalne z kontekstem i pamięcią. Wyjścia do prążkowia brzusznego, podwzgórza oraz pnia pomagają przełożyć ocenę na motywację i odpowiedź autonomiczną. Pęczek haczykowaty łączy część przedniej skroni z okolicą oczodołowo-czołową, a obręcz przyśrodkowe elementy sieci. Połączenia ze wzgórzem, PCC i boczną PFC umożliwiają współpracę procesów oceny z kontrolą zadaniową. Szlak mezokortykalny jest jednym z układów modulujących, nie jedyną drogą informacji.",
+    "clinical": "Uszkodzenia mogą zaburzać decyzje w zmiennych warunkach nagrody i kary, przewidywanie konsekwencji społecznych oraz reakcje autonomiczne na przyszły wynik. Klasyczne badania pacjentów wykazały niekorzystne decyzje mimo częściowo zachowanej wiedzy jawnej; nie oznacza to, że jeden test ocenia wyłącznie vmPFC. Podobne trudności mogą mieć różne przyczyny i obejmować sieci pamięci, uwagi oraz uczenia. Zmiana zachowania powinna być odnoszona do wcześniejszego funkcjonowania i sytuacji. Różnica w ocenie ryzyka sama w sobie nie stanowi dowodu ogniskowego uszkodzenia ani patologii osobowości.",
+    "laterality": "Znaczenie mają obie strony, a wiele dowodów klinicznych pochodzi z uszkodzeń obustronnych. Asymetrii nie należy przekładać na prosty podział decyzji moralnych lub emocji.",
+    "limitations": "Karta nie ma ścisłego odpowiednika w pojedynczej parceli atlasowej. Homologia z obszarami przyśrodkowej PFC gryzoni jest przybliżona, dlatego modeli wygaszania nie należy bezpośrednio utożsamiać z ludzką anatomią.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18, 28–31"
+      },
+      {
+        "sourceId": "deep-web-bechara-i-wsp-1997-deciding-advantageously",
+        "locator": "Pierwotne badanie pacjentów z obustronnymi uszkodzeniami vmPFC; decyzje i sygnały antycypacyjne"
+      }
+    ],
+    "relatedCircuitIds": [
+      "fear-extinction",
+      "mesocortical"
+    ]
+  },
+  {
+    "id": "functional-ofc",
+    "names": {
+      "pl": "Kora oczodołowo-czołowa",
+      "en": "Orbitofrontal cortex",
+      "lat": "Cortex orbitofrontalis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "ofc"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "OFC leży na dolnej powierzchni płata czołowego nad oczodołami. Obejmuje część zakrętu prostego i zakrętów oczodołowych, lecz jej granice cytoarchitektoniczne są bardziej złożone niż podział powierzchniowy. Przednia, tylna, przyśrodkowa i boczna część różnią się strukturą i połączeniami. Sąsiaduje z opuszką i pasmem węchowym; ich uszkodzenie może współistnieć z uszkodzeniem OFC po urazie.",
+    "function": "Tworzy i aktualizuje reprezentację oczekiwanych wyników: ich tożsamości, wartości i zależności od sytuacji. Integruje sygnały smakowe, węchowe, trzewne i społeczne. Pomaga zmienić wybór, gdy bodziec wcześniej nagradzający przestaje przynosić korzyść. Uczenie odwracania jest częstym modelem badawczym, lecz nie cała elastyczność zachowania należy do OFC. Wartość pokarmu zależy np. od sytości, więc ta sama rzecz może prowadzić do odmiennej odpowiedzi w różnych stanach organizmu. Ważne jest odróżnienie zmiany wartości wyniku od zmiany samej reguły bodziec–reakcja. Oba zadania mogą wymagać elastyczności, lecz angażują częściowo odmienne obszary przedczołowe. Dlatego wynik jednego testu odwracania nie opisuje całej zdolności przystosowania.",
+    "connections": "Otrzymuje wejścia z kory sensorycznej i asocjacyjnej, wyspy, ciała migdałowatego oraz wzgórza. Połączenia z przednią skronią biegną m.in. pęczkiem haczykowatym, a z prążkowiem brzusznym włączają OFC do pętli motywacyjnych. Przyśrodkowe obszary silniej łączą się z układami trzewno-limbicznymi, boczne z reprezentacją bodźców i zmianami wyniku, choć jest to gradient. Wyjścia do innych części PFC umożliwiają wykorzystanie aktualnej wartości podczas planowania i kontroli działania.",
+    "clinical": "Uszkodzenia mogą wywoływać rozhamowanie, niewłaściwą ocenę konsekwencji, trudność uczenia na zmiennych wynikach i zaburzenia zachowania społecznego. Uraz podstawy czołowej może dawać istotne objawy przy zachowanej podstawowej sile i mowie. Perseweracja nie jest swoista dla OFC; bywa wynikiem różnych uszkodzeń wykonawczych. Powiązania tej okolicy z kompulsyjnością lub uzależnieniami dotyczą całych pętli, nie jednej anatomicznej przyczyny.",
+    "laterality": "Obie strony biorą udział w ocenie wyników; profil zależy bardziej od podregionu i rodzaju informacji niż od prostego lewo-prawego podziału.",
+    "limitations": "Nie utożsamiać OFC z vmPFC: pojęcia częściowo się pokrywają, ale żadnego nie można w całości zastąpić drugim. Badania odwracania u gryzoni dostarczają mechanizmów, nie pełnej mapy klinicznej człowieka.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18, 20, 28–31"
+      },
+      {
+        "sourceId": "deep-web-15721796",
+        "locator": "Pierwotne badanie inaktywacji OFC u szczurów; elastyczna zmiana kontyngencji wyniku"
+      }
+    ],
+    "relatedCircuitIds": [
+      "corticocortical",
+      "mesocortical"
+    ]
+  },
+  {
+    "id": "functional-acc",
+    "names": {
+      "pl": "Przednia kora obręczy",
+      "en": "Anterior cingulate cortex",
+      "lat": "Cortex cingularis anterior"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "acc"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "ACC obejmuje przednią część kory obręczy otaczającą kolano ciała modzelowatego. Rozróżnia się okolice podkolanową i przedkolanową oraz bardziej grzbietowe sektory. Termin dACC w literaturze funkcjonalnej bywa używany dla obszarów, które w podziale anatomicznym należą już do przedniej części środkowej kory obręczy. Ta różnica nazewnictwa ma znaczenie przy zestawianiu wyników z parcelami atlasu.",
+    "function": "Uczestniczy w monitorowaniu wyniku działania, konfliktu, błędów i kosztu wysiłku, a także w regulacji odpowiedzi autonomicznej i afektywnego wymiaru bólu. Poszczególne sektory nie pełnią wszystkich tych ról jednakowo. Aktywność podczas konfliktu może sygnalizować potrzebę zwiększenia kontroli, ale nie dowodzi istnienia jednego wyłącznego „detektora błędów”. Rozległe połączenia pozwalają powiązać motywację z wyborem działania i utrzymaniem zaangażowania. Obręcz może uczestniczyć zarówno w reakcjach zagrożenia, jak i w kontroli zachowania. Przetwarzanie bólu w obręczy silniej wiąże się z jego znaczeniem dla działania i cierpienia niż z dokładną lokalizacją bodźca na skórze. Rozróżnienie tych wymiarów pomaga zrozumieć, dlaczego zmiana przeżywania bólu może występować przy zachowanej zdolności wskazania jego miejsca.",
+    "connections": "Połączenia z boczną PFC i korą ciemieniową pomagają dostosować kontrolę zadaniową. Przednia wyspa i grzbietowa obręcz są istotnymi elementami sieci istotności. Wyjścia do prążkowia, obszarów ruchowych, podwzgórza i PAG łączą ocenę kosztów z motywacją, reakcją autonomiczną i zachowaniem obronnym. Pęczek obręczy umożliwia komunikację z tylną korą przyśrodkową i przyhipokampową. Kierunek wpływu zależy od konkretnej projekcji i nie powinien być opisywany globalnie jako „hamowanie emocji”.",
+    "clinical": "Uszkodzenia przyśrodkowych obszarów czołowych mogą powodować apatię, abulię, a przy rozległych obustronnych zmianach mutyzm akinetyczny. Ból może zachować cechy sensoryczne przy zmianie jego znaczenia motywacyjnego, jeżeli naruszona zostaje odpowiednia sieć. Nieprawidłowa aktywacja ACC występuje w licznych zaburzeniach i nie stanowi swoistego wskaźnika depresji, lęku czy zaburzeń obsesyjno-kompulsyjnych.",
+    "laterality": "Procesy monitorowania i motywacji angażują obie strony; jednostronne ognisko wymaga oceny pozostałych części sieci.",
+    "limitations": "Nazwy ACC i dACC w pracach badawczych wymagają lokalizacji współrzędnych. Funkcjonalna karta projektu nie ma jednoznacznej relacji jeden-do-jednego z przednim zakrętem obręczy Destrieux.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18, 29–31"
+      },
+      {
+        "sourceId": "deep-web-14963333",
+        "locator": "Badanie pierwotne: konflikt Stroopa i następcza kontrola"
+      },
+      {
+        "sourceId": "deep-web-17707349",
+        "locator": "Badanie pierwotne: udział dACC w ekspresji reakcji lękowej"
+      },
+      {
+        "sourceId": "deep-web-seeley-i-wsp-intrinsic-networks",
+        "locator": "Badanie pierwotne: sieć istotności i odrębność od sieci wykonawczej"
+      }
+    ],
+    "relatedCircuitIds": [
+      "corticocortical",
+      "pain-descending"
+    ]
+  },
+  {
+    "id": "functional-pcc",
+    "names": {
+      "pl": "Tylna kora obręczy",
+      "en": "Posterior cingulate cortex",
+      "lat": "Cortex cingularis posterior"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "pcc"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "PCC leży na przyśrodkowej powierzchni półkuli za przednią i środkową obręczą, powyżej oraz z tyłu ciała modzelowatego. Obejmuje głównie pola 23 i 31, przy czym granice zależą od atlasu. Sąsiadująca kora retrosplenialna obejmuje pola 29/30 i jest blisko powiązana, lecz nie jest pełnym synonimem PCC. Przedklinek leży bardziej grzbietowo w płacie ciemieniowym i również stanowi odrębne pojęcie.",
+    "function": "Współuczestniczy w przypominaniu zdarzeń, odnoszeniu informacji do siebie, korzystaniu z kontekstu i dostosowaniu nastawienia uwagi. Jest ważnym węzłem sieci stanu domyślnego, której nazwa nie oznacza bezczynności. Aktywność tej sieci może maleć podczas części zadań wymagających skupienia na bodźcach zewnętrznych i rosnąć przy myśleniu wewnętrznym, ale nie jest wyłącznie przeciwieństwem każdej aktywności zadaniowej. Różne podobszary PCC mają odmienne profile połączeń i odpowiedzi.",
+    "connections": "Pęczek obręczy łączy tylną okolicę przyśrodkową z korą czołową i przyhipokampową. Połączenia z hipokampem pośredniczą w kontekście pamięci, a z przyśrodkową PFC i zakrętem kątowym w przetwarzaniu szerokich reprezentacji. Jądra przednie i boczne wzgórza są częścią jej połączeń podkorowych. Kora retrosplenialna pomaga łączyć wskazówki otoczenia z reprezentacją orientacji; w praktyce niektóre ogniska obejmują jednocześnie ją i PCC. Przypominanie drogi do znanego miejsca wymaga połączenia sceny, położenia obserwatora i pamięci relacji przestrzennych. PCC może uczestniczyć w integracji tych informacji, natomiast hipokamp i kora retrosplenialna dostarczają innych, komplementarnych składowych tego samego zadania.",
+    "clinical": "Uszkodzenia tylnej okolicy przyśrodkowej mogą powodować trudności orientacji i pamięci, zwłaszcza gdy zajmują sieć retrosplenialno-hipokampową. W badaniach choroby Alzheimera często obserwuje się zmiany metabolizmu i łączności tej sieci, ale wynik pojedynczego obszaru nie ustala rozpoznania. Zaburzenie połączeń może być równie ważne jak bezpośrednie uszkodzenie kory. Trudności uwagi czy ruminacje nie lokalizują się swoiście do PCC.",
+    "laterality": "Obie strony uczestniczą w sieciach pamięci i odniesienia do siebie. Relatywne różnice w przetwarzaniu przestrzennym i werbalnym są zależne od szerszej organizacji półkul.",
+    "limitations": "„Sieć stanu domyślnego” jest konstruktem funkcjonalnym, a PCC strukturą anatomiczną; nie są to pojęcia zamienne. Łączność funkcjonalna oznacza współzmienność sygnału i nie potwierdza bezpośredniej drogi aksonalnej.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 29–31"
+      },
+      {
+        "sourceId": "deep-web-11209064",
+        "locator": "Pierwotna identyfikacja regularnych zmian aktywności w warunkach odniesienia i zadania"
+      }
+    ],
+    "relatedCircuitIds": [
+      "corticocortical",
+      "papez"
+    ]
+  },
+  {
+    "id": "functional-insula",
+    "names": {
+      "pl": "Kora wyspy",
+      "en": "Insular cortex",
+      "lat": "Cortex insularis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "insula"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Wyspa leży w głębi bruzdy bocznej i jest przykryta wieczkami czołowym, ciemieniowym oraz skroniowym. Bruzda środkowa wyspy oddziela przednie zakręty krótkie od tylnych długich. Jej architektura zmienia się od bardziej agranularnych obszarów przednich do bardziej ziarnistych tylnych. Brzeg wyspy otacza bruzda okólna. Położenie pod wieczkami sprawia, że małe napadowe lub naczyniowe ognisko może być klinicznie mylone z sąsiednią korą skroniową, czuciową lub ruchową.",
+    "function": "Uczestniczy w interocepcji, czyli reprezentacji stanu organizmu, przetwarzaniu smaku, bólu, temperatury oraz istotności bodźców. Tylne obszary silniej wiążą się z informacją somatosensoryczną i przedsionkową, przednie z jej integracją emocjonalną i zadaniową. Przednia wyspa współtworzy sieć istotności, lecz nie jest wyłącznym przełącznikiem wszystkich sieci. Wstręt, empatia i subiektywne odczucia ciała angażują wiele regionów; aktywacja wyspy nie pozwala odczytać konkretnej emocji. Reprezentacja bólu obejmuje aspekty czuciowe, afektywne i uwagowe, które należy odróżniać.",
+    "connections": "Połączenia ze wzgórzem, wtórną korą somatosensoryczną, wieczkami i korą skroniową dostarczają informacji sensorycznej. Współpraca z ACC, OFC, ciałem migdałowatym, podwzgórzem i pniem łączy odczuwanie stanu ciała z reakcją autonomiczną. Drogi smakowe dochodzą przez wzgórze do okolicy wyspowo-wieczkowej. Połączenia z korą ruchową i językową uczestniczą w koordynacji złożonych zachowań ustno-twarzowych. Wyspa nie jest węzłem jednej jednorodnej drogi: jej sektory mają odmienne wejścia i wyjścia.",
+    "clinical": "Uszkodzenia mogą powodować zaburzenia smaku, odczuwania ciała, bólu i kontroli autonomicznej. Napady wyspowe mogą rozpoczynać się uczuciem w gardle, nietypowymi parestezjami lub objawami trzewnymi; objawy te nie są swoiste. Udar obejmujący lewą wyspę może współistnieć z zaburzeniami mowy i apraksją artykulacyjną, lecz często zajmuje także sąsiednie obszary i ich drogi. Zmiany regulacji sercowo-naczyniowej zależą od zasięgu uszkodzenia sieci. Interpretacja zawsze wymaga rozdzielenia zmiany czucia od zmiany reakcji autonomicznej.",
+    "laterality": "Istnieją asymetrie niektórych funkcji autonomicznych i językowych, ale nie uzasadniają one uniwersalnej zasady „prawa współczulna, lewa przywspółczulna” dla każdej sytuacji.",
+    "limitations": "Karta obejmuje całą wyspę, podczas gdy Destrieux rozdziela jej zakręty i bruzdy. Wnioski o konkretnym sektorze nie mogą być automatycznie rozciągane na całą strukturę.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 17–18, 23"
+      },
+      {
+        "sourceId": "deep-web-seeley-i-wsp-intrinsic-networks",
+        "locator": "Pierwotne mapowanie łączności funkcjonalnej przedniej wyspy i dACC"
+      }
+    ],
+    "relatedCircuitIds": [
+      "corticocortical",
+      "pain-descending"
+    ]
+  },
+  {
+    "id": "functional-precuneus",
+    "names": {
+      "pl": "Przedklinek",
+      "en": "Precuneus",
+      "lat": "Precuneus"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "precuneus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Przedklinek jest przyśrodkową częścią płata ciemieniowego, pomiędzy gałęzią brzeżną bruzdy obręczy a bruzdą ciemieniowo-potyliczną, powyżej bruzdy podciemieniowej. Sąsiaduje z PCC ku dołowi i klinem ku tyłowi. Nazwa powierzchniowa obejmuje kilka sektorów różniących się połączeniami. Nie jest synonimem tylnej obręczy ani całej sieci stanu domyślnego. Granice funkcjonalne mogą przebiegać przez obszar jednego zakrętu.",
+    "function": "Uczestniczy w wyobrażeniach wzrokowo-przestrzennych, przyjmowaniu perspektywy, pamięci epizodycznej i odnoszeniu informacji do własnej osoby. Przednie sektory są silniej powiązane z przetwarzaniem czuciowo-ruchowym, środkowe z integracją poznawczą, a tylne z przetwarzaniem wzrokowym. Część obszaru współpracuje z siecią stanu domyślnego, część z sieciami uwagi i działania. Pojawiający się sygnał podczas samooceny nie oznacza istnienia jednego „ośrodka ja”. Świadomość i orientacja wynikają ze współpracy rozległych układów. Zadanie wyobrażenia sobie własnego położenia może angażować inny sektor niż prosty ruch wywołany bodźcem wzrokowym. To przykład, dlaczego nazwa jednego zakrętu nie powinna mieć przypisanej jednej wyłącznej funkcji. Także stan spoczynkowy zawiera aktywne procesy poznawcze, których treść różni się między osobami.",
+    "connections": "Połączenia z korą ciemieniową i przedruchową wspierają przekształcanie reprezentacji przestrzennych na działanie. Współpraca z PCC, korą retrosplenialną i układem hipokampa pomaga łączyć aktualną perspektywę z pamięcią otoczenia. Projekcje do obszarów potylicznych uczestniczą w analizie scen oraz wyobrażeniach, a do przyśrodkowej PFC w przetwarzaniu odnoszącym się do siebie. Badania łączności funkcjonalnej wykazują subregiony, jednak współzmienność aktywności nie dowodzi kierunku przepływu ani pojedynczego pęczka.",
+    "clinical": "Uszkodzenie tylnej okolicy ciemieniowej przyśrodkowej może utrudniać orientację, korzystanie z wyobrażeń i dostęp do informacji przestrzennej. Czyste izolowane zespoły przedklinka są rzadkie, a objawy często wynikają także z zajęcia PCC, retrosplenialnej lub istoty białej. Zaburzenia aktywności w chorobach pamięci i stanach zaburzonej świadomości nie oznaczają, że przedklinek sam jest przyczyną całego obrazu.",
+    "laterality": "Przetwarzanie przestrzenne często ma silną składową prawopółkulową, ale obie strony uczestniczą w zadaniach pamięci i wyobrażeń.",
+    "limitations": "Jedna karta funkcjonalna nie rozróżnia przedniego, środkowego i tylnego sektora. Interpretacja objętości i aktywacji musi uwzględniać lokalizację oraz badane zadanie.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 17–18, 29–31"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Pierwotne badanie porównawcze ludzi i makaków: trzy profile połączeń przedklinka"
+      }
+    ],
+    "relatedCircuitIds": [
+      "corticocortical"
+    ]
+  },
+  {
+    "id": "functional-motor-cortex",
+    "names": {
+      "pl": "Kora ruchowa",
+      "en": "Motor cortex",
+      "lat": "Cortex motorius"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "motor-cortex"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "W węższym użyciu karta oznacza pierwotną korę ruchową M1, obejmującą zakręt przedśrodkowy i przednią część płacika okołośrodkowego, w przybliżeniu pole 4. W szerszym pojęciu kora ruchowa obejmuje także korę przedruchową i dodatkowe pole ruchowe. M1 jest korą agranularną z silnie rozwiniętą warstwą projekcyjną V. Duże komórki Betza są jej charakterystycznym składnikiem, lecz stanowią tylko część neuronów dających drogę korowo-rdzeniową.",
+    "function": "M1 uczestniczy w wykonywaniu i precyzyjnym dostosowywaniu ruchu, zwłaszcza różnicowaniu aktywności palców. Populacje neuronów kodują współzależne parametry siły, kierunku i dynamiki działania. Homunkulus przedstawia ogólną somatotopię, nie sztywne punkty kontrolujące pojedyncze mięśnie. Reprezentacje nakładają się i zmieniają z doświadczeniem. Kora przedruchowa pomaga dobierać plan do wskazówek, a SMA organizować sekwencje i działania inicjowane wewnętrznie; wszystkie te obszary współpracują, a granica przygotowanie–wykonanie nie jest absolutna.",
+    "connections": "Wyjście biegnie przez wieniec promienisty, torebkę wewnętrzną, odnogi mózgu i piramidy. Większość włókien korowo-rdzeniowych krzyżuje się w dolnym rdzeniu przedłużonym; część połączeń osiowych pozostaje bardziej obustronna. Włókna korowo-jądrowe wpływają na ośrodki ruchowe nerwów czaszkowych, często przez interneurony. Drogi korowo-mostowe, korowo-prążkowiowe i korowo-siatkowe włączają korę w pętle móżdżkowe, jąder podstawy i kontroli postawy. Wejścia czuciowe oraz wzgórzowe dostarczają informacji zwrotnej potrzebnej do poprawnego działania.",
+    "clinical": "Uszkodzenie M1 lub jej wyjścia powoduje zwykle przeciwstronny niedowład, szczególnie utratę ruchów precyzyjnych. W fazie późniejszej mogą wystąpić objawy neuronu ośrodkowego, ale spastyczność zależy od szerszego zajęcia układów zstępujących. Małe ognisko może ograniczać się do twarzy lub ręki; zmiana przyśrodkowa częściej obejmuje kończynę dolną. Napad ruchowy może rozprzestrzeniać się zgodnie z sąsiedztwem reprezentacji. Apraksja oznacza inny mechanizm niż sam niedowład. Somatotopia ułatwia lokalizację, lecz obrzęk, niedokrwienie sąsiednich dróg i reorganizacja mogą rozszerzać lub zmieniać oczekiwany obraz. Nie należy przewidywać pełnego zakresu niesprawności z jednego punktu modelu.",
+    "laterality": "Kończyny są kontrolowane głównie przeciwstronnie. Unerwienie osiowe i część mięśni czaszkowych są bardziej obustronne; dolna połowa twarzy ma silniejszą składową przeciwstronną.",
+    "limitations": "Karta powinna określać, czy opis dotyczy M1, czy całego zespołu pól ruchowych. Początek ruchu nie należy wyłącznie do jednego regionu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18–19, 35, 51, 90"
+      },
+      {
+        "sourceId": "deep-web-motor-cortex-neuroscience-online",
+        "locator": "Odróżnienie M1, premotor i SMA; rozproszone kodowanie ruchu"
+      }
+    ],
+    "relatedCircuitIds": [
+      "basal-direct",
+      "basal-hyperdirect",
+      "basal-indirect",
+      "thalamocortical"
+    ]
+  },
+  {
+    "id": "functional-somatosensory-cortex",
+    "names": {
+      "pl": "Kora somatosensoryczna",
+      "en": "Somatosensory cortex",
+      "lat": "Cortex somatosensorius"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "somatosensory-cortex"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Pierwotna kora somatosensoryczna S1 leży w zakręcie zaśrodkowym i tylnej części płacika okołośrodkowego. Obejmuje pola 3a, 3b, 1 i 2, o różnych wejściach i właściwościach. Wtórna kora somatosensoryczna S2 znajduje się w okolicy wieczka ciemieniowego; nie jest dalszą nazwą tego samego obszaru. Reprezentacja kończyny dolnej leży przyśrodkowo, tułowia i kończyny górnej bardziej górno-bocznie, a twarzy w okolicy dolno-bocznej. Mapa jest nieproporcjonalna do rozmiaru części ciała.",
+    "function": "S1 uczestniczy w lokalizacji i różnicowaniu dotyku, określaniu cech bodźca i pozycji części ciała. Pole 3b jest szczególnie związane z dotykiem skórnym, 3a z propriocepcją, a kolejne pola integrują bardziej złożone cechy. Nie jest to jednak liniowy łańcuch bez połączeń zwrotnych. Rozpoznawanie przedmiotu dotykiem wymaga także S2 i tylnej kory ciemieniowej, pamięci oraz uwagi. Ból angażuje S1 w stopniu zależnym od zadania i bodźca, ale jego doświadczenie nie mieści się w jednym homunkulusie. Nieproporcjonalnie duża reprezentacja palców odzwierciedla wymagania rozdzielczości czuciowej. Schemat homunkulusa służy orientacji, lecz nie jest indywidualną mapą pacjenta i nie ujawnia zmian plastycznych po treningu albo uszkodzeniu.",
+    "connections": "Dane z ciała dochodzą przez VPL, a z twarzy głównie przez VPM wzgórza. Droga sznurów tylnych–wstęgi przyśrodkowej dostarcza dotyku dyskryminacyjnego, wibracji i świadomej propriocepcji; układ przednio-boczny inne składowe czucia, w tym bólowo-termiczne. S1 wysyła projekcje do S2, tylnej kory ciemieniowej oraz pól ruchowych, umożliwiając sterowanie ruchem na podstawie czucia. Sprzężenia korowo-wzgórzowe oraz zstępujące modulują wejście sensoryczne, więc odbiór zależy także od uwagi i oczekiwań.",
+    "clinical": "Uszkodzenie może pogarszać przeciwstronne różnicowanie lokalizacji, dwóch punktów, grafestezję i rozpoznawanie przez dotyk. Ocena astereognozji wymaga wcześniej wystarczającego czucia elementarnego i sprawności ruchu. Ubytek czucia po stronie przeciwnej może mieć też źródło wzgórzowe, pniowe lub rdzeniowe. Zaniedbywanie jest zaburzeniem uwagi przestrzennej i nie jest synonimem uszkodzenia S1.",
+    "laterality": "S1 reprezentuje przede wszystkim przeciwległą połowę ciała. S2 i wyższe obszary mają więcej integracji obustronnej.",
+    "limitations": "Karta zbiorcza nie rozdziela S1, S2 i pól 3a/3b. Zaburzenia czucia trzeba opisywać według modalności, a nie jako jednolite „czucie wyłączone”.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18–19, 25–27"
+      }
+    ],
+    "relatedCircuitIds": [
+      "thalamocortical"
+    ]
+  },
+  {
+    "id": "functional-visual-cortex",
+    "names": {
+      "pl": "Kora wzrokowa",
+      "en": "Visual cortex",
+      "lat": "Cortex visualis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "visual-cortex"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Pierwotna kora wzrokowa V1 leży wzdłuż bruzdy ostrogowej na przyśrodkowej powierzchni płata potylicznego i odpowiada w przybliżeniu polu 17. Dolną część pola widzenia reprezentuje okolica nad bruzdą, górną pod nią. Centralne widzenie ma dużą reprezentację w pobliżu bieguna potylicznego, bardziej obwodowe części pola bardziej ku przodowi. Dalsze obszary wzrokowe V2, V3, V4 i okolica MT/V5 nie są tożsame z V1 ani z pojedynczym zakrętem.",
+    "function": "V1 analizuje lokalny kontrast, orientację, przestrzenną organizację i inne cechy wejścia wzrokowego. Pełne rozpoznawanie obiektów, twarzy, scen czy ruchu wymaga dalszych obszarów oraz połączeń zwrotnych. Strumień brzuszny w kierunku skroniowym jest ważny dla rozpoznawania, a grzbietowy ku ciemieniowemu dla relacji przestrzennych i wzrokowego prowadzenia działania. Ten podział ma charakter dominujących funkcji, ponieważ strumienie komunikują się i nie są niezależnymi przewodami.",
+    "connections": "Główna droga biegnie: siatkówka → nerw wzrokowy → skrzyżowanie → pasmo wzrokowe → ciało kolankowate boczne → promienistość wzrokowa → V1. W skrzyżowaniu przechodzą na drugą stronę przede wszystkim włókna siatkówki nosowej. Pętla skroniowa promienistości prowadzi reprezentację górnego przeciwstronnego kwadrantu pola widzenia. Połączenia kory z poduszką i wzgórkiem górnym uczestniczą w uwadze i orientacji, a projekcje zwrotne zmieniają przetwarzanie wczesnych obszarów. Kora każdej półkuli otrzymuje informacje z obu oczu o przeciwległej połowie przestrzeni.",
+    "clinical": "Jednostronne uszkodzenie V1 daje zwykle przeciwstronne jednoimienne ubytki pola; obustronne może powodować ślepotę korową. Zachowanie widzenia centralnego zależy od zakresu ogniska i unaczynienia, nie jest obowiązkowe. Zaburzenia rozpoznawania obiektu przy zachowanym widzeniu elementarnym wskazują na inne mechanizmy niż sama utrata V1. Ogniska pobudzające mogą wywoływać proste zjawiska wzrokowe. Uszkodzenia szlaków pozakorowych mogą tworzyć bardzo podobne ubytki pola. Badanie pola widzenia należy odróżniać od badania ostrości wzroku i rozpoznawania obiektów.",
+    "laterality": "Lewa kora reprezentuje głównie prawą połowę pola widzenia obu oczu, a prawa lewą. Nie odpowiada to podziałowi lewe/prawe oko.",
+    "limitations": "Karta może być używana szerzej niż V1, dlatego zakres należy jawnie określić. Granice retinotopowe i cytoarchitektoniczne nie pokrywają się dokładnie z parcelami Destrieux.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18, 21, 25–27"
+      },
+      {
+        "sourceId": "deep-web-visual-processing-cortical-pathways",
+        "locator": "Strumienie korowe i odróżnienie reprezentacji pola od tożsamości oka"
+      }
+    ],
+    "relatedCircuitIds": [
+      "thalamocortical"
+    ]
+  },
+  {
+    "id": "functional-auditory-cortex",
+    "names": {
+      "pl": "Kora słuchowa",
+      "en": "Auditory cortex",
+      "lat": "Cortex auditorius"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "auditory-cortex"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Pierwotna kora słuchowa znajduje się w zakrętach skroniowych poprzecznych Heschla, na górnej powierzchni płata skroniowego w głębi bruzdy bocznej. Zakręty te wykazują znaczną zmienność i mogą być zdwojone. Pole 41 jest klasycznym przybliżeniem rdzenia kory słuchowej; sąsiednie obszary pasa i okołopasa obejmują dalsze etapy analizy. Sam zakręt Heschla nie jest doskonałą granicą obszaru pierwotnego. Okolica planum temporale stanowi sąsiedni element szerszej sieci.",
+    "function": "Analizuje cechy dźwięku, w tym częstotliwość, zmiany w czasie i strukturę widmową. Tonotopia oznacza uporządkowanie odpowiedzi na częstotliwości, a nie pojedynczy liniowy rejestr dźwięków. Dalsze sieci pomagają rozpoznawać źródło, mowę, muzykę i lokalizację przestrzenną. Rozumienie słów wymaga współpracy rozległej kory skroniowej, ciemieniowej i czołowej; nie zachodzi wyłącznie w korze pierwotnej ani jednym ośrodku Wernickego. Wpływ uwagi i oczekiwania rozpoczyna się już na wczesnych etapach przetwarzania.",
+    "connections": "Wejście przechodzi przez nerw VIII, jądra ślimakowe, układy kompleksu oliwki górnej i wstęgi bocznej, wzgórek dolny oraz ciało kolankowate przyśrodkowe. Projekcje końcowe biegną promienistością słuchową do kory. Już w pniu występują liczne połączenia obustronne; każda kora otrzymuje informacje z obu uszu. Połączenia z korą tylno-skroniową i czołową uczestniczą w mapowaniu dźwięku na artykulację, a brzuszne sieci skroniowe w rozpoznawaniu znaczenia. Drogi zstępujące regulują wcześniejsze etapy przetwarzania. Obustronność centralnej drogi słuchowej jest kluczowa klinicznie: przewaga odpowiedzi na ucho przeciwne nie oznacza, że drugie ucho nie dostarcza informacji. To odróżnia układ słuchowy od prostego modelu jednostronnej reprezentacji kończyny w S1.",
+    "clinical": "Jednostronne uszkodzenie kory rzadko powoduje całkowitą głuchotę jednego ucha. Może pogarszać rozróżnianie cech, lokalizację i przetwarzanie złożonych sekwencji. Obustronne uszkodzenia centralnej drogi mogą powodować głuchotę korową. Agnozja słuchowa, czysta głuchota słowna i zaburzenia odbioru melodii oznaczają różne profile funkcjonalne wymagające oceny słuchu obwodowego. Omamy słuchowe nie lokalizują się swoiście do A1.",
+    "laterality": "Wiele procesów językowych ma przewagę lewopółkulową, a część analizy prozodii i melodii prawopółkulową; oba układy są obustronne i zależne od doświadczenia.",
+    "limitations": "Nie należy utożsamiać kory słuchowej z całą górną korą skroniową ani przewidywać funkcji wyłącznie z asymetrii zakrętów.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 18, 21, 25–27, 35–36"
+      }
+    ],
+    "relatedCircuitIds": [
+      "thalamocortical"
+    ]
+  },
+  {
+    "id": "functional-parahippocampal-gyrus",
+    "names": {
+      "pl": "Zakręt przyhipokampowy",
+      "en": "Parahippocampal gyrus",
+      "lat": "Gyrus parahippocampalis"
+    },
+    "category": "functional",
+    "projectRegionIds": [],
+    "projectStructureIds": [
+      "parahippocampal-gyrus"
+    ],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt przyhipokampowy biegnie na przyśrodkowo-dolnej powierzchni płata skroniowego, przy formacji hipokampa. Ku przodowi wiąże się z hakiem i obszarem śródwęchowym, a bocznie graniczy z bruzdą poboczną. „Zakręt”, „kora przyhipokampowa” i „obszar przyhipokampowy miejsc” PPA nie są identycznymi pojęciami: pierwsze jest makroanatomiczne, drugie zależy od podziału korowego, a trzecie jest funkcjonalnie wyznaczaną okolicą reagującą na sceny.",
+    "function": "Bierze udział w reprezentowaniu kontekstu i otoczenia oraz przekazywaniu informacji do systemu pamięci epizodycznej. Tylne obszary reagują na sceny i układ przestrzenny miejsca, a przednie, w tym okolice śródwęchowe i okołowęchowe, uczestniczą w różnorodnych aspektach pamięci i relacji obiekt–kontekst. Reakcja na scenę nie oznacza jedynie zapamiętywania: obejmuje również percepcję struktury lokalnego otoczenia. Pamięć rozpoznawcza i epizodyczna wymagają współpracy z hipokampem oraz rozproszoną korą asocjacyjną. Scena zawiera wzajemne relacje powierzchni i punktów orientacyjnych, a nie tylko listę przedmiotów. Rozdzielenie tych aspektów pozwala zrozumieć, dlaczego ten obszar może być potrzebny do oceny układu pomieszczenia nawet bez świadomego przypominania wcześniejszego pobytu.",
+    "connections": "Otrzymuje informacje z obszarów wzrokowych, skroniowych i ciemieniowych. Połączenia z korą retrosplenialną i tylną obręczą wspierają orientację i nawigację. Przez korę śródwęchową sygnały docierają do hipokampa drogą przeszywającą, a przetworzone wyjście wraca do kory. Pęczek obręczy uczestniczy w komunikacji z przyśrodkowymi obszarami czołowymi i ciemieniowymi. Sąsiedztwo brzusznych dróg wzrokowych sprawia, że uszkodzenie może zaburzać zarówno rozpoznawanie otoczenia, jak i jego późniejsze przypomnienie.",
+    "clinical": "Zmiany mogą powodować trudności uczenia nowego kontekstu, rozpoznawania miejsc i orientacji topograficznej. W chorobach przyśrodkowej części płata skroniowego, w tym neurodegeneracyjnych i padaczce, uszkodzenie zwykle obejmuje kilka połączonych obszarów. Ubytek pamięci nie pozwala odróżnić zmiany hipokampa od uszkodzenia wejścia korowego bez dodatkowych danych. Zachowane rozpoznawanie pojedynczych przedmiotów może współistnieć z trudnością rozpoznawania całej sceny.",
+    "laterality": "Prawostronne obszary często silniej uczestniczą w przestrzennym rozpoznawaniu otoczenia, ale funkcje scen i pamięci są obustronne.",
+    "limitations": "Nie przypisywać całemu zakrętowi funkcji samego PPA ani utożsamiać kory śródwęchowej z hipokampem. Granice funkcjonalne nie pokrywają się dokładnie z jednym zakrętem atlasowym.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 17–18, 29–31"
+      },
+      {
+        "sourceId": "parahippocampal-scenes-1998",
+        "locator": "Pierwotne badanie fMRI: reprezentacja lokalnego otoczenia w okolicy przyhipokampowej"
+      }
+    ],
+    "relatedCircuitIds": [
+      "corticocortical",
+      "papez"
+    ]
+  },
+  {
+    "id": "deep-lateral-ventricles",
+    "names": {
+      "pl": "Komory boczne",
+      "en": "Lateral ventricles",
+      "lat": "Ventriculi laterales"
+    },
+    "category": "ventricle",
+    "projectRegionIds": [
+      "Left-Lateral-Ventricle",
+      "Right-Lateral-Ventricle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Parzyste jamy kresomózgowia wyścielone ependymą i wypełnione płynem mózgowo-rdzeniowym. Każda obejmuje róg przedni w płacie czołowym, część środkową, trójkąt oraz rogi tylny i dolny. Ich ściany są tworzone przez sąsiadujące struktury, m.in. ciało modzelowate, jądro ogoniaste, wzgórze i hipokamp. Etykieta główna w ASEG jest odrębna od etykiety rogu dolnego.",
+    "function": "Są elementem przestrzeni płynowych zapewniających właściwe środowisko i ochronę mechaniczną mózgowia. Światło komory nie przetwarza sygnałów neuronowych. Splot naczyniówkowy znajdujący się w części komory produkuje płyn, ale jest odrębną tkanką, nie całym światłem jamy.",
+    "connections": "Każda komora boczna łączy się z komorą III przez otwór międzykomorowy. Dalej droga prowadzi przez wodociąg do komory IV i przestrzeni podpajęczynówkowej. Przepływ ma składowe pulsacyjne i nie jest wyłącznie stałym jednokierunkowym strumieniem.",
+    "clinical": "Powiększenie może wynikać z utrudnionego krążenia płynu lub utraty otaczającej tkanki ex vacuo. Sam rozmiar nie rozróżnia tych przyczyn. Asymetria może być wariantem prawidłowym; przy ocenie znaczenie mają dynamika, kształt i otaczające struktury.",
+    "laterality": "Lewa i prawa komora są odrębne, lecz komunikują się pośrednio przez komorę III. Fizjologiczna asymetria nie jest mapą dominacji półkul.",
+    "limitations": "Maska obrazuje przestrzeń płynową, nie funkcjonalną jednostkę neuronalną. Nie wolno wyprowadzać rozpoznania wodogłowia z pojedynczej etykiety lub objętości.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 67–68"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 124–125 (tablice 107–108)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-inferior-horn",
+    "names": {
+      "pl": "Róg dolny komory bocznej",
+      "en": "Inferior horn of lateral ventricle",
+      "lat": "Cornu inferius ventriculi lateralis"
+    },
+    "category": "ventricle",
+    "projectRegionIds": [
+      "Left-Inf-Lat-Vent",
+      "Right-Inf-Lat-Vent"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Róg dolny, czyli skroniowy, jest częścią komory bocznej zawijającą do płata skroniowego. W jego dnie uwypukla się hipokamp, a w okolicy przyśrodkowej biegnie strzępek i szczelina naczyniówkowa. Nad rogiem przebiegają elementy ogona jądra ogoniastego i dróg wzrokowych; przednio sąsiaduje ciało migdałowate.",
+    "function": "Stanowi część przestrzeni płynowej. Nie jest ośrodkiem pamięci: jego związek z pamięcią wynika z sąsiedztwa hipokampa, nie z funkcji światła komory.",
+    "connections": "Pozostaje ciągły z trójkątem i pozostałymi częściami komory bocznej. Splot naczyniówkowy jest związany z okolicą szczeliny naczyniówkowej; nie obejmuje całej powierzchni rogu.",
+    "clinical": "Poszerzenie może towarzyszyć wodogłowiu albo zanikowi sąsiedniego hipokampa i płata skroniowego. Te mechanizmy wymagają rozróżnienia. W ocenie ogniska przy komorze istotne jest ryzyko zajęcia hipokampa i pętli skroniowej promienistości wzrokowej.",
+    "laterality": "Parzysta struktura o dopuszczalnej asymetrii kształtu.",
+    "limitations": "Jest częścią komory bocznej, mimo osobnej etykiety projektu. Nie wolno traktować dwóch kategorii jako oddzielnych układów krążenia ani liczyć nakładających się zakresów bez sprawdzenia segmentacji.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 21, 23, 67–68"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 124, 128 (tablice 107, 111)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-third-ventricle",
+    "names": {
+      "pl": "Komora trzecia",
+      "en": "Third ventricle",
+      "lat": "Ventriculus tertius"
+    },
+    "category": "ventricle",
+    "projectRegionIds": [
+      "3rd-Ventricle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Nieparzysta szczelinowata jama międzymózgowia między wzgórzami i podwzgórzami. Przednią ścianę współtworzy blaszka krańcowa, a dno okolica podwzgórzowa. Zrost międzywzgórzowy może przechodzić przez jej światło, lecz nie występuje u wszystkich osób. Zachyłki obejmują m.in. okolicę nadwzrokową, lejka i szyszynki.",
+    "function": "Jest przestrzenią krążenia płynu, a nie skupiskiem komórek odpowiadającym za funkcje wzgórza lub podwzgórza.",
+    "connections": "Otwory międzykomorowe łączą ją z komorami bocznymi, a wodociąg mózgu z komorą IV. Splot naczyniówkowy znajduje się w sklepieniu i współuczestniczy w produkcji płynu.",
+    "clinical": "Zablokowanie otworu międzykomorowego lub wodociągu może zaburzać odpływ i poszerzać części układu powyżej przeszkody. Rozrost w sąsiedztwie może jednocześnie powodować objawy wzrokowe, hormonalne, pamięciowe lub zaburzenia czuwania poprzez ucisk tkanek.",
+    "laterality": "Struktura pośrodkowa; objawy zależą od uciskanej strony i otaczających dróg.",
+    "limitations": "Poszerzenie komory nie lokalizuje konkretnego deficytu neuronalnego. Należy odróżniać zawartość jamy od struktur tworzących jej ściany.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 25–29, 67–68"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 124–125, 131 (tablice 107–108, 114)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-fourth-ventricle",
+    "names": {
+      "pl": "Komora czwarta",
+      "en": "Fourth ventricle",
+      "lat": "Ventriculus quartus"
+    },
+    "category": "ventricle",
+    "projectRegionIds": [
+      "4th-Ventricle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Komora IV leży między mostem i górnym rdzeniem przedłużonym od przodu a móżdżkiem od tyłu. Jej dnem jest dół równoległoboczny. Sklepienie tworzą m.in. zasłony rdzeniowe i tkanka naczyniówkowa; bocznie znajdują się zachyłki. W pobliżu leżą jądra nerwów czaszkowych i drogi pniowe, ale światło komory ich nie zawiera.",
+    "function": "Umożliwia przejście płynu z układu komorowego do przestrzeni podpajęczynówkowej i mieści splot współuczestniczący w jego wytwarzaniu.",
+    "connections": "Wodociąg doprowadza płyn od komory III. Otwór pośrodkowy i dwa boczne łączą ją z przestrzenią podpajęczynówkową; kaudalnie istnieje przejście do kanału środkowego rdzenia.",
+    "clinical": "Zmiany tylnego dołu mogą uciskać komorę i utrudniać odpływ. Współistnienie ataksji, objawów nerwów czaszkowych i cech wzrostu ciśnienia może wynikać z zajęcia sąsiednich tkanek i krążenia płynu. Poszerzona jama nie musi oznaczać czynnej przeszkody.",
+    "laterality": "Struktura pośrodkowa z dwoma zachyłkami i otworami bocznymi.",
+    "limitations": "Rola płynowa nie jest tożsama z funkcjami jąder widocznych jako wyniosłości dna. Jeden segment nie dostarcza informacji o drożności otworów.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 33–38, 67–68"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 124–125, 131 (tablice 107–108, 114)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-csf",
+    "names": {
+      "pl": "Płyn mózgowo-rdzeniowy",
+      "en": "Cerebrospinal fluid",
+      "lat": "Liquor cerebrospinalis"
+    },
+    "category": "ventricle",
+    "projectRegionIds": [
+      "CSF"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Płyn mózgowo-rdzeniowy wypełnia komory, zbiorniki i przestrzeń podpajęczynówkową mózgowia oraz rdzenia. Nie jest tkanką nerwową. Etykieta CSF w atlasie jest techniczną klasą płynu rozpoznanego przez segmentację i nie musi obejmować wszystkich przestrzeni płynowych, ponieważ część ma osobne nazwy.",
+    "function": "Zapewnia wyporność i amortyzację, współtworzy stabilne środowisko jonowe oraz transport substancji. Jego wymiana z płynem śródmiąższowym i drogami odpływu ma znaczenie dla usuwania produktów przemiany. Nie przewodzi potencjałów czynnościowych jak szlak nerwowy.",
+    "connections": "Większość jest wytwarzana przez sploty naczyniówkowe. Krążenie łączy komory boczne, III i IV z przestrzenią podpajęczynówkową. Odpływ obejmuje ziarnistości pajęczynówki oraz drogi limfatyczne i okołonerwowe; model jednej drogi do zatok żylnych jest niepełny.",
+    "clinical": "Nieprawidłowości ciśnienia, krążenia i składu mogą towarzyszyć wodogłowiu, krwawieniu, zakażeniu i zapaleniu. Obraz przestrzeni płynowych nie mierzy składu ani ciśnienia. Poszerzenie ex vacuo odzwierciedla ubytek tkanki, a nie automatycznie wzrost produkcji płynu.",
+    "laterality": "Płyn tworzy połączony układ, bez neuronalnej dominacji lewej lub prawej strony.",
+    "limitations": "W analizie objętości trzeba sprawdzić, czy CSF jest klasą resztkową obok osobnych komór. Nie należy sumować kategorii bez znajomości ich zakresów.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 67–68"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 125 (tablica 108)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-choroid-plexus",
+    "names": {
+      "pl": "Splot naczyniówkowy",
+      "en": "Choroid plexus",
+      "lat": "Plexus choroideus"
+    },
+    "category": "ventricle",
+    "projectRegionIds": [
+      "Left-choroid-plexus",
+      "Right-choroid-plexus"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Sploty naczyniówkowe są unaczynioną tkanką pokrytą wyspecjalizowanym nabłonkiem. Występują w komorach bocznych oraz III i IV; parzyste etykiety projektu dotyczą splotów komór bocznych. Rdzeń naczyniowy i nabłonek stanowią strukturę odrębną od światła komory. Szczelne połączenia między komórkami nabłonka tworzą zasadniczą barierę krew–płyn mózgowo-rdzeniowy.",
+    "function": "Aktywnie wydzielają większość płynu mózgowo-rdzeniowego i regulują jego skład. Uczestniczą w transporcie wybranych substancji oraz nadzorze immunologicznym. Płyn nie jest jedynie biernym przesączem osocza, a bariera splotowa różni się od śródbłonkowej bariery krew–mózg.",
+    "connections": "Wymiana zachodzi pomiędzy naczyniami, zrębem, nabłonkiem i światłem komory. Nie jest to połączenie synaptyczne typu droga nerwowa. Płyn następnie przemieszcza się przez układ komorowy i przestrzenie podpajęczynówkowe.",
+    "clinical": "Guzy splotu mogą utrudniać krążenie płynu lub zwiększać jego produkcję. Zwapnienia i niektóre torbielowate zmiany mogą być przypadkowym znaleziskiem; samo uwidocznienie splotu nie jest patologią. Ocena zależy od wieku, obrazu i kontekstu klinicznego.",
+    "laterality": "Sploty boczne występują po obu stronach; nie mają lateralizacji funkcji poznawczych.",
+    "limitations": "Kategoria ventricle oznacza tu związek z układem komorowym, nie brak tkanki. Obecna etykieta nie obejmuje automatycznie wszystkich splotów i nie jest objętością produkowanego płynu.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 67–68"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "s. PDF 124–125 (tablice 107–108)"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-optic-chiasm",
+    "names": {
+      "pl": "Skrzyżowanie wzrokowe",
+      "en": "Optic chiasm",
+      "lat": "Chiasma opticum"
+    },
+    "category": "white-matter",
+    "projectRegionIds": [
+      "Optic-Chiasm"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Skrzyżowanie leży na podstawie mózgowia, powyżej okolicy przysadki i przed lejkiem podwzgórza. Tworzą je aksony komórek zwojowych siatkówek przechodzące z nerwów do pasm wzrokowych. Włókna z połówek nosowych siatkówek przechodzą głównie na stronę przeciwną, a skroniowe pozostają po tej samej stronie. Jest to struktura istoty białej, nie miejsce typowego przełączenia synaptycznego.",
+    "function": "Porządkuje sygnały obu oczu według przeciwległych połówek pola widzenia. Dzięki częściowemu skrzyżowaniu każda półkula otrzymuje informację o tej samej połowie otoczenia z obu oczu. Część włókien siatkówkowych uczestniczy także w odruchach i synchronizacji rytmu dobowego przez dalsze rozgałęzienia układu wzrokowego.",
+    "connections": "Nerwy wzrokowe dochodzą od przodu, pasma odchodzą ku tyłowi i bokowi. Większość projekcji pasma zmierza do ciała kolankowatego bocznego, inne do okolic przedpokrywowych, wzgórka górnego i podwzgórza. Nie należy nazywać skrzyżowania korą wzrokową ani traktować go jako źródła percepcji.",
+    "clinical": "Ucisk środkowej części, np. przez zmianę nadsiodłową, może powodować dwuskroniowe ubytki pola. Wzór zależy od kierunku i zakresu ucisku, dlatego nie każde uszkodzenie daje idealną hemianopsję. Zajęcie nerwu przed skrzyżowaniem i pasma za nim powoduje inne rozkłady ubytków.",
+    "laterality": "Struktura pośrodkowa łącząca oba układy siatkówkowe. Pole skroniowe oka rzutuje na nosową połowę siatkówki.",
+    "limitations": "Maska nie rozdziela pęczków z poszczególnych sektorów siatkówki. Obraz geometryczny nie mierzy ostrości ani pola widzenia.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 21, 27–29"
+      },
+      {
+        "sourceId": "deep-web-visual-processing-cortical-pathways",
+        "locator": "Relacja siatkówka–skrzyżowanie–przeciwstronne pole widzenia"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-corpus-callosum",
+    "names": {
+      "pl": "Ciało modzelowate — pięć pasm segmentacyjnych",
+      "en": "Corpus callosum — five segmentation bands",
+      "lat": "Corpus callosum"
+    },
+    "category": "white-matter",
+    "projectRegionIds": [
+      "CC_Anterior",
+      "CC_Mid_Anterior",
+      "CC_Central",
+      "CC_Mid_Posterior",
+      "CC_Posterior"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Ciało modzelowate jest największym spoidłem półkul. W opisie makroskopowym wyróżnia się dziób, kolano, pień i płat; czasem osobno opisuje się cieśń. Włókna rozchodzą się do kory obu półkul, tworząc m.in. kleszcze mniejsze ku czołu i większe ku potylicy. Pięć nazw CC w projekcie oznacza przednio-tylne pasma segmentacyjne. Liczba pięć nie uprawnia do utożsamienia ich kolejno z dziobem, kolanem, pniem, cieśnią i płatem: podział geometryczny i anatomiczny to różne kryteria.",
+    "function": "Zapewnia wymianę informacji i koordynację obu półkul, w tym ruchy oburęczne, integrację percepcji i komunikację między sieciami o częściowo odmiennej specjalizacji. Aksony modzelowate są zasadniczo pobudzające, ale przez lokalne interneurony mogą wywoływać hamowanie odbiorczej kory. Dlatego całego spoidła nie należy opisywać jako czysto pobudzającego albo hamującego. Przecięcie części włókien może utrudniać przekazywanie reprezentacji między półkulami przy zachowaniu przetwarzania lokalnego.",
+    "connections": "Orientacyjnie przednie pasma zawierają więcej połączeń przedczołowych, środkowe ruchowych i czuciowych, a tylne ciemieniowych, skroniowych i potylicznych. Są to gradienty o nakładaniu, nie wyłączne funkcje pięciu etykiet. Część płatów skroniowych łączy się przez spoidło przednie, ale nie jest prawdą, że całe płaty skroniowe nie mają połączeń modzelowatych. CC_Anterior, CC_Mid_Anterior, CC_Central, CC_Mid_Posterior i CC_Posterior należy prezentować jako kolejne odcinki tej samej struktury z takim zastrzeżeniem. Dokładne cele włókien wymagają danych połączeniowych, nie samego przekroju środkowego.",
+    "clinical": "Uszkodzenia mogą wywoływać zespoły odłączenia, np. trudność nazywania przedmiotu prezentowanego do jednej półkuli, apraksję lewej ręki w określonych warunkach czy zaburzenie koordynacji oburęcznej. Uszkodzenie płata wraz z lewą korą potyliczną może współtworzyć aleksję bez agrafii przez odcięcie prawej informacji wzrokowej od lewostronnych sieci językowych. Wady rozwojowe spoidła mają bardzo zróżnicowany obraz zależny od innych zmian i reorganizacji.",
+    "laterality": "Jest strukturą pośrodkową łączącą obie strony; asymetria funkcji kory wpływa na obraz odłączenia, ale samo spoidło nie ma pojedynczej dominującej strony.",
+    "limitations": "Pięć etykiet nie tworzy dokładnej mapy pęczków ani biologicznych granic. Objętość każdego pasma nie może być traktowana jako miara jednej zdolności poznawczej. Pierwotne uproszczenie starego źródła o braku połączeń skroniowych przez ciało modzelowate nie zostało przejęte.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 20–21"
+      }
+    ],
+    "relatedCircuitIds": []
+  },
+  {
+    "id": "deep-habenula",
+    "names": {
+      "pl": "Jądra uzdeczki, jądro międzykonarowe i RMTg",
+      "en": "Habenular nuclei, interpeduncular nucleus and RMTg",
+      "lat": "Nuclei habenulares; nucleus interpeduncularis"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Uzdeczka należy do nadwzgórza i leży przy tylno-przyśrodkowej części wzgórza, obok szyszynki. Ma jądro przyśrodkowe MHb i boczne LHb, różniące się składem komórek i połączeniami. Jądro międzykonarowe IPN leży w brzusznej okolicy śródmózgowia, przy dole międzykonarowym. RMTg, rostromedial tegmental nucleus, jest odrębnym skupiskiem neuronów GABA-ergicznych w okolicy nakrywki; nie jest synonimem IPN ani VTA. W modelu projektu wymienione jądra są węzłami pojęciowymi, bez osobnych masek.",
+    "function": "LHb uczestniczy w aktualizacji zachowania wobec niekorzystnych wyników i pominięcia oczekiwanej nagrody. Nie jest jednorodnym „ośrodkiem kary”. Szlak MHb–IPN uczestniczy w regulacji pobudzenia i reakcji na nikotynę, w tym awersyjnych i związanych z odstawieniem, szczególnie dobrze opisanych u gryzoni. Rozdzielenie tych dwóch układów zapobiega mylnemu przypisaniu wszystkich efektów dopaminowych przyśrodkowej uzdeczce. Znaczenie zależy od typu komórek i kierunku połączenia.",
+    "connections": "Prążek rdzenny wzgórza dostarcza wejść przodomózgowia do uzdeczki. Pęczek tyłozgięty prowadzi istotną część wyjść ku śródmózgowiu. MHb wysyła do IPN włókna cholinergiczne, glutaminergiczne i peptydergiczne w zależności od podregionu. LHb oddziałuje na układy dopaminowe m.in. przez pobudzającą projekcję do RMTg, którego neurony GABA hamują część komórek dopaminowych. Badania pierwotne u naczelnych wykazały udział takiej drogi w przekazie negatywnych sygnałów wyniku. Są także inne wyjścia do jąder szwu i nakrywki.",
+    "clinical": "Obwody te są badane w kontekście uzależnień, zaburzeń motywacji i nastroju. Związek z depresją nie uzasadnia lokalizowania całej choroby w LHb, a wyniki eksperymentów nikotynowych u myszy nie stanowią samodzielnego wyjaśnienia zachowania konkretnego człowieka. Drobne jądra są trudne do wiarygodnej segmentacji i obrazowania czynnościowego.",
+    "laterality": "Układ jest obustronny; asymetrie międzygatunkowe i rozwojowe nie tworzą prostego podziału na ludzką lewą i prawą funkcję nastroju.",
+    "limitations": "Hasło uzupełniające bez istniejących identyfikatorów struktur. Wyraźnie rozróżnia IPN od RMTg i projekcje MHb od LHb. Szczegółowe wnioski mechanistyczne częściowo opierają się na modelach zwierzęcych. W schemacie pobudzająca projekcja LHb do hamującego RMTg może ostatecznie osłabić aktywność dopaminową. Należy opisywać osobno znak synapsy bezpośredniej i efekt całego łańcucha, zamiast nazywać samą LHb jądrem hamującym.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 25, 29–31"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "s. 420, ryc. 16.32 (EPUB: obraz 439.jpg; ogólne połączenia przegrodowo-uzdeczkowe)"
+      },
+      {
+        "sourceId": "deep-web-21832176",
+        "locator": "Pierwotne badanie u naczelnych: pośrednictwo RMTg w negatywnym sygnale nagrody"
+      },
+      {
+        "sourceId": "deep-web-26585290",
+        "locator": "Pierwotne badania myszy: szlak MHb–IPN i efekty nikotyny"
+      }
+    ],
+    "supplementary": true,
+    "relatedCircuitIds": [
+      "habenula-lateral",
+      "habenula-medial"
+    ]
+  },
+  {
+    "id": "deep-basal-forebrain",
+    "names": {
+      "pl": "Podstawa przodomózgowia i jądra przegrody",
+      "en": "Basal forebrain and septal nuclei",
+      "lat": "Nuclei basales telencephali et nuclei septales"
+    },
+    "category": "subcortex",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Podstawa przodomózgowia obejmuje kilka blisko położonych układów, m.in. jądro podstawne Meynerta, przegrodę przyśrodkową oraz pasmo przekątne Broki. Rozproszone grupy cholinergiczne współistnieją tu z neuronami GABA-ergicznymi i glutaminergicznymi. Jądra przegrody leżą przed i poniżej rogu przedniego komory bocznej, w sąsiedztwie pola przegrodowego. Przegroda przezroczysta jest inną strukturą: cienką przegrodą między przestrzeniami komór, nie synonimem jąder przegrody.",
+    "function": "Projekcje podstawy przodomózgowia modulują uwagę, stan kory, uczenie i podatność obwodów na zmianę. Neurony przegrodowe uczestniczą w organizacji rytmiki hipokampa i współpracy procesów uwagi z pamięcią. Acetylocholina zmienia sposób przetwarzania informacji, lecz nie jest samą „substancją pamięci”. Obszar zawiera także obwody związane z motywacją i stanem autonomicznym, dlatego zespół kliniczny po rozległym uszkodzeniu nie jest czystym efektem ubytku jednego przekaźnika.",
+    "connections": "Jądro podstawne wysyła rozległe projekcje do kory, a układ przegrody przyśrodkowej i pasma przekątnego szczególnie do formacji hipokampa. Część włókien biegnie ze sklepieniem i w innych drogach podstawy przodomózgowia. Projekcje GABA-ergiczne z przegrody oddziałują na interneurony hipokampa i wpływają na synchronizację. Wejścia z hipokampa, ciała migdałowatego, podwzgórza i pnia łączą kontekst i pobudzenie. Prążek rdzenny wzgórza prowadzi część informacji przegrodowej do uzdeczki. Podstawa przodomózgowia nie jest jednym węzłem równomiernie unerwiającym każdą korę. Projekcje mają topografię, a różne cele mogą być modulowane zależnie od zadania. Uszkodzenie części układu przegrodowego powinno być zatem odróżnione od rozległego ubytku projekcji jądra podstawnego.",
+    "clinical": "Degeneracja układów cholinergicznych podstawy przodomózgowia jest ważnym elementem patologii choroby Alzheimera, lecz obejmuje ją szerszy proces chorobowy. Uszkodzenie podstawy przodomózgowia po krwawieniu lub niedokrwieniu może powodować zaburzenia pamięci, uwagi i zachowania. Zaburzenia te mogą także wynikać z przerwania połączeń oraz zajęcia sąsiadującego prążkowia lub kory czołowej.",
+    "laterality": "Jądra występują obustronnie, a ich projekcje mają uporządkowanie przestrzenne. Całościowa regulacja czuwania i pamięci korzysta z obu stron.",
+    "limitations": "Termin podstawowe jądra przodomózgowia może mylić się z jądrami podstawy typu prążkowie–gałka blada; w tym haśle opisano przede wszystkim układy modulacyjne i przegrodowe. Brak swoistych masek w projekcie.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 24–25, 29–31"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "s. 420, ryc. 16.32 (EPUB: obraz 439.jpg)"
+      }
+    ],
+    "supplementary": true,
+    "relatedCircuitIds": [
+      "cholinergic-basal",
+      "septohippocampal"
+    ]
+  },
+  {
+    "id": "deep-pontine-tegmental-nuclei",
+    "names": {
+      "pl": "Jądra konarowo-mostowe i grzbietowo-boczne nakrywki",
+      "en": "Pedunculopontine and laterodorsal tegmental nuclei",
+      "lat": "Nucleus pedunculopontinus et nucleus tegmentalis laterodorsalis"
+    },
+    "category": "brainstem",
+    "projectRegionIds": [],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "PPN/PPT i LDT są skupiskami neuronów w okolicy górnego mostu i dolnego śródmózgowia. PPN leży w nakrywce w pobliżu konara górnego móżdżku, a LDT bardziej grzbietowo i przyśrodkowo. Obejmują neurony cholinergiczne oraz inne populacje, więc terminu „jądra cholinergiczne” nie należy rozumieć jako jednorodnego składu. Sąsiadują z wieloma drogami pniowymi i strukturami sterowania snem oraz ruchem.",
+    "function": "Uczestniczą w regulacji aktywacji wzgórzowo-korowej, stanów snu i czuwania oraz powiązaniu pobudzenia z działaniem. PPN wiąże się także z kontrolą postawy i lokomocji w ramach rozległej sieci pniowo-rdzeniowej. Rola w REM nie oznacza, że te dwa jądra samodzielnie włączają cały stan snu; ważne są oddzielne populacje glutaminergiczne i GABA-ergiczne w innych obszarach nakrywki oraz ich wzajemne oddziaływania. Aktywacja kory i zdolność utrzymania pionowej postawy są różnymi wymiarami stanu organizmu. Sen REM pokazuje ich rozdzielenie: aktywność mózgu może być wysoka przy zahamowaniu większości ruchów dowolnych. Wyjaśnienie tego zjawiska wymaga oddzielnego opisu sieci aktywacji i zstępującej atonii. PPN/LDT są częścią takiej organizacji, lecz nie zastępują opisu mostowo-rdzeniowych dróg hamujących neurony ruchowe.",
+    "connections": "Projekcje biegną do wzgórza, jąder podstawy, układów dopaminowych i innych struktur pnia. Wejścia z GPi/SNr łączą wybór działania z pniową kontrolą ruchu. Drogi do wzgórza modulują jego stan przewodzenia, a połączenia z tworem siatkowatym wpływają na zachowanie posturalne. Współpracują z LC, jądrami szwu, podwzgórzowymi neuronami oreksynowymi i układami przedwzrokowymi. Wzajemne hamowanie i pobudzanie między tymi układami zmienia się wraz ze snem.",
+    "clinical": "Zaburzenia tych obwodów są badane w zaburzeniach chodu, postawy i snu w chorobach neurodegeneracyjnych. Zaburzenie zachowania podczas snu REM wynika z dysfunkcji rozleglejszej sieci atonii i nie jest swoistym objawem uszkodzenia PPN lub LDT. Zmiany małego obszaru pnia mogą dawać mieszany obraz przez zajęcie sąsiednich struktur.",
+    "laterality": "Układ jest parzysty, ze znaczną obustronną integracją funkcji osiowych i stanu pobudzenia.",
+    "limitations": "Hasło uzupełniające do obwodu cholinergic-pontine. Nie ma odrębnych masek, a lokalizacja na schemacie jest orientacyjna. Nie należy przypisywać całej kontroli REM acetylocholinie.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "s. PDF 35–36, 53"
+      },
+      {
+        "sourceId": "netter-neuro",
+        "locator": "s. 254, ryc. 11.33 (EPUB: obraz 273.jpg)"
+      }
+    ],
+    "supplementary": true,
+    "relatedCircuitIds": [
+      "cholinergic-pontine"
+    ]
+  }
+]

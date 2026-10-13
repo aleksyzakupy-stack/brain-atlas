@@ -1,0 +1,28 @@
+.neuro-page { flex: 1; min-height: 0; height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain; padding: 24px; }
+.neuro-page > .neuro-article, .neuro-catalog, .neuro-guide { max-width: 980px; margin: 0 auto; }
+.neuro-article h1, .neuro-guide h1, .neuro-catalog h1 { font-family: var(--font-display); font-size: clamp(25px,3vw,34px); font-weight: 500; margin: 8px 0 16px; }
+.neuro-article p, .neuro-guide p { line-height: 1.8; margin: 0 0 16px; color: var(--secondary); max-width: 80ch; }
+.neuro-side, .neuro-kind, .neuro-context { font-size: 12px; color: var(--muted); }
+.neuro-names { font-size: 12px; margin: 6px 0; }
+.neuro-names summary { padding: 8px 0; font-size: 12px; font-weight: 400; color: var(--muted); }
+.neuro-names dl { display: grid; grid-template-columns: 32px 1fr; gap: 8px; }.neuro-names dd { margin: 0; }
+.neuro-sections { display: flex; flex-wrap: wrap; gap: 3px 12px; margin: 12px 0 18px; }
+.neuro-sections button { font-size: 12px; color: var(--muted); padding: 6px 0; min-height: 32px; border-bottom: 1px solid var(--line); }
+.neuro-section { border-top: 1px solid var(--line); scroll-margin-top: 8px; }
+.neuro-section > summary { font-size: 15px; padding: 14px 0; font-weight: 500; }
+.neuro-section > div, .neuro-section > p { padding-bottom: 8px; }
+.neuro-section p { font-size: 15px; }.neuro-related, .neuro-model-links { margin-top: 14px; }
+.neuro-related summary, .neuro-model-links summary { font-size: 13px; }
+.neuro-article .source-locator { font-size: 12px; margin: 7px 0; }
+.source-verification > summary { font-size: 11px; color: var(--muted); padding: 8px 0; font-weight: 400; }
+.source-verification p { font-size: 12px; }.neuro-catalog-tools { display: flex; flex-wrap: wrap; gap: 10px; }.neuro-catalog-tools input { flex: 1; min-width: 180px; }
+.neuro-catalog-meta { display: flex; gap: 12px; justify-content: space-between; flex-wrap: wrap; margin: 20px 0; font-size: 12px; color: var(--muted); }
+.neuro-catalog nav > details { border-top: 1px solid var(--line); }.neuro-catalog nav summary { font-size: 15px; display: flex; gap: 12px; }.neuro-catalog nav summary small { color: var(--muted); font-size: 12px; margin-left: auto; }
+.neuro-catalog-link { display: flex; flex-direction: column; padding: 12px 6px; font-size: 14px; border-top: 1px solid #ffffff06; color: var(--secondary); }.neuro-catalog-link small { font-size: 11px; color: var(--muted); margin-top: 3px; }
+.neuro-guide li { color: var(--secondary); line-height: 1.8; margin-bottom: 12px; }.guide-table { overflow-x: auto; margin-bottom: 16px; }.guide-table table { border-collapse: collapse; font-size: 13px; min-width: 600px; }.guide-table th, .guide-table td { border: 1px solid var(--line); padding: 10px; text-align: left; vertical-align: top; line-height: 1.6; }
+.neuro-links-short { margin: 8px 0 14px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
+.pathway-dialog .neuro-article { margin-top: 12px; }.pathway-dialog .neuro-article h1 { font-size: 24px; }
+@media (max-width:640px) { .neuro-page { padding: 16px; }.neuro-article .neuro-section p { font-size: 15px; }.neuro-sections button { min-height: 40px; }.neuro-catalog-tools select { width: 100%; }.neuro-guide h1 { font-size: 25px; } }
+.neuro-section > summary h2 { display: inline; font: inherit; margin: 0; letter-spacing: normal; }
+.app-menu-panel > a { display: block; padding: 9px 12px; font-size: 13px; color: var(--secondary); }
+.additional-pathways summary { font-size: 13px; }.additional-pathways .related-links { font-size: 12px; }.additional-pathways a { padding: 10px 4px; font-size: 12px; }

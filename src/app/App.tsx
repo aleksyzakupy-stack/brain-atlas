@@ -24,10 +24,19 @@ import { brodmannByNumber, brodmannDescriptions } from '../data/brodmann'
 import { normalizeSearch } from '../utils/normalizeSearch'
 import { LessonPathwayScene, PathwayScene } from '../components/brain/PathwayScene'
 import { BrodmannPage, RegionContent } from '../components/panels/BrodmannContent'
+import { NeuroArticle } from '../components/neuroanatomy/NeuroArticle'
+import { NeuroCatalog } from '../components/neuroanatomy/NeuroCatalog'
+import { NeuroGuide } from '../components/neuroanatomy/NeuroGuide'
+import { neuroEntryById, neuroEntryName, neuroEntryUrl, searchNeuroEntries } from '../data/neuroanatomy'
 
 function Workspace() {
   const location = useLocation(), navigate = useNavigate()
   const lessonMatch = useMatch('/nauka/:slug/:stepId'), structureMatch = useMatch('/struktury/:slug')
+  const articleMatch = useMatch('/kompendium/:id')
+  const article = neuroEntryById[articleMatch?.params.id ?? '']
+  const catalog = location.pathname === '/kompendium'
+  const guide = location.pathname === '/przewodnik'
+  const referencePage = !!articleMatch || catalog || guide
   const circuitMatch = useMatch('/szlaki/:id'), baMatch = useMatch('/pola/:number')
   const circuit = circuitById[circuitMatch?.params.id ?? '']
   const baNumber = baMatch && /^\d+$/.test(baMatch.params.number ?? '') ? Number(baMatch.params.number) : undefined
@@ -55,7 +64,7 @@ function Workspace() {
   const showReading = hasReading && closedReading !== readingKey
   const closeSearch = useCallback(() => setSearchOpen(false), [setSearchOpen]), closeAbout = useCallback(() => setAboutOpen(false), [setAboutOpen]), closeDrawer = useCallback(() => setDrawerOpen(false), [setDrawerOpen])
   const home = location.pathname === '/'
-  const valid = home || location.pathname === '/atlas' || !!structure || !!step || !!circuit || !!baDescription
+  const valid = !!article || catalog || guide || home || location.pathname === '/atlas' || !!structure || !!step || !!circuit || !!baDescription
   const returnTo = circuit ? `/szlaki/${circuit.id}` : step && path ? lessonUrl(path.slug, step.id) : validReturnPath(new URLSearchParams(location.search).get('powrot'))
   const view = viewOverride?.route === location.pathname ? viewOverride.view : step?.view ?? (structure ? preferredView(structure.id) : 'lateral')
   const selectedId = region?.id ?? structure?.id
@@ -75,7 +84,7 @@ function Workspace() {
   }, [])
 
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [location.pathname])
-  useEffect(() => { document.title = `${circuit?.names.pl ?? baDescription?.title ?? step?.title ?? region?.names.pl ?? structure?.names.pl ?? 'Mózg w psychiatrii'} · Neuroatlas` }, [circuit?.names.pl, baDescription?.title, step?.title, structure?.names.pl, region?.names.pl])
+  useEffect(() => { document.title = `${article ? neuroEntryName(article,language) : catalog ? 'Kompendium neuroanatomii' : guide ? 'Przewodnik' : circuit?.names.pl ?? baDescription?.title ?? step?.title ?? region?.names.pl ?? structure?.names.pl ?? 'Mózg w psychiatrii'} · Neuroatlas` }, [article, catalog, guide, language, circuit?.names.pl, baDescription?.title, step?.title, structure?.names.pl, region?.names.pl])
 
   function select(id: string, keepModel = false) {
     const parcel = atlasRegionById[id]
@@ -104,8 +113,9 @@ function Workspace() {
       const items = brainCircuits.filter(item => item.group === group && normalizeSearch([item.names.pl,item.names.en,item.transmitter,item.summary].join(' ')).includes(normalizeSearch(circuitQuery)))
       return items.length ? <section key={group}><h3 className="circuit-directory-group">{label}</h3>{items.map(item => <button key={item.id} aria-current={circuit.id === item.id ? 'page' : undefined} onClick={() => { navigate(`/szlaki/${item.id}`); setMobilePane('diagram'); closeDrawer() }}><span>{language === 'en' ? item.names.en : item.names.pl}</span></button>)}</section> : null
     })}</nav>
+    <details className="additional-pathways"><summary>Dodatkowe drogi · 25</summary><div className="related-links">{searchNeuroEntries(circuitQuery).filter(entry => entry.category === 'pathway' && !entry.projectCircuitIds.length).map(entry => <Link key={entry.id} to={neuroEntryUrl(entry)} onClick={closeDrawer}>{neuroEntryName(entry,language)} ↗</Link>)}</div></details><div className="neuro-links-short"><Link to="/kompendium">Kompendium ↗</Link></div>
   </> : <>
-    <h2>Struktury mózgu</h2>
+    <h2>Struktury mózgu</h2><div className="neuro-links-short"><Link to="/kompendium">Wszystkie artykuły ↗</Link></div>
     <div className="atlas-index-switch"><button aria-pressed={anatomicalIndex && atlasMode === 'anatomy'} onClick={() => changeAtlas('anatomy')}>Anatomia</button><button aria-pressed={anatomicalIndex && atlasMode === 'brodmann'} onClick={() => changeAtlas('brodmann')}>Brodmann</button><button aria-pressed={!anatomicalIndex} onClick={() => setFunctionalIndex(true)}>Funkcje</button></div>
     {anatomicalIndex ? <>
       <input className="region-filter" aria-label="Filtruj obszary atlasu" placeholder="Nazwa lub BA…" value={regionQuery} onChange={event => setRegionQuery(event.target.value)} />
@@ -120,18 +130,18 @@ function Workspace() {
   return <><div className={`app-shell ${focusMode ? 'is-focused' : ''}`} inert={anyModal}>
     <a className="skip-link" href="#main" onClick={event => { event.preventDefault(); document.getElementById('main')?.focus() }}>Przejdź do treści</a>
     <header className="app-header">
-      {!home && <button className="directory-trigger" onClick={() => setDrawerOpen(true)} aria-label={step ? 'Kroki trasy' : circuit ? 'Lista szlaków' : 'Lista struktur'}>☰</button>}
+      {!home && !referencePage && <button className="directory-trigger" onClick={() => setDrawerOpen(true)} aria-label={step ? 'Kroki trasy' : circuit ? 'Lista szlaków' : 'Lista struktur'}>☰</button>}
       <nav className="mode-nav" aria-label="Główna nawigacja"><Link to="/" aria-current={home || !!step ? 'page' : undefined}>Nauka</Link><Link to="/atlas" aria-current={!home && !step && !circuit ? 'page' : undefined}>Atlas</Link><Link to="/szlaki/mesolimbic" aria-current={circuit ? 'page' : undefined}>Szlaki</Link></nav>
       <div className="header-tools"><button className="search-trigger" onClick={() => setSearchOpen(true)} aria-label="Szukaj w atlasie" title="Szukaj (⌘K / Ctrl+K)"><SearchIcon /></button>
-        <details className="app-menu" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}><summary aria-label="Menu atlasu">⋯</summary><div className="app-menu-panel"><span>Terminologia</span><TerminologySwitch /><button onClick={event => { event.currentTarget.closest('details')!.open = false; setFocusMode(true) }}>Skupienie</button><button onClick={event => { event.currentTarget.closest('details')!.open = false; setAboutOpen(true) }}>O atlasie i źródłach</button></div></details>
+        <details className="app-menu" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}><summary aria-label="Menu atlasu">⋯</summary><div className="app-menu-panel"><span>Terminologia</span><TerminologySwitch /><button onClick={event => { event.currentTarget.closest('details')!.open = false; setFocusMode(true) }}>Skupienie</button><button onClick={event => { event.currentTarget.closest('details')!.open = false; setAboutOpen(true) }}>O atlasie i źródłach</button><Link to="/kompendium" onClick={event => { event.currentTarget.closest('details')!.open = false }}>Kompendium</Link><Link to="/przewodnik" onClick={event => { event.currentTarget.closest('details')!.open = false }}>Przewodnik</Link></div></details>
       </div>
     </header>
     {focusMode && <button className="exit-focus" onClick={() => setFocusMode(false)}>↙ Wyjdź ze skupienia</button>}
 
-    {!valid ? <main className="not-found" id="main" tabIndex={-1}><span>404</span><h1>Ta ścieżka nie istnieje w atlasie.</h1><Link className="primary-button" to="/atlas">Wróć do atlasu</Link></main> : home ? <main id="main" tabIndex={-1} className="learning-home">
+    {!valid ? <main className="not-found" id="main" tabIndex={-1}><span>404</span><h1>Ta ścieżka nie istnieje w atlasie.</h1><Link className="primary-button" to="/atlas">Wróć do atlasu</Link></main> : referencePage ? <main id="main" tabIndex={-1} className="neuro-page">{catalog ? <NeuroCatalog language={language} /> : guide ? <NeuroGuide /> : article && <><div className="neuro-links-short"><Link to="/kompendium">← Kompendium</Link></div><NeuroArticle key={article.id} id={article.id} language={language} fullPage /></>}</main> : home ? <main id="main" tabIndex={-1} className="learning-home">
       {showCompletion && <div className="completion-notice" role="status">✓ Trasa „{completedPath.title}” ukończona.</div>}
       <div className="home-grid"><div className="home-brain"><AtlasScene view={view} onView={next => setViewOverride({ route: location.pathname, view: next })} language={language} atlasMode={atlasMode} onSelect={select} onSelect3d={id => select(id, true)} /><div className="home-brain-caption"><Link to="/atlas">Otwórz pełny atlas ↗</Link></div></div>
-        <section className="path-selection"><div className="section-heading"><h2>Trasy nauki</h2></div>{learningPaths.map(item => {
+        <section className="path-selection"><div className="neuro-links-short"><Link to="/kompendium">Kompendium neuroanatomii ↗</Link><Link to="/przewodnik">Przewodnik ↗</Link></div><div className="section-heading"><h2>Trasy nauki</h2></div>{learningPaths.map(item => {
           const done = progress.completed[item.slug]?.length ?? 0
           return <Link className="path-card" key={item.slug} to={lessonUrl(item.slug, item.steps[0].id)} style={{ '--category': categoryById[item.categoryId].color } as CSSProperties}><div className="path-card-top"><span>{item.minutes} min</span>{done > 0 && <span className="path-done">{done}/6 ✓</span>}</div><h3>{item.title}</h3><span className="path-card-arrow" aria-hidden="true">↗</span></Link>
         })}</section></div>

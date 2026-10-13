@@ -1,0 +1,2784 @@
+[
+  {
+    "id": "ctx-G_and_S_frontomargin",
+    "names": {
+      "pl": "Zakręt i bruzda czołowo-brzeżna",
+      "en": "Frontomarginal gyrus and sulcus",
+      "lat": "Gyrus et sulcus frontomarginalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_frontomargin",
+      "rh_G_and_S_frontomargin"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Obszar na przednio-dolnym brzegu płata czołowego, w sąsiedztwie przejścia powierzchni bocznej bieguna czołowego w powierzchnię oczodołową. Etykieta projektu łączy niewielki zakręt z przyległą bruzdą. Należy do kory przedczołowej; nie jest częścią obszaru skroniowego nazywanego ośrodkiem Wernickego, mimo historycznego eponimu zakrętu czołowo-brzeżnego. Granice drobnych fałdów przedniego płata czołowego są osobniczo zmienne.",
+    "function": "Funkcje należy odnosić do szerszej kory przedniej i oczodołowo-przedczołowej: utrzymywania celów, porównywania możliwych działań oraz uwzględniania ich przewidywanych następstw. Wykonywanie zadania z odroczonym celem angażuje rozległą sieć czołową, a nie samą bruzdę. Nie ma podstaw do traktowania tej parceli jako osobnego ośrodka inteligencji lub jednej emocji.",
+    "connections": "Krótkie włókna kojarzeniowe łączą ją z sąsiednią korą biegunową i oczodołową. Dalsza komunikacja odbywa się w obrębie sieci przedczołowych, przez połączenia międzypółkulowe przedniej części ciała modzelowatego i obwody wzgórzowo-korowe. Nie należy przypisywać całej parceli jednego wyłącznego pęczka.",
+    "clinical": "Uszkodzenia przedniego płata czołowego mogą pogarszać samodzielne planowanie, elastyczne przechodzenie między zadaniami i ocenę skutków zachowania przy względnie zachowanej sile mięśniowej. Taki obraz wymaga oceny szerszego uszkodzenia i jego połączeń; nie pozwala zlokalizować zmiany wyłącznie w zakręcie czołowo-brzeżnym.",
+    "laterality": "Obie półkule uczestniczą w kontroli zachowania. Sama strona ani kształt bruzdy nie określają profilu osobowości lub sprawności wykonawczej.",
+    "limitations": "Jest to jednostka morfologiczna obejmująca zakręt i bruzdę. Badania przedniej kory czołowej nie wyznaczają jej indywidualnych granic funkcjonalnych.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "frontopolar-lesions-2008",
+        "locator": "Abstract i Results: ogniskowe uszkodzenia kory czołowo-biegunowej a wykonywanie wielu zadań"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_occipital_inf",
+    "names": {
+      "pl": "Zakręt i bruzda potyliczna dolna",
+      "en": "Inferior occipital gyrus and sulcus",
+      "lat": "Gyrus et sulcus occipitalis inferior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_occipital_inf",
+      "rh_G_and_S_occipital_inf"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt potyliczny dolny zajmuje dolno-boczną część płata potylicznego i przechodzi w okolicę potyliczno-skroniową. Sąsiaduje z zakrętem potylicznym środkowym oraz dolną powierzchnią półkuli. W projekcie połączono zakręt i bruzdę potyliczną dolną, dlatego widoczna etykieta obejmuje powierzchnię wypukłą oraz część kory ukrytej w fałdach.",
+    "function": "Ta okolica należy przede wszystkim do pozaprążkowych etapów analizy wzrokowej. Uczestniczy w rozpoznawaniu kształtu, konturów i złożonych cech widzianych przedmiotów, które są następnie zestawiane z reprezentacjami w korze skroniowej. Nie stanowi całej pierwotnej kory wzrokowej; sama nazwa zakrętu nie wyznacza pól V2, V3 ani obszarów selektywnych dla twarzy.",
+    "connections": "Informacja dociera z sąsiednich pól potylicznych przez krótkie włókna kojarzeniowe. Współpraca z brzuszną korą skroniową odbywa się m.in. w systemie pęczka podłużnego dolnego. Połączenia z przeciwległym płatem potylicznym przechodzą przez tylną część ciała modzelowatego; nie każdy punkt zakrętu ma taki sam profil połączeń.",
+    "clinical": "Zmiany korowo-podkorowe w dolnej okolicy potyliczno-skroniowej mogą upośledzać wzrokowe rozpoznawanie przedmiotów mimo zachowania podstawowego widzenia. Ubytki pola widzenia wskazują na współzajęcie retinotopowych pól lub dróg wzrokowych, a ich kształtu nie można przewidzieć z samej etykiety. Zakres unaczynienia zależy od przebiegu gałęzi tętnicy tylnej oraz środkowej mózgu.",
+    "laterality": "Analiza wzrokowa jest obustronna; przewaga prawej strony w niektórych zadaniach wzrokowych nie oznacza wyłączności tej półkuli.",
+    "limitations": "Parcelacja anatomiczna nie jest lokalizatorem funkcjonalnym rozpoznawania twarzy, liter ani przedmiotów.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_paracentral",
+    "names": {
+      "pl": "Płacik okołośrodkowy",
+      "en": "Paracentral lobule and sulcus",
+      "lat": "Lobulus paracentralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_paracentral",
+      "rh_G_and_S_paracentral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Płacik okołośrodkowy leży na powierzchni przyśrodkowej wokół górnego końca bruzdy środkowej. Łączy przyśrodkowe przedłużenia zakrętu przedśrodkowego i zaśrodkowego. Od przodu ogranicza go bruzda okołośrodkowa, od tyłu okolica gałęzi brzeżnej bruzdy obręczy, a od dołu bruzda obręczy. Zaopatrują go głównie gałęzie tętnicy przedniej mózgu.",
+    "function": "Przednia część zawiera reprezentację ruchową przeciwległej kończyny dolnej, tylna reprezentacje somatosensoryczne tej okolicy. Uczestniczy w dowolnej kontroli stopy i nogi oraz odbiorze czucia, zwłaszcza położenia i dotyku. Przyśrodkowe sieci czołowe uczestniczą także w kontroli mikcji; nie uzasadnia to wyznaczania jednego ostro odgraniczonego ośrodka pęcherza w całej parceli.",
+    "connections": "Włókna z kory ruchowej schodzą przez wieniec promienisty i torebkę wewnętrzną do drogi korowo-rdzeniowej; większość krzyżuje się w dolnej części rdzenia przedłużonego. Informacja somatosensoryczna dociera z przeciwległego ciała przez wzgórze. Połączenia z dodatkowymi polami ruchowymi i korą ciemieniową wiążą ruch z pozycją kończyny.",
+    "clinical": "Zawał przyśrodkowej okolicy czołowo-ciemieniowej może powodować przeciwstronny niedowład i zaburzenia czucia nogi silniejsze niż ręki. Przy bardziej rozległych zmianach w obszarze tętnicy przedniej mózgu mogą towarzyszyć zaburzenia inicjacji chodu, apatia i nietrzymanie moczu. Ogniskowe napady ruchowe lub czuciowe mogą zaczynać się w stopie.",
+    "laterality": "Reprezentacja kończyny jest głównie przeciwstronna. Kontrola osi ciała oraz zachowań związanych z chodem wymaga współpracy obu półkul i pnia mózgu.",
+    "limitations": "Granica zakręt–bruzda w atlasie nie rozdziela idealnie kory ruchowej, czuciowej i ich pól przejściowych.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 41–44; druk s. 39–42: drogi somatosensoryczne"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_subcentral",
+    "names": {
+      "pl": "Zakręt i bruzdy podśrodkowe",
+      "en": "Subcentral gyrus and sulci",
+      "lat": "Gyrus et sulci subcentrales"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_subcentral",
+      "rh_G_and_S_subcentral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt podśrodkowy stanowi most korowy łączący dolne końce zakrętów przedśrodkowego i zaśrodkowego nad bruzdą boczną. Jest częścią wieczka centralnego, zasłaniającego wyspę. W projekcie obejmuje także drobne przednią i tylną bruzdę podśrodkową. Bliskość dolnej reprezentacji twarzy, jamy ustnej i gardła jest ważniejsza funkcjonalnie niż sam kształt fałdu.",
+    "function": "Okolica uczestniczy w integracji czucia z ruchami ust, języka i aparatu artykulacyjnego, a wraz z sąsiednią korą ruchową, wieczkową i wyspą także w połykaniu. Należy rozróżniać wykonanie ruchu artykulacyjnego od tworzenia treści językowej: zaburzenie wymowy nie zawsze jest afazją. Funkcje nie kończą się na bruzdach oddzielających parcelę.",
+    "connections": "Krótkie włókna łączą korę przedśrodkową, zaśrodkową, dolną czołową i wieczkową. Sygnały czuciowe twarzy po przełączeniu w drogach trójdzielnych i wzgórzu trafiają do okolicy somatosensorycznej; sygnały ruchowe są przekazywane przez układ korowo-jądrowy do sieci pnia mózgu. Obustronne połączenia mają znaczenie dla ruchów gardła i krtani.",
+    "clinical": "Uszkodzenia okolicy centralno-wieczkowej mogą prowadzić do dyzartrii, dysfagii i zaburzeń czucia jamy ustnej. Przy obustronnym zajęciu wieczek występują ciężkie zaburzenia dowolnych ruchów ustno-twarzowo-gardłowych, niekoniecznie proporcjonalne do ruchów automatycznych. Napady mogą obejmować parestezje ust lub ruchy twarzy. Obszar zwykle należy do unaczynienia tętnicy środkowej mózgu.",
+    "laterality": "Ruchy dolnej części twarzy mają wyraźną składową przeciwstronną, ale korowa kontrola aparatu mowy i połykania jest częściowo obustronna.",
+    "limitations": "Jeden zakręt nie wystarcza do określenia lokalizacji wszystkich funkcji połykania lub rozpoznania zespołu wieczkowego.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "opercular-case-2019",
+        "locator": "Abstract: zespół wieczkowy i dysocjacja automatyczno-dowolna przy uszkodzeniu kory i przeciwległych włókien"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_transv_frontopol",
+    "names": {
+      "pl": "Poprzeczne zakręty i bruzdy bieguna czołowego",
+      "en": "Transverse frontopolar gyri and sulci",
+      "lat": "Gyri et sulci frontopolares transversi"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_transv_frontopol",
+      "rh_G_and_S_transv_frontopol"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Poprzeczne fałdy bieguna czołowego zajmują najbardziej przednią część półkuli. Łączą powierzchnię boczną i przyśrodkową przedniej kory czołowej; ich liczba i przebieg są zmienne. Położenie odpowiada szerokiej okolicy czołowo-biegunowej, często omawianej w związku z polem 10, lecz granice makroskopowe nie pokrywają się dokładnie z granicami cytoarchitektonicznymi.",
+    "function": "Kora czołowo-biegunowa wspiera utrzymywanie długofalowego zamiaru podczas wykonywania bieżących czynności, porównywanie alternatywnych celów i monitorowanie własnego działania. Dane z badań uszkodzeń wiążą tę okolicę z wielozadaniowością. Nie oznacza to, że odpowiada samodzielnie za całość planowania, pamięci roboczej albo inteligencji.",
+    "connections": "Lokalne połączenia z boczną i przyśrodkową korą przedczołową pozwalają zestawiać cele zadania z informacją o kontekście. Łączność z korą kojarzeniową ciemieniową i skroniową oraz obwodami wzgórzowymi wspiera integrację informacji. Połączenia międzypółkulowe przedniej kory przechodzą przez kolano ciała modzelowatego.",
+    "clinical": "Pacjent z rozległym uszkodzeniem bieguna czołowego może poprawnie wykonywać proste polecenia, a jednocześnie gubić odroczony zamiar i źle organizować wieloetapowe czynności dnia codziennego. Taki rozdźwięk między krótkim testem a zachowaniem jest klinicznie istotny. Zmiany pourazowe, guzy lub zawały mogą obejmować także sąsiednie połączenia, więc objawy nie są swoiste dla tych fałdów.",
+    "laterality": "Sieci czołowo-biegunowe działają obustronnie. Asymetrie zależą od zadania i jego materiału, np. werbalnego lub przestrzennego.",
+    "limitations": "Nie ma podstaw, aby poszczególnym poprzecznym bruzdom przypisywać osobne procesy poznawcze albo na podstawie samej objętości określać sprawność intelektualną.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "frontopolar-lesions-2008",
+        "locator": "Abstract i Results: ogniskowe uszkodzenia kory czołowo-biegunowej a wykonywanie wielu zadań"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_cingul-Ant",
+    "names": {
+      "pl": "Przednia część zakrętu obręczy",
+      "en": "Anterior cingulate gyrus and sulcus",
+      "lat": "Pars anterior gyri cinguli"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_cingul-Ant",
+      "rh_G_and_S_cingul-Ant"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Przedni odcinek zakrętu obręczy otacza przednią część ciała modzelowatego na przyśrodkowej ścianie półkuli. Ku górze sąsiaduje z bruzdą obręczy i przyśrodkową korą czołową, ku dołowi z bruzdą ciała modzelowatego i okolicą podspoidłową. Obejmuje niejednorodną korę przedkolanową; nie należy automatycznie włączać do niego całej środkowej części obręczy.",
+    "function": "Uczestniczy w wiązaniu stanu emocjonalnego i sygnałów z ciała z wyborem zachowania oraz regulacją odpowiedzi autonomicznych. Znaczenie motywacyjne bodźców powstaje we współpracy z wyspą, korą oczodołową i strukturami limbicznymi. Nie jest pojedynczym ośrodkiem emocji ani bólu; rozróżnienie ACC i MCC zapobiega przypisywaniu mu wszystkich funkcji wykonawczych i ruchowych obręczy.",
+    "connections": "Obręcz jako pęczek istoty białej łączy obszary przyśrodkowe z dalszymi częściami sieci limbicznej. Współpraca z ciałem migdałowatym, podwzgórzem, prążkowiem brzusznym i wzgórzem umożliwia wpływ motywacji na zachowanie i stan wegetatywny. Jest to opis sieci, a nie informacja, że każdy z tych szlaków kończy się w każdym punkcie parceli.",
+    "clinical": "Obustronne uszkodzenia przyśrodkowej sieci czołowej mogą powodować apatię, abulię i ograniczenie spontanicznych zachowań. Skrajne zaburzenia inicjacji przy względnie zachowanych podstawowych drogach ruchowych wymagają oceny rozległości zmian. Związek aktywności tej okolicy z zaburzeniami nastroju nie pozwala rozpoznawać choroby psychicznej na podstawie pojedynczego obrazu lub pomiaru.",
+    "laterality": "Obie strony należą do sieci regulacji motywacyjnej i autonomicznej. Nie ma prostego podziału na prawostronne emocje negatywne i lewostronne pozytywne.",
+    "limitations": "Granice atlasu są przybliżeniem podziału kory obręczy; funkcja zależy od podobszaru, zadania i połączeń.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "cingulate-receptors-2008",
+        "locator": "Introduction; histologia i podział ACC/MCC/PCC/RSC"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_cingul-Mid-Ant",
+    "names": {
+      "pl": "Przednia część środkowego zakrętu obręczy",
+      "en": "Anterior mid-cingulate gyrus and sulcus",
+      "lat": "Pars media anterior gyri cinguli"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_cingul-Mid-Ant",
+      "rh_G_and_S_cingul-Mid-Ant"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Przednia część środkowej kory obręczy leży grzbietowo względem trzonu ciała modzelowatego, za przednią korą obręczy i przed tylną częścią MCC. Zawiera fragment zakrętu oraz sąsiedniej bruzdy obręczy. Współczesny podział odróżnia ją od ACC; dawne określenie grzbietowa ACC bywa stosowane do obszarów, które anatomicznie należą do MCC.",
+    "function": "Łączy ocenę istotności sytuacji i kosztu działania z wyborem odpowiedzi. Jest angażowana podczas zadań wymagających kontroli, wysiłku i dostosowania zachowania. Przetwarzanie bodźców bólowych dotyczy zwłaszcza ich znaczenia dla działania i reakcji obronnych, a nie wyłącznie odczuwania lokalizacji czy natężenia bólu.",
+    "connections": "Współpracuje z boczną korą przedczołową, wyspą i korą przedruchową. Pola ruchowe w bruździe obręczy należą do układu łączącego motywację z ruchem. Połączenia z prążkowiem i wzgórzem uczestniczą w wyborze czynności; włókna obręczy zapewniają komunikację z innymi odcinkami przyśrodkowej sieci.",
+    "clinical": "Uszkodzenia lub odłączenie sieci przyśrodkowej czołowej mogą zmniejszać inicjowanie działań i skuteczność kontroli zachowania. Ból może pozostawać rozpoznawalny mimo zmienionej reakcji emocjonalnej lub ruchowej. Sama obecność aktywacji podczas bólu, błędu czy konfliktu nie stanowi swoistego biomarkera ani dowodu na jedną funkcję.",
+    "laterality": "Organizacja jest obustronna. Stronność zaburzeń ruchowych zależy od zajęcia konkretnych pól ruchowych i dróg, a nie wyłącznie nazwy MCC.",
+    "limitations": "Opis dotyczy przedniej MCC jako sieci; atlas nie odtwarza indywidualnych granic jej pól ruchowych ani receptorowych.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "cingulate-receptors-2008",
+        "locator": "Introduction; histologia i podział ACC/MCC/PCC/RSC"
+      },
+      {
+        "sourceId": "cingulate-mid-2003",
+        "locator": "Abstract: zróżnicowanie przedniej i tylnej części MCC"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_and_S_cingul-Mid-Post",
+    "names": {
+      "pl": "Tylna część środkowego zakrętu obręczy",
+      "en": "Posterior mid-cingulate gyrus and sulcus",
+      "lat": "Pars media posterior gyri cinguli"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_and_S_cingul-Mid-Post",
+      "rh_G_and_S_cingul-Mid-Post"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Tylna część środkowej kory obręczy leży nad tylnym odcinkiem trzonu ciała modzelowatego, przed korą obręczy tylnej i poniżej przyśrodkowej okolicy okołośrodkowej. Łączna etykieta zakrętu i bruzdy obejmuje korę o różnych cechach komórkowych. Nie jest synonimem tylnej kory obręczy należącej do posteromedialnych sieci pamięci.",
+    "function": "Ma silny związek z kontrolą sensomotoryczną: integrowaniem położenia i ruchu ciała oraz dostosowaniem reakcji ruchowej do bodźców. W porównaniu z przednią MCC silniej podkreśla się tu przetwarzanie ruchu i orientowanie odpowiedzi. Nie należy przypisywać jej wyłącznie emocji z powodu przynależności do zakrętu obręczy.",
+    "connections": "Połączenia z okolicą przedruchową, pierwotną korą ruchową i korą ciemieniową pozwalają sprzęgać informacje somatosensoryczne z ruchem. Obszary ruchowe obręczy mają także projekcje zstępujące; ich zasięg nie pokrywa się z całą parcelą. Obręcz łączy tę okolicę z pozostałymi odcinkami przyśrodkowej kory.",
+    "clinical": "Uszkodzenie może uczestniczyć w zaburzeniach inicjacji, sekwencjonowania lub dostosowania ruchów, szczególnie przy współzajęciu dodatkowego pola ruchowego. Napady powstające w przyśrodkowej korze mogą szybko obejmować obustronne wzorce ruchowe. Objawy te nie są wystarczające do odróżnienia pMCC od sąsiednich pól bez badań lokalizacyjnych.",
+    "laterality": "Sieć działa obustronnie; efekt ruchowy zależy od strony i połączeń konkretnego pola. Nie można zakładać identycznego profilu funkcjonalnego obu parceli u każdej osoby.",
+    "limitations": "Jest to przybliżenie części pMCC. Granica z tylną korą obręczy jest konwencją atlasu i nie oznacza skokowej zmiany wszystkich funkcji.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "cingulate-receptors-2008",
+        "locator": "Introduction; histologia i podział ACC/MCC/PCC/RSC"
+      },
+      {
+        "sourceId": "cingulate-mid-2003",
+        "locator": "Abstract: zróżnicowanie przedniej i tylnej części MCC"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_cingul-Post-dorsal",
+    "names": {
+      "pl": "Grzbietowa część tylnego zakrętu obręczy",
+      "en": "Dorsal posterior cingulate gyrus",
+      "lat": "Pars dorsalis posterior gyri cinguli"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_cingul-Post-dorsal",
+      "rh_G_cingul-Post-dorsal"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Grzbietowa tylna część zakrętu obręczy znajduje się w tylnej części powierzchni przyśrodkowej półkuli, nad okolicą płata ciała modzelowatego. Sąsiaduje z przedklinkiem, środkową obręczą i bardziej brzuszną częścią PCC. Bruzdy umożliwiają orientację makroskopową, lecz nie pozwalają utożsamić całej parceli z jednym polem histologicznym.",
+    "function": "Jest częścią kory tylno-przyśrodkowej, uczestniczącej w integrowaniu informacji o bieżącym otoczeniu z pamięcią i nastawieniem uwagi. Nie wszystkie jej podobszary zachowują się jednakowo podczas spoczynku i zadania. W tym opisie funkcje pamięciowe i uwagowe odnoszą się do współpracującej sieci, a nie do pojedynczej wyłącznej operacji wykonywanej przez dPCC.",
+    "connections": "Obręcz i połączenia korowo-korowe zapewniają komunikację z okolicami przedczołowymi, ciemieniowymi i przyśrodkową skronią. Powiązanie ze wzgórzem i pozostałymi odcinkami obręczy włącza ją do obwodów orientacji oraz pamięci. Łączność funkcjonalna w fMRI oznacza skorelowaną aktywność, nie dowód bezpośredniego pojedynczego szlaku.",
+    "clinical": "Zmiany w tylnej sieci przyśrodkowej mogą towarzyszyć zaburzeniom orientacji i sprawności pamięciowej. Zmniejszony metabolizm w tej okolicy występuje w różnych stanach neurologicznych i nie jest samodzielnym rozpoznaniem. Obraz kliniczny zależy również od połączeń z hipokampem i korą ciemieniową, dlatego nie należy lokalizować całego zespołu otępiennego do jednego zakrętu.",
+    "laterality": "PCC występuje obustronnie i współdziała międzypółkulowo; asymetrie zależą od rodzaju materiału i zadania.",
+    "limitations": "Dorsal PCC nie jest równoważne całemu przedklinkowi ani całej sieci stanu domyślnego. Atlas odróżnia przylegające parcele, choć ich aktywność może być skorelowana.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "cingulate-receptors-2008",
+        "locator": "Introduction; histologia i podział ACC/MCC/PCC/RSC"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_cingul-Post-ventral",
+    "names": {
+      "pl": "Brzuszna część tylnego zakrętu obręczy",
+      "en": "Ventral posterior cingulate gyrus",
+      "lat": "Pars ventralis posterior gyri cinguli"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_cingul-Post-ventral",
+      "rh_G_cingul-Post-ventral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Brzuszna tylna część zakrętu obręczy obejmuje okolicę cieśni, która zawija za płatem ciała modzelowatego i łączy obręcz z zakrętem przyhipokampowym. W sąsiedztwie znajduje się kora retrosplenialna. Nazwa parceli nie oznacza jednak, że obejmuje wyłącznie pola retrosplenialne 29 i 30 ani że wyznacza ich dokładny przebieg.",
+    "function": "W szerszym układzie tylno-przyśrodkowym uczestniczy w wykorzystywaniu kontekstu pamięciowego do orientowania się w otoczeniu. Łączy przetwarzanie informacji przestrzennych z zasobami pamięci epizodycznej. Zależność ta tłumaczy, dlaczego prawidłowe widzenie punktu orientacyjnego nie gwarantuje poprawnego wykorzystania go w nawigacji.",
+    "connections": "Przebiega tu komunikacja między obręczą i korą przyhipokampową; nie należy utożsamiać korowego zakrętu z leżącym pod nim pęczkiem obręczy. Połączenia ze strukturami przyśrodkowej skroni i wzgórzem są częścią sieci pamięciowo-przestrzennej. Informacje wzrokowe docierają także z sąsiednich pól potyliczno-ciemieniowych.",
+    "clinical": "Uszkodzenia okolicy retrosplenialnej i jej połączeń mogą prowadzić do dezorientacji topograficznej oraz trudności w wiązaniu rozpoznanego miejsca z kierunkiem drogi. Nie każdy zawał obejmujący cieśń daje taki zespół, ponieważ znaczenie mają strona, rozległość i oszczędzone połączenia. Zmiany pamięciowe wymagają odróżnienia deficytu zapamiętywania od problemu odtwarzania kontekstu.",
+    "laterality": "Funkcje przestrzenne i pamięciowe rozkładają się między obie półkule; znaczenie prawej strony dla orientacji nie jest regułą wyłączności.",
+    "limitations": "Opis kliniczny dotyczy szerszej okolicy retrosplenialno-przyhipokampowej. Etykieta vPCC/cieśni nie jest precyzyjną maską pojedynczego ośrodka nawigacji.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "cingulate-receptors-2008",
+        "locator": "Introduction; histologia i podział ACC/MCC/PCC/RSC"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_cuneus",
+    "names": {
+      "pl": "Klin",
+      "en": "Cuneus",
+      "lat": "Cuneus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_cuneus",
+      "rh_G_cuneus"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Klin jest trójkątnym obszarem przyśrodkowej powierzchni płata potylicznego. Od przodu i góry ogranicza go bruzda ciemieniowo-potyliczna, od dołu bruzda ostrogowa, a z tyłu przechodzi ku biegunowi potylicznemu. Kora na dolnej granicy klina sąsiaduje z górnym brzegiem pierwotnej kory wzrokowej. Główne unaczynienie pochodzi z tętnicy tylnej mózgu.",
+    "function": "Przybruźdowa część tej okolicy reprezentuje przeciwległą dolną połowę pola widzenia. Bardziej powierzchowne części klina obejmują wzrokową korę kojarzeniową. Informacja o konturach, położeniu i relacjach wzrokowych jest przekazywana dalej do sieci potyliczno-ciemieniowych oraz potyliczno-skroniowych. Klin nie jest w całości synonimem pola V1.",
+    "connections": "Do kory przy bruździe ostrogowej docierają włókna promienistości wzrokowej z ciała kolankowatego bocznego. Dla dolnego pola widzenia istotny jest górny, ciemieniowy przebieg promienistości. Połączenia lokalne łączą pola wzrokowe, a tylna część ciała modzelowatego wspiera wymianę między półkulami, szczególnie w pobliżu reprezentacji południka pionowego.",
+    "clinical": "Uszkodzenie górnego brzegu kory ostrogowej może powodować przeciwstronny dolny jednoimienny ubytek pola widzenia. Zajęcie rozleglejszej kory potylicznej prowadzi do większych ubytków; oszczędzenie widzenia centralnego zależy od oszczędzonej tkanki i unaczynienia, nie od samej nazwy klina. Podrażnienie kory wzrokowej może wywoływać elementarne fenomeny wzrokowe.",
+    "laterality": "Lewy klin przetwarza przede wszystkim prawe pole widzenia, prawy lewe. Nie odpowiadają one oddzielnie prawemu i lewemu oku.",
+    "limitations": "W parcellacji Destrieux znaczna część kory V1 znajduje się w osobnej etykiecie bruzdy ostrogowej; funkcji całego V1 nie należy kopiować na całą parcelę klina.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_front_inf-Opercular",
+    "names": {
+      "pl": "Część wieczkowa zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, opercular part",
+      "lat": "Pars opercularis gyri frontalis inferioris"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_front_inf-Opercular",
+      "rh_G_front_inf-Opercular"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Część wieczkowa zakrętu czołowego dolnego leży ku tyłowi od gałęzi wstępującej bruzdy bocznej, przed dolną okolicą przedśrodkową. Tworzy fragment wieczka czołowego nad wyspą. Jest w przybliżeniu związana z polem 44, lecz pole histologiczne może wchodzić w bruzdy i nie pokrywa się z powierzchniową etykietą.",
+    "function": "W półkuli dominującej dla języka uczestniczy w organizacji fonologicznej i artykulacyjnej wypowiedzi oraz złożonych operacjach składniowych. Jej działanie zależy od współpracy z korą skroniowo-ciemieniową i ruchową. Po stronie prawej dolna sieć czołowa jest także angażowana w kontrolę reakcji. Żadna z tych funkcji nie jest wyłączna ani identyczna w całej parceli.",
+    "connections": "Grzbietowy system językowy, obejmujący pęczek łukowaty i składowe pęczka podłużnego górnego, wiąże przednie obszary mowy z tylną siecią skroniowo-ciemieniową. Krótkie połączenia z korą przedruchową i dolną przedśrodkową umożliwiają przekładanie planu wypowiedzi na ruchy. Są też połączenia z wyspą, prążkowiem i obszarami dodatkowymi ruchowymi.",
+    "clinical": "Uszkodzenie lewego dolnego płata czołowego może powodować niepłynną mowę, trudność w budowaniu wypowiedzi i zaburzenia planowania artykulacji. Pełny przewlekły zespół afazji Broki zwykle wiąże się z uszkodzeniem szerszej sieci niż sama pars opercularis. Należy odróżnić afazję, apraksję mowy i dyzartrię. Okolica jest zwykle unaczyniona przez górne gałęzie tętnicy środkowej mózgu.",
+    "laterality": "U większości osób ważniejsza dla języka jest strona lewa, ale dominacja wymaga indywidualnego ustalenia. Prawe obszary homologiczne nie są funkcjonalnie puste.",
+    "limitations": "Pars opercularis nie jest równoznaczna z całym polem Broki; parcela anatomiczna i pola 44/45 należą do różnych systemów podziału.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_front_inf-Orbital",
+    "names": {
+      "pl": "Część oczodołowa zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, orbital part",
+      "lat": "Pars orbitalis gyri frontalis inferioris"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_front_inf-Orbital",
+      "rh_G_front_inf-Orbital"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Część oczodołowa zakrętu czołowego dolnego leży poniżej przedniej poziomej gałęzi bruzdy bocznej i na przejściu powierzchni bocznej w oczodołową. Sąsiaduje z częścią trójkątną i boczną korą oczodołowo-czołową. Często odnoszona jest do pola 47, lecz jej granice w obrazie powierzchniowym nie stanowią mapy tego pola.",
+    "function": "W lewej przedniej dolnej korze czołowej ważne są operacje semantyczne: wydobywanie i wybór znaczenia słów z uwzględnieniem kontekstu. Położenie przy korze oczodołowej wiąże tę okolicę także z oceną informacji istotnych dla zachowania. Nie oznacza to przechowywania tu całej wiedzy semantycznej; reprezentacje pojęć są rozproszone w sieci skroniowo-ciemieniowej.",
+    "connections": "Przednia dolna kora czołowa komunikuje się z przednią i boczną korą skroniową przez brzuszne szlaki kojarzeniowe. Pęczek haczykowaty jest szczególnie ważnym anatomicznym połączeniem okolicy oczodołowej z przednią skronią. Udział dłuższych szlaków semantycznych należy rozpatrywać sieciowo, a nie jako jeden przewód dla jednego rodzaju znaczenia.",
+    "clinical": "Zmiany w dominującej dolnej korze czołowej mogą utrudniać dobór właściwego znaczenia, nazywanie i elastyczne korzystanie z wiedzy. W rozleglejszych zmianach oczodołowych mogą współistnieć zaburzenia oceny skutków i kontroli społecznego zachowania. Nie istnieje jednolity swoisty zespół kliniczny samej pars orbitalis.",
+    "laterality": "W zadaniach językowych częściej obserwuje się przewagę lewej strony. Ocena emocjonalna, kontekst społeczny i kontrola zachowania mają reprezentację obustronną.",
+    "limitations": "Anatomicznie sąsiaduje z klasycznym obszarem Broki, ale nie należy utożsamiać jej z polami 44 i 45 ani z całością kory oczodołowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_front_inf-Triangul",
+    "names": {
+      "pl": "Część trójkątna zakrętu czołowego dolnego",
+      "en": "Inferior frontal gyrus, triangular part",
+      "lat": "Pars triangularis gyri frontalis inferioris"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_front_inf-Triangul",
+      "rh_G_front_inf-Triangul"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Część trójkątna leży między przednią poziomą i przednią wstępującą gałęzią bruzdy bocznej. Od góry ogranicza ją okolica bruzdy czołowej dolnej; sąsiaduje z częścią wieczkową i oczodołową. Odpowiada w przybliżeniu bocznej okolicy pola 45, przy znacznej zmienności granic cytoarchitektonicznych między osobami.",
+    "function": "W dominującej półkuli wspiera wybór i kontrolę informacji językowej, zwłaszcza gdy trzeba wybrać właściwe znaczenie spośród konkurujących możliwości lub dopasować je do zdania. Współpracuje z częścią wieczkową w tworzeniu wypowiedzi. Rozróżnienie funkcji semantycznych i fonologicznych jest względnym gradientem sieci, a nie ścisłą granicą przebiegającą po jednej bruździe.",
+    "connections": "Łączy się z innymi częściami dolnego zakrętu czołowego, boczną korą przedczołową oraz skroniowymi obszarami językowymi. Zarówno grzbietowe, jak i brzuszne systemy kojarzeniowe uczestniczą w komunikacji czołowo-skroniowej. Krótkie włókna do sąsiedniej kory ruchowej i przedruchowej wiążą kontrolę językową z przygotowaniem odpowiedzi.",
+    "clinical": "Uszkodzenie dominującej okolicy dolnoczołowej może ograniczać płynność słowną, budowę wypowiedzi i wybór słów. Nasilenie i utrzymywanie się afazji zależy od sąsiedniej kory, wyspy oraz istoty białej. Prawidłowa prosta artykulacja nie wyklucza problemu z doborem znaczeń. Tętniczo jest to zwykle obszar tętnicy środkowej mózgu.",
+    "laterality": "Najczęściej lewostronna dominacja językowa; prawa część homologiczna uczestniczy m.in. w szerszych operacjach komunikacyjnych i kontroli reakcji. Ręczność nie jest pewnym zamiennikiem badania dominacji.",
+    "limitations": "Klasyczna etykieta ośrodek Broki upraszcza rozproszoną organizację języka. Przyporządkowanie pars triangularis do BA45 jest orientacyjne.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_front_middle",
+    "names": {
+      "pl": "Zakręt czołowy środkowy",
+      "en": "Middle frontal gyrus",
+      "lat": "Gyrus frontalis medius"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_front_middle",
+      "rh_G_front_middle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt czołowy środkowy znajduje się na powierzchni bocznej między bruzdą czołową górną i dolną, przed bruzdą przedśrodkową. Jest dużą i niejednorodną jednostką, obejmującą tylną okolicę przedruchowo-okoruchową oraz bardziej przednie obszary przedczołowe. Może być dodatkowo podzielony niestałą bruzdą czołową środkową.",
+    "function": "Jego przedczołowe części uczestniczą w utrzymywaniu i przekształcaniu informacji roboczych, ustalaniu reguł oraz kontrolowaniu kolejności działań. Tylny odcinek sąsiaduje z czołowymi polami gałkoruchowymi, ważnymi dla dowolnego kierowania spojrzeniem i uwagi. Udział w zadaniu zależy od konkretnego podobszaru; cały zakręt nie jest jednym ośrodkiem pamięci roboczej.",
+    "connections": "Pęczki kojarzeniowe górnej części półkuli łączą boczną korę czołową z korą ciemieniową. Obwody korowo-prążkowiowo-wzgórzowe wspierają wybór i kontrolę działania. Włókna z pól gałkoruchowych docierają do podkorowych ośrodków ruchów oczu, bezpośrednio lub przez pośrednie stacje, a połączenia spoidłowe koordynują obie półkule.",
+    "clinical": "Uszkodzenia grzbietowo-bocznej kory przedczołowej mogą powodować problemy z planowaniem, podzielnością uwagi, pamięcią roboczą i zmianą reguły. Ostre uszkodzenie tylnej okolicy gałkoruchowej może dawać preferencję spojrzenia w stronę uszkodzonej półkuli; napadowe pobudzenie może kierować oczy przeciwnie. Objawy różnicuje się z uszkodzeniami pnia i szlaków istoty białej.",
+    "laterality": "Funkcje wykonawcze wymagają obu półkul. Materiał werbalny częściej angażuje lewą, a przestrzenny prawą sieć, lecz nie jest to sztywny podział.",
+    "limitations": "FEF, kora przedruchowa i obszary BA9/46 nie są tożsame z pełną parcelą zakrętu środkowego. Lokalizacja wymaga uwzględnienia osi przednio-tylnej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_front_sup",
+    "names": {
+      "pl": "Zakręt czołowy górny",
+      "en": "Superior frontal gyrus",
+      "lat": "Gyrus frontalis superior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_front_sup",
+      "rh_G_front_sup"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt czołowy górny biegnie nad bruzdą czołową górną, na brzegu górnym oraz powierzchni przyśrodkowej płata czołowego. Ku tyłowi zbliża się do okolicy przedśrodkowej i płacika okołośrodkowego. Duża parcela obejmuje przednie obszary przedczołowe i tylne okolice związane z planowaniem ruchu, dlatego jej funkcje są zróżnicowane.",
+    "function": "Tylna część przyśrodkowa sąsiaduje z dodatkowym polem ruchowym i pre-SMA, które uczestniczą w inicjowaniu, sekwencjonowaniu i koordynowaniu czynności. Bardziej przednie fragmenty wspierają kontrolę celu, uwagę i operacje poznawcze wymagające współpracy sieci przedczołowej. Nie można całego zakrętu traktować jako SMA ani pojedynczego ośrodka woli.",
+    "connections": "Łączy się z korą przedruchową i ruchową, przeciwległymi obszarami przyśrodkowymi oraz korą ciemieniową. Przez obwody jąder podstawy i wzgórza uczestniczy w wybieraniu działania. Połączenia z zakrętem obręczy wiążą przygotowanie ruchu z motywacją; tylne pola wysyłają również projekcje zstępujące.",
+    "clinical": "Uszkodzenie dodatkowych obszarów ruchowych może powodować przejściowe znaczne ograniczenie spontanicznych ruchów, trudność inicjacji i, w półkuli dominującej, ograniczenie spontanicznej mowy. Przy większych zmianach przyśrodkowych występują zaburzenia chodu i abulia. Niedowład piramidowy wskazuje na współzajęcie pierwotnej kory ruchowej lub jej dróg. Przyśrodkowe części są zwykle zaopatrywane przez tętnicę przednią mózgu.",
+    "laterality": "Koordynacja oburęczna i inicjacja ruchów angażują obie strony. Wpływ uszkodzenia lewej okolicy na mowę zależy od indywidualnej dominacji.",
+    "limitations": "Granice pól ruchowych, pre-SMA i kory przedczołowej przecinają morfologiczną parcelę; sam zakręt nie określa stopnia udziału w każdej funkcji.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_Ins_lg_and_S_cent_ins",
+    "names": {
+      "pl": "Zakręt długi i bruzda środkowa wyspy",
+      "en": "Long insular gyrus and central insular sulcus",
+      "lat": "Gyrus longus et sulcus centralis insulae"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_Ins_lg_and_S_cent_ins",
+      "rh_G_Ins_lg_and_S_cent_ins"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Tylna część wyspy leży głęboko w bruździe bocznej, pod wieczkami. Zakręt długi jest położony ku tyłowi od bruzdy środkowej wyspy, która oddziela go od przednich zakrętów krótkich. W projekcie połączono zakręt z bruzdą środkową; jest to bruzda wyspowa, odrębna od bruzdy środkowej na powierzchni półkuli.",
+    "function": "Tylna wyspa uczestniczy w przetwarzaniu doznań somatycznych, temperatury, bólu i sygnałów dotyczących stanu ciała. W sąsiedniej okolicy wyspowo-wieczkowej zbiega się również informacja przedsionkowa. Integracja tych danych umożliwia odnoszenie bodźca do ciała, ale nie oznacza, że sama tylna wyspa wytwarza całe świadome doświadczenie bólu.",
+    "connections": "Połączenia wzgórzowo-korowe i lokalne wiążą wyspę z korą somatosensoryczną, wieczkiem ciemieniowym i skroniowym oraz przednią wyspą. Sąsiadująca głęboka istota biała zawiera różne szlaki przechodzące obok tej kory; widoczna bliskość pęczka na modelu nie dowodzi jego zakończenia w zakręcie długim.",
+    "clinical": "Stymulacja i wyładowania wyspowe mogą wywoływać czucie nieprzyjemne, ból, wrażenia trzewne lub przedsionkowe; przebieg napadu zależy też od szerzenia się do wieczek. Objawy mogą naśladować napady skroniowe lub inne okołosylwialne. W udarze unaczynienia tętnicy środkowej mózgu zajęcie wyspy często współistnieje z uszkodzeniem większej sieci.",
+    "laterality": "Obie wyspy integrują sygnały cielesne; część odpowiedzi somatycznych jest przeciwstronna, a inne obustronne. Nie ma uniwersalnej zasady wyłącznie prawego odczuwania ciała.",
+    "limitations": "Bruzda środkowa jest punktem orientacyjnym, nie funkcją. Objawy wyspowe nie lokalizują automatycznie wyładowania do jednej parceli.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 41–44; druk s. 39–42: drogi somatosensoryczne"
+      },
+      {
+        "sourceId": "insula-stimulation-2017",
+        "locator": "Abstract: serie stymulacji wyspy u 222 pacjentów z padaczką"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_insular_short",
+    "names": {
+      "pl": "Zakręty krótkie wyspy",
+      "en": "Short insular gyri",
+      "lat": "Gyri breves insulae"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_insular_short",
+      "rh_G_insular_short"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręty krótkie stanowią przednią część wyspy, ukrytą pod wieczkiem czołowym. Rozchodzą się wachlarzowato od okolicy wierzchołka i progu wyspy; od tylnej wyspy oddziela je bruzda środkowa. Pod korą leżą torebka ostatnia, przedmurze i torebka zewnętrzna, dalej zaś skorupa. Te warstwy są osobnymi strukturami.",
+    "function": "Przednia wyspa uczestniczy w łączeniu sygnałów z ciała z uwagą, stanem emocjonalnym i przygotowaniem odpowiedzi. Wraz z obręczą jest angażowana w wykrywanie zdarzeń istotnych dla organizmu. Część okolicy wyspowo-wieczkowej przetwarza smak i czynności jamy ustnej. Żadna z tych funkcji nie ogranicza się do wszystkich zakrętów krótkich w jednakowym stopniu.",
+    "connections": "Połączenia z przednią obręczą, korą oczodołowo-czołową, wieczkami i strukturami limbicznymi umożliwiają integrację motywacyjną oraz autonomiczną. Lokalna komunikacja z tylną wyspą wiąże reprezentację sygnałów cielesnych z ich znaczeniem. Włókna przechodzące w torebce ostatniej stanowią odrębny system kojarzeniowy i nie są tym samym co kora wyspy.",
+    "clinical": "Uszkodzenia wyspowo-wieczkowe mogą towarzyszyć zaburzeniom smaku, artykulacji, połykania i regulacji autonomicznej. Napady mogą rozpoczynać się od nieprzyjemnego odczucia w gardle lub trzewiach i szybko szerzyć do innych okolic. Nie należy diagnozować padaczki wyspowej wyłącznie na podstawie jednego takiego objawu. Unaczynienie pochodzi przede wszystkim z gałęzi tętnicy środkowej mózgu.",
+    "laterality": "Lewostronne sieci częściej uczestniczą w niektórych czynnościach mowy; integracja cielesna i autonomiczna jest obustronna, ze zmiennymi asymetriami.",
+    "limitations": "Popularny termin sieć istotności opisuje współpracę wielu obszarów. Nie uprawnia do przypisania całej przedniej wyspie jednej roli psychologicznej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "insula-stimulation-2017",
+        "locator": "Abstract: serie stymulacji wyspy u 222 pacjentów z padaczką"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_occipital_middle",
+    "names": {
+      "pl": "Zakręt potyliczny środkowy",
+      "en": "Middle occipital gyrus",
+      "lat": "Gyrus occipitalis medius"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_occipital_middle",
+      "rh_G_occipital_middle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt potyliczny środkowy leży na bocznej powierzchni płata potylicznego, między jego górną i dolną okolicą. Układ bruzd potylicznych jest zmienny i nie daje tak stałych granic jak okolica centralna. Ta parcela sąsiaduje z boczną korą wzrokową oraz przejściem potyliczno-skroniowym.",
+    "function": "Obejmuje część wzrokowej kory kojarzeniowej zaangażowanej w analizę cech przedmiotów, konturów i relacji przestrzennych. Informacja jest przetwarzana równolegle w kilku sieciach; podział na strumień brzuszny i grzbietowy opisuje kierunki współpracy, a nie dwie izolowane drogi. Okolica ruchu wzrokowego hMT+ bywa położona w sąsiedztwie bocznego pogranicza potyliczno-skroniowego, ale nie pokrywa się z całym zakrętem.",
+    "connections": "Krótkie włókna kojarzeniowe łączą okolicę z wcześniejszymi polami potylicznymi. Dłuższe połączenia biegną do skroniowych sieci rozpoznawania i ciemieniowych sieci uwagi oraz działania wzrokowo-ruchowego. Włókna spoidłowe tylnej części ciała modzelowatego uczestniczą w integracji informacji obu półpól.",
+    "clinical": "Uszkodzenia bocznej sieci wzrokowej mogą powodować trudności w rozpoznawaniu wzrokowym lub analizie ruchu i położenia, zależnie od rzeczywiście zajętych pól. Izolowanego zaburzenia widzenia ruchu nie można rozpoznać na podstawie etykiety zakrętu. Ubytek pola widzenia może wynikać z sąsiedniej kory retinotopowej albo głębiej przebiegającej promienistości wzrokowej.",
+    "laterality": "Wczesne reprezentacje odnoszą się głównie do przeciwległego pola widzenia. Wyższe operacje wzrokowe korzystają także z informacji obu półpól.",
+    "limitations": "Zakręt potyliczny środkowy nie jest równoważny pojedynczemu polu wzrokowemu, LOC ani hMT+; ich lokalizacja wymaga kryteriów funkcjonalnych.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_occipital_sup",
+    "names": {
+      "pl": "Zakręt potyliczny górny",
+      "en": "Superior occipital gyrus",
+      "lat": "Gyrus occipitalis superior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_occipital_sup",
+      "rh_G_occipital_sup"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt potyliczny górny zajmuje górną część bocznej powierzchni płata potylicznego, blisko przejścia w korę ciemieniową i przyśrodkowy klin. Od sąsiednich fragmentów oddzielają go zmienne bruzdy potyliczne. Stanowi część powierzchniowego układu zakrętów, podczas gdy funkcjonalne pola wzrokowe rozciągają się również na ich brzegi i do bruzd.",
+    "function": "Okolica uczestniczy w wzrokowej analizie przestrzeni oraz przekazywaniu informacji do grzbietowych sieci ciemieniowych. Ma to znaczenie dla lokalizowania celu, kierowania uwagą i przekształcania danych wzrokowych na przygotowanie działania. Nie należy przypisywać całemu zakrętowi wyłącznie ruchu wzrokowego ani utożsamiać go z jedną mapą retinotopową.",
+    "connections": "Łączy się przez włókna lokalne z sąsiednimi obszarami potylicznymi, a przez systemy kojarzeniowe z korą ciemieniową. Połączenia wzajemne pozwalają uwadze i celowi zadania modulować przetwarzanie wzrokowe. Nie jest to jednokierunkowy łańcuch prowadzący wyłącznie od oka do płata czołowego.",
+    "clinical": "Zmiany tylnej sieci potyliczno-ciemieniowej mogą upośledzać analizę przestrzenną i kierowanie ruchem na podstawie wzroku. Przy obustronnych, rozległych uszkodzeniach tej sieci pojawiają się złożone zaburzenia uwagi wzrokowej i sięgania; nie są one swoistym zespołem jednego zakrętu. Sąsiednie zajęcie dróg lub pierwotnej kory wzrokowej może dodatkowo ograniczać pole widzenia.",
+    "laterality": "Wczesne przetwarzanie wzrokowe jest organizowane względem przeciwległego półpola, lecz uwaga przestrzenna angażuje obie półkule w sposób nierównomierny.",
+    "limitations": "Brak stałego odwzorowania zakrętu na pola V3/V3A lub określony fragment strumienia grzbietowego. Opis odnosi się do szerszej okolicy wzrokowo-kojarzeniowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_oc-temp_lat-fusifor",
+    "names": {
+      "pl": "Zakręt wrzecionowaty",
+      "en": "Fusiform gyrus",
+      "lat": "Gyrus fusiformis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_oc-temp_lat-fusifor",
+      "rh_G_oc-temp_lat-fusifor"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt wrzecionowaty leży na dolnej powierzchni pogranicza potyliczno-skroniowego. Bocznie oddziela go od zakrętu skroniowego dolnego bruzda potyliczno-skroniowa, przyśrodkowo od okolicy językowatej i przyhipokampowej bruzda poboczna. Nazwa zakręt potyliczno-skroniowy boczny odnosi się do tej samej dużej struktury. Wewnątrz znajdują się różne pola wzrokowe, nie jeden jednorodny ośrodek.",
+    "function": "Jest ważnym elementem brzusznego systemu rozpoznawania wzrokowego. Wybrane obszary wykazują preferencję dla twarzy, inne uczestniczą w rozpoznawaniu znaków pisma lub kategorii przedmiotów. Rozpoznanie osoby wymaga dalszej współpracy z przednią skronią i pamięcią, a czytanie połączenia analizy liter z siecią językową. Preferencja funkcjonalna nie obejmuje całego zakrętu.",
+    "connections": "Krótkie włókna łączą go z sąsiednią korą potyliczną i skroniową. Pęczek podłużny dolny wspiera komunikację potyliczno-skroniową; połączenia z szerszymi sieciami językowymi i semantycznymi umożliwiają przypisywanie znaczenia widzianym bodźcom. Informacja między półkulami może być wymieniana przez tylne systemy spoidłowe.",
+    "clinical": "Uszkodzenia prawej lub obu okolic potyliczno-skroniowych mogą uczestniczyć w prozopagnozji, czyli trudności rozpoznawania tożsamości twarzy. Lewostronne zmiany brzusznej sieci wzrokowo-językowej mogą upośledzać czytanie. Stymulacja wybranych prawych obszarów selektywnych dla twarzy wywoływała zniekształcenie ich percepcji, lecz nie dowodzi to, że każdy fragment zakrętu ma tę samą funkcję.",
+    "laterality": "Częściej prawostronna przewaga w przetwarzaniu twarzy i lewostronna w rozpoznawaniu zapisu słów; obie funkcje korzystają jednak z obustronnych oraz rozproszonych sieci.",
+    "limitations": "FFA i obszar wzrokowej formy słowa są pojęciami funkcjonalnymi. Nie należy przypisywać ich całej parceli ani wyznaczać ich u osoby wyłącznie według kształtu zakrętu.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "fusiform-stimulation-2012",
+        "locator": "Abstract i Results: zniekształcenie percepcji twarzy po stymulacji obszarów wrzecionowatych"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_oc-temp_med-Lingual",
+    "names": {
+      "pl": "Zakręt językowaty",
+      "en": "Lingual gyrus",
+      "lat": "Gyrus lingualis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_oc-temp_med-Lingual",
+      "rh_G_oc-temp_med-Lingual"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt językowaty leży na przyśrodkowo-dolnej powierzchni płata potylicznego, poniżej bruzdy ostrogowej i przyśrodkowo od bruzdy pobocznej. Ku przodowi przechodzi w okolicę przyhipokampową, ku tyłowi w okolicę bieguna potylicznego. Mimo nazwy nie jest podstawowym ośrodkiem ruchów języka; nazwa odnosi się do kształtu.",
+    "function": "Przy górnej granicy znajduje się dolny brzeg kory ostrogowej, związany z przeciwległą górną połową pola widzenia. Pozostałe części uczestniczą w wyższej analizie wzrokowej, w tym cech scen i złożonych układów. Nie cała powierzchnia zakrętu jest pierwotną korą wzrokową, a funkcje obszarów scenicznych mogą przekraczać jego przednią granicę.",
+    "connections": "Włókna promienistości wzrokowej reprezentujące górne pole widzenia docierają do dolnej kory ostrogowej po przebiegu przez płat skroniowy. Lokalne włókna łączą zakręt z klinem, korą wrzecionowatą i przyhipokampową. W dalszej analizie wzrokowej uczestniczą systemy kojarzeniowe potyliczno-skroniowe.",
+    "clinical": "Uszkodzenie dolnego brzegu V1 może powodować przeciwstronne jednoimienne niedowidzenie kwadrantowe górne. Taki sam układ ubytku może powstać przy uszkodzeniu skroniowej części promienistości, dlatego sam wynik badania pola nie dowodzi uszkodzenia zakrętu językowatego. Rozleglejsze zmiany dolnej kory potylicznej mogą upośledzać rozpoznawanie wzrokowe. Dominujące unaczynienie pochodzi z tętnicy tylnej mózgu.",
+    "laterality": "Lewa okolica reprezentuje prawą część pola widzenia i odwrotnie; oboje oczu dostarczają informacji do każdej półkuli.",
+    "limitations": "Retinotopię można przypisywać określonym polom przybruźdowym, nie dowolnemu punktowi całego zakrętu. Etykieta atlasu nie oznacza funkcji językowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "parahippocampal-scenes-1998",
+        "locator": "Abstract: odpowiedź tylnej kory przyhipokampowej na sceny przestrzenne"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_oc-temp_med-Parahip",
+    "names": {
+      "pl": "Zakręt przyhipokampowy",
+      "en": "Parahippocampal gyrus",
+      "lat": "Gyrus parahippocampalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_oc-temp_med-Parahip",
+      "rh_G_oc-temp_med-Parahip"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt przyhipokampowy biegnie na dolno-przyśrodkowej powierzchni płata skroniowego, przyśrodkowo od bruzdy pobocznej. Jego przednia część sąsiaduje z hakiem i korą śródwęchową, a tylna łączy się przez cieśń z zakrętem obręczy i przechodzi ku zakrętowi językowatemu. Hipokamp leży głębiej; nie jest synonimem tego zakrętu.",
+    "function": "Uczestniczy w kodowaniu kontekstu zdarzeń i dostarczaniu informacji do układu pamięci przyśrodkowej skroni. Tylna kora przyhipokampowa reaguje silnie na sceny i układ otoczenia. Przednia okolica śródwęchowa pośredniczy w komunikacji z formacją hipokampa. Zapamiętywanie zdarzenia wymaga połączenia przedmiotu, miejsca i kontekstu, a nie działania jednego zakrętu.",
+    "connections": "Połączenia z korą skroniową, potyliczną i retrosplenialną przekazują informacje skojarzeniowe. Przez korę śródwęchową informacja dociera do hipokampa; jest to odrębne ogniwo od sklepienia, głównej drogi wyjściowej części formacji hipokampa. Pęczek obręczy wspiera komunikację z korą obręczy i szerszą siecią pamięci.",
+    "clinical": "Uszkodzenie przyśrodkowej skroni może powodować zaburzenia pamięci epizodycznej, a tylnej sieci przyhipokampowej również trudności rozpoznawania miejsc i orientacji. Ciężka amnezja zwykle wynika z szerszego, często obustronnego zajęcia układu, nie z dowolnej małej zmiany powierzchniowej. Napady skroniowe mogą angażować tę okolicę razem z hipokampem i ciałem migdałowatym.",
+    "laterality": "Obie strony uczestniczą w pamięci. Przewaga lewej dla materiału werbalnego i prawej dla części informacji przestrzennych jest względna i zależy od zadania.",
+    "limitations": "Parcela nie wyodrębnia dokładnie kory śródwęchowej, okołowęchowej ani funkcjonalnego obszaru PPA. Należy odróżniać korę zakrętu od podkorowego modelu hipokampa.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "parahippocampal-scenes-1998",
+        "locator": "Abstract: odpowiedź tylnej kory przyhipokampowej na sceny przestrzenne"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_orbital",
+    "names": {
+      "pl": "Zakręty oczodołowe",
+      "en": "Orbital gyri",
+      "lat": "Gyri orbitales"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_orbital",
+      "rh_G_orbital"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręty oczodołowe leżą na dolnej powierzchni płata czołowego nad stropami oczodołów. Od zakrętu prostego oddziela je bruzda węchowa; układ bruzd oczodołowych dzieli powierzchnię na kilka części. Sąsiadują z przednią dolną korą czołową i okolicą bieguna czołowego. Unaczynienie obejmuje gałęzie tętnic przedniej i środkowej mózgu.",
+    "function": "Kora oczodołowo-czołowa pomaga wiązać bodźce i działania z ich aktualnymi następstwami, zmieniać wybór po zmianie warunków oraz uwzględniać wartość nagrody i kontekst społeczny. To ocena zależna od sytuacji, a nie stały odczyt przyjemności. Poszczególne części przyśrodkowe i boczne różnią się udziałem w tych operacjach.",
+    "connections": "Pęczek haczykowaty łączy okolice oczodołowe z przednią skronią. Połączenia z ciałem migdałowatym, korą wyspy, wzgórzem i prążkowiem wiążą informacje sensoryczne, emocjonalne i motywacyjne. Włókna krótkie zapewniają współpracę z sąsiednią korą czołową, a przednie systemy spoidłowe komunikację międzypółkulową.",
+    "clinical": "Uszkodzenia mogą powodować trudność uczenia się z konsekwencji, impulsywność, odhamowanie i pogorszenie oceny społecznej przy stosunkowo dobrym wyniku prostych testów intelektualnych. Obraz nie jest jednak obligatoryjny; znaczenie ma rozległość i zajęcie innych sieci. Powierzchnia oczodołowa jest podatna na stłuczenia w urazach głowy z uwagi na sąsiedztwo podstawy czaszki.",
+    "laterality": "Kontrola wartościowania i zachowania jest obustronna. Jednostronność zmiany nie pozwala przewidzieć konkretnego typu osobowości lub zachowania.",
+    "limitations": "Etykieta obejmuje kilka zakrętów i nie rozdziela dokładnie podobszarów OFC. Objaw odhamowania nie jest swoisty wyłącznie dla tej kory.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "orbitofrontal-lesions-2017",
+        "locator": "Abstract: różne następstwa uszkodzeń przyśrodkowej i bocznej OFC u ludzi"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_pariet_inf-Angular",
+    "names": {
+      "pl": "Zakręt kątowy",
+      "en": "Angular gyrus",
+      "lat": "Gyrus angularis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_pariet_inf-Angular",
+      "rh_G_pariet_inf-Angular"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt kątowy tworzy tylną część płacika ciemieniowego dolnego i obejmuje okolicę tylnego końca bruzdy skroniowej górnej. Sąsiaduje z zakrętem nadbrzeżnym z przodu oraz korą potyliczną i skroniową z tyłu i dołu. Jest często wiązany z polem 39, lecz granice pola nie są identyczne z parcelą powierzchniową.",
+    "function": "Łączy informacje językowe, wzrokowe, przestrzenne i pamięciowe. W półkuli dominującej uczestniczy w operacjach semantycznych, czytaniu, pisaniu i części procesów liczbowych. Prawa tylna sieć ciemieniowa ma szczególne znaczenie dla uwagi przestrzennej. Te zadania uruchamiają różne podobszary i połączenia, więc nie należy traktować zakrętu jako jednego ośrodka wszystkich symboli.",
+    "connections": "Połączenia z korą skroniową i wzrokową integrują materiał pojęciowy i widziane znaki. Systemy czołowo-ciemieniowe, w tym składowe pęczka podłużnego górnego, wiążą te reprezentacje z kontrolą zadania. Współpraca z korą tylno-przyśrodkową uczestniczy w odtwarzaniu kontekstu i pamięci.",
+    "clinical": "Uszkodzenie dominującej okolicy dolnociemieniowej może powodować zaburzenia czytania i pisania, liczenia, rozpoznawania palców lub orientacji prawo–lewo. Ich klasyczne współwystępowanie opisuje zespół Gerstmanna, ale objawy mogą wynikać z zajęcia rozproszonych pól i połączeń. Prawostronne zmiany szerszej sieci mogą dawać zaniedbywanie lewostronne. Typowe unaczynienie pochodzi z tętnicy środkowej mózgu.",
+    "laterality": "Zależność językowo-symboliczna jest zwykle silniejsza po lewej, przestrzenno-uwagowa często po prawej; żadna z półkul nie wykonuje tych zadań całkowicie samodzielnie.",
+    "limitations": "Nie każdy objaw zespołu Gerstmanna lokalizuje się w zakręcie kątowym. Stymulacja wykazuje rozdzielone miejsca również w sąsiedniej korze.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "angular-stimulation-2003",
+        "locator": "Abstract: stymulacja, pisanie, liczenie i rozpoznawanie palców"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_pariet_inf-Supramar",
+    "names": {
+      "pl": "Zakręt nadbrzeżny",
+      "en": "Supramarginal gyrus",
+      "lat": "Gyrus supramarginalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_pariet_inf-Supramar",
+      "rh_G_pariet_inf-Supramar"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt nadbrzeżny jest przednią częścią płacika ciemieniowego dolnego i otacza tylny koniec bruzdy bocznej. Leży za dolnym zakrętem zaśrodkowym i przed zakrętem kątowym. Głęboko sąsiaduje z wieczkiem ciemieniowym i wyspą. Przybliżone powiązanie z polem 40 nie zastępuje rozpoznania granic cytoarchitektonicznych.",
+    "function": "Uczestniczy w łączeniu czucia, obrazu ciała i planowania wyuczonych czynności. Lewa okolica jest ważna w operacjach fonologicznych i krótkotrwałym utrzymywaniu materiału słownego. Prawa sieć dolnociemieniowa współuczestniczy w uwadze i odniesieniu bodźców do własnego ciała. Nie są to odrębne wyłączne moduły przypisane każdej stronie.",
+    "connections": "Krótkie włókna łączą go z korą zaśrodkową i skroniową. Grzbietowe połączenia czołowo-ciemieniowe oraz składowe sieci łukowatej pomagają wiązać reprezentację dźwięku i działania z przygotowaniem odpowiedzi. Połączenia międzypółkulowe i sieci ciemieniowo-przedruchowe mają znaczenie dla gestów i czynności oburęcznych.",
+    "clinical": "Uszkodzenia dominującej sieci ciemieniowo-czołowej mogą powodować apraksję, czyli zaburzenie wykonywania wyuczonych gestów niewyjaśnione samym niedowładem. Zajęcie grzbietowej sieci języka może pogarszać powtarzanie i operacje fonologiczne. W prawej półkuli, przy szerszej zmianie, mogą wystąpić zaniedbywanie i zaburzenia świadomości deficytu. Kora jest zwykle zaopatrywana przez tętnicę środkową mózgu.",
+    "laterality": "Częstsza lewostronna przewaga dla praksji i fonologii oraz prawostronna dla uwagi przestrzennej; objawy zależą od sieci i ręczności nie można traktować jako rozstrzygającej.",
+    "limitations": "Zakręt nie jest całym obszarem SII ani pojedynczym magazynem programów ruchowych. Uszkodzenia istoty białej mogą naśladować jego objawy.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "angular-stimulation-2003",
+        "locator": "Abstract: stymulacja, pisanie, liczenie i rozpoznawanie palców"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_parietal_sup",
+    "names": {
+      "pl": "Płacik ciemieniowy górny",
+      "en": "Superior parietal lobule",
+      "lat": "Lobulus parietalis superior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_parietal_sup",
+      "rh_G_parietal_sup"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Płacik ciemieniowy górny znajduje się za bruzdą zaśrodkową i powyżej bruzdy śródciemieniowej. Ku przyśrodkowi przechodzi w przedklinek, ku tyłowi w okolice potyliczne. Nie jest pierwotną korą czuciową; leży za nią i zawiera heterogeniczne pola kojarzeniowe, wiązane orientacyjnie z częściami pól 5 i 7.",
+    "function": "Integruje dotyk i propriocepcję z informacją wzrokową, dzięki czemu położenie kończyny można odnieść do celu w przestrzeni. Uczestniczy w kontroli sięgania, manipulowania oraz uwagi skierowanej na określone położenie. Budowany tu obraz ciała ma znaczenie dla działania, a nie tylko świadomego nazywania części ciała.",
+    "connections": "Połączenia z zakrętem zaśrodkowym doprowadzają informacje somatosensoryczne. Włókna do grzbietowej kory przedruchowej i czołowych sieci kontroli wzroku wiążą percepcję z wyborem ruchu. Szlaki potyliczno-ciemieniowe dostarczają informacji wzrokowej, a połączenia spoidłowe koordynują dane obu półkul.",
+    "clinical": "Uszkodzenia mogą pogarszać precyzję ruchów kierowanych wzrokiem mimo zachowanej siły, utrudniać rozpoznawanie przedmiotu dotykiem lub orientację względem własnego ciała. Rozległe obustronne zmiany ciemieniowo-potyliczne mogą dawać zespół obejmujący ataksję wzrokową, ograniczone ogarnianie sceny i zaburzenia dowolnej eksploracji wzrokowej. Nie jest to zespół przypisany każdemu uszkodzeniu tej jednej parceli.",
+    "laterality": "Organizacja czuciowo-ruchowa w znacznej części dotyczy przeciwległej kończyny, natomiast przetwarzanie przestrzeni wymaga współpracy obu półkul.",
+    "limitations": "Płacik jest większy niż pojedyncze pola odpowiedzialne za sięganie lub chwytanie. Obecność aktywacji nie rozstrzyga, czy struktura jest niezbędna do danej czynności.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 41–44; druk s. 39–42: drogi somatosensoryczne"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_postcentral",
+    "names": {
+      "pl": "Zakręt zaśrodkowy",
+      "en": "Postcentral gyrus",
+      "lat": "Gyrus postcentralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_postcentral",
+      "rh_G_postcentral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt zaśrodkowy leży bezpośrednio za bruzdą środkową i przed bruzdą zaśrodkową. Zawiera dużą część pierwotnej kory somatosensorycznej, obejmującej pola 3a, 3b, 1 i 2; część tych pól znajduje się na ścianie bruzdy środkowej. Ku przyśrodkowi przechodzi w tylną część płacika okołośrodkowego. Reprezentacja twarzy leży najniżej, ręki bardziej grzbietowo, nogi na powierzchni przyśrodkowej.",
+    "function": "Przetwarza informacje o dotyku, położeniu i ruchu części ciała oraz różnicuje cechy bodźca skórnego. Somatotopia nie jest mapą wielkości narządów: dłoni i twarzy przypada nieproporcjonalnie duża reprezentacja. Różne podobszary analizują odmienne aspekty czucia, a pełne rozpoznanie obiektu dotykiem wymaga także kory kojarzeniowej.",
+    "connections": "Informacja z ciała po przełączeniach w drogach wstępujących dociera głównie przez jądro brzuszne tylno-boczne wzgórza, a z twarzy przez jądro brzuszne tylno-przyśrodkowe. Włókna wzgórzowo-korowe przebiegają przez torebkę wewnętrzną i wieniec promienisty. Wyjścia do kory ciemieniowej, SII i pól ruchowych umożliwiają sprzężenie czucia z działaniem.",
+    "clinical": "Uszkodzenie może powodować przeciwstronne zaburzenie lokalizacji i różnicowania bodźców, czucia ułożenia oraz złożonych funkcji dotykowych. Astereognozję należy oceniać przy zachowanym czuciu elementarnym, aby nie mylić jej z pierwotną utratą dopływu czuciowego. Napady mogą zaczynać się parestezjami w somatotopowo odpowiadającej części ciała. Boczna powierzchnia należy głównie do obszaru tętnicy środkowej mózgu.",
+    "laterality": "Reprezentacja zasadniczo przeciwstronna; nie wszystkie rodzaje czucia zanikają całkowicie po małym jednostronnym uszkodzeniu kory.",
+    "limitations": "Atlas zakrętowy wydziela bruzdę środkową osobno, więc parcela zakrętu nie obejmuje całej pierwotnej kory somatosensorycznej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 41–44; druk s. 39–42: drogi somatosensoryczne"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "geyer-1999",
+        "locator": "Abstract: mikrostrukturalna lokalizacja BA3a/3b/1 i zmienność względem bruzd w 10 mózgach"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_precentral",
+    "names": {
+      "pl": "Zakręt przedśrodkowy",
+      "en": "Precentral gyrus",
+      "lat": "Gyrus precentralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_precentral",
+      "rh_G_precentral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt przedśrodkowy leży między bruzdą przedśrodkową a środkową. Jest głównym powierzchniowym punktem orientacyjnym pierwotnej kory ruchowej, której znaczna część znajduje się na przedniej ścianie bruzdy środkowej. Reprezentacja twarzy i aparatu ustnego jest dolno-boczna, ręki pośrednia, a nogi przyśrodkowa w płaciku okołośrodkowym. Charakterystyczne wygięcie okolicy ręki pomaga orientacji obrazowej.",
+    "function": "Współuczestniczy w generowaniu dowolnych ruchów, szczególnie precyzyjnych, niezależnych ruchów poszczególnych palców. Nie steruje każdym mięśniem za pomocą jednego izolowanego punktu; populacje neuronów reprezentują nakładające się aspekty czynności. Plan ruchu powstaje w sieci z korą przedruchową, ciemieniową, jądrami podstawy i móżdżkiem.",
+    "connections": "Włókna korowo-rdzeniowe biegną przez wieniec promienisty, tylną odnogę torebki wewnętrznej, odnogę mózgu, most i piramidy rdzenia przedłużonego. Większość krzyżuje się do przeciwległego rdzenia. Włókna korowo-jądrowe uczestniczą w kontroli ruchów twarzy, języka i gardła. Kora otrzymuje także zwrotne informacje wzgórzowe i czuciowe.",
+    "clinical": "Uszkodzenie powoduje przeciwstronny niedowład z wyraźną utratą ruchów precyzyjnych; zakres może być ograniczony do ręki lub twarzy. Ostre osłabienie nie musi od razu wykazywać pełnej spastyczności. Ogniskowy napad ruchowy może szerzyć się po kolejnych reprezentacjach ciała. Boczna powierzchnia jest zwykle zaopatrywana przez tętnicę środkową mózgu, część przyśrodkowa przez przednią.",
+    "laterality": "Kończyny są kontrolowane głównie przeciwstronnie. Mięśnie osiowe oraz część mięśni unerwianych przez nerwy czaszkowe otrzymują wpływy obustronne.",
+    "limitations": "Nie cała droga korowo-rdzeniowa rozpoczyna się w tej parceli i nie cała kora M1 leży na odsłoniętym szczycie zakrętu.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_precuneus",
+    "names": {
+      "pl": "Przedklinek",
+      "en": "Precuneus",
+      "lat": "Precuneus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_precuneus",
+      "rh_G_precuneus"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Przedklinek jest przyśrodkową częścią płata ciemieniowego. Leży za gałęzią brzeżną bruzdy obręczy i przed bruzdą ciemieniowo-potyliczną, nad tylną obręczą i okolicą bruzdy podciemieniowej. Jest odrębną strukturą od klina, który leży po potylicznej stronie bruzdy ciemieniowo-potylicznej.",
+    "function": "Jest funkcjonalnie niejednorodny. Przednie fragmenty są silniej powiązane z przetwarzaniem sensomotorycznym, środkowe z operacjami kojarzeniowymi, a tylne z informacją wzrokową. Bierze udział w wyobrażeniach przestrzennych, orientacji i integrowaniu kontekstu, lecz nie należy przedstawiać go jako pojedynczego ośrodka świadomości ani utożsamiać całej parceli z siecią stanu domyślnego.",
+    "connections": "Połączenia funkcjonalne z korą okołośrodkową, ciemieniową, czołową i potyliczną różnią się wzdłuż osi przednio-tylnej. Sąsiedztwo tylnej obręczy umożliwia współpracę z sieciami pamięciowymi. Badania korelacji fMRI dostarczają danych o organizacji sieci, ale nie pozwalają same w sobie odtworzyć kierunku i przebiegu pojedynczych włókien.",
+    "clinical": "Zmiany w okolicy przyśrodkowej ciemieniowej mogą powodować zaburzenia orientacji, obrazu ciała lub koordynacji wzrokowo-ruchowej, zależnie od podobszaru i sieci. Napady mogą dawać nietypowe wrażenia cielesne lub wzrokowe i szybko szerzyć się dalej. Nie istnieje jeden swoisty objaw pozwalający rozpoznać uszkodzenie całego przedklinka.",
+    "laterality": "Organizacja jest obustronna; przetwarzanie przestrzeni może być nierównomierne, ale nie usprawiedliwia sztywnego przypisania funkcji jednej stronie.",
+    "limitations": "Przedklinek i tylna obręcz są sąsiadami o częściowo różnej łączności. Etykiety nie powinny być zamieniane w opisach badań i modelu.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_rectus",
+    "names": {
+      "pl": "Zakręt prosty",
+      "en": "Straight gyrus",
+      "lat": "Gyrus rectus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_rectus",
+      "rh_G_rectus"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt prosty biegnie na najbardziej przyśrodkowej części dolnej powierzchni płata czołowego, między szczeliną podłużną a bruzdą węchową. Opuszka i pasmo węchowe leżą w sąsiedniej bruździe, a nie wewnątrz zakrętu. Ku tyłowi okolica zbliża się do struktur podstawy przodomózgowia. Zaopatrzenie tętnicze pochodzi głównie z gałęzi przyśrodkowej okolicy oczodołowej.",
+    "function": "Stanowi część przyśrodkowej sieci oczodołowo-przedczołowej, która uczestniczy w wartościowaniu, regulacji emocjonalnej i uwzględnianiu następstw zachowania. Nie ma dobrze uzasadnionej jednej funkcji właściwej wyłącznie zakrętowi prostemu. Bliskość drogi węchowej nie oznacza, że cały zakręt jest pierwotną korą węchową.",
+    "connections": "Lokalne połączenia wiążą go z korą oczodołową i przyśrodkową czołową. Szersza sieć komunikuje się z przednią skronią, strukturami limbicznymi i wzgórzem. Jest to opis regionu przedczołowego; atlas powierzchniowy nie pokazuje drobnych szlaków podstawy przodomózgowia ani ich dokładnych miejsc zakończenia.",
+    "clinical": "Zmiany podstawy płata czołowego mogą współistnieć z zaburzeniami zachowania, motywacji lub funkcji wykonawczych. Zaburzenie węchu może wynikać z uszkodzenia sąsiadującej opuszki, pasma lub włókien węchowych, a nie z samego zakrętu. Zmiany po urazie albo w sąsiedztwie tętnicy łączącej przedniej należy oceniać wraz z głębokimi strukturami i połączeniami.",
+    "laterality": "Funkcje przyśrodkowo-przedczołowe są obustronne. Nie ma podstaw do prognozowania zachowania wyłącznie według strony lub objętości zakrętu prostego.",
+    "limitations": "Opis działania jest regionalny, ponieważ anatomiczna parcela nie odpowiada jednemu wyizolowanemu modułowi poznawczemu.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_subcallosal",
+    "names": {
+      "pl": "Pole podspoidłowe",
+      "en": "Subcallosal area",
+      "lat": "Area subcallosa"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_subcallosal",
+      "rh_G_subcallosal"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Pole podspoidłowe zajmuje niewielką okolicę powierzchni przyśrodkowej poniżej przedniej części ciała modzelowatego, blisko dzioba, kolana i struktur przegrody. Sąsiaduje z brzuszną korą obręczy i przyśrodkową podstawą płata czołowego. Nazwa atlasowa nie jest dokładnym synonimem pola Brodmanna 25 ani całej okolicy podkolanowej.",
+    "function": "Należy do szerokiej sieci limbiczno-przedczołowej łączącej stan emocjonalny, motywację i regulację autonomiczną. Znaczenie ma współdziałanie z obręczą, podwzgórzem i podstawą przodomózgowia. Nie istnieje podstawa do traktowania tej małej parceli jako pojedynczego ośrodka nastroju lub depresji.",
+    "connections": "W bliskiej okolicy przebiegają połączenia przyśrodkowej kory czołowej, zakrętu obręczy i struktur przegrodowych. Połączenia sieci limbicznej umożliwiają wpływ stanu wewnętrznego na zachowanie. Sąsiedztwo spoidła przedniego czy sklepienia nie dowodzi, że są one szlakiem wyjściowym całego powierzchniowego pola podspoidłowego.",
+    "clinical": "Zmiany tej okolicy zwykle nie są izolowane i mogą współuczestniczyć w zaburzeniach napędu, pamięci lub regulacji zachowania poprzez zajęcie podstawy przodomózgowia. Dane o aktywności okolicy podkolanowej w zaburzeniach nastroju dotyczą określonych badań i grup, a nie prostego testu diagnostycznego. Wnioskowanie wymaga dokładnej lokalizacji i oceny sąsiednich struktur.",
+    "laterality": "Sieci regulacji afektywnej i autonomicznej są obustronne. Asymetryczne wyniki badań grupowych nie przekładają się na pewną funkcję u pojedynczej osoby.",
+    "limitations": "To szczególnie mała i granicznie zmienna parcela. Pole podspoidłowe, kora podkolanowa i BA25 powinny pozostać rozróżnione.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "cingulate-receptors-2008",
+        "locator": "Introduction; histologia i podział ACC/MCC/PCC/RSC"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_temp_sup-G_T_transv",
+    "names": {
+      "pl": "Zakręty skroniowe poprzeczne Heschla",
+      "en": "Transverse temporal gyri of Heschl",
+      "lat": "Gyri temporales transversi"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_temp_sup-G_T_transv",
+      "rh_G_temp_sup-G_T_transv"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręty skroniowe poprzeczne Heschla leżą na górnej, ukrytej powierzchni płata skroniowego w bruździe bocznej. Są ustawione skośnie poprzecznie względem długiej osi zakrętu skroniowego górnego. Ich liczba i stopień zdwojenia są zmienne. Przed nimi znajduje się płaszczyzna biegunowa, za nimi płaszczyzna skroniowa.",
+    "function": "W przyśrodkowej części tej okolicy znajduje się rdzeń pierwotnej kory słuchowej, analizujący podstawowe właściwości dźwięku, w tym częstotliwość i przebieg czasowy. Tonotopia oznacza uporządkowaną reprezentację częstotliwości, a nie mapę konkretnych słów. Pozostałe fragmenty fałdów mogą należeć do sąsiednich pól słuchowych wyższego rzędu.",
+    "connections": "Główna droga wstępująca prowadzi od struktur pnia słuchowego przez wzgórek dolny i ciało kolankowate przyśrodkowe do promienistości słuchowej. Po wejściu do kory informacja trafia do pól okołordzeniowych i bocznej kory skroniowej. Obustronność szlaków na poziomie pnia sprawia, że jedna półkula otrzymuje sygnały z obu uszu.",
+    "clinical": "Jednostronne uszkodzenie zwykle nie powoduje całkowitej głuchoty jednego ucha, ale może utrudniać lokalizację, analizę czasową i rozpoznawanie złożonych bodźców. Obustronne rozległe uszkodzenia kory słuchowej lub jej dopływu mogą powodować głuchotę korową. Napady z tej okolicy mogą dawać proste wrażenia słuchowe, których stronność nie wyznacza bezpośrednio chorego ucha.",
+    "laterality": "Obie strony mają reprezentacje częstotliwości. Lateralizacja analizy mowy lub melodii dotyczy szerszych sieci i nie oznacza wyłączenia przeciwnej kory słuchowej.",
+    "limitations": "Nie należy utożsamiać wszystkich zakrętów Heschla z BA41 ani zaliczać całego BA42 do rdzenia pierwotnej kory słuchowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "haines-local",
+        "locator": "PDF s. 26; druk s. 12: BA41 jako pierwotna kora słuchowa"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_temp_sup-Lateral",
+    "names": {
+      "pl": "Zakręt skroniowy górny",
+      "en": "Superior temporal gyrus, lateral aspect",
+      "lat": "Gyrus temporalis superior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_temp_sup-Lateral",
+      "rh_G_temp_sup-Lateral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Boczna powierzchnia zakrętu skroniowego górnego leży poniżej bruzdy bocznej i nad bruzdą skroniową górną. Jest odrębna od ukrytych zakrętów Heschla oraz płaszczyzn skroniowej i biegunowej, które projekt wydziela osobno. Obejmuje przednie i tylne odcinki o różnym profilu połączeń.",
+    "function": "Uczestniczy w analizie złożonych dźwięków, w tym mowy, głosu i niejęzykowych cech sygnału. Tylne odcinki dominującej sieci skroniowej są ważne dla analizy dźwiękowej mowy i jej wiązania z dalszym przetwarzaniem językowym. Rozumienie wypowiedzi wymaga także kory skroniowej środkowej, przedniej skroni, okolic ciemieniowych i czołowych.",
+    "connections": "Połączenia z pierwotną i wtórną korą słuchową przenoszą przetworzoną informację akustyczną. Grzbietowe połączenia skroniowo-ciemieniowo-czołowe wiążą dźwięk z programem odpowiedzi, a brzuszne sieci skroniowe z rozpoznaniem i znaczeniem. Połączenia międzypółkulowe wspierają integrację językowych i pozajęzykowych aspektów komunikacji.",
+    "clinical": "Uszkodzenie dominującej tylnej sieci skroniowej może powodować trudności rozumienia mowy, parafazje i płynną, lecz mało informatywną wypowiedź. Klasyczny zespół Wernickego nie jest ograniczony do całego jednego zakrętu ani jego jednego punktu. Prawostronne uszkodzenia mogą zaburzać ocenę melodii wypowiedzi i innych złożonych cech dźwięku. Boczna kora jest głównie obszarem tętnicy środkowej mózgu.",
+    "laterality": "Najczęściej przewaga lewej sieci dla języka, prawej dla części aspektów prozodii; sygnał akustyczny jest przetwarzany obustronnie.",
+    "limitations": "Ta parcela nie obejmuje całej kory słuchowej. Określenie pole Wernickego jest przybliżeniem klinicznym, nie granicą atlasową.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_temp_sup-Plan_polar",
+    "names": {
+      "pl": "Płaszczyzna biegunowa",
+      "en": "Planum polare",
+      "lat": "Planum polare"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_temp_sup-Plan_polar",
+      "rh_G_temp_sup-Plan_polar"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Płaszczyzna biegunowa jest przednią częścią górnej powierzchni płata skroniowego, ukrytą w bruździe bocznej przed zakrętami Heschla i ku tyłowi od okolicy bieguna skroniowego. Nazwa odnosi się do powierzchni górnoskroniowej; nie oznacza całego bieguna skroniowego ani płaszczyzny skroniowej leżącej za Heschlem.",
+    "function": "Należy do kojarzeniowej sieci słuchowej. Badania obrazowe i magnetoencefalograficzne wiążą jej okolice z przetwarzaniem złożonych wzorów wysokości dźwięku, w tym konturu melodii. Jest to etap integracji dźwięków w sekwencję, nie wyłączny ośrodek muzyki. Słuchanie głosu, mowy i melodii korzysta z częściowo wspólnych i częściowo różnych sieci.",
+    "connections": "Połączenia lokalne z zakrętami Heschla i boczną korą skroniową umożliwiają dalszą analizę cech akustycznych. Przednie systemy skroniowe wiążą rozpoznawany dźwięk z pamięcią i znaczeniem, a współpraca z korą czołową umożliwia ocenę oraz przygotowanie odpowiedzi. Nie ma podstaw, aby przypisywać całej płaszczyźnie jeden izolowany trakt muzyczny.",
+    "clinical": "Zaburzenia rozpoznawania melodii lub złożonych dźwięków mogą towarzyszyć uszkodzeniom sieci słuchowych. Nie da się jednak na podstawie samej amuzji zlokalizować zmiany wyłącznie tutaj. Niewielkie jednostronne uszkodzenie nie musi powodować utraty podstawowego słyszenia, ponieważ kora słuchowa i jej dopływ są obustronne.",
+    "laterality": "Badania konturów melodycznych wskazują udział obu półkul; popularne przypisanie całej muzyki prawej półkuli jest zbyt uproszczone.",
+    "limitations": "Wyniki badań funkcjonalnych dotyczą aktywowanych fragmentów przedniej kory słuchowej. Ich granice mogą przekraczać parcelę planum polare.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "planum-polare-melody-2022",
+        "locator": "Abstract i Results: przetwarzanie konturu melodii w przednich polach słuchowych"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_temp_sup-Plan_tempo",
+    "names": {
+      "pl": "Płaszczyzna skroniowa",
+      "en": "Planum temporale",
+      "lat": "Planum temporale"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_temp_sup-Plan_tempo",
+      "rh_G_temp_sup-Plan_tempo"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Płaszczyzna skroniowa leży na górnej powierzchni płata skroniowego za zakrętami Heschla, w głębi tylnej części bruzdy bocznej. Sąsiaduje z dolną okolicą ciemieniową i tylną korą skroniową. Jej powierzchnia bywa asymetryczna, a rozpoznanie tylnej granicy zależy od indywidualnego przebiegu bruzdy bocznej.",
+    "function": "Uczestniczy w analizie złożonej informacji słuchowej i relacji przestrzenno-czasowych między dźwiękami. Badania fMRI wykazują w tej okolicy reprezentację położenia i kierunku ruchu źródła dźwięku. W dominującej sieci wspiera również przetwarzanie fonologiczne i sprzęganie informacji słuchowej z działaniem. Nie jest wyłącznie obszarem językowym.",
+    "connections": "Krótkie połączenia łączą ją z korą Heschla i zakrętem skroniowym górnym. Dalsza współpraca z korą ciemieniową i czołową uczestniczy w orientowaniu słuchowym oraz planowaniu reakcji. Nie należy mylić połączeń grzbietowej sieci słuchowej z promienistością słuchową doprowadzającą informację wzgórzową do kory.",
+    "clinical": "Uszkodzenia tylnej kory słuchowej mogą utrudniać lokalizację dźwięku i analizę złożonych wzorów akustycznych; przy zajęciu dominującej sieci językowej pojawiają się także zaburzenia fonologiczne. Objawy zależą od współzajęcia zakrętu skroniowego, kory ciemieniowej i istoty białej. Rozmiar płaszczyzny nie wystarcza do rozpoznania zaburzenia językowego.",
+    "laterality": "Lewa płaszczyzna jest u wielu osób większa, lecz asymetria anatomiczna nie jest pewnym testem dominacji języka ani zdolności muzycznych.",
+    "limitations": "Planum temporale, pole Wernickego i kora słuchowa wtórna są pojęciami częściowo nakładającymi się, ale nie tożsamymi.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "planum-temporale-motion-2019",
+        "locator": "Abstract i Results: reprezentacja lokalizacji oraz ruchu źródła dźwięku"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_temporal_inf",
+    "names": {
+      "pl": "Zakręt skroniowy dolny",
+      "en": "Inferior temporal gyrus",
+      "lat": "Gyrus temporalis inferior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_temporal_inf",
+      "rh_G_temporal_inf"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt skroniowy dolny zajmuje dolno-boczną powierzchnię płata skroniowego. Od góry ogranicza go bruzda skroniowa dolna, a na powierzchni podstawnej od zakrętu wrzecionowatego oddziela go bruzda potyliczno-skroniowa. Biegnie od przedniej skroni w kierunku potylicy i obejmuje obszary o różnych połączeniach.",
+    "function": "Jest częścią brzusznej sieci rozpoznawania wzrokowego, która pozwala łączyć widziane kształty z kategorią i znaczeniem przedmiotu. Bardziej przednie odcinki współpracują z siecią wiedzy pojęciowej. Samo rozpoznanie kształtu, nazwanie obiektu i odtworzenie wiedzy o nim są różnymi operacjami, zależnymi od rozproszonych układów.",
+    "connections": "Pęczek podłużny dolny wspiera komunikację między płatem potylicznym a skroniowym. Krótkie włókna wiążą zakręt z korą wrzecionowatą i skroniową środkową. Połączenia z przednią skronią i siecią czołową umożliwiają wykorzystanie reprezentacji wzrokowej w nazywaniu oraz zachowaniu. Komunikacja międzypółkulowa obejmuje więcej niż jeden system spoidłowy.",
+    "clinical": "Uszkodzenia dolnej skroni mogą uczestniczyć w agnozjach wzrokowych i trudnościach nazywania. Rozleglejsze zmiany przedniej skroni mogą zaburzać wiedzę semantyczną niezależnie od sposobu podania bodźca. Zaburzenie pola widzenia może oznaczać zajęcie głębszej promienistości wzrokowej, a nie funkcji samego zakrętu.",
+    "laterality": "Analiza wzrokowa jest obustronna. Lewa strona częściej współpracuje z siecią nazywania, prawa z częścią procesów rozpoznawania tożsamości i złożonych bodźców niewerbalnych.",
+    "limitations": "Zakręt nie jest tożsamy z jednym polem IT ani wyłącznie z korą wzrokową: profil funkcjonalny zmienia się wzdłuż osi potyliczno-skroniowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "anterior-temporal-tms-2007",
+        "locator": "Abstract: wkład przednich płatów skroniowych w reprezentacje semantyczne"
+      }
+    ]
+  },
+  {
+    "id": "ctx-G_temporal_middle",
+    "names": {
+      "pl": "Zakręt skroniowy środkowy",
+      "en": "Middle temporal gyrus",
+      "lat": "Gyrus temporalis medius"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_G_temporal_middle",
+      "rh_G_temporal_middle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Zakręt skroniowy środkowy leży między bruzdą skroniową górną i dolną. Biegnie od przedniej skroni ku pograniczu potyliczno-ciemieniowemu. Jest szeroką parcelą kory kojarzeniowej, różną od pierwotnej kory słuchowej ukrytej na górnej powierzchni płata.",
+    "function": "Uczestniczy w przetwarzaniu znaczeń słów, zdarzeń i relacji między pojęciami, szczególnie w dominującej sieci językowej. Tylne części współpracują z sieciami analizy działań i informacji wzrokowych, przednie z wiedzą semantyczną. Nie przechowuje samodzielnie całego słownika; rozumienie zdania wymaga dostępu do reprezentacji i kontroli ich wyboru.",
+    "connections": "Łączy się z sąsiednią górną i dolną korą skroniową, dolnym płacikiem ciemieniowym oraz korą czołową. Brzuszne systemy skroniowo-czołowe wspierają przetwarzanie znaczeń, a tylne połączenia z grzbietową siecią językową komunikację między analizą dźwięku i odpowiedzią. Nie wszystkie włókna pęczka łukowatego kończą się w jednym klasycznym ośrodku.",
+    "clinical": "Uszkodzenie dominującej bocznej skroni może utrudniać rozumienie słów i wypowiedzi, nazywanie oraz kontrolowany dostęp do wiedzy. Gdy pacjent widzi przedmiot i wie do czego służy, lecz nie potrafi go nazwać, mechanizm różni się od utraty samego pojęcia. Rozległość uszkodzenia i stan połączeń są kluczowe dla takiego rozróżnienia.",
+    "laterality": "Najczęściej większy udział lewej strony w języku, ale operacje semantyczne i rozpoznawanie zdarzeń angażują obie skronie.",
+    "limitations": "Tylna skroń jest heterogeniczna. Granica zakrętu nie wyznacza dokładnie obszaru rozumienia mowy, ruchu biologicznego ani wiedzy o działaniach.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      },
+      {
+        "sourceId": "anterior-temporal-tms-2007",
+        "locator": "Abstract: obustronna przednia sieć skroniowa w semantyce"
+      }
+    ]
+  },
+  {
+    "id": "ctx-Lat_Fis-ant-Horizont",
+    "names": {
+      "pl": "Gałąź przednia bruzdy bocznej",
+      "en": "Anterior horizontal ramus of lateral sulcus",
+      "lat": "Ramus anterior sulci lateralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_Lat_Fis-ant-Horizont",
+      "rh_Lat_Fis-ant-Horizont"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Przednia pozioma gałąź bruzdy bocznej biegnie w kierunku przednim w dolnej części płata czołowego. Oddziela część trójkątną zakrętu czołowego dolnego od części oczodołowej. Jej układ bywa niestały i może łączyć się z innymi odgałęzieniami.",
+    "function": "Jest punktem orientacyjnym. Operacje językowe i semantyczne są wykonywane przez korę jej brzegów oraz szerszą sieć dolnoczołową, nie przez przestrzeń bruzdy. Obie przyległe części zakrętu uczestniczą w wyborze informacji, lecz ich funkcji nie rozdziela idealna linia.",
+    "connections": "Krótkie włókna pod dnem łączą sąsiednie zakręty. Dalsze połączenia należą do systemów czołowo-skroniowych, a nie do osobnej drogi poziomej gałęzi Sylwiusza.",
+    "clinical": "Znaczenie kliniczne polega na orientacji w dolnej korze czołowej i ocenie rozległości zmiany. Afazja po uszkodzeniu tej okolicy zależy od zajętej kory i włókien; sama odmienna długość bruzdy nie jest zaburzeniem językowym.",
+    "laterality": "Asymetria bruzdy nie ustala pewnie dominacji językowej.",
+    "limitations": "Parcela bruzdowa w modelu oznacza korę ścian i dna, nie naczynie ani pustą szczelinę. Nie należy nazywać jej odrębnym ośrodkiem mowy.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      }
+    ]
+  },
+  {
+    "id": "ctx-Lat_Fis-ant-Vertical",
+    "names": {
+      "pl": "Gałąź wstępująca bruzdy bocznej",
+      "en": "Anterior ascending ramus of lateral sulcus",
+      "lat": "Ramus ascendens sulci lateralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_Lat_Fis-ant-Vertical",
+      "rh_Lat_Fis-ant-Vertical"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Gałąź wstępująca bruzdy bocznej kieruje się ku górze w obrębie zakrętu czołowego dolnego. Rozdziela część wieczkową położoną ku tyłowi od części trójkątnej leżącej z przodu. Jej przebieg oraz relacja do bruzdy przedśrodkowej są zmienne.",
+    "function": "Wyznacza granicę anatomiczną między sąsiednimi fragmentami sieci dolnoczołowej. Przyległa kora uczestniczy w fonologii, artykulacji, składni i kontroli semantycznej, lecz te procesy nie są przypisane samemu zagłębieniu.",
+    "connections": "Krótkie włókna kojarzeniowe pod bruzdą łączą jej brzegi. Połączenia z tylną skronią i ciemieniem należą do rozległych układów językowych.",
+    "clinical": "Bruzda pomaga opisywać położenie zmiany względem klasycznej okolicy Broki. Nie stanowi jednak bezpiecznej granicy resekcji ani dowodu, że cały brzeg po jednej stronie jest funkcjonalnie jednorodny. Deficyt mowy może wynikać także z uszkodzenia głębszych włókien.",
+    "laterality": "U większości osób lewostronna okolica dolnoczołowa ma silniejszy udział językowy; sam fałd nie rozstrzyga tej dominacji.",
+    "limitations": "Pars opercularis i pars triangularis są parcelami morfologicznymi. Ich przybliżone odpowiedniki BA44/45 nie muszą stykać się dokładnie w tej bruździe.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      }
+    ]
+  },
+  {
+    "id": "ctx-Lat_Fis-post",
+    "names": {
+      "pl": "Tylna część bruzdy bocznej",
+      "en": "Posterior ramus of lateral sulcus",
+      "lat": "Pars posterior sulci lateralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_Lat_Fis-post",
+      "rh_Lat_Fis-post"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Tylna część bruzdy bocznej rozdziela powierzchnie wieczkowe czołowo-ciemieniowe od górnej powierzchni płata skroniowego. Głęboko leży wyspa, a na dolnym brzegu ukryte są pola słuchowe. W szczelinie przebiegają gałęzie tętnicy środkowej mózgu i naczynia żylne.",
+    "function": "Jest rozległym punktem orientacyjnym dla sieci okołosylwialnej. Przyległa kora obejmuje funkcje somatosensoryczne, słuchowe, artykulacyjne i językowe. Nie ma jednej funkcji całej tylnej bruzdy.",
+    "connections": "Pod brzegami przebiegają lokalne połączenia wieczkowe oraz dłuższe włókna czołowo-skroniowo-ciemieniowe. Przebieg naczyń w przestrzeni podpajęczynówkowej należy odróżniać od dróg istoty białej.",
+    "clinical": "Zmiany okołosylwialne mogą łączyć zaburzenia mowy, czucia i ruchów twarzy oraz połykania; obraz zależy od strony i głębokości. Niedokrwienie w zakresie tętnicy środkowej mózgu może obejmować kilka tych obszarów jednocześnie.",
+    "laterality": "Asymetria tylnego przebiegu szczeliny jest częsta i nie stanowi sama w sobie diagnozy ani testu dominacji.",
+    "limitations": "Brzegi bruzdy należą do różnych płatów. Jedna etykieta nie uprawnia do przeniesienia funkcji całej sieci okołosylwialnej na każdy jej punkt.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-Pole_occipital",
+    "names": {
+      "pl": "Biegun potyliczny",
+      "en": "Occipital pole",
+      "lat": "Polus occipitalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_Pole_occipital",
+      "rh_Pole_occipital"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Biegun potyliczny jest najbardziej tylnym krańcem półkuli, gdzie zbiegają się jej powierzchnie boczna, przyśrodkowa i dolna. Sąsiaduje z tylnym końcem bruzdy ostrogowej oraz klinem i zakrętem językowatym. Granice pola biegunowego są częściowo umowne i nie odpowiadają jednej histologicznej granicy.",
+    "function": "Tylne okolice wczesnej kory wzrokowej poświęcają dużą powierzchnię reprezentacji widzenia centralnego. Jest to korowe powiększenie obrazu plamkowego: mały obszar pola widzenia otrzymuje wiele zasobów analizy. Nie każdy punkt bieguna należy do V1, a mapa centralnego pola może wchodzić na boczną powierzchnię półkuli.",
+    "connections": "Promienistość wzrokowa doprowadza informację z ciała kolankowatego bocznego do wczesnej kory. Połączenia między sąsiednimi polami potylicznymi umożliwiają analizę konturów i dalsze rozpoznawanie, a kleszcze większe i pozostałe tylne włókna spoidłowe wspierają komunikację obu stron.",
+    "clinical": "Małe ognisko potyliczne może powodować centralny lub przycentralny jednoimienny ubytek pola. Przy rozległym udarze potylicznym widzenie centralne bywa oszczędzone, ale nie jest to reguła; zależy od zachowanej tkanki i wariantów unaczynienia. Typowym źródłem krwi jest tętnica tylna mózgu z możliwym udziałem krążenia granicznego.",
+    "laterality": "Każda półkula analizuje przede wszystkim przeciwległą część pola widzenia obojga oczu.",
+    "limitations": "Biegun jako anatomiczny koniec półkuli nie jest synonimem plamkowej reprezentacji V1; do ustalenia mapy potrzebna jest retinotopia.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-Pole_temporal",
+    "names": {
+      "pl": "Biegun skroniowy",
+      "en": "Temporal pole",
+      "lat": "Polus temporalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_Pole_temporal",
+      "rh_Pole_temporal"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Biegun skroniowy jest przednim końcem płata skroniowego. Stanowi miejsce zbiegania się jego powierzchni bocznej, górnej i dolno-przyśrodkowej. Sąsiaduje z przednią korą przyhipokampową i okolicą ciała migdałowatego, ale jest korą powierzchniową, a nie samym ciałem migdałowatym.",
+    "function": "Przednia sieć skroniowa uczestniczy w wiązaniu informacji z różnych modalności w reprezentacje pojęć, osób i znaczeń społecznych. Rozpoznana twarz, głos i nazwisko mogą dzięki tej sieci odnosić się do tej samej osoby. Funkcja wymaga współpracy obu płatów skroniowych i innych obszarów, a nie jednego punktu biegunowego.",
+    "connections": "Pęczek haczykowaty łączy przednią skroń z korą oczodołowo-czołową. Pęczek podłużny dolny i lokalne włókna skroniowe przekazują informacje z sieci wzrokowych i słuchowych. Połączenia z ciałem migdałowatym oraz innymi strukturami limbicznymi wiążą wiedzę o bodźcu z jego znaczeniem emocjonalnym.",
+    "clinical": "Zanik przednich okolic skroniowych, często obustronny, choć asymetryczny, może prowadzić do postępującej utraty wiedzy semantycznej. Przewaga lewostronna częściej wiąże się z trudnościami nazywania i rozumienia słów, prawostronna z rozpoznawaniem osób i zachowaniem społecznym. Jednostronna mała zmiana nie musi wywoływać pełnego zespołu semantycznego.",
+    "laterality": "Obustronna organizacja jest podstawą; różnice lewej i prawej strony mają charakter względny i zależą od połączeń oraz rozległości choroby.",
+    "limitations": "Biegun jest tylko częścią przedniego płata skroniowego. Obserwacji z rozległego zaniku lub stymulacji przedniej skroni nie należy traktować jako dowodu funkcji każdego punktu tej parceli.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "anterior-temporal-tms-2007",
+        "locator": "Abstract i Discussion: semantyka i znaczenie obustronności przedniej sieci skroniowej"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_calcarine",
+    "names": {
+      "pl": "Bruzda ostrogowa",
+      "en": "Calcarine sulcus",
+      "lat": "Sulcus calcarinus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_calcarine",
+      "rh_S_calcarine"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda ostrogowa biegnie po przyśrodkowej powierzchni płata potylicznego i rozdziela klin od zakrętu językowatego. W jej ścianach znajduje się znaczna część pierwotnej kory wzrokowej V1. Przedni odcinek zbliża się do cieśni obręczy, a tylny do bieguna potylicznego.",
+    "function": "Kora górnego brzegu reprezentuje przeciwległe dolne pole widzenia, dolnego brzegu przeciwległe górne. Widzenie centralne ma rozbudowaną reprezentację ku tyłowi, obwodowe bardziej ku przodowi. Funkcja należy do kory ścian, nie przestrzeni bruzdy.",
+    "connections": "Promienistość wzrokowa doprowadza sygnał z ciała kolankowatego bocznego. Połączenia lokalne kierują informację do kolejnych pól wzrokowych, a projekcje zwrotne modulują jej przetwarzanie.",
+    "clinical": "Uszkodzenie kory może powodować przeciwstronne jednoimienne ubytki pola; obustronne rozległe uszkodzenie może prowadzić do ślepoty korowej. Małe ognisko daje ubytek zależny od retinotopii. Tętnica ostrogowa jest gałęzią tętnicy tylnej mózgu.",
+    "laterality": "Każda półkula otrzymuje informację o przeciwległym półpolu obojga oczu, nie o jednym oku.",
+    "limitations": "V1 może wykraczać poza bruzdę, zwłaszcza ku biegunowi. Granica parceli nie jest dokładną granicą pola 17.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_central",
+    "names": {
+      "pl": "Bruzda środkowa",
+      "en": "Central sulcus",
+      "lat": "Sulcus centralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_central",
+      "rh_S_central"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda środkowa oddziela płat czołowy od ciemieniowego. Biegnie od okolicy górno-przyśrodkowego brzegu półkuli ku dolno-bocznej powierzchni, między zakrętem przedśrodkowym i zaśrodkowym. Jest głównym punktem orientacyjnym granicy kory ruchowej i czuciowej.",
+    "function": "Przednia ściana zawiera istotną część kory M1, tylna ściana pola pierwotnej kory somatosensorycznej. Ich somatotopia biegnie od nogi przyśrodkowo do twarzy dolno-bocznie. Sama bruzda nie wykonuje ruchu ani nie przewodzi czucia.",
+    "connections": "Pod korą przebiegają krótkie włókna łączące obie okolice oraz włókna projekcyjne ruchowe i czuciowe. Wzajemne połączenia umożliwiają korygowanie ruchu na podstawie dopływu sensorycznego.",
+    "clinical": "Uszkodzenia okołośrodkowe mogą łączyć przeciwstronny niedowład i zaburzenia czucia, zaś napady dawać ruchowe lub czuciowe objawy somatotopowe. Miejsce początku objawu może wskazywać część reprezentacji, ale nie rozstrzyga o dokładnym brzegu bruzdy.",
+    "laterality": "Funkcje kończyn są głównie przeciwstronne. Organizacja osi ciała i części aparatu ustno-gardłowego ma większy udział obustronny.",
+    "limitations": "Etykiety zakrętów i bruzdy rozdzielają fragmenty tych samych pól funkcjonalnych; nie należy liczyć ich jako niezależnych ośrodków.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 41–44; druk s. 39–42: drogi somatosensoryczne"
+      },
+      {
+        "sourceId": "geyer-1999",
+        "locator": "Abstract: mikrostrukturalna lokalizacja BA3a/3b/1 i zmienność względem bruzd w 10 mózgach"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_cingul-Marginalis",
+    "names": {
+      "pl": "Gałąź brzeżna bruzdy obręczy",
+      "en": "Marginal ramus of cingulate sulcus",
+      "lat": "Ramus marginalis sulci cinguli"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_cingul-Marginalis",
+      "rh_S_cingul-Marginalis"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Gałąź brzeżna bruzdy obręczy wznosi się ku górnemu brzegowi półkuli za płacikiem okołośrodkowym. Oddziela tę okolicę od przedklinka i jest charakterystycznym punktem orientacyjnym na przyśrodkowej powierzchni mózgu.",
+    "function": "Przyległy płacik okołośrodkowy zawiera reprezentacje nogi, a przednia część przedklinka uczestniczy w integracji sensomotorycznej. Granica bruzdowa służy lokalizacji, lecz nie ma własnej odrębnej funkcji motorycznej.",
+    "connections": "Krótkie połączenia korowe wiążą brzegi z przyśrodkową korą ciemieniową i ruchową. Przebiegające w sąsiedztwie włókna obręczy są osobną strukturą, której nie należy utożsamiać z bruzdą.",
+    "clinical": "Zmiana w tej okolicy może uszkadzać czucie lub ruch nogi albo przetwarzanie przestrzenno-cielesne, zależnie od zajętego brzegu. Wartość kliniczna bruzdy polega na określeniu położenia zmiany względem okolicy okołośrodkowej.",
+    "laterality": "Wpływ na kończynę jest przeważnie przeciwstronny; funkcje kojarzeniowe angażują obie półkule.",
+    "limitations": "Tylna granica płacika jest przybliżeniem powierzchniowym i nie wyznacza ostro końca całej reprezentacji kończyny dolnej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_circular_insula_ant",
+    "names": {
+      "pl": "Przednia część bruzdy okólnej wyspy",
+      "en": "Anterior circular sulcus of insula",
+      "lat": "Pars anterior sulci circularis insulae"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_circular_insula_ant",
+      "rh_S_circular_insula_ant"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Przedni odcinek bruzdy okólnej wyspy leży głęboko pod wieczkiem czołowym i ogranicza wyspę od przodu. Jest częścią bruzdy otaczającej wyspę, odrębną od jej wewnętrznej bruzdy środkowej.",
+    "function": "Przedni brzeg wyspowy uczestniczy w integracji sygnałów cielesnych, emocjonalnych i autonomicznych, a przyległa kora wieczkowa w czynnościach jamy ustnej i kontroli zachowania. Nie ma podstaw do wydzielenia funkcji samego przedniego odcinka bruzdy.",
+    "connections": "Krótkie włókna kojarzeniowe łączą wyspę i wieczko; głębiej przebiegają systemy torebki ostatniej i zewnętrznej. Bliskość szlaku nie dowodzi, że cały kończy się w tej parceli.",
+    "clinical": "Zmiany wyspowo-wieczkowe mogą zaburzać smak, mowę lub połykanie oraz wywoływać objawy autonomiczne. Gałęzie tętnicy środkowej mózgu przebiegające w sąsiedztwie mają znaczenie dla zasięgu niedokrwienia.",
+    "laterality": "Funkcje cielesne są obustronne; udział w mowie zależy od dominacji językowej.",
+    "limitations": "Bruzda jest granicą anatomiczną. Objawy przyległych obszarów nie są dowodem na jej własny ośrodek smaku lub emocji.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "insula-stimulation-2017",
+        "locator": "Abstract: serie stymulacji wyspy u 222 pacjentów z padaczką"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_circular_insula_inf",
+    "names": {
+      "pl": "Dolna część bruzdy okólnej wyspy",
+      "en": "Inferior circular sulcus of insula",
+      "lat": "Pars inferior sulci circularis insulae"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_circular_insula_inf",
+      "rh_S_circular_insula_inf"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Dolny odcinek bruzdy okólnej oddziela dolny brzeg wyspy od górnej powierzchni płata skroniowego. Leży w głębi bruzdy bocznej, przy wieczku skroniowym i korze słuchowej.",
+    "function": "Sąsiedztwo wyspowe wiąże się z przetwarzaniem doznań cielesnych, a skroniowe ze słuchem. W okolicy wyspowo-wieczkowej integrowane są też informacje przedsionkowe. Te funkcje należą do różnych pól korowych, nie do bruzdy jako szczeliny.",
+    "connections": "Połączenia lokalne wiążą wyspę z górną skronią i pozostałymi wieczkami. W głębi przebiegają szlaki kojarzeniowe skroniowe; promienistość słuchowa jest oddzielną drogą wzgórzowo-korową.",
+    "clinical": "Zmiany tej okolicy mogą łączyć doznania trzewne, słuchowe lub przedsionkowe, zwłaszcza przy wyładowaniach szerzących się między wyspą i skronią. Taki zestaw nie lokalizuje automatycznie początku napadu do dolnej bruzdy okólnej.",
+    "laterality": "Obie strony integrują sygnały; korowe przetwarzanie dźwięku nie odpowiada izolowanemu słyszeniu jednym uchem.",
+    "limitations": "Parcela obejmuje korę bruzdową na granicy dwóch okolic o różnej organizacji. Nie jest pojedynczym obszarem słuchowo-przedsionkowym.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "insula-stimulation-2017",
+        "locator": "Abstract: serie stymulacji wyspy u 222 pacjentów z padaczką"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_circular_insula_sup",
+    "names": {
+      "pl": "Górna część bruzdy okólnej wyspy",
+      "en": "Superior circular sulcus of insula",
+      "lat": "Pars superior sulci circularis insulae"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_circular_insula_sup",
+      "rh_S_circular_insula_sup"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Górny odcinek bruzdy okólnej oddziela wyspę od wieczek czołowego i ciemieniowego. Jest ukryty w głębi szczeliny bocznej i pozwala odróżnić powierzchnię wyspy od przykrywającej ją kory.",
+    "function": "Kora na brzegach uczestniczy w integracji somatosensorycznej, czynnościach ustno-twarzowych i przetwarzaniu stanu ciała. Zróżnicowanie przednio-tylne odzwierciedla sąsiedztwo przedniej oraz tylnej wyspy i odpowiednich wieczek.",
+    "connections": "Krótkie połączenia korowo-korowe wiążą brzegi. W pobliżu przebiegają naczynia tętnicy środkowej mózgu; są to struktury naczyniowe, odrębne od pęczków podkorowych.",
+    "clinical": "Zajęcie górnej okolicy wyspowo-wieczkowej może prowadzić do zaburzeń czucia, artykulacji lub połykania i do złożonych napadów czuciowo-ruchowych. Objawy zależą od zajętej kory oraz głębokich włókien.",
+    "laterality": "Kontrola aparatu ustnego jest częściowo obustronna, a elementy czucia mogą wykazywać przewagę reprezentacji przeciwstronnej.",
+    "limitations": "Bruzda nie jest równoznaczna z wtórną korą czuciową SII, której pola zajmują określone fragmenty wieczka ciemieniowego.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "insula-stimulation-2017",
+        "locator": "Abstract: serie stymulacji wyspy u 222 pacjentów z padaczką"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_collat_transv_ant",
+    "names": {
+      "pl": "Przednia poprzeczna bruzda poboczna",
+      "en": "Anterior transverse collateral sulcus",
+      "lat": "Sulcus collateralis transversus anterior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_collat_transv_ant",
+      "rh_S_collat_transv_ant"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Przednia poprzeczna bruzda poboczna jest drobnym elementem dolnej powierzchni skroniowej, związanym z przednim układem bruzdy pobocznej i granicą przedniej części zakrętu wrzecionowatego. Jej rozpoznanie zależy od przebiegu sąsiednich fałdów.",
+    "function": "Pełni rolę punktu orientacyjnego na pograniczu brzusznej skroni. Funkcje przyległej kory obejmują kojarzenie informacji wzrokowych i pojęciowych oraz współpracę z przyśrodkową siecią pamięci. Nie wykazano jednej czynności przypisanej samej tej bruździe.",
+    "connections": "Krótkie włókna wiążą sąsiednie pola dolnoskroniowe i wrzecionowate; komunikacja daleka odbywa się w systemach potyliczno-skroniowych i przednioskroniowych.",
+    "clinical": "Bruzda pomaga opisać zasięg zmiany dolnej skroni. Zaburzenia nazywania lub rozpoznawania zależą od zajęcia kory i jej połączeń; anatomiczny wariant fałdu sam w sobie nie wyjaśnia takiego deficytu.",
+    "laterality": "Asymetria morfologii nie jest dowodem różnicy zdolności poznawczych.",
+    "limitations": "Nie należy utożsamiać jej z całą bruzdą poboczną ani automatycznie z korą śródwęchową. Związek funkcjonalny jest wyłącznie regionalny.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_collat_transv_post",
+    "names": {
+      "pl": "Tylna poprzeczna bruzda poboczna",
+      "en": "Posterior transverse collateral sulcus",
+      "lat": "Sulcus collateralis transversus posterior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_collat_transv_post",
+      "rh_S_collat_transv_post"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Tylna poprzeczna bruzda poboczna leży na dolnej powierzchni potylicznej, w obrębie tylnego zakończenia układu pobocznego i tylnej granicy okolicy wrzecionowatej. Jest drobnym, osobniczo zmiennym punktem orientacyjnym.",
+    "function": "Kora sąsiedniej dolnej potylicy uczestniczy w analizie wzrokowej, a okolice wrzecionowata i językowata w kolejnych etapach rozpoznawania. Sama bruzda nie ma odrębnej funkcji rozpoznawania barw, twarzy czy znaków.",
+    "connections": "Lokalne włókna łączą sąsiednie pola wzrokowe. Dalsze połączenia potyliczno-skroniowe umożliwiają przekazywanie informacji o obrazie do sieci rozpoznawania.",
+    "clinical": "Znaczenie kliniczne polega na lokalizacji zmian dolnej potylicy względem sąsiednich zakrętów. Ubytek pola lub zaburzenie rozpoznawania wymaga oceny faktycznie zajętych pól i promienistości, nie tylko obecności zmiany w etykiecie.",
+    "laterality": "Informacja wzrokowa jest wczesnym etapem organizowana przeciwstronnie; wyższa analiza ma bardziej rozproszony charakter.",
+    "limitations": "Bruzda nie stanowi stałej granicy między pierwotną a kojarzeniową korą wzrokową.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_front_inf",
+    "names": {
+      "pl": "Bruzda czołowa dolna",
+      "en": "Inferior frontal sulcus",
+      "lat": "Sulcus frontalis inferior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_front_inf",
+      "rh_S_front_inf"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda czołowa dolna oddziela zakręt czołowy środkowy od dolnego. Biegnie na bocznej powierzchni płata czołowego i ku tyłowi często łączy się z dolną częścią bruzdy przedśrodkowej. Może być przerwana mostkami korowymi.",
+    "function": "Na jej brzegach sąsiadują obszary kontroli wykonawczej i dolnoczołowych sieci językowych. Utrzymywanie reguły zadania, wybór odpowiedzi i kontrola materiału językowego angażują różne podobszary; bruzda nie rozdziela ich w sposób absolutny.",
+    "connections": "Krótkie włókna podkorowe wiążą sąsiednie zakręty. Dalej leżą systemy czołowo-ciemieniowe i czołowo-skroniowe, których funkcji nie wolno przypisać samej linii bruzdy.",
+    "clinical": "Uszkodzenie okolicy może dawać zaburzenia wykonawcze, językowe lub planowania odpowiedzi. Deficyt zależy od osi przednio-tylnej, strony oraz głębokości zmiany. Brak wyraźnej bruzdy nie oznacza braku kory językowej.",
+    "laterality": "Znaczenie językowe jest częściej lewostronne, kontrola zadania obustronna.",
+    "limitations": "Jest to punkt orientacyjny, nie ścisła granica BA44/45, BA46 ani obszaru funkcjonalnego.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "inferior-frontal-tms-2005",
+        "locator": "Abstract i Discussion: rozdzielenie procesów semantycznych i fonologicznych w lewym IFG"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_front_middle",
+    "names": {
+      "pl": "Bruzda czołowa środkowa",
+      "en": "Middle frontal sulcus",
+      "lat": "Sulcus frontalis medius"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_front_middle",
+      "rh_S_front_middle"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda czołowa środkowa jest zmiennym zagłębieniem w obrębie zakrętu czołowego środkowego. Zwykle dotyczy bardziej przedniej części powierzchni bocznej i może dzielić się na odcinki. Nie jest synonimem bruzdy czołowej dolnej lub górnej.",
+    "function": "Przyległa kora należy do sieci przedczołowych uczestniczących w utrzymywaniu celu, pamięci roboczej i planowaniu. Nie ma uzasadnienia dla jednej odrębnej funkcji bruzdy, niezależnej od kory zakrętu środkowego.",
+    "connections": "Połączenia lokalne łączą jej brzegi, a długie włókna przedczołowe wiążą okolicę z korą ciemieniową, skroniową i wzgórzem. Sama topografia nie określa jednego docelowego pęczka.",
+    "clinical": "Bruzda służy do opisu morfologii i położenia zmiany. Zaburzenia wykonawcze mogą wynikać z szerszego uszkodzenia kory lub obwodów czołowo-podkorowych; nie można ich przewidzieć z głębokości lub liczby odcinków tego fałdu.",
+    "laterality": "Różnice między stronami są częste i nie stanowią testu dominacji poznawczej.",
+    "limitations": "Niewielkie bruzdy trzeciorzędowe mają dużą zmienność. Ich obecność nie pozwala przypisać osobie określonych zdolności.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_front_sup",
+    "names": {
+      "pl": "Bruzda czołowa górna",
+      "en": "Superior frontal sulcus",
+      "lat": "Sulcus frontalis superior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_front_sup",
+      "rh_S_front_sup"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda czołowa górna oddziela zakręt czołowy górny od środkowego. Biegnie w przybliżeniu równolegle do górnego brzegu półkuli, ku tyłowi zbliżając się do górnej części bruzdy przedśrodkowej.",
+    "function": "Przednie brzegi należą do sieci wykonawczych; tylna okolica sąsiaduje z korą przedruchową i polami kontrolującymi spojrzenie. Nie jest to jednorodny obszar uwagi ani jedna granica między poznaniem a ruchem.",
+    "connections": "Lokalne włókna kojarzeniowe łączą brzegi. Połączenia czołowo-ciemieniowe wiążą tylną okolicę z uwagą i działaniem kierowanym wzrokiem; bardziej przednie fragmenty uczestniczą w szerszych obwodach przedczołowych.",
+    "clinical": "Zmiany tylnej okolicy mogą zaburzać przygotowanie ruchu i kierowanie spojrzeniem, a bardziej przedniej kontrolę zadania. Relacja guza czy zawału do bruzdy pomaga lokalizacji, lecz nie zastępuje oceny faktycznych pól funkcjonalnych.",
+    "laterality": "Obie półkule uczestniczą w kontroli ruchu i zadania; znaczenie konkretnego brzegu zależy od podobszaru.",
+    "limitations": "Nie należy utożsamiać całej bruzdy z FEF, SMA ani jedną częścią kory grzbietowo-bocznej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_interm_prim-Jensen",
+    "names": {
+      "pl": "Bruzda pośrednia pierwsza Jensena",
+      "en": "First intermediate sulcus of Jensen",
+      "lat": "Sulcus intermedius primus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_interm_prim-Jensen",
+      "rh_S_interm_prim-Jensen"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda pośrednia pierwsza Jensena jest krótką, zmienną bruzdą płacika ciemieniowego dolnego. Służy jako granica między zakrętem nadbrzeżnym a kątowym i jest związana z okolicą bruzdy śródciemieniowej.",
+    "function": "Jej brzegi należą do sąsiednich pól integracji czuciowej, językowej, praksji i operacji symbolicznych. Sama bruzda nie jest osobnym ośrodkiem liczenia ani rozpoznawania palców.",
+    "connections": "Krótkie włókna wiążą oba zakręty, a dłuższe układy ciemieniowo-czołowe i ciemieniowo-skroniowe zapewniają ich współpracę z pozostałą siecią.",
+    "clinical": "Znaczenie kliniczne polega na orientacji względem dominującej okolicy dolnociemieniowej. Agrafia, akalkulia lub apraksja zależą od zajęcia określonych pól i ich połączeń; objawy nie identyfikują jednoznacznie tej bruzdy.",
+    "laterality": "Sieci językowo-symboliczne częściej dominują po lewej, przestrzenne po prawej; kształt bruzdy tego nie rozstrzyga.",
+    "limitations": "Zmienność i nieciągłość utrudniają parcelację. Granica anatomiczna nie musi oddzielać dwóch ostrych modułów funkcjonalnych.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "angular-stimulation-2003",
+        "locator": "Abstract: stymulacja, pisanie, liczenie i rozpoznawanie palców"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_intrapariet_and_P_trans",
+    "names": {
+      "pl": "Bruzda śródciemieniowa i poprzeczne bruzdy ciemieniowe",
+      "en": "Intraparietal and transverse parietal sulci",
+      "lat": "Sulcus intraparietalis et sulci parietales transversi"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_intrapariet_and_P_trans",
+      "rh_S_intrapariet_and_P_trans"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda śródciemieniowa biegnie za okolicą zaśrodkową i rozdziela płacik ciemieniowy górny od dolnego. Projekt grupuje ją z poprzecznymi bruzdami ciemieniowymi, dlatego parcela obejmuje większy i niejednorodny obszar kory ukrytej.",
+    "function": "Pola w ścianach uczestniczą w uwadze przestrzennej, koordynacji oko–ręka, przygotowaniu chwytu oraz przetwarzaniu wielkości i relacji liczbowych. Te funkcje należą do różnych podobszarów. Bruzda nie jest jednym uniwersalnym ośrodkiem liczenia czy chwytania.",
+    "connections": "Połączenia z korą wzrokową, somatosensoryczną i przedruchową pozwalają przekształcać lokalizację celu w parametry ruchu. Systemy czołowo-ciemieniowe wspierają wybór bodźca oraz utrzymywanie reguły zadania.",
+    "clinical": "Uszkodzenia mogą powodować zaburzenia sięgania kierowanego wzrokiem, uwagi lub operacji liczbowych; profil zależy od zajętego pola. Rozległe obustronne zmiany ciemieniowo-potyliczne mają bardziej złożony obraz niż mała jednostronna zmiana.",
+    "laterality": "Wielu zadaniom towarzyszy aktywność obu stron; nie można przypisać całej matematyki tylko lewej bruździe.",
+    "limitations": "Nazwy pól AIP/LIP z badań naczelnych nie powinny być bezpośrednio mapowane na całą ludzką parcelę bez dowodów homologii.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "angular-stimulation-2003",
+        "locator": "Abstract: stymulacja, pisanie, liczenie i rozpoznawanie palców"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_oc_middle_and_Lunatus",
+    "names": {
+      "pl": "Bruzda potyliczna środkowa i bruzda księżycowata",
+      "en": "Middle occipital and lunate sulci",
+      "lat": "Sulcus occipitalis medius et sulcus lunatus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_oc_middle_and_Lunatus",
+      "rh_S_oc_middle_and_Lunatus"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Parcela łączy bruzdę potyliczną środkową i niestałą bruzdę księżycowatą na bocznej powierzchni płata potylicznego. Układ tych bruzd jest zmienny i nie przypomina zawsze schematu podręcznikowego.",
+    "function": "Sąsiednia kora bierze udział w wzrokowej analizie cech obrazu i przekazywaniu informacji do sieci rozpoznawania oraz działania przestrzennego. Sama bruzda nie stanowi ośrodka jednej cechy wzrokowej.",
+    "connections": "Lokalne włókna łączą sąsiadujące pola potyliczne, a dłuższe połączenia kierują informację ku skroni i ciemieniu. Na podstawie kształtu nie można ustalić początku lub końca pojedynczego szlaku.",
+    "clinical": "Bruzdy pomagają opisywać zmianę bocznej potylicy. Zaburzenie wzrokowe zależy od zajętych pól retinotopowych, kojarzeniowych i istoty białej. Nietypowy fałd sam w sobie nie jest objawem choroby.",
+    "laterality": "Podstawowa organizacja wzrokowa odnosi się do przeciwległego półpola, wyższe procesy do sieci obu półkul.",
+    "limitations": "Ludzka bruzda księżycowata nie jest pewnym odpowiednikiem granicy V1 obserwowanej u innych naczelnych ani stałą granicą pola 17.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_oc_sup_and_transversal",
+    "names": {
+      "pl": "Bruzda potyliczna górna i bruzda potyliczna poprzeczna",
+      "en": "Superior and transverse occipital sulci",
+      "lat": "Sulcus occipitalis superior et transversus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_oc_sup_and_transversal",
+      "rh_S_oc_sup_and_transversal"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Parcela grupuje bruzdę potyliczną górną i poprzeczną, położone w górnej części powierzchni potylicznej przy pograniczu ciemieniowym. Ich przebieg i łączenie z sąsiednimi bruzdami są zmienne.",
+    "function": "Przyległa kora wzrokowo-kojarzeniowa uczestniczy w analizie przestrzeni, scen i relacji obiektu do otoczenia. Obszary selektywne dla scen mogą znajdować się w tej okolicy, ale nazwa bruzdy nie jest wystarczającym lokalizatorem takiej selektywności.",
+    "connections": "Krótkie włókna łączą okolicę z sąsiednią korą potyliczną; połączenia ciemieniowe wiążą obraz z uwagą i działaniem. Funkcja zależy od konkretnego pola w ścianie lub na brzegu.",
+    "clinical": "Zmiany mogą zaburzać analizę przestrzenną i wzrokową orientację, szczególnie przy zajęciu szerszej sieci. Brak izolowanego swoistego zespołu odpowiadającego całej wspólnej parceli.",
+    "laterality": "Obie półkule współpracują w przetwarzaniu scen i przestrzeni; stronność deficytu wynika z organizacji pola oraz sieci.",
+    "limitations": "Wspólna etykieta anatomii nie jest równoważna funkcjonalnemu obszarowi scen potylicznych ani pojedynczej mapie V3A.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_occipital_ant",
+    "names": {
+      "pl": "Bruzda potyliczna przednia",
+      "en": "Anterior occipital sulcus",
+      "lat": "Sulcus occipitalis anterior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_occipital_ant",
+      "rh_S_occipital_ant"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda potyliczna przednia jest niestałym punktem orientacyjnym na boczno-dolnym pograniczu potyliczno-skroniowym, związanym z okolicą wcięcia przedpotylicznego. Boczna granica płata potylicznego w dużej części pozostaje umowna.",
+    "function": "Sąsiadujące pola należą do wzrokowej kory kojarzeniowej i przejścia ku skroniowym systemom rozpoznawania. Nie ma osobnej funkcji wynikającej z istnienia samej bruzdy.",
+    "connections": "Lokalne włókna łączą sąsiednie zakręty potyliczne i skroniowe. Dłuższe układy, w tym pęczek podłużny dolny, przebiegają w głębi regionu, lecz nie należy nazywać bruzdy ich korowym zakończeniem.",
+    "clinical": "Znaczenie kliniczne polega na opisie lokalizacji ogniska względem płatów. Zaburzenia wzrokowe wymagają oceny pól funkcjonalnych i dróg; nieregularny przebieg granicy atlasowej nie oznacza patologii.",
+    "laterality": "Warianty budowy obu półkul są częste i nie określają dominacji dla rozpoznawania.",
+    "limitations": "To szczególnie zmienny znacznik morfologiczny. Nie wyznacza ostro końca kory wzrokowej ani początku kory semantycznej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_oc-temp_lat",
+    "names": {
+      "pl": "Bruzda potyliczno-skroniowa boczna",
+      "en": "Lateral occipitotemporal sulcus",
+      "lat": "Sulcus occipitotemporalis lateralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_oc-temp_lat",
+      "rh_S_oc-temp_lat"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda potyliczno-skroniowa boczna biegnie na dolnej powierzchni półkuli między zakrętem skroniowym dolnym a wrzecionowatym. Może być nieciągła i łączyć się z innymi zagłębieniami dolnej skroni.",
+    "function": "Kora po obu stronach należy do brzusznych sieci wzrokowych, które analizują kształt i tożsamość bodźca oraz łączą je ze znaczeniem. Rozpoznawanie liter lub twarzy dotyczy określonych sąsiednich pól, nie całej bruzdy.",
+    "connections": "Krótkie włókna łączą jej brzegi. Pęczek podłużny dolny i inne systemy kojarzeniowe w głębi wspierają dalsze przetwarzanie potyliczno-skroniowe.",
+    "clinical": "Uszkodzenia mogą uczestniczyć w trudnościach rozpoznawania lub nazywania wzrokowego. Ubytek pola widzenia może wynikać z zajęcia głębszych dróg i wymaga odrębnej analizy. Bruzda pomaga określić relację zmiany do zakrętu wrzecionowatego.",
+    "laterality": "Częstsze lewostronne związki z czytaniem i nazywaniem oraz prawostronne z częścią rozpoznawania twarzy nie dotyczą jednakowo całej parceli.",
+    "limitations": "Bruzda nie jest synonimem funkcjonalnego obszaru wzrokowej formy słowa ani granicą wszystkich pól selektywnych dla twarzy.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "fusiform-stimulation-2012",
+        "locator": "Abstract i Results: zniekształcenie percepcji twarzy po stymulacji obszarów wrzecionowatych"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_oc-temp_med_and_Lingual",
+    "names": {
+      "pl": "Bruzda potyliczno-skroniowa przyśrodkowa i bruzda językowata",
+      "en": "Medial occipitotemporal and lingual sulci",
+      "lat": "Sulcus occipitotemporalis medialis et sulcus lingualis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_oc-temp_med_and_Lingual",
+      "rh_S_oc-temp_med_and_Lingual"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda potyliczno-skroniowa przyśrodkowa, czyli poboczna, oddziela zakręt wrzecionowaty od przyhipokampowego i językowatego. Projekt łączy ją z bruzdą językowatą, więc parcela obejmuje odcinki skroniowe i potyliczne.",
+    "function": "Przyległa kora uczestniczy w analizie scen i kontekstu oraz w przekazywaniu informacji do sieci pamięci przyśrodkowej skroni. Funkcja zmienia się wzdłuż bruzdy; przedni i tylny odcinek nie są równoważne.",
+    "connections": "Połączenia lokalne wiążą brzegi z korą wrzecionowatą, językowatą i przyhipokampową. Współpraca z hipokampem odbywa się przez wyspecjalizowane pola przyśrodkowej skroni, a nie bezpośrednio przez samą bruzdę.",
+    "clinical": "Zmiany mogą wiązać się z zaburzeniami rozpoznawania otoczenia i pamięci kontekstowej. Powierzchniowa relacja do bruzdy nie wystarcza do określenia stopnia zajęcia hipokampa lub kory śródwęchowej.",
+    "laterality": "Przetwarzanie scen jest obustronne; rodzaj materiału i dominacja językowa mogą modyfikować obraz deficytu.",
+    "limitations": "PPA nie pokrywa się z całą parcelą poboczną. Połączone bruzdy są opisem morfologii, nie pojedynczym szlakiem pamięci.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "parahippocampal-scenes-1998",
+        "locator": "Abstract: odpowiedź tylnej kory przyhipokampowej na sceny przestrzenne"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_orbital_lateral",
+    "names": {
+      "pl": "Bruzda oczodołowa boczna",
+      "en": "Lateral orbital sulcus",
+      "lat": "Sulcus orbitalis lateralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_orbital_lateral",
+      "rh_S_orbital_lateral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda oczodołowa boczna leży w bocznej części powierzchni oczodołowej płata czołowego. Pomaga odgraniczać boczne zakręty oczodołowe od sąsiedniej dolnej kory czołowej; jej przebieg jest zmienny.",
+    "function": "Przyległa kora bierze udział w ocenie następstw wyboru i dostosowywaniu zachowania. Bruzda nie jest samodzielnym ośrodkiem hamowania, nagrody lub karania.",
+    "connections": "Lokalne włókna łączą korę oczodołową z dolnoczołową. Szersze połączenia z przednią skronią, wyspą i strukturami podkorowymi wspierają ocenę kontekstu.",
+    "clinical": "Zmiany bocznej OFC mogą utrudniać przypisywanie wyniku właściwemu wyborowi i uczenie się z informacji zwrotnej. Taki deficyt wymaga oceny sieci, a nie tylko obrazu bruzdy. Unaczynienie okolicy obejmuje gałęzie oczodołowo-czołowe.",
+    "laterality": "Sieci wartościowania są obustronne; asymetria bruzdy nie przewiduje typu reakcji emocjonalnej.",
+    "limitations": "Granica morfologiczna nie rozdziela idealnie bocznej OFC i brzuszno-bocznej kory przedczołowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "orbitofrontal-lesions-2017",
+        "locator": "Abstract: wkład bocznej OFC w uczenie się wartości wyborów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_orbital_med-olfact",
+    "names": {
+      "pl": "Bruzda węchowa",
+      "en": "Olfactory sulcus",
+      "lat": "Sulcus olfactorius"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_orbital_med-olfact",
+      "rh_S_orbital_med-olfact"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda węchowa biegnie na podstawie płata czołowego między zakrętem prostym a zakrętami oczodołowymi. W jej sąsiedztwie leżą opuszka i pasmo węchowe. Te struktury drogi węchowej należy odróżniać od kory ścian bruzdy.",
+    "function": "Jest punktem orientacyjnym dla anatomii węchu i podstawy płata czołowego. Sygnał zapachowy przewodzą włókna węchowe, opuszka i pasmo, a analiza odbywa się w rozproszonej korze węchowej i oczodołowej; bruzda sama nie przewodzi zapachu.",
+    "connections": "Pasmo węchowe biegnące obok kory jest odrębną strukturą. Połączenia samej kory brzegów należą do przyśrodkowej sieci oczodołowo-przedczołowej.",
+    "clinical": "Guzy lub urazy podstawy czołowej mogą powodować zaburzenia węchu przez uszkodzenie dróg węchowych. Anosmia nie dowodzi uszkodzenia samej parceli korowej. Ocena wymaga rozróżnienia drogi obwodowej, opuszki, pasma i kory.",
+    "laterality": "Drogi węchowe mają znaczące połączenia po tej samej stronie, ale percepcja korzysta z dalszej integracji obustronnej.",
+    "limitations": "Nazwa anatomiczna nie oznacza, że cała kora w bruździe należy do pierwotnej kory węchowej.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 92; druk s. 90: uszkodzenia drogi węchowej przy zmianach podstawy czołowej"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_orbital-H_Shaped",
+    "names": {
+      "pl": "Bruzdy oczodołowe",
+      "en": "H-shaped orbital sulci",
+      "lat": "Sulci orbitales"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_orbital-H_Shaped",
+      "rh_S_orbital-H_Shaped"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzdy oczodołowe tworzą na dolnej powierzchni płata czołowego zmienny układ często przypominający literę H. Dzielą zakręty oczodołowe na części przyśrodkowe, boczne, przednie i tylne. To układ odrębny od biegnącej przyśrodkowo bruzdy węchowej.",
+    "function": "Funkcje kory brzegów obejmują ocenę wartości i następstw działania oraz aktualizowanie zachowania po zmianie sytuacji. Sam układ H nie odpowiada jednej operacji poznawczej ani osobnej sieci nagrody.",
+    "connections": "Krótkie włókna integrują sąsiednie fragmenty OFC. Połączenia z przednią skronią, wzgórzem i prążkowiem wiążą ocenę bodźca z wyborem reakcji.",
+    "clinical": "Uszkodzenie przyległej kory może zaburzać elastyczne uczenie się, ocenę skutków i społeczną kontrolę zachowania. Różny wzór bruzd jest jednak częstym wariantem anatomii, a nie wskaźnikiem odhamowania.",
+    "laterality": "Obie półkule uczestniczą w wartościowaniu; nie ma prostego przypisania przyśrodkowego ramienia do pozytywnych, a bocznego do negatywnych emocji.",
+    "limitations": "Bruzdy porządkują makroskopową powierzchnię. Granice pól receptorowych i funkcjonalnych nie muszą przebiegać po ich dnach.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "orbitofrontal-lesions-2017",
+        "locator": "Abstract: zróżnicowanie przyśrodkowej i bocznej OFC"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_parieto_occipital",
+    "names": {
+      "pl": "Bruzda ciemieniowo-potyliczna",
+      "en": "Parieto-occipital sulcus",
+      "lat": "Sulcus parietooccipitalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_parieto_occipital",
+      "rh_S_parieto_occipital"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda ciemieniowo-potyliczna oddziela na powierzchni przyśrodkowej przedklinek od klina. Ku górze dochodzi do brzegu półkuli, a ku dołowi zbliża się do bruzdy ostrogowej. Jest istotnym punktem orientacyjnym granicy płatów ciemieniowego i potylicznego.",
+    "function": "Potyliczny brzeg sąsiaduje z korą wzrokową, a ciemieniowy z sieciami integracji przestrzennej i sensomotorycznej. Kora w tej okolicy może uczestniczyć w wiązaniu obrazu z orientacją i działaniem, lecz cała bruzda nie stanowi jednego pola wzrokowo-ruchowego.",
+    "connections": "Krótkie połączenia wiążą sąsiednie pola, a dalsze układy potyliczno-ciemieniowe przekazują informacje do sieci przygotowania ruchu. W pobliżu przebiegają gałęzie tętnic przedniej i tylnej mózgu.",
+    "clinical": "Uszkodzenie może powodować zaburzenia pola widzenia lub orientacji wzrokowo-przestrzennej, zależnie od brzegu i głębokości. Sama lokalizacja przy bruździe nie rozstrzyga, czy deficyt wynika z V1, kory kojarzeniowej czy drogi podkorowej.",
+    "laterality": "Wczesna analiza dotyczy głównie przeciwległego półpola; integracja przestrzenna jest sieciowa i obustronna.",
+    "limitations": "Granica płatów nie jest dokładną granicą funkcji wzrokowej; kora ciemieniowa również przetwarza dane wzrokowe.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 136; tablica 119: droga wzrokowa i reprezentacja pola widzenia"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_pericallosal",
+    "names": {
+      "pl": "Bruzda ciała modzelowatego",
+      "en": "Pericallosal sulcus",
+      "lat": "Sulcus corporis callosi"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_pericallosal",
+      "rh_S_pericallosal"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda ciała modzelowatego biegnie między ciałem modzelowatym a zakrętem obręczy na przyśrodkowej powierzchni półkuli. Należy odróżnić ją od położonej wyżej bruzdy obręczy. W jej sąsiedztwie przebiegają naczynia okołospoidłowe.",
+    "function": "Jest granicą anatomiczną struktury spoidłowej i kory limbicznej. Funkcje kory brzegowej zmieniają się od okolicy przedniej do tylnej obręczy; bruzda nie jest wspólnym ośrodkiem pamięci ani drogą łączącą półkule.",
+    "connections": "Ciało modzelowate zawiera włókna spoidłowe, a pęczek obręczy włókna kojarzeniowe biegnące w tej samej półkuli. Oba należy odróżniać od zagłębienia powierzchniowego.",
+    "clinical": "Przy zmianach okołospoidłowych trzeba rozróżniać uszkodzenie kory, włókien ciała modzelowatego i sąsiednich naczyń. Zespół rozłączenia międzypółkulowego wynika z zajęcia włókien spoidłowych, nie z samej obecności zmiany przy bruździe.",
+    "laterality": "Funkcje spoidłowe z definicji dotyczą współpracy obu półkul; sąsiednia kora obręczy ma własną organizację obustronną.",
+    "limitations": "Podobne nazwy bruzda ciała modzelowatego, tętnica okołospoidłowa i pęczek obręczy oznaczają różne struktury.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 154–156; tablice 137–139: tętnice mózgowia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_postcentral",
+    "names": {
+      "pl": "Bruzda zaśrodkowa",
+      "en": "Postcentral sulcus",
+      "lat": "Sulcus postcentralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_postcentral",
+      "rh_S_postcentral"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda zaśrodkowa leży za zakrętem zaśrodkowym i oddziela go od tylnej kory ciemieniowej. Często składa się z kilku odcinków i łączy z układem bruzdy śródciemieniowej.",
+    "function": "Przedni brzeg sąsiaduje z pierwotną korą somatosensoryczną, tylny z korą integrującą czucie z obrazem ciała i działaniem. To przejście między etapami przetwarzania, nie bruzda o własnej funkcji czuciowej.",
+    "connections": "Krótkie włókna łączą korę zaśrodkową z płacikami ciemieniowymi. Dalsze połączenia z korą przedruchową umożliwiają wykorzystywanie czucia w kierowaniu ruchem.",
+    "clinical": "Zmiany przy tej bruździe mogą dawać zaburzenia dyskryminacji dotykowej, czucia położenia lub rozpoznawania przedmiotu dotykiem. Profil zależy od tego, czy uszkodzono dopływ i korę pierwotną, czy obszary kojarzeniowe.",
+    "laterality": "Pierwotne reprezentacje są głównie przeciwstronne; integracja kojarzeniowa może wykorzystywać informacje z obu stron ciała.",
+    "limitations": "Granica morfologiczna nie pozwala precyzyjnie oddzielić wszystkich pól 1/2 od 5/7. Warianty segmentacji są prawidłowe.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 41–44; druk s. 39–42: drogi somatosensoryczne"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_precentral-inf-part",
+    "names": {
+      "pl": "Dolna część bruzdy przedśrodkowej",
+      "en": "Inferior precentral sulcus",
+      "lat": "Pars inferior sulci precentralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_precentral-inf-part",
+      "rh_S_precentral-inf-part"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Dolna część bruzdy przedśrodkowej leży przed dolnym zakrętem przedśrodkowym i w sąsiedztwie tylnej części zakrętu czołowego dolnego. Jej relacje z bruzdą czołową dolną pomagają orientacji w okolicy przedruchowej.",
+    "function": "Przyległa kora wiąże planowanie ruchów kończyny górnej i aparatu ustnego z ich wykonaniem. W półkuli dominującej sąsiednia sieć uczestniczy w przygotowaniu artykulacji. Bruzda nie jest jednak samodzielnym ośrodkiem mowy.",
+    "connections": "Krótkie włókna łączą korę przedruchową, M1 i dolnoczołową. Dalej przebiegają włókna projekcyjne oraz czołowo-ciemieniowe; ich dokładne zakończenia nie wynikają z etykiety bruzdy.",
+    "clinical": "Uszkodzenia mogą powodować trudność planowania gestów lub mowy, a przy zajęciu M1 i dróg także niedowład. Dyzartria, apraksja mowy i afazja wymagają rozróżnienia, mimo bliskości anatomicznej.",
+    "laterality": "Wpływ na ruch jest głównie przeciwstronny; planowanie wyuczonych czynności i mowy bywa silniej zależne od lewej sieci.",
+    "limitations": "Parcela bruzdy obejmuje granicę kilku pól, więc nie należy utożsamiać jej w całości z BA6 lub częścią obszaru Broki.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_precentral-sup-part",
+    "names": {
+      "pl": "Górna część bruzdy przedśrodkowej",
+      "en": "Superior precentral sulcus",
+      "lat": "Pars superior sulci precentralis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_precentral-sup-part",
+      "rh_S_precentral-sup-part"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Górna część bruzdy przedśrodkowej biegnie przed górnym zakrętem przedśrodkowym, w sąsiedztwie tylnego odcinka bruzdy czołowej górnej. Oddziela powierzchniowo okolicę przedruchową od przedśrodkowej.",
+    "function": "Przyległe pola uczestniczą w przygotowaniu i wyborze ruchu, zwłaszcza w relacji do celu przestrzennego. Okolica styku z tylną korą czołową jest ważna także dla kontroli spojrzenia, ale lokalizacja FEF nie jest identyczna u wszystkich osób.",
+    "connections": "Połączenia z M1, korą ciemieniową i innymi polami przedruchowymi wiążą sygnały sensoryczne z planem ruchu. Szlaki do jąder podstawy i wzgórza uczestniczą w kontroli wyboru działania.",
+    "clinical": "Uszkodzenie może zaburzać przygotowanie ruchu, kierowanie spojrzeniem lub wykonywanie czynności pod kontrolą wzroku. Niedowład zależy od zajęcia dróg wykonawczych. Sama pozycja względem bruzdy nie zastępuje oceny funkcjonalnej.",
+    "laterality": "Ruch kończyny ma przewagę przeciwstronną, natomiast planowanie i uwaga angażują rozległe sieci obu półkul.",
+    "limitations": "Bruzda nie wyznacza dokładnie granicy M1/PMd ani lokalizacji FEF; ich relacja jest przybliżona.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 48–51 i 90; druk s. 46–49 i 88: drogi ruchowe i objawy uszkodzenia"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_suborbital",
+    "names": {
+      "pl": "Bruzda podoczodołowa",
+      "en": "Suborbital sulcus",
+      "lat": "Sulcus suborbitalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_suborbital",
+      "rh_S_suborbital"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda podoczodołowa tej parcellacji jest niewielką bruzdą na przyśrodkowej powierzchni płata czołowego, związaną z okolicą dziobową i zakrętem prostym. Nie jest rowkiem kostnym oczodołu ani bruzdą węchową.",
+    "function": "Przyległa kora należy do przyśrodkowych sieci przedczołowych i oczodołowych uczestniczących w ocenie znaczenia informacji oraz regulacji zachowania. Brak podstaw do przypisania samej bruździe jednej funkcji afektywnej.",
+    "connections": "Połączenia lokalne wiążą brzegi z korą przyśrodkową czołową i oczodołową. Dalsza komunikacja odbywa się w sieciach limbiczno-przedczołowych, nie przez odrębny trakt podoczodołowy.",
+    "clinical": "Służy do opisu powierzchni przyśrodkowej i położenia zmian. Zaburzenia napędu lub kontroli zachowania wskazują na szerszą sieć; kształt lub obecność tego drobnego fałdu nie stanowią markera choroby.",
+    "laterality": "Funkcje sieciowe są obustronne; asymetria morfologii nie oznacza jednostronnego ośrodka emocji.",
+    "limitations": "Polska nazwa jest zachowana zgodnie z projektem. W piśmiennictwie występują różne odpowiedniki dziobowe/nadoczodołowe, co utrudnia porównanie atlasów.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_subparietal",
+    "names": {
+      "pl": "Bruzda podciemieniowa",
+      "en": "Subparietal sulcus",
+      "lat": "Sulcus subparietalis"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_subparietal",
+      "rh_S_subparietal"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda podciemieniowa leży na przyśrodkowej powierzchni tylnej półkuli, między przedklinkiem a tylną okolicą obręczy. Jej kształt i relacja do innych bruzd przyśrodkowych są zmienne.",
+    "function": "Na brzegach sąsiadują sieci przestrzenno-sensomotoryczne przedklinka i pamięciowo-kontekstowe tylnej obręczy. Nie należy całej tej granicy traktować jako pojedynczego ośrodka pamięci autobiograficznej.",
+    "connections": "Krótkie połączenia wiążą sąsiednie części kory tylno-przyśrodkowej. Ich dalsze profile łączności różnią się: przedklinek silniej współpracuje z korą czuciowo-ruchową lub wzrokową zależnie od fragmentu, PCC z sieciami limbicznymi.",
+    "clinical": "Uszkodzenia w pobliżu mogą powodować zaburzenia orientacji i wykorzystania kontekstu, ale nie istnieje swoisty zespół samej bruzdy podciemieniowej. Ważne jest ustalenie zajętego brzegu i głębokich połączeń.",
+    "laterality": "Sieć działa obustronnie; asymetrie nie wynikają wyłącznie z kształtu fałdu.",
+    "limitations": "Granica między parcelami przedklinka i obręczy jest narzędziem opisu; nie oznacza całkowitego rozdzielenia ich funkcji.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 30–31; druk s. 28–29: układ limbiczny i krąg Papeza"
+      },
+      {
+        "sourceId": "precuneus-connectivity-2009",
+        "locator": "Abstract: odrębne wzorce łączności przedklinka; łączność funkcjonalna nie dowodzi bezpośrednich aksonów"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_temporal_inf",
+    "names": {
+      "pl": "Bruzda skroniowa dolna",
+      "en": "Inferior temporal sulcus",
+      "lat": "Sulcus temporalis inferior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_temporal_inf",
+      "rh_S_temporal_inf"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda skroniowa dolna oddziela zakręt skroniowy środkowy od dolnego. Biegnie wzdłuż boczno-dolnej części płata skroniowego i często jest nieciągła. Jest odrębna od bardziej podstawnie położonej bruzdy potyliczno-skroniowej.",
+    "function": "Przyległa kora uczestniczy w przetwarzaniu wzrokowo-pojęciowym, nazywaniu oraz dostępie do wiedzy semantycznej. Funkcje zmieniają się od tylnej do przedniej skroni; sama bruzda nie ma jednego rodzaju reprezentacji.",
+    "connections": "Włókna lokalne wiążą oba zakręty. Dalsze systemy potyliczno-skroniowe przekazują informacje wzrokowe, a czołowo-skroniowe umożliwiają ich wykorzystanie językowe i decyzyjne.",
+    "clinical": "Zmiany tej okolicy mogą towarzyszyć zaburzeniom rozpoznawania i nazywania. Jeżeli uszkodzenie sięga głębiej, objawy mogą wynikać również z przerwania szlaków, dlatego opis samej powierzchni nie wystarcza.",
+    "laterality": "Częstsza lewa przewaga w nazywaniu nie oznacza braku udziału prawej strony w wiedzy semantycznej.",
+    "limitations": "Nie jest stałą granicą między korą językową i wzrokową; obie modalności są integrowane po obu stronach tej bruzdy.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_temporal_sup",
+    "names": {
+      "pl": "Bruzda skroniowa górna",
+      "en": "Superior temporal sulcus",
+      "lat": "Sulcus temporalis superior"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_temporal_sup",
+      "rh_S_temporal_sup"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda skroniowa górna rozdziela zakręt skroniowy górny i środkowy. Biegnie na bocznej powierzchni płata skroniowego, a ku tyłowi ma złożony przebieg na pograniczu ciemieniowym. Jest długą, funkcjonalnie heterogeniczną parcelą korową.",
+    "function": "Pola jej ścian uczestniczą w analizie mowy, łączeniu informacji słuchowej i wzrokowej oraz interpretowaniu ruchu biologicznego. Szczególnie tylna okolica reaguje na ruch ciała i sygnały społeczne, lecz nie cała bruzda pełni jednakową funkcję. Rozumienie intencji wymaga szerszej sieci.",
+    "connections": "Połączenia z korą słuchową, wzrokową, przednią skronią, dolnym ciemieniem i korą czołową umożliwiają integrację modalności. Łączność różni się między przednią a tylną częścią.",
+    "clinical": "Uszkodzenia mogą zaburzać analizę złożonych bodźców komunikacyjnych lub językowych. Trudność rozumienia mowy, głosu czy ruchu społecznego nie lokalizuje jednoznacznie ogniska do całej STS i może wynikać z odłączenia sieci.",
+    "laterality": "Częściej lewa przewaga dla języka, prawa dla części aspektów prozodii i ruchu społecznego; wiele procesów jest obustronnych.",
+    "limitations": "Nie należy utożsamiać STS z ośrodkiem Wernickego ani z pojedynczym ośrodkiem rozumienia innych osób.",
+    "sources": [
+      {
+        "sourceId": "human-atlas",
+        "locator": "PDF s. 121–123; tablice 104–106: powierzchnie półkul i wyspa"
+      },
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "sts-biological-motion-2005",
+        "locator": "Abstract: badanie fMRI przetwarzania konfiguracji ruchu biologicznego w STS"
+      }
+    ]
+  },
+  {
+    "id": "ctx-S_temporal_transverse",
+    "names": {
+      "pl": "Bruzda skroniowa poprzeczna",
+      "en": "Transverse temporal sulcus",
+      "lat": "Sulcus temporalis transversus"
+    },
+    "category": "cortex",
+    "projectRegionIds": [
+      "lh_S_temporal_transverse",
+      "rh_S_temporal_transverse"
+    ],
+    "projectStructureIds": [],
+    "projectCircuitIds": [],
+    "anatomy": "Bruzda skroniowa poprzeczna jest elementem górnej, ukrytej powierzchni płata skroniowego przy zakrętach Heschla. Pomaga rozdzielać fałdy poprzeczne od sąsiedniej płaszczyzny skroniowej; jej obraz zależy od liczby i zdwojenia zakrętów.",
+    "function": "Kora brzegów uczestniczy we wczesnej i kojarzeniowej analizie słuchowej. Nie ma osobnej funkcji samej bruzdy, a jej przebieg nie wyznacza dokładnie wszystkich granic tonotopowych.",
+    "connections": "Połączenia lokalne wiążą pola słuchowe na górnej powierzchni skroni. Dopływ wzgórzowy dociera promienistością słuchową do określonych pól, nie do całej parceli bruzdowej jednakowo.",
+    "clinical": "Zmiany sąsiedniej kory mogą zaburzać analizę cech dźwięku lub jego lokalizacji. Ze względu na obustronny dopływ mała jednostronna zmiana zwykle nie powoduje całkowitej głuchoty jednego ucha.",
+    "laterality": "Obie półkule przetwarzają informacje z obu uszu; asymetrie wyższych operacji nie znoszą tej zasady.",
+    "limitations": "Bruzda anatomiczna i granica pierwotnej kory słuchowej nie są tożsame. Znaczenie funkcjonalne wymaga uwzględnienia indywidualnego układu zakrętów Heschla.",
+    "sources": [
+      {
+        "sourceId": "repetytorium",
+        "locator": "PDF s. 16–21; druk s. 14–19: kresomózgowie, lokalizacja czynności i istota biała"
+      },
+      {
+        "sourceId": "planum-temporale-motion-2019",
+        "locator": "Abstract i Results: reprezentacja lokalizacji oraz ruchu źródła dźwięku"
+      },
+      {
+        "sourceId": "destrieux-2010",
+        "locator": "Tabela 1 i rozdział 2: nazwy oraz rozdzielenie etykiet zakrętowych i bruzdowych; źródło parcellacji, nie mapy funkcji"
+      }
+    ]
+  }
+]

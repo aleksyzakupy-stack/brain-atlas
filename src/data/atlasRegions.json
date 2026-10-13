@@ -3692,7 +3692,7 @@
   {
     "id": "Left-VentralDC",
     "hemisphere": "left",
-    "kind": "ventricle",
+    "kind": "subcortex",
     "atlas": "both",
     "color": "#a52a2a",
     "names": {
@@ -3902,7 +3902,7 @@
   {
     "id": "Right-VentralDC",
     "hemisphere": "right",
-    "kind": "ventricle",
+    "kind": "subcortex",
     "atlas": "both",
     "color": "#a52a2a",
     "names": {
@@ -3947,13 +3947,13 @@
   {
     "id": "CC_Posterior",
     "hemisphere": "midline",
-    "kind": "subcortex",
+    "kind": "white-matter",
     "atlas": "both",
     "color": "#000040",
     "names": {
-      "pl": "Ciało modzelowate — część tylna",
-      "en": "Corpus callosum, posterior segment",
-      "lat": "Pars posterior corporis callosi"
+      "pl": "Ciało modzelowate — segment tylny (ASEG)",
+      "en": "Corpus callosum, posterior segment (ASEG)",
+      "lat": "Pars posterior corporis callosi (ASEG)"
     },
     "sourceRegion": "CC_Posterior",
     "number": null,
@@ -3962,13 +3962,13 @@
   {
     "id": "CC_Mid_Posterior",
     "hemisphere": "midline",
-    "kind": "subcortex",
+    "kind": "white-matter",
     "atlas": "both",
     "color": "#000070",
     "names": {
-      "pl": "Ciało modzelowate — część środkowo-tylna",
-      "en": "Corpus callosum, mid-posterior segment",
-      "lat": "Pars media posterior corporis callosi"
+      "pl": "Ciało modzelowate — segment środkowo-tylny (ASEG)",
+      "en": "Corpus callosum, mid-posterior segment (ASEG)",
+      "lat": "Pars media posterior corporis callosi (ASEG)"
     },
     "sourceRegion": "CC_Mid_Posterior",
     "number": null,
@@ -3977,13 +3977,13 @@
   {
     "id": "CC_Central",
     "hemisphere": "midline",
-    "kind": "subcortex",
+    "kind": "white-matter",
     "atlas": "both",
     "color": "#0000a0",
     "names": {
-      "pl": "Ciało modzelowate — część środkowa",
-      "en": "Corpus callosum, central segment",
-      "lat": "Pars centralis corporis callosi"
+      "pl": "Ciało modzelowate — segment środkowy (ASEG)",
+      "en": "Corpus callosum, central segment (ASEG)",
+      "lat": "Pars centralis corporis callosi (ASEG)"
     },
     "sourceRegion": "CC_Central",
     "number": null,
@@ -3992,13 +3992,13 @@
   {
     "id": "CC_Mid_Anterior",
     "hemisphere": "midline",
-    "kind": "subcortex",
+    "kind": "white-matter",
     "atlas": "both",
     "color": "#0000d0",
     "names": {
-      "pl": "Ciało modzelowate — część środkowo-przednia",
-      "en": "Corpus callosum, mid-anterior segment",
-      "lat": "Pars media anterior corporis callosi"
+      "pl": "Ciało modzelowate — segment środkowo-przedni (ASEG)",
+      "en": "Corpus callosum, mid-anterior segment (ASEG)",
+      "lat": "Pars media anterior corporis callosi (ASEG)"
     },
     "sourceRegion": "CC_Mid_Anterior",
     "number": null,
@@ -4007,13 +4007,13 @@
   {
     "id": "CC_Anterior",
     "hemisphere": "midline",
-    "kind": "subcortex",
+    "kind": "white-matter",
     "atlas": "both",
     "color": "#0000ff",
     "names": {
-      "pl": "Ciało modzelowate — część przednia",
-      "en": "Corpus callosum, anterior segment",
-      "lat": "Pars anterior corporis callosi"
+      "pl": "Ciało modzelowate — segment przedni (ASEG)",
+      "en": "Corpus callosum, anterior segment (ASEG)",
+      "lat": "Pars anterior corporis callosi (ASEG)"
     },
     "sourceRegion": "CC_Anterior",
     "number": null,

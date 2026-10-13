@@ -1,0 +1,327 @@
+[
+  {
+    "anchorId": "accumbens",
+    "articleId": "deep-accumbens",
+    "scope": "Jądro półleżące jest opisane jako struktura i węzeł prążkowia brzusznego. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "amygdala",
+    "articleId": "deep-amygdala",
+    "scope": "Artykuł obejmuje zespół jąder ciała migdałowatego. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "hippocampus",
+    "articleId": "deep-hippocampus",
+    "scope": "Artykuł obejmuje hipokamp w szerszej formacji hipokampa. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "caudate",
+    "articleId": "deep-caudate",
+    "scope": "Artykuł opisuje jądro ogoniaste i jego połączenia. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "putamen",
+    "articleId": "deep-putamen",
+    "scope": "Artykuł opisuje skorupę i jej udział w prążkowiu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "thalamus",
+    "articleId": "deep-thalamus",
+    "scope": "Artykuł zbiorczy opisuje wzgórze i zróżnicowanie jego jąder. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "cerebellum",
+    "articleId": "deep-cerebellar-cortex",
+    "scope": "Artykuł obejmuje korę i ogólną organizację móżdżku. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pfc",
+    "articleId": "functional-prefrontal-cortex",
+    "scope": "Artykuł opisuje obszar funkcjonalny PFC; zakręt czołowy górny jest tu orientacyjnym zakotwiczeniem. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "dlpfc",
+    "articleId": "functional-dlpfc",
+    "scope": "Artykuł opisuje funkcjonalną okolicę DLPFC, której granice nie pokrywają się z całym zakrętem czołowym środkowym. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "ofc",
+    "articleId": "functional-ofc",
+    "scope": "Artykuł opisuje korę oczodołowo-czołową jako zróżnicowaną okolicę funkcjonalną. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "motor",
+    "articleId": "functional-motor-cortex",
+    "scope": "Artykuł obejmuje korę ruchową i jej relację do zakrętu przedśrodkowego. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pcc",
+    "articleId": "functional-pcc",
+    "scope": "Artykuł opisuje tylną korę obręczy, obejmującą okolicę reprezentowaną przez kotwicę. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "parietal",
+    "articleId": "functional-precuneus",
+    "scope": "Kotwica parietal jest przypisana w projekcie do przedklinka; artykuł opisuje przedklinek, a nie cały płat ciemieniowy. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "temporal",
+    "articleId": "ctx-G_temporal_middle",
+    "scope": "Kotwica temporal wskazuje zakręt skroniowy środkowy, którego dotyczy artykuł, a nie cały płat skroniowy. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "entorhinal",
+    "articleId": "ba-28",
+    "scope": "Artykuł opisuje korę śródwęchową w odniesieniu do pola 28; kotwica używa szerszej parceli zakrętu przyhipokampowego. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "acc",
+    "articleId": "functional-acc",
+    "scope": "Artykuł obejmuje przednią korę obręczy jako okolicę funkcjonalną. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "vmpfc",
+    "articleId": "functional-vmpfc",
+    "scope": "Artykuł opisuje brzuszno-przyśrodkową korę przedczołową jako obszar funkcjonalny. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "vta",
+    "articleId": "deep-vta",
+    "scope": "Artykuł opisuje pole brzuszne nakrywki i jego zróżnicowane projekcje. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "snc",
+    "articleId": "deep-substantia-nigra",
+    "scope": "Część zbita SNc jest opisana wewnątrz artykułu o istocie czarnej. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "snr",
+    "articleId": "deep-substantia-nigra",
+    "scope": "Część siatkowata SNr jest opisana wewnątrz artykułu o istocie czarnej. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pag",
+    "articleId": "deep-pag",
+    "scope": "Artykuł opisuje istotę szarą okołowodociągową i jej organizację funkcjonalną. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "lc",
+    "articleId": "deep-locus-coeruleus",
+    "scope": "Artykuł opisuje miejsce sinawe i projekcje noradrenergiczne. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "dorsalRaphe",
+    "articleId": "deep-raphe-nuclei",
+    "scope": "Jądro grzbietowe szwu jest opisane w grupowym artykule o jądrach szwu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "medianRaphe",
+    "articleId": "deep-raphe-nuclei",
+    "scope": "Jądro pośrodkowe szwu jest opisane w grupowym artykule o jądrach szwu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "caudalRaphe",
+    "articleId": "deep-raphe-nuclei",
+    "scope": "Doogonowe grupy szwu i ich projekcje są ujęte w artykule grupowym. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "medulla",
+    "articleId": "deep-brainstem",
+    "scope": "Rdzeń przedłużony jest opisany jako część pnia mózgu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "hypothalamus",
+    "articleId": "functional-hypothalamus",
+    "scope": "Artykuł zbiorczy obejmuje podwzgórze i organizację jego głównych układów. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "arcuate",
+    "articleId": "functional-hypothalamus",
+    "scope": "Jądro łukowate jest opisane wewnątrz artykułu o podwzgórzu; nazwa kotwicy nie oznacza pęczka łukowatego. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "mammillary",
+    "articleId": "functional-hypothalamus",
+    "scope": "Ciała suteczkowate są opisane wewnątrz artykułu o podwzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pvn",
+    "articleId": "functional-hypothalamus",
+    "scope": "Jądro przykomorowe PVN jest opisane wewnątrz artykułu o podwzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "scn",
+    "articleId": "functional-hypothalamus",
+    "scope": "Jądro nadskrzyżowaniowe SCN jest opisane wewnątrz artykułu o podwzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "tmn",
+    "articleId": "functional-hypothalamus",
+    "scope": "Jądro guzowo-suteczkowate TMN jest opisane wewnątrz artykułu o podwzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "lateralHypothalamus",
+    "articleId": "functional-hypothalamus",
+    "scope": "Okolica boczna podwzgórza i neurony oreksynowe są opisane w artykule zbiorczym. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "vlpo",
+    "articleId": "functional-hypothalamus",
+    "scope": "Brzuszno-boczna okolica przedwzrokowa VLPO jest opisana wewnątrz artykułu o podwzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "septum",
+    "articleId": "deep-basal-forebrain",
+    "scope": "Jądra przegrody są opisane w artykule o podstawie przodomózgowia; kotwica nie oznacza przegrody przezroczystej. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "nbm",
+    "articleId": "deep-basal-forebrain",
+    "scope": "Jądro podstawne Meynerta jest opisane w artykule o podstawie przodomózgowia. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "ppn",
+    "articleId": "deep-pontine-tegmental-nuclei",
+    "scope": "Jądro konarowo-mostowe PPN jest opisane we wspólnym artykule o jądrach nakrywki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "ldt",
+    "articleId": "deep-pontine-tegmental-nuclei",
+    "scope": "Jądro grzbietowo-boczne nakrywki LDT jest opisane we wspólnym artykule o jądrach nakrywki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "stn",
+    "articleId": "deep-subthalamic-nucleus",
+    "scope": "Artykuł opisuje jądro niskowzgórzowe STN. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "gpi",
+    "articleId": "deep-pallidum",
+    "scope": "Segment wewnętrzny GPi jest opisany wewnątrz artykułu o gałce bladej. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "gpe",
+    "articleId": "deep-pallidum",
+    "scope": "Segment zewnętrzny GPe jest opisany wewnątrz artykułu o gałce bladej. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "ventralPallidum",
+    "articleId": "deep-pallidum",
+    "scope": "Brzuszna gałka blada jest omawiana jako odrębny obszar funkcjonalny, niewspółmierny z całą maską Pallidum. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "anteriorThalamus",
+    "articleId": "deep-thalamus",
+    "scope": "Jądra przednie są opisane wewnątrz artykułu o wzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "md",
+    "articleId": "deep-thalamus",
+    "scope": "Jądro przyśrodkowo-grzbietowe MD jest opisane wewnątrz artykułu o wzgórzu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "va",
+    "articleId": "deep-thalamus",
+    "scope": "Jądro brzuszne przednie VA jest ujęte w opisie ruchowych jąder wzgórza. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "reticular",
+    "articleId": "deep-thalamus",
+    "scope": "Jądro siatkowate wzgórza TRN jest opisane wewnątrz artykułu o wzgórzu; kotwica nie oznacza tworu siatkowatego pnia. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "lateralHabenula",
+    "articleId": "deep-habenula",
+    "scope": "Jądro boczne uzdeczki LHb jest opisane w grupowym artykule obejmującym układ uzdeczki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "medialHabenula",
+    "articleId": "deep-habenula",
+    "scope": "Jądro przyśrodkowe uzdeczki MHb jest opisane w grupowym artykule obejmującym układ uzdeczki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "rmtg",
+    "articleId": "deep-habenula",
+    "scope": "RMTg jest opisane jako odrębne jądro nakrywki w artykule o układzie uzdeczki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "ipn",
+    "articleId": "deep-habenula",
+    "scope": "Jądro międzykonarowe IPN jest opisane jako odrębna struktura w artykule o układzie uzdeczki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "rvm",
+    "articleId": "path-pain-descending",
+    "scope": "RVM jest opisane jako pniowe ogniwo zstępującej modulacji bólu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pons",
+    "articleId": "deep-brainstem",
+    "scope": "Most jest opisany jako część pnia mózgu, z rozróżnieniem podstawy i nakrywki. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "dentate",
+    "articleId": "deep-cerebellar-cortex",
+    "scope": "Jądro zębate jest opisane w artykule o organizacji móżdżku jako jądro głębokie, a nie część kory. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "retina",
+    "articleId": "path-visual",
+    "scope": "Siatkówka jest opisana jako początek drogi wzrokowej; artykuł nie stanowi pełnego atlasu jej warstw. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "spinal",
+    "articleId": "path-serotonin-descending",
+    "scope": "Artykuł opisuje rdzeń kręgowy jako cel projekcji serotoninowych; kotwica zewnętrzna nie zastępuje opisu całego rdzenia. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "spinalDorsal",
+    "articleId": "path-pain-descending",
+    "scope": "Róg tylny rdzenia jest opisany jako miejsce działania zstępującej modulacji bólu. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "adrenal",
+    "articleId": "path-hpa",
+    "scope": "Kora nadnerczy jest opisana jako obwodowe ogniwo hormonalne osi HPA, poza mózgowiem. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "tissues",
+    "articleId": "path-hpa",
+    "scope": "Tkanki obwodowe są ujęte jako cele działania hormonów osi HPA, a nie pojedyncza struktura anatomiczna. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pyramidal",
+    "articleId": "path-cortical-gaba",
+    "scope": "Neurony piramidowe są opisane jako element mikroukładu korowego, nie wydzielona makroskopowa okolica. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "interneuron",
+    "articleId": "path-cortical-gaba",
+    "scope": "Interneurony hamujące są opisane jako element mikroukładu korowego, nie wydzielona makroskopowa okolica. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pineal",
+    "articleId": "supporting-pineal",
+    "scope": "Artykuł opisuje anatomię, funkcję i klinikę struktury wskazanej przez kotwicę. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "pituitary",
+    "articleId": "supporting-pituitary-median-eminence",
+    "scope": "Artykuł opisuje anatomię, funkcję i klinikę struktury wskazanej przez kotwicę. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "eminence",
+    "articleId": "supporting-pituitary-median-eminence",
+    "scope": "Artykuł opisuje anatomię, funkcję i klinikę struktury wskazanej przez kotwicę. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "bnst",
+    "articleId": "supporting-bnst-extended-amygdala",
+    "scope": "Artykuł opisuje anatomię, funkcję i klinikę struktury wskazanej przez kotwicę. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  },
+  {
+    "anchorId": "extendedAmygdala",
+    "articleId": "supporting-bnst-extended-amygdala",
+    "scope": "Artykuł opisuje anatomię, funkcję i klinikę struktury wskazanej przez kotwicę. Powiązanie treściowe nie wyznacza dokładnej maski 3D."
+  }
+]

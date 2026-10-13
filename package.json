@@ -9,7 +9,10 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "reference:check": "python3 docs/neuroanatomy/build_reference.py --check && node scripts/build-neuroanatomy.mjs --check",
+    "prebuild": "node scripts/build-neuroanatomy.mjs",
+    "predev": "node scripts/build-neuroanatomy.mjs"
   },
   "dependencies": {
     "react": "^19.2.8",
