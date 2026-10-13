@@ -1,3 +1,4 @@
+import type { StructureConnectionFocus } from '../../data/structureConnections'
 import { useAtlasFullscreen } from '../../hooks/useAtlasFullscreen'
 import { useEffect, useRef, useState } from 'react'
 import { structureById } from '../../data/structures'
@@ -18,7 +19,7 @@ type Props = {
   selectedId?: string; highlightedIds?: string[]; language: TerminologyLanguage;
   onSelect: (id: string) => void; onFallback: () => void;
   atlasMode?: AtlasMode; onAtlasMode?: (mode: AtlasMode) => void;
-  pathway?: PathwayPlayback;
+  pathway?: PathwayPlayback; connectionFocus?: StructureConnectionFocus;
 }
 const emptyIds: string[] = []
 type Quality = 'standard' | 'high'
@@ -31,7 +32,7 @@ function loadModel(quality: Quality) {
   return modelPromises[quality]!
 }
 
-export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, language, onSelect, onFallback, atlasMode = 'anatomy', pathway }: Props) {
+export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, language, onSelect, onFallback, atlasMode = 'anatomy', pathway, connectionFocus }: Props) {
   const host = useRef<HTMLDivElement>(null)
   const viewer = useRef<BrainViewer | null>(null)
   const [model, setModel] = useState<BrainModelData | null>(null)
@@ -54,12 +55,12 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
   useEffect(() => { callbacks.current = { onSelect } }, [onSelect])
   const ids = selectedId ? [selectedId] : highlightedIds
   const selectionKey = ids.join(',')
-  const hemisphere = hemisphereOverride?.key === selectionKey ? hemisphereOverride.value : 'both'
+  const hemisphere = hemisphereOverride?.key === selectionKey ? hemisphereOverride.value : connectionFocus?.hemisphere === 'left' ? 'left' : connectionFocus?.hemisphere === 'right' ? 'right' : 'both'
   const selectionMeshes = model?.meshes.filter(mesh => (mesh.atlas === atlasMode || mesh.atlas === 'both') && ids.some(id => mesh.id === id || mesh.structureIds.includes(id))) ?? []
   const needsInterior = selectionMeshes.some(mesh => !isCortex(mesh)) || ids.some(id => ['insula', 'auditory-cortex', 'acc', 'pcc', 'vmpfc'].includes(id))
-  const interior = interiorOverride?.key === selectionKey ? interiorOverride.value : !!pathway || needsInterior
+  const interior = interiorOverride?.key === selectionKey ? interiorOverride.value : !!connectionFocus || !!pathway || needsInterior
   const selected = selectedId ? structureById[selectedId] : undefined
-  const region = atlasRegionById[hovered?.regionId ?? selectedId ?? '']
+  const region = atlasRegionById[hovered ? hovered.regionId ?? '' : selectedId ?? '']
   const caption = hovered?.structureId ? structureById[hovered.structureId] : selected
   const availableIds = new Set(model?.meshes.flatMap(mesh => [...mesh.structureIds, mesh.id]))
   const approximate = selectionMeshes.some(mesh => mesh.approximate)
@@ -99,7 +100,8 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
 
   useEffect(() => { viewer.current?.select(selectedId, highlightedIds) }, [selectedId, highlightedIds, model])
   useEffect(() => { viewer.current?.pathway(pathway) }, [pathway, model])
-  useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: labels, isolate: isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway])
+  useEffect(() => { viewer.current?.connections(connectionFocus) }, [connectionFocus, model])
+  useEffect(() => { viewer.current?.layers({ interior, hemisphere, separation, atlas: atlasMode, texture, vessels: vessels && !pathway, colors: colors || atlasMode === 'brodmann', labels: labels, isolate: !!connectionFocus || isolate && canIsolate, language }) }, [interior, hemisphere, separation, atlasMode, texture, vessels, colors, labels, isolate, canIsolate, language, model, pathway, connectionFocus])
 
   return <section className={`brain-3d${pathway ? ' pathway-model' : ''}`} aria-label="Interaktywny model mózgu 3D">
     <details className="model-options" onKeyDown={event => { if (event.key === 'Escape') { event.currentTarget.open = false; event.currentTarget.querySelector('summary')?.focus() } }}>
@@ -107,12 +109,12 @@ export default function Brain3DScene({ selectedId, highlightedIds = emptyIds, la
       <div className="model-options-panel">
         <div className="model-tools">
           <button className="interior-toggle" disabled={!ready} aria-pressed={interior} onClick={() => setInteriorOverride({ key: selectionKey, value: !interior })}>Wnętrze</button>
-          <div className="model-hemispheres" role="group" aria-label="Widoczne półkule">{([['both', 'Obie'], ['left', 'Lewa'], ['right', 'Prawa']] as const).map(([value, label]) => <button key={value} disabled={!ready} aria-pressed={hemisphere === value} onClick={() => setHemisphereOverride({key:selectionKey,value})}>{label}</button>)}</div>
+          <div className="model-hemispheres" role="group" aria-label="Widoczne półkule">{([['both', 'Obie'], ['left', 'Lewa'], ['right', 'Prawa']] as const).map(([value, label]) => <button key={value} disabled={!ready || !!connectionFocus?.hemisphere && value!=='both' && value!==connectionFocus.hemisphere} aria-pressed={hemisphere === value} onClick={() => setHemisphereOverride({key:selectionKey,value})}>{label}</button>)}</div>
         </div>
         <div className="model-layer-tools" role="group" aria-label="Warstwy modelu">
           <button disabled={!ready} aria-pressed={texture} onClick={() => setTexture(!texture)}>Tekstura</button>
           {!pathway && <><button disabled={!ready} aria-pressed={vessels} onClick={() => setVessels(!vessels)}>Naczynia</button><button disabled={!ready || atlasMode === 'brodmann'} aria-pressed={colors || atlasMode === 'brodmann'} onClick={() => setColors(!colors)}>Kolory atlasu</button><button disabled={!ready} aria-pressed={labels} onClick={() => setLabels(!labels)}>Podpisy</button></>}
-          {!pathway && canIsolate && <button disabled={!ready} aria-pressed={isolate} onClick={() => setIsolate(!isolate)}>Izoluj</button>}
+          {!pathway && !connectionFocus && canIsolate && <button disabled={!ready} aria-pressed={isolate} onClick={() => setIsolate(!isolate)}>Izoluj</button>}
         </div>
         <div className="model-presets" role="group" aria-label="Ustawienie kamery">{([['lateral', 'Bok'], ['front', 'Przód'], ['top', 'Góra']] as [CameraPreset, string][]).map(([value, label]) => <button key={value} disabled={!ready} onClick={() => viewer.current?.preset(value)}>{label}</button>)}</div>
         <label className="model-quality">Jakość<select aria-label="Jakość modelu" value={quality} onChange={event => { setQualityNotice(''); setQuality(event.target.value as Quality) }}><option value="standard">Standard</option><option value="high" disabled={typeof DecompressionStream === 'undefined'}>HQ</option></select></label>

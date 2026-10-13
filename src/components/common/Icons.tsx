@@ -78,6 +78,8 @@ export const StepsIcon = (props: IconProps) => <svg {...defaults} {...props}><pa
 export const BookIcon = (props: IconProps) => <svg {...defaults} {...props}><path d="M12 6c-3-3-7-3-9-2v15c3-1 6-1 9 1 3-2 6-2 9-1V4c-2-1-6-1-9 2Zm0 0v14" /></svg>
 export const RotatePhoneIcon = (props: IconProps) => <svg {...defaults} {...props}><rect x="6" y="2" width="12" height="20" rx="2" /><path d="M2 7V3h4m16 14v4h-4M2 3l4 4m16 14-4-4" /></svg>
 
+export const ConnectionsIcon = (props: IconProps) => <svg {...defaults} {...props}><circle cx="5" cy="12" r="2.5" /><circle cx="18" cy="5" r="2.5" /><circle cx="18" cy="19" r="2.5" /><path d="m7 11 8.5-5M7 13l8.5 5" /></svg>
+
 export const BrainMark = (props: IconProps) => (
   <svg {...defaults} viewBox="0 0 32 32" {...props}>
     <path d="M11.8 5.2a5 5 0 0 0-5 5 4.7 4.7 0 0 0-2 7.6 4.5 4.5 0 0 0 4.5 6.8c.8 1.6 2.5 2.7 4.4 2.7 1 0 1.8-.3 2.3-.8.6.5 1.4.8 2.3.8 2 0 3.7-1.1 4.5-2.8a4.5 4.5 0 0 0 4.4-6.7 4.7 4.7 0 0 0-2-7.6 5 5 0 0 0-8-4 5 5 0 0 0-5.4-1Z" />

@@ -9,6 +9,9 @@ import { acceleratedRaycast, MeshBVH } from 'three-mesh-bvh'
 import { createTissueMaterial, loadTissueTexture, setTissueDetail } from './tissueMaterial'
 import { createCorticalVessels } from './corticalVessels'
 import { createBrainLighting } from './brainLighting'
+import { createConnectionOverlay } from './connectionOverlay'
+import { connectedStructureIds } from '../../../data/structureConnections'
+import type { StructureConnectionFocus } from '../../../data/structureConnections'
 import { createCircuitOverlay } from './circuitOverlay'
 import { bindingsForCircuit, spatialAnchors, spatialGroups } from '../../../data/pathwaySpatial'
 import type { BrainCircuit, PathwayScenario } from '../../../types/atlas'
@@ -26,6 +29,7 @@ type Options = {
 }
 
 export type BrainViewer = {
+  connections: (focus?: StructureConnectionFocus) => void
   pathway: (playback?: PathwayPlayback) => void
   upgrade: (data: BrainModelData) => void
   select: (id: string | undefined, highlighted: string[]) => void
@@ -176,6 +180,10 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   let highlighted: string[] = []
   let layerState: BrainLayers = { interior: false, hemisphere: 'both', separation: 0, atlas: 'anatomy', texture: true, vessels: true, colors: false, labels: false, language: 'pl' }
   let activeModel = data
+  let connectionFocus: StructureConnectionFocus | undefined
+  let connectionOverlay: ReturnType<typeof createConnectionOverlay> | undefined
+  let connectionNeighbors = new Set<string>()
+  let connectionHoverId: string | null = null
   let playback: PathwayPlayback | undefined
   let pathOverlay: ReturnType<typeof createCircuitOverlay> | undefined
   let animationTime = 0
@@ -228,8 +236,9 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   }
   const requestRender = () => { if (!disposed && !frame) frame = requestAnimationFrame(render) }
   let pathwayRegions = new Set<string>()
-  const hasFocus = () => !!playback || !!selected || highlighted.length > 0
-  const isActive = (item: BrainMeshData) => playback ? pathwayRegions.has(item.id) : selected ? item.id === selected || item.structureIds.includes(selected) : highlighted.some(id => item.id === id || item.structureIds.includes(id))
+  const hasFocus = () => !!connectionFocus || !!playback || !!selected || highlighted.length > 0
+  const isConnectionSource = (item: BrainMeshData) => !!connectionFocus && (connectionFocus.selectionId ? item.id===connectionFocus.selectionId : item.structureIds.includes(connectionFocus.rootId))
+  const isActive = (item: BrainMeshData) => connectionFocus ? (!connectionFocus.hemisphere || (connectionFocus.hemisphere==='left' ? isLeft(item.hemisphere) : isRight(item.hemisphere))) && (isConnectionSource(item) || item.structureIds.some(id=>connectionNeighbors.has(id))) : playback ? pathwayRegions.has(item.id) : selected ? item.id === selected || item.structureIds.includes(selected) : highlighted.some(id => item.id === id || item.structureIds.includes(id))
 
   const applyAppearance = () => {
     for (const { mesh, data: item } of parts) {
@@ -246,14 +255,14 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       if (layerState.isolate && !active && !cortical) mesh.visible = false
       if (pathOverlay && !cortical && !active && item.kind !== 'cerebellum' && !['Brain-Stem','Left-VentralDC','Right-VentralDC'].includes(item.id)) mesh.visible = false
       mesh.position.x = isLeft(item.hemisphere) ? -layerState.separation : isRight(item.hemisphere) ? layerState.separation : 0
-      const transparent = pathOverlay ? (layerState.interior && cortical) || !cortical && !active : !!(layerState.interior || layerState.isolate) && cortical && !active && !hovered
+      const transparent = connectionFocus ? !isConnectionSource(item) : pathOverlay ? (layerState.interior && cortical) || !cortical && !active : !!(layerState.interior || layerState.isolate) && cortical && !active && !hovered
       mesh.material.transparent = transparent
-      mesh.material.opacity = transparent ? pathOverlay ? active ? .3 : cortical ? .12 : .18 : layerState.isolate ? 0.025 : 0.075 : 1
+      mesh.material.opacity = connectionFocus ? active ? isConnectionSource(item) ? 1 : cortical ? .42 : .7 : .018 : transparent ? pathOverlay ? active ? .3 : cortical ? .12 : .18 : layerState.isolate ? 0.025 : 0.075 : 1
       mesh.material.depthWrite = !transparent
       mesh.castShadow = !transparent
       mesh.renderOrder = transparent ? 2 : 0
-      const neutral = cortical ? '#bd8e86' : item.kind === 'white-matter' ? '#eee1c5' : '#c8a698'
-      const color = active && selected && structureById[selected] ? category?.color ?? item.color ?? '#d3ba8a' : item.color ?? category?.color ?? '#d3ba8a'
+      const neutral = connectionFocus ? '#737985' : cortical ? '#bd8e86' : item.kind === 'white-matter' ? '#eee1c5' : '#c8a698'
+      const color = connectionFocus && active ? isConnectionSource(item) ? '#efc47e' : '#88d8bb' : active && selected && structureById[selected] ? category?.color ?? item.color ?? '#d3ba8a' : item.color ?? category?.color ?? '#d3ba8a'
       mesh.material.vertexColors = !!layerState.texture
       setTissueDetail(mesh.material, !!layerState.texture && textureAvailable)
       mesh.material.color.set(active || hovered || (layerState.colors && !hasFocus()) ? color : neutral)
@@ -264,6 +273,8 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     }
     vessels.update(layerState)
     pathOverlay?.updateLayers(layerState)
+    connectionOverlay?.updateLayers(layerState)
+    if (connectionFocus) {canvas.dataset.connectionRoot=connectionFocus.rootId;canvas.dataset.connectionNeighbors=JSON.stringify([...connectionNeighbors])} else {delete canvas.dataset.connectionRoot;delete canvas.dataset.connectionNeighbors}
     const surfaceTriangles = parts.reduce((sum, { mesh }) => sum + (mesh.visible ? (mesh.geometry.index?.count ?? 0) / 3 : 0), 0)
     const vesselTriangles = vessels.root.visible ? vessels.root.children.reduce((sum, child) => sum + (child.visible ? ((child as Mesh).geometry.index?.count ?? 0) / 3 : 0), 0) : 0
     canvas.dataset.triangles = String(surfaceTriangles + vesselTriangles)
@@ -307,7 +318,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       if (!label) continue
       label.hidden = true
       const active = isActive(item)
-      if ((!layerState.labels && !active) || (hasFocus() && !active) || !mesh.visible || mesh.material.opacity < 0.5 || placed.length >= limit) continue
+      if ((connectionFocus && !layerState.labels) || (!layerState.labels && !active) || (hasFocus() && !active) || !mesh.visible || mesh.material.opacity < 0.5 || placed.length >= limit) continue
       const region = atlasRegionById[item.id]
       const world = mesh.localToWorld(anchor.clone())
       const direction = camera.position.clone().sub(world).normalize()
@@ -379,6 +390,10 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     })
   }
   const showHover = (event: PointerEvent) => {
+    const rect=canvas.getBoundingClientRect()
+    const connectionNode=connectionOverlay?.hit(camera,width,height,event.clientX-rect.left,event.clientY-rect.top)
+    if (connectionNode) {if(connectionHoverId===connectionNode.id)return;connectionHoverId=connectionNode.id;hoverMesh=null;options.onHover({label:structureById[connectionNode.id].names.pl,structureId:connectionNode.id,hemisphere:connectionNode.side});requestRender();return}
+    if(connectionHoverId) {connectionHoverId=null;options.onHover(null)}
     if (pathOverlay) {
       pathOverlay.setHover(pathwayHit(event)?.id ?? null)
       requestRender()
@@ -420,6 +435,9 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     if (!pointers.size) gesture = null
     if (event.pointerType === 'touch') { pathOverlay?.setHover(null); options.onHover(null); requestRender() }
     if (!pick) return
+    const rect=canvas.getBoundingClientRect()
+    const connectionNode=connectionOverlay?.hit(camera,width,height,event.clientX-rect.left,event.clientY-rect.top)
+    if (connectionNode) {options.onPick(connectionNode.id);return}
     const node = pathwayHit(event)
     if (node) { playback?.onNodePick?.(node.nodeId); return }
     const item: BrainMeshData | undefined = hitAt(event)?.userData.parcel
@@ -427,7 +445,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
     if (item && item.selectable !== false) options.onPick(atlasRegionById[item.id] ? item.id : item.structureIds[0])
   }
   const pointerCancel = (event: PointerEvent) => { clearHold(); pointers.delete(event.pointerId); gesture = null; pathOverlay?.setHover(null); requestRender() }
-  const pointerLeave = () => { hoverMesh = null; pathOverlay?.setHover(null); options.onHover(null); applyAppearance() }
+  const pointerLeave = () => { connectionHoverId=null;hoverMesh = null; pathOverlay?.setHover(null); options.onHover(null); applyAppearance() }
   const preventTouchScroll = (event: TouchEvent) => { if (event.cancelable) event.preventDefault() }
   const preventContextMenu = (event: Event) => event.preventDefault()
   const cameraChanged = () => {
@@ -490,6 +508,14 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
   applyAppearance()
 
   return {
+    connections(next) {
+      connectionFocus=next
+      connectionNeighbors=new Set(next ? connectedStructureIds(next.rootId) : [])
+      connectionOverlay?.dispose()
+      connectionOverlay=next ? createConnectionOverlay(activeModel,next) : undefined
+      if(connectionOverlay)brain.add(connectionOverlay.root)
+      applyAppearance()
+    },
     pathway(next) {
       const changed=playback?.circuit.id!==next?.circuit.id
       playback=next
@@ -542,6 +568,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
         pathOverlay.setElapsed(elapsed)
         brain.add(pathOverlay.root)
       }
+      if(connectionFocus) {connectionOverlay?.dispose();connectionOverlay=createConnectionOverlay(next,connectionFocus);brain.add(connectionOverlay.root)}
       applyAppearance()
     },
     select(id, ids) { selected = id; highlighted = ids; pointerLeave() },
@@ -570,6 +597,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       parts.forEach(({ mesh }) => { mesh.geometry.dispose(); mesh.material.dispose() })
       vessels.dispose()
       pathOverlay?.dispose()
+      connectionOverlay?.dispose()
       lighting.dispose()
       tissueTexture.dispose()
       environment.dispose()
