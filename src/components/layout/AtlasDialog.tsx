@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { useNavigate } from 'react-router-dom'
 import { useDialogFocus } from '../../hooks/useDialogFocus'
 import { searchAtlas } from '../../utils/searchIndex'
@@ -8,9 +9,15 @@ import { CloseIcon, SearchIcon } from '../common/Icons'
 export function AtlasDialog({ title, onClose, children, className = '' }: { title: string; onClose: () => void; children: ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   useDialogFocus(ref, onClose)
-  return <div className="modal-backdrop" onClick={event => { if (event.target === event.currentTarget) onClose() }}><div ref={ref} className={`atlas-dialog ${className}`} role="dialog" aria-modal="true" aria-label={title}>
+  useEffect(() => {
+    const shell = document.querySelector<HTMLElement>('.app-shell')
+    if (!shell || shell.inert) return
+    shell.inert = true
+    return () => { shell.inert = false }
+  }, [])
+  return createPortal(<div className="modal-backdrop" onClick={event => { if (event.target === event.currentTarget) onClose() }}><div ref={ref} className={`atlas-dialog ${className}`} role="dialog" aria-modal="true" aria-label={title}>
     <div className="dialog-heading"><h2>{title}</h2><button onClick={onClose} aria-label="Zamknij okno"><CloseIcon /></button></div>{children}
-  </div></div>
+  </div></div>, document.body)
 }
 
 export function AtlasSearch({ onClose, returnTo }: { onClose: () => void; returnTo?: string }) {

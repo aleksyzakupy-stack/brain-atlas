@@ -10,7 +10,7 @@ import { createTissueMaterial, loadTissueTexture, setTissueDetail } from './tiss
 import { createCorticalVessels } from './corticalVessels'
 import { createBrainLighting } from './brainLighting'
 import { createCircuitOverlay } from './circuitOverlay'
-import type { BrainCircuit } from '../../../types/atlas'
+import type { BrainCircuit, PathwayScenario } from '../../../types/atlas'
 import { categoryById } from '../../../data/categories'
 import { structureById } from '../../../data/structures'
 import { atlasRegionById, regionLabel } from '../../../data/anatomicalAtlas'
@@ -35,7 +35,7 @@ export type BrainViewer = {
   dispose: () => void
 }
 
-export type PathwayPlayback = { circuit: BrainCircuit; playing: boolean; speed: number }
+export type PathwayPlayback = { circuit: BrainCircuit; playing: boolean; speed: number; scenario?: PathwayScenario; onEdgePick?: (index: number) => void; onNodePick?: (id: string) => void }
 
 export function createBrainViewer(host: HTMLElement, data: BrainModelData, options: Options): BrainViewer {
   const renderer = new WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
@@ -207,6 +207,7 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       labelsLayer.hidden = true
       pathOverlay.updateLabels(camera,width,height)
       const stats=pathOverlay.stats()
+      canvas.dataset.pathwayScenario=stats.scenario
       canvas.dataset.pathwayId=stats.id
       canvas.dataset.pathwayEdges=String(stats.renderedEdges)
       canvas.dataset.pathwayElapsed=String(stats.elapsed)
@@ -449,11 +450,12 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       playback=next
       if(changed) {
         pathOverlay?.dispose()
-        pathOverlay=next ? createCircuitOverlay(activeModel,next.circuit,{host,onPick:options.onPick}) : undefined
+        pathOverlay=next ? createCircuitOverlay(activeModel,next.circuit,{host,onPick:options.onPick,onEdgePick:index=>playback?.onEdgePick?.(index),onNodePick:id=>playback?.onNodePick?.(id)}) : undefined
         if(pathOverlay)brain.add(pathOverlay.root)
         labelsLayer.hidden=!!pathOverlay
-        if(!pathOverlay)for(const key of ['pathwayId','pathwayEdges','pathwayElapsed','pathwayPlaying','pathwaySignal'])delete canvas.dataset[key]
+        if(!pathOverlay)for(const key of ['pathwayScenario','pathwayId','pathwayEdges','pathwayElapsed','pathwayPlaying','pathwaySignal'])delete canvas.dataset[key]
       }
+      pathOverlay?.setScenario(next?.scenario)
       pathOverlay?.setPlayback(next?.playing ?? false,next?.speed ?? 1)
       animationTime=0
       applyAppearance()
@@ -478,7 +480,8 @@ export function createBrainViewer(host: HTMLElement, data: BrainModelData, optio
       if(playback) {
         const elapsed=pathOverlay?.elapsed() ?? 0
         pathOverlay?.dispose()
-        pathOverlay=createCircuitOverlay(next,playback.circuit,{host,onPick:options.onPick})
+        pathOverlay=createCircuitOverlay(next,playback.circuit,{host,onPick:options.onPick,onEdgePick:index=>playback?.onEdgePick?.(index),onNodePick:id=>playback?.onNodePick?.(id)})
+        pathOverlay.setScenario(playback.scenario)
         pathOverlay.setPlayback(playback.playing,playback.speed)
         pathOverlay.setElapsed(elapsed)
         brain.add(pathOverlay.root)

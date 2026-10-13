@@ -20,11 +20,11 @@ export function LessonContent({ path, step, language, onSelect }: { path: Learni
   return <article className="reading-content" style={{ '--category': categoryById[path.categoryId].color } as CSSProperties}>
     <h1 tabIndex={-1}>{step.title}</h1>
     <p className="reading-lead">{step.lead}</p>
+    <div className="takeaway"><span>Zapamiętaj</span><p>{step.takeaway}</p></div>
     {step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
     {step.circuitIds?.map(id => <CircuitArticle key={id} circuit={circuitById[id]} compact />)}
     {step.brodmannNumbers?.map(number => <BrodmannArticle key={number} number={number} compact />)}
     <details className="reading-detail"><summary>{step.detail.title}</summary><p>{step.detail.text}</p></details>
-    <div className="takeaway"><span>Zapamiętaj</span><p>{step.takeaway}</p></div>
     <section className="related-section"><h2>Struktury w tym kroku</h2><div className="related-links">{step.structureIds.map(id => <button key={id} onClick={() => onSelect(id)}><span className="category-dot" style={{ background: categoryById[structureById[id].categoryId].color }} />{getStructureName(structureById[id], language)} <span>↗</span></button>)}</div></section>
     {currentConnections.length > 0 && <section className="connections-reading"><h2>Jak czytać powiązania</h2>{currentConnections.map(connection => <details key={connection.id}><summary>{connection.title}</summary><p>{connection.description}</p><Sources references={resolveReferences(connection.referenceIds)} /></details>)}</section>}
     <details className="source-details"><summary>Źródła tego kroku · {step.referenceIds.length}</summary><Sources references={resolveReferences(step.referenceIds)} /></details>

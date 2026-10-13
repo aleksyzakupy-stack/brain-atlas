@@ -4,6 +4,8 @@ const ref = (id: string, title: string, authors: string, year: number, url: stri
   ({ id, title, authors, year, url, kind, status: 'verified' })
 
 export const references: Reference[] = [
+  ref('kegeles-striatum', 'Increased Synaptic Dopamine Function in Associative Regions of the Striatum in Schizophrenia', 'Kegeles L.S. i wsp.', 2010, 'https://jamanetwork.com/journals/jamapsychiatry/fullarticle/210611', 'study'),
+  ref('slifstein-pfc', 'Deficits in Prefrontal Cortical and Extrastriatal Dopamine Release in Schizophrenia', 'Slifstein M. i wsp.', 2015, 'https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2108652', 'study'),
   ref('brodmann-nomenclature', 'Brodmann Areas — historyczne nazwy i numery', 'Yale University · Language in the Human Brain', 0, 'https://brain-language.yale.edu/brodmann-areas', 'atlas'),
   ref('haines', 'Neuroanatomy in Clinical Context, wyd. 9', 'Haines D.E. · ISBN 978-1-4511-8625-3', 2015, 'https://search.worldcat.org/isbn/9781451186253', 'atlas'),
   ref('dopamine-modern', 'Dopamine and glutamate in schizophrenia: biology, symptoms and treatment', 'McCutcheon R.A., Krystal J.H., Howes O.D.', 2020, 'https://pubmed.ncbi.nlm.nih.gov/31922684/', 'review'),

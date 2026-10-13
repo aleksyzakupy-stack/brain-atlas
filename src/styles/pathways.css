@@ -32,3 +32,69 @@
   .pathway-graph text { font-size: 24px; }
   .pathway-animation-tools select, .lesson-pathway-select select { font-size: 16px; }
 }
+
+.pathway-heading { padding: 22px 24px 8px; display: flex; gap: 16px; align-items: center; justify-content: space-between; }
+.pathway-heading h1 { font-size: 26px; font-weight: 500; }
+.pathway-heading > button { flex-shrink: 0; font-size: 13px; }
+.pathway-controls { display: flex; align-items: center; gap: 12px; padding: 4px 110px 8px 22px; flex-wrap: wrap; min-height: 52px; }
+.pathway-controls .scene-mode-switch { padding: 0; }
+.pathway-controls .scene-mode-switch button { font-size: 13px; }
+.scenario-switch { display: flex; gap: 2px; background: #ffffff05; border-radius: 7px; padding: 3px; }
+.scenario-switch button { font-size: 13px; min-height: 36px; padding: 6px 12px; color: var(--muted); border-radius: 5px; }
+.scenario-switch button[aria-pressed="true"] { background: #ffffff0c; color: var(--ink); }
+.scenario-switch button:last-child[aria-pressed="true"] { background: #edb17f1a; color: #edb17f; }
+.playback-toggle { padding: 6px 10px; min-height: 38px; color: var(--secondary); font-size: 13px; }
+.playback-options { position: relative; font-size: 12px; color: var(--muted); }
+.playback-options > summary { font-size: 12px; font-weight: 400; padding: 8px; }
+.playback-options > label { position: absolute; z-index: 12; top: 40px; right: 0; width: 170px; background: var(--panel); padding: 12px; border: 1px solid var(--line); border-radius: 8px; }
+.playback-options select { width: 100%; margin-top: 8px; }
+.pathway-scene .brain-3d .brain-3d-host { height: clamp(390px, calc(100dvh - 325px), 760px); }
+.pathway-3d-label { width: 172px; }
+.pathway-3d-label small { display: block; font-size: 11px; line-height: 1.4; margin-top: 5px; color: #edb17f; }
+.pathway-3d-label[data-change]:not([data-change=""]) { border-color: #edb17f; }
+.pathway-edge-label { position: absolute; transform: translate(-50%, -50%); background: #172522f2; border: 1px solid #88d8bb50; border-radius: 20px; min-height: 32px; min-width: 40px; padding: 4px 9px; font-size: 11px; line-height: 1.3; pointer-events: auto; box-shadow: 0 2px 12px #0006; }
+.pathway-edge-label[hidden] { display: none; }
+.pathway-key { padding-top: 6px; padding-bottom: 8px; }
+.pathway-insight { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 4px 24px 12px; padding: 12px 16px; border-left: 2px solid #88d8bb70; background: #88d8bb05; }
+.pathway-insight.is-clinical { border-color: #edb17f; background: #edb17f08; }
+.insight-kicker { display: block; font-size: 11px; color: var(--muted); margin-bottom: 5px; }
+.is-clinical .insight-kicker { color: #edb17f; }
+.pathway-insight p { font-size: 14px; line-height: 1.6; color: var(--secondary); max-width: 78ch; }
+.pathway-insight button { flex-shrink: 0; font-size: 13px; }
+.scenario-related { display: inline-block; margin: 0 24px 12px; font-size: 13px; }
+.pathway-limit { font-size: 11px; padding-bottom: 14px; }
+.pathway-dialog { max-width: 700px; }
+.pathway-dialog .reading-content { padding: 0; }
+.pathway-dialog .reading-content h3 { margin-top: 20px; }
+.pathway-dialog .connection-transmitter { color: #88d8bb; }
+.pathway-node > button, .pathway-node > span { flex-wrap: wrap; }
+.pathway-node small { display: block; flex-basis: 100%; font-size: 11px; color: #edb17f; }
+.pathway-node[data-change] > button { border-color: #edb17f; }
+.pathway-graph text[role="button"] { cursor: pointer; }
+@media (max-width: 640px) {
+  .pathway-heading { padding: 18px 16px 8px; align-items: start; }
+  .pathway-heading h1 { font-size: 21px; }
+  .pathway-heading > button { font-size: 12px; padding-top: 0; }
+  .pathway-controls { padding-left: 12px; padding-right: 82px; gap: 6px; }
+  .pathway-controls .scene-mode-switch button { padding-inline: 8px; }
+  .scenario-switch button { font-size: 12px; padding-inline: 8px; }
+  .pathway-3d-label { width: 130px; }
+  .pathway-3d-label small { font-size: 10px; }
+  .pathway-scene .brain-3d .brain-3d-host { height: clamp(370px, 56svh, 540px); }
+  .pathway-insight { margin-inline: 16px; flex-direction: column; align-items: start; gap: 3px; padding: 10px 12px; }
+  .pathway-insight p { font-size: 13px; }
+  .pathway-limit { padding-inline: 16px; }
+}
+@media (max-width: 640px) {
+  .pathway-controls { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-rows: 42px 42px; gap: 2px 6px; padding: 0 12px 6px; min-height: 90px; }
+  .pathway-controls .scene-mode-switch { grid-column: 1; grid-row: 1; }
+  .pathway-controls .playback-toggle { grid-column: 2; grid-row: 1; }
+  .pathway-controls .playback-options { grid-column: 3; grid-row: 1; }
+  .pathway-controls .scenario-switch { grid-column: 1 / 3; grid-row: 2; justify-self: start; }
+  .pathway-scene .brain-3d .brain-3d-host { height: clamp(360px, 52svh, 440px); }
+}
+.pathway-node button > span { position: absolute; top: 3px; right: 6px; font-size: 10px; }
+.node-connections { display: flex; flex-direction: column; margin-bottom: 18px; }
+.node-connections button { text-align: left; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.node-connections small { display: block; margin-top: 4px; color: #88d8bb; font-size: 12px; }
+.pathway-3d-label .pathway-node-route { color: #a8cebf; font-size: 10px; margin-top: 3px; }

@@ -92,6 +92,20 @@ export type BrainNetwork = {
   hubStructureIds: string[]
 }
 
+/** Qualitative teaching annotations, never measured firing rates or patient data. */
+export type PathwayScenario = {
+  id: 'schizophrenia'
+  title: string
+  summary: string
+  mechanism: string
+  manifestation: string
+  caveat: string
+  evidenceLabel: string
+  referenceIds: string[]
+  relatedCircuitId?: string
+  changes: { nodeId: string; kind: 'increase' | 'decrease' | 'dysregulation'; label: string }[]
+}
+
 export type NeurotransmitterSystem = {
   id: string
   names: Terminology

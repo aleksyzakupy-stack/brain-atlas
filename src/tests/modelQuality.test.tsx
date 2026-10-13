@@ -13,8 +13,9 @@ describe('zmiana jakości bez resetowania sceny', () => {
     const fetch=vi.spyOn(globalThis,'fetch').mockImplementation(async()=>new Response(JSON.stringify(model),{headers:{'content-encoding':'gzip'}}))
     try {
       const {unmount}=render(<Brain3DScene language="pl" selectedId="lh_Brodmann.4" onSelect={vi.fn()} onFallback={vi.fn()} />)
-      await screen.findByRole('combobox',{name:'Jakość modelu'})
-      expect(create).toHaveBeenCalledOnce()
+      fireEvent.click(screen.getByText('Widok'))
+      await waitFor(()=>expect(create).toHaveBeenCalledOnce())
+      fireEvent.click(screen.getByRole('button',{name:'Podpisy'}))
       fireEvent.change(screen.getByRole('combobox',{name:'Jakość modelu'}),{target:{value:'standard'}})
       await waitFor(()=>expect(viewer.upgrade).toHaveBeenCalledOnce())
       expect(viewer.dispose).not.toHaveBeenCalled()

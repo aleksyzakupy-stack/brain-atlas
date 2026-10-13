@@ -16,6 +16,7 @@ describe('przełącznik terminologii PL / EN / LAT', () => {
     expect(prefrontalRegion).not.toBeNull()
     fireEvent.click(prefrontalRegion!)
 
+    fireEvent.click(screen.getByLabelText('Menu atlasu'))
     fireEvent.click(screen.getByRole('button', { name: 'EN' }))
     await waitFor(() => expect(screen.getAllByRole('heading', { name: 'Prefrontal cortex' }).length).toBeGreaterThan(0))
     expect(screen.getByRole('heading', { name: 'Lokalizacja' })).toBeInTheDocument()

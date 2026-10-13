@@ -10,10 +10,10 @@ export function CircuitArticle({ circuit, compact = false }: { circuit: BrainCir
   return <section className="circuit-article" data-circuit-id={circuit.id}>
     {compact && <h2><Link to={`/szlaki/${circuit.id}`}>{circuit.names.pl} ↗</Link></h2>}
     <p className="reading-lead">{circuit.summary}</p>
-    <h2>Anatomia</h2><p>{circuit.anatomy}</p>
-    <h2>Fizjologia</h2><p>{circuit.physiology}</p>
-    <h2>W psychiatrii</h2><p>{circuit.psychiatry}</p>
-    <h2>Farmakologia</h2><p>{circuit.pharmacology}</p>
+    <details className="reading-detail"><summary>Anatomia</summary><p>{circuit.anatomy}</p></details>
+    <details className="reading-detail"><summary>Fizjologia</summary><p>{circuit.physiology}</p></details>
+    <details className="reading-detail"><summary>W psychiatrii</summary><p>{circuit.psychiatry}</p></details>
+    <details className="reading-detail"><summary>Farmakologia</summary><p>{circuit.pharmacology}</p></details>
     <details className="source-details"><summary>Badania i źródła</summary><p>{circuit.evidence}</p>{circuit.hainesPages && <p>Haines, wyd. 9, s. {circuit.hainesPages} (numeracja drukowana).</p>}<Sources references={resolveReferences(circuit.referenceIds)} /></details>
   </section>
 }

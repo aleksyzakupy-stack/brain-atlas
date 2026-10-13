@@ -312,3 +312,73 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 5px
   .learning-home { padding-top: 34px; }
 }
 @media (min-width: 641px) { .workspace-scene .brain-transform-content { margin-inline: auto; } }
+
+/* A single, compact navigation row; the scene owns its title. */
+.app-shell > .app-header { height: 48px; min-height: 48px; padding: 0 20px; gap: 12px; flex-wrap: nowrap; }
+.app-header .mode-nav { margin: 0; gap: 12px; order: 0; flex-basis: auto; height: 48px; }
+.app-header .mode-nav a { padding: 0 10px; font-size: 14px; }
+.app-header .header-tools { gap: 2px; }
+.app-header .search-trigger { display: grid; place-items: center; width: 44px; height: 44px; padding: 10px; }
+.app-header .directory-trigger { display: grid; place-items: center; min-width: 36px; font-size: 18px; color: var(--secondary); }
+.app-menu { position: relative; }
+.app-menu > summary { list-style: none; width: 44px; height: 44px; padding: 0; display: grid; place-items: center; font-size: 24px; }
+.app-menu > summary::-webkit-details-marker { display: none; }
+.app-menu-panel { position: absolute; top: 46px; right: 0; z-index: 20; width: 238px; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); box-shadow: 0 12px 45px #0007; }
+.app-menu-panel > span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+.app-menu-panel > button { display: block; text-align: left; width: 100%; font-size: 14px; }
+.app-menu .terminology-switch { padding: 0 0 10px; border: 0; }
+.atlas-workspace { height: calc(100dvh - 48px); grid-template-columns: 232px minmax(0, 1fr) 360px; }
+.atlas-workspace.is-learning { height: calc(100dvh - 120px); grid-template-columns: minmax(0, 1fr) 380px; }
+.atlas-workspace.without-reading { grid-template-columns: 232px minmax(0, 1fr); }
+.atlas-workspace.is-learning.without-reading { grid-template-columns: minmax(0, 1fr); }
+.is-learning > .workspace-sidebar, .workspace-reading[hidden] { display: none; }
+.workspace-sidebar { padding-top: 20px; }
+.workspace-sidebar h2 { font-size: 18px; margin-bottom: 18px; }
+.workspace-reading { position: relative; }
+.close-reading { position: absolute; right: 10px; top: 4px; font-size: 24px; z-index: 1; color: var(--muted); }
+.workspace-reading .reading-content { padding-top: 40px; }
+.reopen-reading { float: right; margin: 6px 20px; }
+.atlas-empty-heading { padding: 24px 24px 6px; }
+.atlas-empty-heading h1 { font-size: 24px; font-weight: 500; }
+.atlas-empty-heading p { color: var(--muted); font-size: 13px; margin-top: 7px; }
+.lesson-navigation { height: 72px; padding: 10px 24px; }
+.home-brand { display: block; color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+.path-card { position: relative; padding: 18px 44px 18px 18px; margin-bottom: 8px; background: transparent; border-color: transparent; border-bottom-color: var(--line); border-radius: 0; }
+.path-card h3 { font-size: 20px; margin: 5px 0 0; }
+.path-card-top { font-size: 12px; }
+.path-card-arrow { position: absolute; right: 16px; top: 36px; color: var(--muted); }
+.home-brain .model-options { display: none; }
+.is-focused > .app-header, .is-focused .workspace-sidebar { display: none; }
+.is-focused .atlas-workspace { height: 100dvh; grid-template-columns: minmax(0, 1fr) 360px; }
+.is-focused .atlas-workspace.without-reading { grid-template-columns: minmax(0, 1fr); }
+.is-focused .atlas-workspace.is-learning { height: calc(100dvh - 72px); }
+.exit-focus { position: fixed; right: 16px; bottom: 16px; z-index: 15; padding: 8px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; font-size: 13px; }
+.is-focused:has(.lesson-navigation) .exit-focus { bottom: 82px; }
+@media (max-width: 1199px) {
+  .atlas-workspace, .atlas-workspace.is-learning { grid-template-columns: minmax(0, 1fr) 340px; }
+  .atlas-workspace.without-reading { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .app-shell > .app-header { padding: 0 8px; gap: 2px; }
+  .app-header .mode-nav { gap: 0; }
+  .app-header .mode-nav a { padding-inline: 10px; font-size: 13px; }
+  .app-header .directory-trigger { min-width: 32px; padding: 4px; }
+  .atlas-workspace, .atlas-workspace.is-learning, .is-focused .atlas-workspace { display: block; height: auto; min-height: calc(100dvh - 48px); }
+  .mobile-view-switch { padding: 4px 12px; }
+  .mobile-view-switch button { min-height: 36px; }
+  .atlas-empty-heading { padding: 20px 16px 0; }
+  .atlas-empty-heading h1 { font-size: 22px; }
+  .lesson-navigation { height: 72px; padding-inline: 14px; }
+  .close-reading { display: none; }
+  .home-grid { display: flex; flex-direction: column; }
+  .home-brain, .path-selection { width: 100%; }
+}
+.anatomical-directory details { border-bottom: 1px solid var(--line); }
+.anatomical-directory summary { font-size: 13px; padding: 14px 0; }
+.anatomical-directory summary small { float: right; color: var(--muted); font-size: 11px; }
+.region-pair { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 0; }
+.region-pair > span { font-size: 13px; line-height: 1.5; color: var(--secondary); }
+.region-pair > div { display: flex; flex-shrink: 0; }
+.region-pair button { padding: 6px 8px; min-width: 32px; font-size: 12px; color: var(--muted); border-radius: 5px; }
+.region-pair button[aria-current] { color: var(--accent); background: var(--accent-soft); }
+.directory-empty { color: var(--muted); font-size: 13px; }

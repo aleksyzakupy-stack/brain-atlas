@@ -82,3 +82,26 @@
   .model-message { padding: 24px; }
 }
 @media (prefers-reduced-motion: reduce) { .model-loading { animation: none; } }
+
+/* Model controls share the view-switch row instead of stacking above anatomy. */
+.brain-3d { position: relative; }
+.brain-3d .model-options { position: absolute; right: 22px; top: -45px; z-index: 10; }
+.brain-3d .model-options > summary { list-style: none; border-radius: 7px; padding: 8px 14px; font-size: 13px; min-height: 40px; color: var(--secondary); }
+.brain-3d .model-options > summary::after { content: ' ▾'; color: var(--muted); }
+.brain-3d .model-options > summary::-webkit-details-marker { display: none; }
+.model-options-panel { position: absolute; right: 0; top: 44px; width: min(330px, calc(100vw - 32px)); border: 1px solid var(--line); background: var(--panel); box-shadow: 0 12px 45px #0007; border-radius: 10px; padding: 14px; }
+.model-options-panel .model-tools, .model-options-panel .model-layer-tools { padding: 0; margin-bottom: 12px; gap: 6px; }
+.model-options-panel .model-presets { position: static; margin-block: 10px; }
+.model-options-panel .model-presets button { min-height: 36px; }
+.model-options-panel .hemisphere-spacing { margin-bottom: 0; }
+.brain-3d .brain-3d-host { height: clamp(390px, calc(100dvh - 165px), 820px); }
+.home-brain .brain-3d-host { height: clamp(390px, 57vh, 660px); }
+.is-learning .brain-3d .brain-3d-host { height: max(350px, calc(100dvh - 185px)); }
+.model-stage .zoom-controls { bottom: 14px; }
+.model-stage:has(.model-caption) .zoom-controls { bottom: 82px; }
+.brain-3d > .model-notice { margin: 10px 22px; }
+@media (max-width: 640px) {
+  .brain-3d .model-options { right: 10px; top: -44px; }
+  .scene-mode-switch button { font-size: 13px; padding-inline: 10px; }
+  .brain-3d .brain-3d-host, .is-learning .brain-3d .brain-3d-host { height: clamp(370px, 65svh, 570px); }
+}

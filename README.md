@@ -4,7 +4,7 @@ Statyczny, polskojęzyczny atlas edukacyjny w React, TypeScript, Vite, Three.js 
 
 - Nauka: siedem tras, 42 kroki — pamięć, emocje, kontrola poznawcza, dopamina, neuromodulacja, obwody psychiatryczne i pola Brodmanna. Nowe lekcje udostępniają animowane schematy oraz szczegółowe artykuły ze źródłami.
 - Atlas: 148 obszarów korowych Destrieux, 38 struktur ASEG i 82 regiony pól Brodmanna (41 w każdej półkuli), wybierane bezpośrednio na modelu i z listy; nazwy PL / EN / LAT. Osobny indeks Funkcje zachowuje 28 kart edukacyjnych.
-- Model 3D: pełne fsaverage HQ, 655 360 trójkątów kory, czterokrotnie więcej niż Standard (fsaverage6). Płynne sterowanie, tekstura z głębokości bruzd, kolory atlasów i podpisy z liniami wskazującymi. Zmiana jakości nie resetuje kamery ani wyboru. Podpisy są domyślnie włączone; ocena widoczności ogranicza nakładanie i podpisywanie zasłoniętej anatomii.
+- Model 3D: pełne fsaverage HQ, 655 360 trójkątów kory, czterokrotnie więcej niż Standard (fsaverage6). Płynne sterowanie, tekstura z głębokości bruzd, kolory atlasów i podpisy z liniami wskazującymi. Zmiana jakości nie resetuje kamery ani wyboru. Ogólne podpisy atlasu są domyślnie wyłączone; podpisy węzłów wybranego szlaku pozostają widoczne. Ocena widoczności ogranicza nakładanie podpisów anatomii.
 - Szlaki: 34 układy i obwody, domyślnie animowane bezpośrednio na modelu 3D. Przestrzenne krzywe, strzałki i sygnały obracają się razem z mózgiem; pętle i osie przechodzą przez kolejne etapy. Pauza i tempo 0,5× / 1× / 2× zachowują fazę. Regiony mają punkty z siatki; małe niesegmentowane jądra są oznaczone ≈. GPi/SNr i inne węzły złożone są rozdzielone. Elementy poza mózgiem oraz mikroukłady mają osobne oznaczenia. Przebieg krzywych jest schematyczny, nie jest traktografią ani pomiarem czasu przewodzenia. Alternatywny schemat 2D pozostaje dostępny.
 - Pola Brodmanna: katalog numerów 1–52 z lokalizacją, funkcjami, mechanizmem i kontekstem klinicznym. 41 pól ma geometrię PALS-B12; pozostałe opisy wyjaśniają brak parceli lub ograniczenia historycznej nomenklatury. BA50/51 nie otrzymują wymyślonej funkcji.
 - Typografia: lokalne Manrope i Source Serif 4, licencje OFL; brak zapytań do zewnętrznego serwera fontów.
@@ -75,3 +75,13 @@ Three.js 0.186.1 pozostaje silnikiem przeglądarkowym (MIT). Materiał fizyczny 
 Przycisk **Naczynia** włącza osobne, zwężające się tętnice i żyły. Warstwa odpowiada widoczności i rozsunięciu półkul; ukrywa się w trybie wnętrza i izolacji. To **ilustracja proceduralna**, nie segmentacja angiografii ani mapa obszarów unaczynienia. Geometria kory i granice atlasu pozostają źródłowe. `three-mesh-bvh` przyspiesza wybór parcel i dopasowanie naczyń do powierzchni. Standard pomija kosztowny etap GTAO.
 
 Tekstura: `public/textures/cortex-tissue-albedo.png` (1254 × 1254 px, wbudowany ImageGen). Pochodzenie, pełny prompt i SHA-256: `public/textures/cortex-tissue-provenance.json`. Licencje silnika i biblioteki BVH znajdują się w `public/licenses/`.
+
+## Widok skupiony i scenariusze kliniczne
+
+Nawigacja zajmuje jeden wiersz (48 px). Menu „⋯” udostępnia terminologię PL / EN / LAT, źródła oraz tryb „Skupienie” (wyjście przyciskiem lub Escape). Ustawienia modelu są w „Widok”; naczynia i ogólne podpisy włącza się na żądanie. Katalog anatomii grupuje struktury, z osobnym wyborem L / P w jednej pozycji. Panel opisu pojawia się po wyborze i można go zamknąć.
+
+W Szlakach model zajmuje całą przestrzeń obok katalogu. Podpisy zawierają nazwy struktur, a dla projekcji także źródło i mediator. Kliknięcie podpisu pokazuje rolę struktury w aktualnym szlaku; kliknięcie oznaczenia mediatora otwiera opis połączenia. Pełne artykuły są dostępne pod „Opis szlaku”.
+
+„Fizjologia / Schizofrenia” jest dostępne dla trzech przykładów dopaminowych: mezolimbicznego (model istotności), nigrostriatalnego (obserwacja PET dotycząca prążkowia asocjacyjnego) i mezokortykalnego (odpowiedź DA w dlPFC na próbę farmakologiczną). Adnotacje są jakościowe i przypisane do konkretnych węzłów w `src/data/pathwayScenarios.ts`. Nie zmieniają geometrii, kierunku projekcji, kamery ani tempa przewodzenia. Znaczniki ruchu obrazują kierunek sygnału, nie transport cząsteczek mediatora. Modele mechanizmu, wyniki grupowe i ograniczenia lokalizacji są opisane osobno, wraz ze źródłami. Inne szlaki nie otrzymują automatycznie scenariusza choroby.
+
+Bezpośredni przykład: `/#/szlaki/nigrostriatal?stan=schizofrenia`. Scenariusze działają także w schemacie 2D i przy włączonym ograniczeniu ruchu. Otwarcie szczegółów wstrzymuje odtwarzanie; zamknięcie przywraca poprzedni stan.

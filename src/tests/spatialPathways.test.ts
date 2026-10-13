@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest'
 import { createCircuitOverlay, resolveSpatialNodes } from '../components/brain/three/circuitOverlay'
 import { validateBrainModel } from '../components/brain/three/modelTypes'
 import { brainCircuits, circuitById } from '../data/circuits'
+import { pathwayScenarios } from '../data/pathwayScenarios'
 import { bindingsForCircuit, spatialBindings } from '../data/pathwaySpatial'
 import type { BrainModelData } from '../components/brain/three/modelTypes'
 
@@ -47,6 +48,26 @@ describe('animacja szlaków we współrzędnych modelu 3D',()=>{
     overlay.setPlayback(true,2);overlay.advance(.2)
     expect(overlay.stats().elapsed).toBe(.8)
     overlay.dispose()
+  })
+  it('zmienia adnotacje choroby bez odtwarzania geometrii, czasu i etykiet szlaku',()=>{
+    const host = document.createElement('div')
+    const overlay = createCircuitOverlay(model,circuitById.nigrostriatal,{host,onPick:()=>{}})
+    overlay.setPlayback(true,1); overlay.advance(.4)
+    overlay.setPlayback(false,1)
+    const children = [...overlay.root.children]
+    const before = overlay.stats()
+    overlay.setScenario(pathwayScenarios.nigrostriatal)
+    expect(overlay.root.children).toEqual(children)
+    expect(overlay.stats().particles).toEqual(before.particles)
+    expect(overlay.stats().elapsed).toBe(before.elapsed)
+    expect(host.querySelectorAll('.pathway-3d-label[data-change="increase"]')).toHaveLength(1)
+    overlay.updateLayers({interior:true,hemisphere:'left',separation:0,labels:false,language:'en'})
+    expect(host.querySelector('.pathway-3d-labels')).not.toHaveAttribute('hidden')
+    expect(host.textContent).toContain('Caudate')
+    overlay.setScenario(undefined)
+    expect(host.querySelectorAll('.pathway-3d-label[data-change="increase"]')).toHaveLength(0)
+    overlay.dispose()
+    expect(host.childElementCount).toBe(0)
   })
   it('sekwencyjnie przechodzi przez drogę pośrednią, a GPi i SNr nie mają jednego fałszywego położenia',()=>{
     const circuit=circuitById['basal-indirect']
