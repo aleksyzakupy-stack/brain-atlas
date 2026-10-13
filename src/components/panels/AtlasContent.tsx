@@ -7,16 +7,13 @@ import { learningPaths } from '../../data/learningPaths'
 import { resolveReferences } from '../../data/references'
 import { structureById } from '../../data/structures'
 import { functionalReferenceIds, separateSchematicIds } from '../../geometry/atlasGeometry'
-import type { BrainStructure, LearningPath, LearningStep, Reference, TerminologyLanguage } from '../../types/atlas'
+import type { BrainStructure, LearningPath, LearningStep, TerminologyLanguage } from '../../types/atlas'
+import { circuitById } from '../../data/circuits'
+import { CircuitArticle } from './PathwayContent'
+import { BrodmannArticle } from './BrodmannContent'
+import { Sources } from './Sources'
 import { lessonUrl } from '../../utils/learningProgress'
 import { getStructureName } from '../../utils/terminology'
-
-export function Sources({ references }: { references: Reference[] }) {
-  return <ol className="sources-list">{references.map(reference => <li key={reference.id}>
-    <a href={reference.url} target="_blank" rel="noreferrer">{reference.title} <span aria-hidden="true">↗</span></a>
-    <small>{reference.authors}{reference.year ? ` · ${reference.year}` : ''}</small>
-  </li>)}</ol>
-}
 
 export function LessonContent({ path, step, language, onSelect }: { path: LearningPath; step: LearningStep; language: TerminologyLanguage; onSelect: (id: string) => void }) {
   const currentConnections = connections.filter(connection => step.connectionIds.includes(connection.id))
@@ -24,6 +21,8 @@ export function LessonContent({ path, step, language, onSelect }: { path: Learni
     <h1 tabIndex={-1}>{step.title}</h1>
     <p className="reading-lead">{step.lead}</p>
     {step.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+    {step.circuitIds?.map(id => <CircuitArticle key={id} circuit={circuitById[id]} compact />)}
+    {step.brodmannNumbers?.map(number => <BrodmannArticle key={number} number={number} compact />)}
     <details className="reading-detail"><summary>{step.detail.title}</summary><p>{step.detail.text}</p></details>
     <div className="takeaway"><span>Zapamiętaj</span><p>{step.takeaway}</p></div>
     <section className="related-section"><h2>Struktury w tym kroku</h2><div className="related-links">{step.structureIds.map(id => <button key={id} onClick={() => onSelect(id)}><span className="category-dot" style={{ background: categoryById[structureById[id].categoryId].color }} />{getStructureName(structureById[id], language)} <span>↗</span></button>)}</div></section>
@@ -46,7 +45,7 @@ export function StructureContent({ structure, language, onSelect, returnTo }: { 
     if (next !== undefined) { event.preventDefault(); setTab(next); document.getElementById(`structure-tab-${next}`)?.focus() }
   }
   return <article className="reading-content structure-content" style={{ '--category': category.color } as CSSProperties}>
-    {returnTo && <Link className="return-link" to={returnTo}>← Wróć do lekcji</Link>}
+    {returnTo && <Link className="return-link" to={returnTo}>← {returnTo.startsWith('/szlaki/') ? 'Wróć do szlaku' : 'Wróć do lekcji'}</Link>}
     <h1>{getStructureName(structure, language)}</h1>
     <div className="card-tabs" role="tablist" aria-label="Informacje o strukturze">{cardTabs.map((name, index) => <button key={name} role="tab" id={`structure-tab-${index}`} aria-selected={tab === index} aria-controls="structure-tab-content" tabIndex={tab === index ? 0 : -1} onClick={() => setTab(index)} onKeyDown={event => switchTab(event, index)}>{name}</button>)}</div>
     <div role="tabpanel" id="structure-tab-content" aria-labelledby={`structure-tab-${tab}`} tabIndex={0}>
@@ -60,7 +59,7 @@ export function StructureContent({ structure, language, onSelect, returnTo }: { 
         <h2>Struktury do porównania</h2><div className="related-links">{structure.relatedStructureIds.filter(id => structureById[id]).map(id => <button key={id} onClick={() => onSelect(id)}>{getStructureName(structureById[id], language)} <span>↗</span></button>)}</div>
       </>}
       {tab === 2 && <><p>{structure.psychiatrySummary}</p><p className="interpretation">{structure.interpretationNote}</p><Sources references={structure.references} />{paths.length > 0 && <><h2>Trasy nauki</h2><div className="related-links">{paths.map(path => <Link key={path.slug} to={lessonUrl(path.slug, path.steps[0].id)}>{path.title} <span>→</span></Link>)}</div></>}</>}
-      {tab === 3 && <><Sources references={references} /><p className="interpretation">Model 3D: FreeSurfer fsaverage5, powierzchnie pial, DK i aseg. Kontury 2D: ggseg.formats. Przypisania funkcjonalne: dydaktyczne, o przybliżonych granicach. Powiązanie funkcjonalne nie oznacza bezpośredniego połączenia anatomicznego.</p>{separateSchematicIds.includes(structure.id) && <p>W 2D tę strukturę przedstawia schemat o umownym położeniu elementów.</p>}{structure.id === 'striatum' && <p>Model 3D prążkowia obejmuje jądro ogoniaste, skorupę i jądro półleżące. W schemacie 2D zaznaczono część grzbietową: jądro ogoniaste i skorupę.</p>}<a href={`${import.meta.env.BASE_URL}licenses/THIRD_PARTY_NOTICES.md`} target="_blank" rel="noreferrer">Pochodzenie danych i licencje ↗</a></>}
+      {tab === 3 && <><Sources references={references} /><p className="interpretation">Model 3D: FreeSurfer fsaverage (HQ) / fsaverage6 (Standard), powierzchnie pial, Destrieux, PALS-B12 i ASEG. Kontury 2D: ggseg.formats. Przypisania funkcjonalne: dydaktyczne, o przybliżonych granicach. Powiązanie funkcjonalne nie oznacza bezpośredniego połączenia anatomicznego.</p>{separateSchematicIds.includes(structure.id) && <p>W 2D tę strukturę przedstawia schemat o umownym położeniu elementów.</p>}{structure.id === 'striatum' && <p>Model 3D prążkowia obejmuje jądro ogoniaste, skorupę i jądro półleżące. W schemacie 2D zaznaczono część grzbietową: jądro ogoniaste i skorupę.</p>}<a href={`${import.meta.env.BASE_URL}licenses/THIRD_PARTY_NOTICES.md`} target="_blank" rel="noreferrer">Pochodzenie danych i licencje ↗</a></>}
     </div>
   </article>
 }

@@ -42,6 +42,16 @@ PINS = {
  'subjects/fsaverage5/mri/aseg.mgz': 'f69a16aad073471cef634db1002f6cae1ef7cd9548ab1b028ca7963861f136f3',
  'FreeSurferColorLUT.txt': 'b040ad6c0c4e26dd0f27ea84317fd25ae871a78e2e33bf463e2636473ee14052',
 }
+HIGH_PINS = {
+ 'subjects/fsaverage/surf/lh.pial': '9cb004f61a2eeb977b1b595ad6de6656afdfc1f37ade0c00a8dde91e990a0f29',
+ 'subjects/fsaverage/surf/rh.pial': '4f752701f74c1626ee3b6239046b9aa793ca4e87c6ae9a6b74a233c04e651212',
+ 'subjects/fsaverage/surf/lh.sulc': '6ebd903d42cd17b51d84229d641fe10a3b32d839c0a69266b089811df5874d91',
+ 'subjects/fsaverage/surf/rh.sulc': '11db597df4edff92b1aa8e6d99bfb4728da4f8178a9984951df2e0572f040f4c',
+ 'subjects/fsaverage/label/lh.aparc.a2009s.annot': '8ce931d3c87d9dfd369ac739fa32c04ab9b8335afab0e6d77f569b43d8c0b70e',
+ 'subjects/fsaverage/label/rh.aparc.a2009s.annot': 'f0de8093fc336ddea7fdefde91449f552accdb198dd51a559718262adf317aac',
+ 'subjects/fsaverage/label/lh.aparc.annot': '39b1acde9a32b4227631eb51cbcd8dff84e2138c57bf9f96d74026f2c17f1480',
+ 'subjects/fsaverage/label/rh.aparc.annot': '6a326aed325d313e6e0d10f67630efcd8d3b8343c50d3e108e005f626614badb',
+}
 # fsaverage6 uses precisely a subset of the fsaverage spherical vertices.
 # We verify this rather than assuming identical numbering across resolutions.
 def majority(values):
@@ -51,17 +61,21 @@ def majority(values):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-dir', required=True, type=Path)
+    parser.add_argument('--resolution', choices=['standard', 'high'], default='standard')
     args = parser.parse_args()
+    high_resolution = args.resolution == 'high'
+    subject = 'fsaverage' if high_resolution else 'fsaverage6'
+    pins = ({key: value for key,value in PINS.items() if 'fsaverage6/' not in key} | HIGH_PINS) if high_resolution else PINS
     folder = args.source_dir
     folder.mkdir(parents=True, exist_ok=True)
     def path(relative): return folder / relative.replace('/', '__')
     def fetch(relative):
         target = path(relative)
         content = target.read_bytes() if target.exists() else base.download(f'{URL}/{relative}')
-        assert base.sha256(content) == PINS[relative], f'Unpinned input: {relative}'
+        assert base.sha256(content) == pins[relative], f'Unpinned input: {relative}'
         if not target.exists(): target.write_bytes(content)
     with ThreadPoolExecutor(max_workers=6) as pool:
-        list(pool.map(fetch, PINS))
+        list(pool.map(fetch, pins))
     dictionary = json.loads((ROOT / 'scripts/atlas-names.json').read_text())
     surfaces, meshes, catalog, statistics = {}, [], [], []
     def names_for(region):
@@ -73,18 +87,18 @@ def main():
                            {'names': names, 'sourceRegion': source, 'number': number,
                             'source': 'PALS-B12' if mesh['atlas'] == 'brodmann' else 'Destrieux' if mesh['kind'] == 'cortex' else 'ASEG'})
     for hemi, side in [('lh', 'left'), ('rh', 'right')]:
-        surfacepath = lambda name: path(f'subjects/fsaverage6/surf/{hemi}.{name}')
+        surfacepath = lambda name: path(f'subjects/{subject}/surf/{hemi}.{name}')
         vertices, faces = read_geometry(surfacepath('pial'))
-        assert vertices.shape == (40962, 3) and faces.shape == (81920, 3)
+        assert vertices.shape == (163842 if high_resolution else 40962, 3) and faces.shape == (327680 if high_resolution else 81920, 3)
         sulc = read_morph_data(surfacepath('sulc'))
         # Positive FreeSurfer sulc values are sulcal (darker), negative gyral.
         relief = np.clip((sulc + 2.0) / 5.0, 0, 1)
         surfaces[hemi] = {'positions': np.round(vertices, 3).ravel().tolist(),
                           'normals': np.round(base.normals(vertices, faces), 4).ravel().tolist(),
                           'relief': np.round(relief, 3).tolist()}
-        dk, _, dk_names = read_annot(path(f'subjects/fsaverage6/label/{hemi}.aparc.annot'))
+        dk, _, dk_names = read_annot(path(f'subjects/{subject}/label/{hemi}.aparc.annot'))
         dk_faces = majority(dk[faces])
-        labels, colors, raw_names = read_annot(path(f'subjects/fsaverage6/label/{hemi}.aparc.a2009s.annot'))
+        labels, colors, raw_names = read_annot(path(f'subjects/{subject}/label/{hemi}.aparc.a2009s.annot'))
         destrieux_names = [name.decode() for name in raw_names]
         gifti = nib.load(path(f'subjects/fsaverage/label/{hemi}.PALS_B12.labels.gii'))
         column = next(array for array in gifti.darrays if array.meta.get('Name', '').startswith('Brodmann -'))
@@ -153,29 +167,35 @@ def main():
         mesh.update({'atlas': 'both', 'color': '#' + ''.join(f'{c:02x}' for c in rgb), 'selectable': True})
         meshes.append(mesh)
         add_catalog(mesh, names_for(region), label)
-    payload = {'version': 2, 'coordinateSystem': 'surface-RAS', 'template': 'fsaverage6 / fsaverage5 ASEG', 'surfaces': surfaces, 'meshes': meshes}
-    out = ROOT / 'public/models/brain-detailed.json'
-    out.write_text(json.dumps(payload,separators=(',',':'),allow_nan=False)+'\n')
+    payload = {'version': 2, 'coordinateSystem': 'surface-RAS', 'template': f'{subject} / fsaverage5 ASEG', 'surfaces': surfaces, 'meshes': meshes}
+    out = ROOT / f'public/models/brain-{"high-resolution" if high_resolution else "detailed"}.json'
+    serialized = (json.dumps(payload,separators=(',',':'),allow_nan=False)+'\n').encode()
+    if not high_resolution: out.write_bytes(serialized)
     compressed = out.with_suffix('.json.gz')
-    compressed.write_bytes(gzip.compress(out.read_bytes(), compresslevel=9, mtime=0))
-    (ROOT / 'src/data/atlasRegions.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
-    provenance = {'asset': out.name, 'outputSha256': base.sha256(out.read_bytes()),
+    compressed.write_bytes(gzip.compress(serialized, compresslevel=9, mtime=0))
+    if not high_resolution:
+        (ROOT / 'src/data/atlasRegions.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
+    else:
+        previous = json.loads((ROOT / 'src/data/atlasRegions.json').read_text())
+        assert {item['id'] for item in previous} == {item['id'] for item in catalog}, 'High resolution catalog mismatch'
+    provenance = {'asset': compressed.name if high_resolution else out.name, 'outputSha256': base.sha256(serialized),
+                  'template': subject, 'resolution': args.resolution, 'uncompressedBytes': len(serialized),
                   'compressedAsset': compressed.name, 'compressedSha256': base.sha256(compressed.read_bytes()),
-                  'sources': [{'url': f'{URL}/{relative}', 'sha256': digest} for relative,digest in PINS.items()],
+                  'sources': [{'url': f'{URL}/{relative}', 'sha256': digest} for relative,digest in pins.items()],
                   'cortex': statistics, 'deepRegions': len(codes), 'catalogRegions': len(catalog),
-                  'triangleCountPerLayer': 163840 + sum(len(m['indices'])//3 for m in meshes if m['atlas']=='both'),
+                  'triangleCountPerLayer': sum(len(m['indices'])//3 for m in meshes if m['atlas'] in ['anatomy','both']),
                   'voxelToSurfaceRAS': affine.tolist(), 'unavailableStructureIds': base.UNAVAILABLE,
-                  'processing': ['Original fsaverage6 pial triangles; shared full-hemisphere normals.',
+                  'processing': [f'Original {subject} pial triangles; shared full-hemisphere normals.',
                                  'Destrieux and original PALS-B12 Brodmann GIFTI label keys (not merged annotation RGB codes).',
-                                 'fsaverage spherical registration matched to fsaverage6; exact vertex subset verified.',
+                                 f'fsaverage spherical registration matched to {subject}; exact vertex correspondence verified.',
                                  'Triangle label: majority vertex, first vertex in a three-way tie.',
                                  'Relief from actual FreeSurfer sulc, clipped (sulc + 2) / 5; not photographic tissue texture.',
                                  'ASEG Gaussian sigma 0.5, marching cubes step 1 (white matter 2), level 0.5, vox2ras_tkr.',
                                  'Teaching-card associations via DK overlap >=20 percent are approximate; not Brodmann boundaries.'],
                   'license': '../licenses/FreeSurfer-LICENSE.txt', 'modified': True,
                   'exporter': 'scripts/export-detailed-atlas.py'}
-    (ROOT / 'public/models/brain-detailed-provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
+    (ROOT / f'public/models/brain-{"high-resolution" if high_resolution else "detailed"}-provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
     print(json.dumps({key: provenance[key] for key in ['cortex','deepRegions','catalogRegions','triangleCountPerLayer','outputSha256']}))
-    print(f'{out.stat().st_size} bytes')
+    print(f'{len(serialized)} bytes uncompressed; {compressed.stat().st_size} bytes gzip')
 
 if __name__ == '__main__': main()

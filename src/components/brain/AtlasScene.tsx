@@ -20,13 +20,14 @@ type Props = {
   step?: LearningStep; language: TerminologyLanguage; onSelect: (id: string) => void;
   onSelect3d?: (id: string) => void;
   atlasMode?: AtlasMode; onAtlasMode?: (mode: AtlasMode) => void;
+  highlightedIds?: string[];
 }
 
 export function AtlasScene(props: Props) {
   const [mode, setMode] = useState<'3d' | '2d'>(props.step?.scene === 'connections' ? '2d' : '3d')
   return <div className="atlas-scene">
     <div className="scene-mode-switch" role="group" aria-label="Rodzaj modelu"><button aria-pressed={mode === '3d'} onClick={() => setMode('3d')}>Model 3D</button><button aria-pressed={mode === '2d'} onClick={() => setMode('2d')}>Schemat 2D</button></div>
-    {mode === '3d' ? <Suspense fallback={<div className="model-message model-loading-placeholder">Ładowanie widoku 3D…</div>}><Brain3DScene selectedId={props.selectedId} highlightedIds={props.step?.structureIds} language={props.language} atlasMode={props.atlasMode} onAtlasMode={props.onAtlasMode} onSelect={props.onSelect3d ?? props.onSelect} onFallback={() => setMode('2d')} /></Suspense> : <AtlasScene2D {...props} selectedId={props.selectedId && structureById[props.selectedId] ? props.selectedId : undefined} />}
+    {mode === '3d' ? <Suspense fallback={<div className="model-message model-loading-placeholder">Ładowanie widoku 3D…</div>}><Brain3DScene selectedId={props.selectedId} highlightedIds={props.highlightedIds ?? props.step?.structureIds} language={props.language} atlasMode={props.atlasMode} onAtlasMode={props.onAtlasMode} onSelect={props.onSelect3d ?? props.onSelect} onFallback={() => setMode('2d')} /></Suspense> : <AtlasScene2D {...props} selectedId={props.selectedId && structureById[props.selectedId] ? props.selectedId : undefined} />}
   </div>
 }
 
@@ -84,7 +85,7 @@ function SeparateSchematic({ id, language, onSelect }: { id: string } & Pick<Pro
   </div>
 }
 
-function AtlasScene2D({ view, onView, selectedId, step, language, onSelect }: Props) {
+function AtlasScene2D({ view, onView, selectedId, step, highlightedIds, language, onSelect }: Props) {
   const reduced = useReducedMotion()
   const [labels, setLabels] = useState(false)
   const [hovered, setHovered] = useState<string | null>(null)
@@ -93,7 +94,7 @@ function AtlasScene2D({ view, onView, selectedId, step, language, onSelect }: Pr
   const gesture = useRef<{ x: number; y: number; moved: boolean } | null>(null)
   const projection = getProjection(view, selectedId === 'cerebellum' || deepSide)
   const allRegions = teachingRegions(projection).filter(region => structureById[region.id])
-  const highlighted = selectedId ? [selectedId] : step?.structureIds ?? []
+  const highlighted = selectedId ? [selectedId] : highlightedIds ?? step?.structureIds ?? []
   const regions = allRegions.filter(region => (region.id !== 'striatum' || highlighted.includes('striatum')) && (region.id !== 'dlpfc' || highlighted.includes('dlpfc')))
   const visibleIds = new Set(regions.map(region => region.id))
   const isNetwork = step?.scene === 'connections' && !showAnatomy

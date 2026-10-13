@@ -23,7 +23,7 @@ export type BrainModelData = {
 }
 
 export type Hemisphere = 'both' | 'left' | 'right'
-export type BrainLayers = { interior: boolean; hemisphere: Hemisphere; separation: number; atlas?: 'anatomy' | 'brodmann'; texture?: boolean; colors?: boolean; labels?: boolean; isolate?: boolean; language?: 'pl' | 'en' | 'la' }
+export type BrainLayers = { interior: boolean; hemisphere: Hemisphere; separation: number; atlas?: 'anatomy' | 'brodmann'; texture?: boolean; vessels?: boolean; colors?: boolean; labels?: boolean; isolate?: boolean; language?: 'pl' | 'en' | 'la' }
 export type CameraPreset = 'lateral' | 'front' | 'top'
 export type HoveredParcel = { label: string; structureId?: string; hemisphere: string; regionId?: string }
 

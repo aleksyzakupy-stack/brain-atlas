@@ -4,6 +4,8 @@ import { connections } from '../data/connections'
 import type { BrainStructure } from '../types/atlas'
 import { normalizeSearch } from './normalizeSearch'
 import { atlasRegions, matchesRegion, regionLabel, regionUrl } from '../data/anatomicalAtlas'
+import { brainCircuits } from '../data/circuits'
+import { brodmannDescriptions } from '../data/brodmann'
 
 export type StructureSearchResult = {
   type: 'structure'
@@ -50,11 +52,16 @@ export const searchStructures = (rawQuery: string): StructureSearchResult[] => {
     .sort((a, b) => b.score - a.score || a.structure.names.pl.localeCompare(b.structure.names.pl, 'pl'))
 }
 
-export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' | 'atlas-region' }
+export type AtlasSearchResult = { id: string; title: string; subtitle: string; to: string; type: 'structure' | 'lesson' | 'connection' | 'atlas-region' | 'circuit' | 'brodmann' }
 export function searchAtlas(rawQuery: string): AtlasSearchResult[] {
   const query = normalizeSearch(rawQuery)
   if (!query) return []
   const results: AtlasSearchResult[] = searchStructures(rawQuery).map(({ structure }) => ({ id: structure.id, title: structure.names.pl, subtitle: structure.names.en, to: `/struktury/${structure.slug}`, type: 'structure' }))
+  const exactBA = /^(?:ba|pole(?: brodmanna)?|brodmann(?: area)?)\s*(\d+)$/i.exec(query)
+  for (const description of brodmannDescriptions) {
+    if (exactBA ? description.number === Number(exactBA[1]) : normalizeSearch([description.title,description.location,...description.functions].join(' ')).includes(query)) results.push({ id: `ba-${description.number}`, title: `BA ${description.number} · ${description.title}`, subtitle: 'Funkcje i klinika', to: `/pola/${description.number}`, type: 'brodmann' })
+  }
+  for (const circuit of brainCircuits) if (normalizeSearch([circuit.names.pl,circuit.names.en,circuit.transmitter,circuit.summary,...circuit.nodes.map(node=>node.label)].join(' ')).includes(query)) results.unshift({id:circuit.id,title:circuit.names.pl,subtitle:circuit.names.en,to:`/szlaki/${circuit.id}`,type:'circuit'})
   for (const region of atlasRegions) {
     if (matchesRegion(region,rawQuery)) results.unshift({ id: region.id, title: regionLabel(region,'pl'), subtitle: region.source, to: regionUrl(region), type: 'atlas-region' })
   }

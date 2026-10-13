@@ -1,12 +1,18 @@
 # Detailed 3D anatomy: sources and processing
 
+## High-resolution extension
+
+HQ uses the full fsaverage pial surface: 163,842 vertices and 327,680 triangles per hemisphere, four times the Standard cortical triangle count. Both Destrieux and PALS-B12 partition the same native surface, with identical region identifiers and no independently invented boundaries. ASEG is unchanged. HQ totals 1,029,060 triangles per atlas layer including deep geometry; hidden internal structures are not rendered by default. Sulcal relief and whole-hemisphere normals use the same source-bound processing as Standard.
+
+The HQ asset is gzip-only (16,361,335 bytes; 58,711,407 bytes decoded). [HQ manifest](../models/brain-high-resolution-provenance.json) records input checksums and output hashes. Reproduce using `scripts/export-detailed-atlas.py --resolution high --source-dir /tmp/detailed-atlas-sources`. The default command below still reproduces Standard. Runtime quality switching replaces geometry without replacing the canvas or resetting camera/selection.
+
 All or portions of this licensed product (such portions are the "Software") have been obtained under license from The General Hospital Corporation "MGH" and are subject to the following terms and conditions:
 
 [FreeSurfer Software License Agreement](./FreeSurfer-LICENSE.txt). These are modified derivatives, not an original FreeSurfer release. Application-code and educational-text licenses do not replace the source-data license.
 
 ## Bundled sources
 
-The active model is `models/brain-detailed.json`, served precompressed as `brain-detailed.json.gz` where supported. The hemisphere surfaces are the original **fsaverage6 pial** template: 40,962 vertices and 81,920 triangles per hemisphere. This is an average MRI-derived surface, not a patient-specific brain or a photographic specimen.
+The Standard model is `models/brain-detailed.json`, served precompressed as `brain-detailed.json.gz` where supported. Its hemisphere surfaces are the original **fsaverage6 pial** template: 40,962 vertices and 81,920 triangles per hemisphere. HQ is the full fsaverage extension described above. Both are average MRI-derived surfaces, not patient-specific brains or photographic specimens.
 
 - **Destrieux / aparc.a2009s:** 74 named gyral and sulcal regions in each hemisphere, 148 selectable cortical regions total.
 - **PALS-B12 Brodmann:** 41 numbered areas in each hemisphere. The original GIFTI column beginning `Brodmann -` is used; unrelated columns for lobes, disorders and other atlases are not included. In particular, BA3 and BA33 are kept as distinct label keys even where source colors coincide. This surface-based transfer is not an individual's histological map.

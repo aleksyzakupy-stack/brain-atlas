@@ -1,4 +1,5 @@
 import { learningPaths } from '../data/learningPaths'
+import { circuitById } from '../data/circuits'
 import type { LearningProgress } from '../types/atlas'
 
 export const PROGRESS_KEY = 'brainAtlas.learning.v1'
@@ -25,6 +26,8 @@ export function readProgress(raw: string | null): LearningProgress {
 
 export function validReturnPath(value: string | null): string | undefined {
   if (!value) return undefined
+  const circuitMatch = /^\/szlaki\/([a-z-]+)$/.exec(value)
+  if (circuitMatch) return circuitById[circuitMatch[1]] ? value : undefined
   const match = /^\/nauka\/([a-z-]+)\/([a-z-]+)$/.exec(value)
   return match && validLesson(match[1], match[2]) ? value : undefined
 }

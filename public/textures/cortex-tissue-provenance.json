@@ -1,0 +1,11 @@
+{
+  "asset": "cortex-tissue-albedo.png",
+  "created": "2026-10-13",
+  "method": "Built-in ImageGen; artistic tissue albedo, not a photograph or a medical measurement",
+  "prompt": "Use case: scientific-educational. Asset type: square seamless tileable PBR base-color texture for a realistic human brain cortical tissue material in an interactive anatomical atlas. Generate a 2048x2048 pixel flat texture swatch filling the entire image, orthographic view, evenly lit neutral diffuse albedo with NO baked lighting, NO shadows, NO highlights. Pale warm ivory, very subtle blush pink and muted taupe mottling, delicate microscopic translucent pia mater connective tissue grain with a few extremely faint thin capillary traces. Low contrast, refined organic moist tissue microstructure at approximately 30 mm field of view. This is a tiny detail texture applied to an existing anatomically accurate folded brain mesh, NOT a picture of a whole brain. NO brain folds, NO gyri, NO large vessels, NO macroscopic grooves, NO objects, NO text, NO border, NO blood pools, NO cut tissue, NO dark patches. Seamless repeat in both axes, uniformly distributed fine detail.",
+  "usage": "Object-space triplanar mapping over original FreeSurfer surface; no changes to cortical positions or atlas parcel boundaries",
+  "vascularLayer": "Procedural illustrative tapered surface vessels. Not a segmented angiogram. Red arteries and muted blue-violet veins are conventional illustration colours; individual anatomy and vascular territories must not be inferred.",
+  "width": 1254,
+  "height": 1254,
+  "sha256": "d43ef789a621312f213fb86614cee1f4203ff12d107d11f51f5403002ff5ad84"
+}

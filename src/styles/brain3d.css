@@ -18,7 +18,8 @@
 .model-layer-tools button[aria-pressed="true"] { color: var(--ink); border-color: #b7a5f565; background: #b7a5f510; }
 .model-layer-tools button:disabled { opacity: .5; }
 .atlas-labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
-.atlas-label { position: absolute; transform: translate(-50%,-50%); max-width: 165px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 10px; line-height: 1.4; padding: 4px 7px; background: #171821dd; color: #f4f1ed; border: 1px solid #ffffff38; border-radius: 4px; pointer-events: auto; box-shadow: 0 1px 5px #0006; }
+.atlas-label { position: absolute; transform: translate(-50%,-50%); width: 150px; font-size: 11px; line-height: 1.4; padding: 5px 7px; background: #171821ed; color: #f4f1ed; border: 1px solid #ffffff38; border-radius: 5px; pointer-events: auto; box-shadow: 0 2px 9px #0006; }
+.atlas-label-leaders { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .atlas-label[hidden] { display: none; }
 .atlas-label[aria-pressed="true"] { border-color: var(--accent); }
 .region-filter { width: 100%; margin: 12px 0; padding: 10px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 7px; }
@@ -31,7 +32,7 @@
 .atlas-index-switch button[aria-pressed="true"] { color: var(--ink); }
 .brain-3d-canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; outline-offset: -3px; }
 .brain-3d-canvas:active { cursor: grabbing; }
-.model-badge { position: absolute; left: 22px; top: 8px; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); pointer-events: none; }
+.model-badge { position: absolute; z-index: 1; left: 22px; top: 8px; font-size: 10px; letter-spacing: .03em; color: var(--muted); pointer-events: none; }
 .model-presets { position: absolute; right: 20px; top: 0; display: flex; gap: 2px; }
 .model-presets button { font-size: 11px; padding: 8px 10px; color: var(--secondary); border-radius: 6px; background: #181b22cc; }
 .model-presets button:hover { background: #35323f; }
@@ -46,6 +47,8 @@
 .model-loading { width: 36px; height: 36px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: model-load 1.2s linear infinite; }
 @keyframes model-load { to { transform: rotate(360deg); } }
 .model-bottom { padding: 4px 22px 20px; }
+.model-quality { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--secondary); margin: 8px 0 12px; }
+.model-quality select { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; }
 .hemisphere-spacing { display: flex; align-items: center; gap: 12px; font-size: 11px; color: var(--secondary); margin: 8px 0 16px; }
 .hemisphere-spacing input { flex: 1; width: 0; min-width: 45px; accent-color: var(--accent); }
 .hemisphere-spacing span { min-width: 63px; color: var(--muted); font-size: 10px; }
@@ -53,6 +56,13 @@
 .model-selection select { flex: 1; min-width: 0; width: 100px; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); font-size: 12px; }
 .model-source { font-size: 10px; color: var(--muted); line-height: 1.65; margin: 15px 0 6px; }
 .model-source a { color: var(--secondary); white-space: nowrap; }
+.model-vessel-legend { position: absolute; left: 22px; bottom: 14px; display: flex; align-items: center; flex-wrap: wrap; gap: 7px 13px; max-width: calc(100% - 130px); font-size: 10px; color: var(--secondary); pointer-events: none; }
+.model-vessel-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.model-vessel-legend i { display: inline-block; width: 13px; height: 3px; border-radius: 3px; }
+.vessel-artery { background: #bd6267; }
+.vessel-vein { background: #8b87a9; }
+.model-vessel-legend small { flex-basis: 100%; font-size: 9px; color: var(--muted); }
+.model-stage:has(.model-caption) .model-vessel-legend { bottom: 74px; }
 .model-notice { font-size: 12px; line-height: 1.65; color: var(--secondary); padding-left: 10px; border-left: 2px solid var(--accent); }
 .model-bottom .gesture-hint { font-size: 10px; }
 @media (max-width: 640px) {
@@ -61,6 +71,7 @@
   .brain-3d-host { height: 380px; height: clamp(340px, 50svh, 450px); }
   .model-caption { left: 12px; right: 12px; }
   .model-badge { left: 16px; font-size: 9px; }
+  .atlas-label { width: 115px; font-size: 10px; }
   .model-presets { right: 12px; }
   .model-presets button { padding: 7px; }
   .model-bottom { padding: 4px 16px 20px; }

@@ -1,4 +1,5 @@
 import type { LearningPath, LearningStep } from '../types/atlas'
+import { extendedLearningPaths } from './extendedLearningPaths'
 
 const step = (id: string, stage: string, title: string, lead: string, paragraphs: string[], detail: LearningStep['detail'], takeaway: string, view: LearningStep['view'], structureIds: string[], referenceIds: string[], connectionIds: string[] = []): LearningStep =>
   ({ id, stage, title, lead, paragraphs, detail, takeaway, view, structureIds, referenceIds, connectionIds, scene: connectionIds.length ? 'connections' : 'anatomy' })
@@ -112,6 +113,7 @@ export const learningPaths: LearningPath[] = [
         'Opisuj proces i poziom dowodów, zanim nazwiesz hipotetyczny mechanizm trudności.', 'deep', ['prefrontal-cortex', 'striatum', 'globus-pallidus', 'thalamus'], ['working-memory', 'control', 'basal'], ['cortex-striatum', 'striatum-pallidum', 'pallidum-thalamus']),
     ],
   },
+  ...extendedLearningPaths,
 ]
 
 export const learningPathBySlug = Object.fromEntries(learningPaths.map(path => [path.slug, path])) as Record<string, LearningPath>

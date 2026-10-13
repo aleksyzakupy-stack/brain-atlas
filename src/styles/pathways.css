@@ -1,0 +1,27 @@
+.lesson-pathway-select { display: flex; flex-direction: column; gap: 8px; margin: 20px 22px 0; color: var(--muted); font-size: 13px; }
+.lesson-pathway-select select { width: 100%; padding: 9px; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); color: var(--ink); }
+.pathway-signal { padding: 20px 24px 0; font-size: 14px; color: var(--secondary); }
+.pathway-animation-tools { display: flex; gap: 20px; align-items: center; padding: 12px 24px; color: var(--secondary); font-size: 12px; }
+.pathway-animation-tools button { border: 1px solid var(--line); border-radius: 7px; min-width: 85px; }
+.pathway-animation-tools label { display: flex; gap: 8px; align-items: center; }
+.pathway-animation-tools select { font-size: 12px; }
+.pathway-particle { filter: drop-shadow(0 0 6px #88d8bb80); }
+.pathway-graph { position: relative; width: 100%; max-width: 720px; margin: 12px auto; }
+.pathway-graph svg { display: block; width: 100%; height: auto; }
+.pathway-node { position: absolute; left: 50%; transform: translate(-50%, -50%); width: 38%; min-height: 52px; }
+.pathway-node > button, .pathway-node > span { display: flex; align-items: center; justify-content: center; gap: 7px; text-align: center; width: 100%; min-height: 52px; padding: 10px 12px; border-radius: 10px; background: #242d37; border: 1px solid #5b7774; color: #e3f2ed; font-size: clamp(11px, 1.1vw, 16px); line-height: 1.3; }
+.pathway-node > button:hover { border-color: #b9ead7; background: #303e49; }
+.pathway-node button span { color: #88d8bb; }
+.pathway-key { display: flex; flex-wrap: wrap; gap: 16px; padding: 12px 24px; color: var(--secondary); font-size: 12px; }
+.pathway-key span { display: flex; align-items: center; gap: 6px; }
+.pathway-key i { width: 16px; height: 2px; }
+.pathway-limit { padding: 0 24px 24px; color: var(--muted); font-size: 12px; }
+.circuit-article + .circuit-article, .brodmann-article + .brodmann-article { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 32px; }
+.circuit-directory-group { font-size: 12px; letter-spacing: .04em; color: var(--muted); margin: 22px 8px 6px; }
+.structure-directory .text-only-ba { opacity: .8; }
+.pathway-course-links { padding-top: 20px; }
+@media (max-width: 640px) {
+  .pathway-node > button, .pathway-node > span { font-size: 12px; min-height: 42px; padding: 6px; }
+  .pathway-graph text { font-size: 24px; }
+  .pathway-animation-tools select, .lesson-pathway-select select { font-size: 16px; }
+}

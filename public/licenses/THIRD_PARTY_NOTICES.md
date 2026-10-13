@@ -1,8 +1,8 @@
 # Pochodzenie ilustracji i biblioteki
 
-## Active 3D model: fsaverage6 / Destrieux / PALS-B12 / ASEG
+## Active 3D model: fsaverage HQ and fsaverage6 Standard / Destrieux / PALS-B12 / ASEG
 
-The active model uses checksum-pinned FreeSurfer fsaverage6 pial surfaces and sulcal-depth values, Destrieux parcellation, original PALS-B12 GIFTI Brodmann labels, and fsaverage5 ASEG segmentations. It is a modified derivative under the [FreeSurfer license](./FreeSurfer-LICENSE.txt).
+The active model uses checksum-pinned FreeSurfer fsaverage (HQ) or fsaverage6 (Standard) pial surfaces and sulcal-depth values, Destrieux parcellation, original PALS-B12 GIFTI Brodmann labels, and fsaverage5 ASEG segmentations. It is a modified derivative under the [FreeSurfer license](./FreeSurfer-LICENSE.txt). HQ: [checksum manifest](../models/brain-high-resolution-provenance.json).
 
 [Sources, citations, coverage, translations and processing](./BRAIN_DETAILED_PROVENANCE.md). [Source and output checksum manifest](../models/brain-detailed-provenance.json). Brodmann boundary data are separate from approximate teaching-card associations. Texture is source-derived sulcal shading, not a specimen photograph.
 
@@ -45,7 +45,17 @@ Struktury niedostępne w użytej geometrii (jądro półleżące, podwzgórze, i
 
 ## react-zoom-pan-pinch
 
+
+Local fonts: Manrope and Source Serif 4, distributed under the SIL Open Font License 1.1. Full licenses: [Manrope](./fonts/Manrope-OFL.txt), [Source Serif 4](./fonts/Source-Serif-4-OFL.txt). Sources: Google Fonts, fonts.gstatic.com; no runtime third-party font requests.
+
 Wersja npm: 4.2.0, zapisana dokładnie w package.json i package-lock.json.
 Repozytorium: https://github.com/BetterTyped/react-zoom-pan-pinch
 Wydanie: https://github.com/BetterTyped/react-zoom-pan-pinch/releases/tag/v4.2.0
 Licencja: MIT — pełny tekst w react-zoom-pan-pinch-MIT.txt.
+
+## Renderowanie tkanki i naczyń
+
+Three.js 0.186.1 (MIT): https://github.com/mrdoob/three.js — pełna licencja w `three-MIT.txt`.
+three-mesh-bvh 0.9.16 (MIT): https://github.com/gkjohnson/three-mesh-bvh — pełna licencja w `three-mesh-bvh-MIT.txt`.
+Mikrotekstura `textures/cortex-tissue-albedo.png` powstała przez wbudowany ImageGen; nie jest fotografią preparatu ani danymi medycznymi. Prompt i pochodzenie: `textures/cortex-tissue-provenance.json`.
+Naczynia są autorską ilustracją proceduralną dopasowaną do powierzchni fsaverage, a nie segmentacją angiografii. Nie opisują indywidualnej anatomii, pełnego drzewa naczyniowego, koła Willisa ani granic unaczynienia. Czerwień i niebieskofioletowy są umownym oznaczeniem tętnic i żył.

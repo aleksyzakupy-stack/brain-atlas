@@ -71,6 +71,19 @@ export type BrainCircuit = {
   names: Terminology
   structureIds: string[]
   connectionIds: string[]
+  group: 'dopamine' | 'modulation' | 'basal' | 'limbic' | 'integration'
+  kind: 'projection' | 'loop' | 'axis' | 'network'
+  transmitter: string
+  summary: string
+  anatomy: string
+  physiology: string
+  psychiatry: string
+  pharmacology: string
+  evidence: string
+  referenceIds: string[]
+  hainesPages?: string
+  nodes: { id: string; label: string; structureId?: string }[]
+  edges: { from: string; to: string; label: string; effect: 'excitation' | 'inhibition' | 'modulation' | 'hormone' }[]
 }
 
 export type BrainNetwork = {
@@ -142,6 +155,8 @@ export type LearningStep = {
   connectionIds: string[]
   referenceIds: string[]
   scene: 'anatomy' | 'connections'
+  circuitIds?: string[]
+  brodmannNumbers?: number[]
 }
 
 export type LearningPath = {

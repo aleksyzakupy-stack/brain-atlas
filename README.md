@@ -2,9 +2,12 @@
 
 Statyczny, polskojęzyczny atlas edukacyjny w React, TypeScript, Vite, Three.js i SVG.
 
-- Nauka: trzy kompletne trasy — Pamięć i kontekst, Emocje i regulacja, Kontrola poznawcza. Każda ma sześć kroków, schemat, objaśnienie, szczegóły i źródła.
+- Nauka: siedem tras, 42 kroki — pamięć, emocje, kontrola poznawcza, dopamina, neuromodulacja, obwody psychiatryczne i pola Brodmanna. Nowe lekcje udostępniają animowane schematy oraz szczegółowe artykuły ze źródłami.
 - Atlas: 148 obszarów korowych Destrieux, 38 struktur ASEG i 82 regiony pól Brodmanna (41 w każdej półkuli), wybierane bezpośrednio na modelu i z listy; nazwy PL / EN / LAT. Osobny indeks Funkcje zachowuje 28 kart edukacyjnych.
-- Model 3D: fsaverage6, czterokrotnie więcej trójkątów kory niż poprzednio; płynne tłumienie obrotu i przejścia kamery, tekstura z rzeczywistych danych o głębokości bruzd, oryginalne kolory atlasów i podpisy z kontrolą widoczności. Przezroczystość kory odsłania wnętrze; można ukryć półkulę lub rozsunąć obie. Preferencja ograniczenia ruchu wyłącza bezwładność i animowane przejścia.
+- Model 3D: pełne fsaverage HQ, 655 360 trójkątów kory, czterokrotnie więcej niż Standard (fsaverage6). Płynne sterowanie, tekstura z głębokości bruzd, kolory atlasów i podpisy z liniami wskazującymi. Zmiana jakości nie resetuje kamery ani wyboru. Podpisy są domyślnie włączone; ocena widoczności ogranicza nakładanie i podpisywanie zasłoniętej anatomii.
+- Szlaki: 34 układy i obwody, anatomia, fizjologia, znaczenie psychiatryczne, farmakologia i ograniczenia dowodów. Wszystkie krawędzie schematów są animowane: sygnał w projekcjach, kolejne etapy pętli i osi, pulsacja relacji sieciowych. Pauza i tempo 0,5× / 1× / 2×; ograniczenie ruchu zatrzymuje animację do świadomego odtworzenia. To schematy, nie traktografia ani pomiar czasu przewodzenia.
+- Pola Brodmanna: katalog numerów 1–52 z lokalizacją, funkcjami, mechanizmem i kontekstem klinicznym. 41 pól ma geometrię PALS-B12; pozostałe opisy wyjaśniają brak parceli lub ograniczenia historycznej nomenklatury. BA50/51 nie otrzymują wymyślonej funkcji.
+- Typografia: lokalne Manrope i Source Serif 4, licencje OFL; brak zapytań do zewnętrznego serwera fontów.
 - Schematy 2D: boczny, przyśrodkowy i struktury głębokie (projekcje czołowa / strzałkowa). Pozostają dostępne także bez WebGL. Lekcje o połączeniach rozpoczynają się od schematu relacji.
 - Wyszukiwanie struktur, funkcji, lekcji i powiązań z obsługą PL / EN / LAT i tekstu bez polskich znaków.
 - Powrót z karty do lekcji, dowolny wybór kroku, lokalny postęp w formacie `brainAtlas.learning.v1`; brak localStorage nie blokuje nauki.
@@ -34,7 +37,7 @@ GitHub Pages jest publikowany przez istniejący workflow po zmianie `main`; wyko
 
 ### Model 3D
 
-Aktywny `public/models/brain-detailed.json` zawiera współdzielone powierzchnie fsaverage6 (40 962 wierzchołki i 81 920 trójkątów na półkulę), oddzielne partycje Destrieux i PALS-B12 oraz 38 etykiet ASEG. Całość pozostaje w surface-RAS. Klient pobiera skompresowany plik (~6,9 MB, ~24 MB po rozpakowaniu), z obsługą kompresji transportowej i pliku gzip; starsze przeglądarki mogą pobrać zwykły JSON. Three.js ładuje się osobno. Poprzedni model DK pozostaje jako archiwalny, odtwarzalny eksport, nie aktywna siatka.
+Domyślne HQ (`public/models/brain-high-resolution.json.gz`) zawiera pełne powierzchnie fsaverage: 163 842 wierzchołki i 327 680 trójkątów na półkulę. Plik ma 16,36 MB, 58,71 MB po rozpakowaniu. Standard (`brain-detailed.json.gz`) zachowuje fsaverage6: 40 962 wierzchołki i 81 920 trójkątów na półkulę. Oba warianty mają te same regiony Destrieux/PALS-B12/ASEG, wspólne współrzędne surface-RAS i identyfikatory. Przeglądarki bez DecompressionStream używają zwykłego JSON Standard. Błąd pobrania HQ przełącza na Standard. Three.js ładuje się osobno.
 
 PALS-B12 dostarcza pola 1–11, 17–33 i 35–47. Brakujące numery nie otrzymują wymyślonych granic. Podwzgórze, VTA, istota czarna, miejsce sinawe, jądra szwu i PAG nie mają osobnej geometrii; VentralDC nie jest osobną segmentacją podwzgórza. Przypisania kart funkcjonalnych przez nakładanie z DK są przybliżeniami dydaktycznymi i nie wyznaczają granic Brodmanna. Rozsuwanie półkul zmienia naturalne relacje przestrzenne.
 
@@ -61,6 +64,14 @@ Zobacz [pochodzenie, cytowania i zawiadomienia licencyjne](public/licenses/THIRD
 
 Źródła przypisano do kroków, kart oraz powiązań. Podsumowania psychiatryczne dotyczą rozumienia mechanizmów, bez zaleceń dla konkretnego pacjenta. Połączenia funkcjonalne nie oznaczają bezpośredniego szlaku anatomicznego. Granice funkcjonalne są przybliżone. Nie przypisano fikcyjnej daty ani autora zewnętrznej recenzji klinicznej.
 
-Dalszy rozwój: kolejne trasy, zadania sprawdzające i bardziej szczegółowe sieci. Te elementy nie są prezentowane jako dostępne funkcje.
+Haines, wydanie 9 (2015), jest źródłem anatomii; nowsze badania uzupełniają interpretacje psychiatryczne i funkcje kory. W artykułach wskazano strony drukowane atlasu i bibliografię. Nie dołączono książki, skanów ani ilustracji autora. Katalog 34 układów nie jest twierdzeniem o kompletności wszystkich włókien mózgu. Małe jądra bez segmentacji pozostają węzłami schematu, nie fikcyjnymi obiektami 3D.
 
 Kod: MIT. Autorskie materiały edukacyjne: CC BY 4.0. Materiały importowane zachowują własne licencje — zobacz CONTENT-LICENSE.md.
+
+## Materiał tkanki i naczynia (2026-10-13)
+
+Three.js 0.186.1 pozostaje silnikiem przeglądarkowym (MIT). Materiał fizyczny ma mikroteksturę tkanki, mikrowypukłości, zmienną szorstkość i delikatną wilgotną powłokę. Projekcja trójpłaszczyznowa we współrzędnych źródłowych zachowuje ciągłość między parcelami i podczas rozsuwania półkul. HQ dodaje GTAO, odszumianie, wielopróbkowe wygładzanie krawędzi oraz mapowanie tonów ACES. Oba tryby używają oświetlenia środowiskowego i cieni. Renderowanie zatrzymuje się w spoczynku.
+
+Przycisk **Naczynia** włącza osobne, zwężające się tętnice i żyły. Warstwa odpowiada widoczności i rozsunięciu półkul; ukrywa się w trybie wnętrza i izolacji. To **ilustracja proceduralna**, nie segmentacja angiografii ani mapa obszarów unaczynienia. Geometria kory i granice atlasu pozostają źródłowe. `three-mesh-bvh` przyspiesza wybór parcel i dopasowanie naczyń do powierzchni. Standard pomija kosztowny etap GTAO.
+
+Tekstura: `public/textures/cortex-tissue-albedo.png` (1254 × 1254 px, wbudowany ImageGen). Pochodzenie, pełny prompt i SHA-256: `public/textures/cortex-tissue-provenance.json`. Licencje silnika i biblioteki BVH znajdują się w `public/licenses/`.

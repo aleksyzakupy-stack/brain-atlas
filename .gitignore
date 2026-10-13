@@ -7,3 +7,4 @@ output/playwright/
 output/base-build/
 .playwright-cli/
 __pycache__/
+tmp/
